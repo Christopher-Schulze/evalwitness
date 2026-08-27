@@ -1,0 +1,1663 @@
+{
+  "schema_version": "evalwitness.capability-attestation.v1",
+  "attestation_id": "att-8541ef45f2d088049e93c8e3d052f9615dfc2b603fb5c4249ca36f23713f44f4",
+  "state": "bounded_qualified",
+  "identity": {
+    "provider_id": "bai",
+    "route_id": "route-2b41666c09dea21ea16fb4f087a36cb547d05c200bc1dc0bcb2e03af77f71d8b",
+    "route_config_digest": "dd47a34bc52d6439abcee7bf868900e4309676402e225ad7661db11bdcb900e2",
+    "base_origin": "https://api.b.ai",
+    "endpoint_path": "/v1/chat/completions",
+    "requested_model": "deepseek-v4-flash",
+    "served_model": "deepseek-v4-flash"
+  },
+  "contract": {
+    "contract_digest": "33e0594374675b53787cea00c2fcf805235aa57657906588c0c99db65894438f",
+    "request_schema_version": 2,
+    "prompt_builder_version": "evalwitness.verifier.prompt.v1",
+    "parser_contract_version": "evalwitness.score-token-parser.v2",
+    "score_policy_version": "evalwitness.strict-score-policy.v1",
+    "score_alphabet": "ABCDEFGHIJKLMNOPQRST",
+    "score_tags": [
+      "\u003cscore_0_code_review\u003e",
+      "\u003cscore_1_code_review\u003e",
+      "\u003cscore_2_code_review\u003e",
+      "\u003cscore_3_code_review\u003e",
+      "\u003cscore_4_code_review\u003e"
+    ],
+    "requested_top_k": 20,
+    "temperature": 1,
+    "thinking_mode": "disabled",
+    "streaming_requested": true,
+    "request_fingerprint": "ea7595d3fae08cf17080e5a3f5586f646095285cc6f782bcad3a21558b134e73"
+  },
+  "observation": {
+    "score_evidence": {
+      "\u003cscore_0_code_review\u003e": {
+        "schema_version": "evalwitness.score-evidence.v1",
+        "policy_version": "evalwitness.strict-score-policy.v1",
+        "tag": "\u003cscore_0_code_review\u003e",
+        "extraction_mode": "verifier",
+        "alignment_status": "exact",
+        "aligned_position": {
+          "token_index": 7,
+          "token_byte": 1,
+          "stream_byte": 21,
+          "raw_byte": 21
+        },
+        "requested_top_k": 20,
+        "returned_top_k": 20,
+        "visible_probability_mass": 0.9999999869516127,
+        "valid_score_mass": 0.7652230487384407,
+        "unobserved_probability_mass": 1.3048387259573246e-8,
+        "score_support": [
+          {
+            "letter": "A",
+            "value": 1,
+            "probability": 0.7646049681727188,
+            "source_ranks": [
+              1,
+              15,
+              16,
+              19
+            ],
+            "source_forms": [
+              "\u003eA",
+              "}A",
+              "_A",
+              " A"
+            ]
+          },
+          {
+            "letter": "B",
+            "value": 0.9473684210526315,
+            "probability": 8.181967529397432e-7,
+            "source_ranks": [
+              8
+            ],
+            "source_forms": [
+              "\u003eb"
+            ]
+          },
+          {
+            "letter": "C",
+            "value": 0.8947368421052632,
+            "probability": 0.00034702636537362476,
+            "source_ranks": [
+              3
+            ],
+            "source_forms": [
+              "\u003eC"
+            ]
+          },
+          {
+            "letter": "S",
+            "value": 0.05263157894736842,
+            "probability": 0.00001995518597076225,
+            "source_ranks": [
+              5
+            ],
+            "source_forms": [
+              "\u003eS"
+            ]
+          },
+          {
+            "letter": "T",
+            "value": 0,
+            "probability": 0.00025028081762457674,
+            "source_ranks": [
+              4
+            ],
+            "source_forms": [
+              "\u003eT"
+            ]
+          }
+        ],
+        "visible_alternatives": [
+          {
+            "rank": 1,
+            "token": "\u003eA",
+            "logprob": "-0.26839596",
+            "probability": 0.7646049681727188,
+            "chosen": true,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              15,
+              16,
+              19
+            ]
+          },
+          {
+            "rank": 2,
+            "token": "\u003e",
+            "logprob": "-1.4491401",
+            "probability": 0.2347720818333135,
+            "diagnostic": "token_fragment"
+          },
+          {
+            "rank": 3,
+            "token": "\u003eC",
+            "logprob": "-7.9661098",
+            "probability": 0.00034702636537362476,
+            "canonical_letter": "C",
+            "canonical_value": 0.8947368421052632,
+            "canonical_source_ranks": [
+              3
+            ]
+          },
+          {
+            "rank": 4,
+            "token": "\u003eT",
+            "logprob": "-8.292927",
+            "probability": 0.00025028081762457674,
+            "canonical_letter": "T",
+            "canonical_value": 0,
+            "canonical_source_ranks": [
+              4
+            ]
+          },
+          {
+            "rank": 5,
+            "token": "\u003eS",
+            "logprob": "-10.8220215",
+            "probability": 0.00001995518597076225,
+            "canonical_letter": "S",
+            "canonical_value": 0.05263157894736842,
+            "canonical_source_ranks": [
+              5
+            ]
+          },
+          {
+            "rank": 6,
+            "token": "\u003eThe",
+            "logprob": "-12.6446495",
+            "probability": 0.0000032247681557198436,
+            "diagnostic": "multi_token_score"
+          },
+          {
+            "rank": 7,
+            "token": "\u003e\n",
+            "logprob": "-13.647362",
+            "probability": 0.0000011831123583565925,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 8,
+            "token": "\u003eb",
+            "logprob": "-14.016163",
+            "probability": 8.181967529397432e-7,
+            "canonical_letter": "B",
+            "canonical_value": 0.9473684210526315,
+            "canonical_source_ranks": [
+              8
+            ]
+          },
+          {
+            "rank": 9,
+            "token": "\u003e-",
+            "logprob": "-16.022125",
+            "probability": 1.1007267582444046e-7,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 10,
+            "token": "A",
+            "logprob": "-16.249933",
+            "probability": 8.764835443746145e-8,
+            "diagnostic": "token_fragment"
+          },
+          {
+            "rank": 11,
+            "token": "\u003e\u003c/",
+            "logprob": "-16.39401",
+            "probability": 7.588779265993836e-8,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 12,
+            "token": "\u003e\u003c",
+            "logprob": "-16.848461",
+            "probability": 4.817329572611665e-8,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 13,
+            "token": "\u003e`",
+            "logprob": "-17.482393",
+            "probability": 2.555601825226313e-8,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 14,
+            "token": "\u003e\u003e",
+            "logprob": "-17.52358",
+            "probability": 2.452482419304465e-8,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 15,
+            "token": "}A",
+            "logprob": "-17.674562",
+            "probability": 2.1087993222872773e-8,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              15,
+              16,
+              19
+            ]
+          },
+          {
+            "rank": 16,
+            "token": "_A",
+            "logprob": "-17.774746",
+            "probability": 1.907769472054843e-8,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              15,
+              16,
+              19
+            ]
+          },
+          {
+            "rank": 17,
+            "token": "\u003e=",
+            "logprob": "-18.375595",
+            "probability": 1.046117554317031e-8,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 18,
+            "token": "\u003e{",
+            "logprob": "-18.55268",
+            "probability": 8.763416470355732e-9,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 19,
+            "token": " A",
+            "logprob": "-18.564783",
+            "probability": 8.657992103272311e-9,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              15,
+              16,
+              19
+            ]
+          },
+          {
+            "rank": 20,
+            "token": "B",
+            "logprob": "-18.572887",
+            "probability": 8.588111274834656e-9,
+            "diagnostic": "token_fragment"
+          }
+        ],
+        "conditional_expected_score": 0.9996004329910966,
+        "conditional_variance": 0.00035534214353363265,
+        "extracted": true,
+        "degradations": [
+          {
+            "code": "token_fragment"
+          },
+          {
+            "code": "multi_token_score"
+          },
+          {
+            "code": "invalid_score_token"
+          },
+          {
+            "code": "duplicate_form",
+            "detail": "A"
+          }
+        ]
+      },
+      "\u003cscore_1_code_review\u003e": {
+        "schema_version": "evalwitness.score-evidence.v1",
+        "policy_version": "evalwitness.strict-score-policy.v1",
+        "tag": "\u003cscore_1_code_review\u003e",
+        "extraction_mode": "verifier",
+        "alignment_status": "exact",
+        "aligned_position": {
+          "token_index": 23,
+          "token_byte": 1,
+          "stream_byte": 66,
+          "raw_byte": 66
+        },
+        "requested_top_k": 20,
+        "returned_top_k": 20,
+        "visible_probability_mass": 1.00000000723025,
+        "valid_score_mass": 0.9993134737114213,
+        "unobserved_probability_mass": 0,
+        "score_support": [
+          {
+            "letter": "A",
+            "value": 1,
+            "probability": 0.9993115637810301,
+            "source_ranks": [
+              1,
+              10,
+              11,
+              13,
+              16,
+              17
+            ],
+            "source_forms": [
+              "\u003eA",
+              "_A",
+              "}A",
+              ")A",
+              "\tA",
+              " A"
+            ]
+          },
+          {
+            "letter": "B",
+            "value": 0.9473684210526315,
+            "probability": 8.677955243888379e-10,
+            "source_ranks": [
+              15
+            ],
+            "source_forms": [
+              "\u003eb"
+            ]
+          },
+          {
+            "letter": "C",
+            "value": 0.8947368421052632,
+            "probability": 0.0000015816309444490651,
+            "source_ranks": [
+              3
+            ],
+            "source_forms": [
+              "\u003eC"
+            ]
+          },
+          {
+            "letter": "S",
+            "value": 0.05263157894736842,
+            "probability": 7.825007883896088e-8,
+            "source_ranks": [
+              5
+            ],
+            "source_forms": [
+              "\u003eS"
+            ]
+          },
+          {
+            "letter": "T",
+            "value": 0,
+            "probability": 2.491815723496224e-7,
+            "source_ranks": [
+              4
+            ],
+            "source_forms": [
+              "\u003eT"
+            ]
+          }
+        ],
+        "visible_alternatives": [
+          {
+            "rank": 1,
+            "token": "\u003eA",
+            "logprob": "-0.0006886733",
+            "probability": 0.9993115637810301,
+            "chosen": true,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              13,
+              16,
+              17
+            ]
+          },
+          {
+            "rank": 2,
+            "token": "\u003e",
+            "logprob": "-7.283949",
+            "probability": 0.000686469336621994,
+            "diagnostic": "token_fragment"
+          },
+          {
+            "rank": 3,
+            "token": "\u003eC",
+            "logprob": "-13.357054",
+            "probability": 0.0000015816309444490651,
+            "canonical_letter": "C",
+            "canonical_value": 0.8947368421052632,
+            "canonical_source_ranks": [
+              3
+            ]
+          },
+          {
+            "rank": 4,
+            "token": "\u003eT",
+            "logprob": "-15.205084",
+            "probability": 2.491815723496224e-7,
+            "canonical_letter": "T",
+            "canonical_value": 0,
+            "canonical_source_ranks": [
+              4
+            ]
+          },
+          {
+            "rank": 5,
+            "token": "\u003eS",
+            "logprob": "-16.363356",
+            "probability": 7.825007883896088e-8,
+            "canonical_letter": "S",
+            "canonical_value": 0.05263157894736842,
+            "canonical_source_ranks": [
+              5
+            ]
+          },
+          {
+            "rank": 6,
+            "token": "\u003eThe",
+            "logprob": "-17.459929",
+            "probability": 2.6136605385969946e-8,
+            "diagnostic": "multi_token_score"
+          },
+          {
+            "rank": 7,
+            "token": "A",
+            "logprob": "-18.463505",
+            "probability": 9.580797519945976e-9,
+            "diagnostic": "token_fragment"
+          },
+          {
+            "rank": 8,
+            "token": "\u003e\u003c/",
+            "logprob": "-18.493402",
+            "probability": 9.298599867527838e-9,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 9,
+            "token": "\u003e\n",
+            "logprob": "-18.87452",
+            "probability": 6.351848271598187e-9,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 10,
+            "token": "_A",
+            "logprob": "-19.349651",
+            "probability": 3.949602089275339e-9,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              13,
+              16,
+              17
+            ]
+          },
+          {
+            "rank": 11,
+            "token": "}A",
+            "logprob": "-19.620733",
+            "probability": 3.011784731043443e-9,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              13,
+              16,
+              17
+            ]
+          },
+          {
+            "rank": 12,
+            "token": "\u003e-",
+            "logprob": "-20.389828",
+            "probability": 1.3957582792479761e-9,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 13,
+            "token": ")A",
+            "logprob": "-20.709711",
+            "probability": 1.0136471202389833e-9,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              13,
+              16,
+              17
+            ]
+          },
+          {
+            "rank": 14,
+            "token": "\u003e\u003e",
+            "logprob": "-20.820948",
+            "probability": 9.069371160727913e-10,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 15,
+            "token": "\u003eb",
+            "logprob": "-20.865065",
+            "probability": 8.677955243888379e-10,
+            "canonical_letter": "B",
+            "canonical_value": 0.9473684210526315,
+            "canonical_source_ranks": [
+              15
+            ]
+          },
+          {
+            "rank": 16,
+            "token": "\tA",
+            "logprob": "-20.929152",
+            "probability": 8.13925725828585e-10,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              13,
+              16,
+              17
+            ]
+          },
+          {
+            "rank": 17,
+            "token": " A",
+            "logprob": "-21.18835",
+            "probability": 6.280822416457317e-10,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              13,
+              16,
+              17
+            ]
+          },
+          {
+            "rank": 18,
+            "token": "\u003e\u003c",
+            "logprob": "-21.343773",
+            "probability": 5.376716812228671e-10,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 19,
+            "token": "\u003e`",
+            "logprob": "-21.818703",
+            "probability": 3.34393390555019e-10,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 20,
+            "token": "\u003e(",
+            "logprob": "-22.225855",
+            "probability": 2.225531870426808e-10,
+            "diagnostic": "invalid_score_token"
+          }
+        ],
+        "conditional_expected_score": 0.9999995098171092,
+        "conditional_variance": 3.37170196575121e-7,
+        "extracted": true,
+        "degradations": [
+          {
+            "code": "token_fragment"
+          },
+          {
+            "code": "multi_token_score"
+          },
+          {
+            "code": "invalid_score_token"
+          },
+          {
+            "code": "duplicate_form",
+            "detail": "A"
+          }
+        ]
+      },
+      "\u003cscore_2_code_review\u003e": {
+        "schema_version": "evalwitness.score-evidence.v1",
+        "policy_version": "evalwitness.strict-score-policy.v1",
+        "tag": "\u003cscore_2_code_review\u003e",
+        "extraction_mode": "verifier",
+        "alignment_status": "exact",
+        "aligned_position": {
+          "token_index": 39,
+          "token_byte": 1,
+          "stream_byte": 111,
+          "raw_byte": 111
+        },
+        "requested_top_k": 20,
+        "returned_top_k": 20,
+        "visible_probability_mass": 1.0000000666313147,
+        "valid_score_mass": 0.9999595883159672,
+        "unobserved_probability_mass": 0,
+        "score_support": [
+          {
+            "letter": "A",
+            "value": 1,
+            "probability": 0.9999572056977023,
+            "source_ranks": [
+              1,
+              10,
+              11,
+              12,
+              13,
+              14,
+              18
+            ],
+            "source_forms": [
+              "\u003eA",
+              "}A",
+              "_A",
+              ")A",
+              " A",
+              "\tA",
+              "=A"
+            ]
+          },
+          {
+            "letter": "B",
+            "value": 0.9473684210526315,
+            "probability": 3.2060444859730613e-10,
+            "source_ranks": [
+              20
+            ],
+            "source_forms": [
+              "\u003eb"
+            ]
+          },
+          {
+            "letter": "C",
+            "value": 0.8947368421052632,
+            "probability": 0.0000015457165016538098,
+            "source_ranks": [
+              3
+            ],
+            "source_forms": [
+              "\u003eC"
+            ]
+          },
+          {
+            "letter": "S",
+            "value": 0.05263157894736842,
+            "probability": 4.582564353510458e-8,
+            "source_ranks": [
+              5
+            ],
+            "source_forms": [
+              "\u003eS"
+            ]
+          },
+          {
+            "letter": "T",
+            "value": 0,
+            "probability": 7.907555153112207e-7,
+            "source_ranks": [
+              4
+            ],
+            "source_forms": [
+              "\u003eT"
+            ]
+          }
+        ],
+        "visible_alternatives": [
+          {
+            "rank": 1,
+            "token": "\u003eA",
+            "logprob": "-4.2795218e-05",
+            "probability": 0.9999572056977023,
+            "chosen": true,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              12,
+              13,
+              14,
+              18
+            ]
+          },
+          {
+            "rank": 2,
+            "token": "\u003e",
+            "logprob": "-10.11699",
+            "probability": 0.00004038750916043765,
+            "diagnostic": "token_fragment"
+          },
+          {
+            "rank": 3,
+            "token": "\u003eC",
+            "logprob": "-13.380023",
+            "probability": 0.0000015457165016538098,
+            "canonical_letter": "C",
+            "canonical_value": 0.8947368421052632,
+            "canonical_source_ranks": [
+              3
+            ]
+          },
+          {
+            "rank": 4,
+            "token": "\u003eT",
+            "logprob": "-14.050277",
+            "probability": 7.907555153112207e-7,
+            "canonical_letter": "T",
+            "canonical_value": 0,
+            "canonical_source_ranks": [
+              4
+            ]
+          },
+          {
+            "rank": 5,
+            "token": "\u003eS",
+            "logprob": "-16.898422",
+            "probability": 4.582564353510458e-8,
+            "canonical_letter": "S",
+            "canonical_value": 0.05263157894736842,
+            "canonical_source_ranks": [
+              5
+            ]
+          },
+          {
+            "rank": 6,
+            "token": "\u003eThe",
+            "logprob": "-17.245193",
+            "probability": 3.239722713705993e-8,
+            "diagnostic": "multi_token_score"
+          },
+          {
+            "rank": 7,
+            "token": "A",
+            "logprob": "-17.714901",
+            "probability": 2.025425382545403e-8,
+            "diagnostic": "token_fragment"
+          },
+          {
+            "rank": 8,
+            "token": "\u003e\u003c/",
+            "logprob": "-18.099192",
+            "probability": 1.3791794818288083e-8,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 9,
+            "token": "\u003e\n",
+            "logprob": "-18.604076",
+            "probability": 8.324390641292677e-9,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 10,
+            "token": "}A",
+            "logprob": "-19.265415",
+            "probability": 4.296715256498587e-9,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              12,
+              13,
+              14,
+              18
+            ]
+          },
+          {
+            "rank": 11,
+            "token": "_A",
+            "logprob": "-19.446812",
+            "probability": 3.5839080423118112e-9,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              12,
+              13,
+              14,
+              18
+            ]
+          },
+          {
+            "rank": 12,
+            "token": ")A",
+            "logprob": "-19.844625",
+            "probability": 2.4076251264584865e-9,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              12,
+              13,
+              14,
+              18
+            ]
+          },
+          {
+            "rank": 13,
+            "token": " A",
+            "logprob": "-20.43054",
+            "probability": 1.3400753409159372e-9,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              12,
+              13,
+              14,
+              18
+            ]
+          },
+          {
+            "rank": 14,
+            "token": "\tA",
+            "logprob": "-20.462902",
+            "probability": 1.297402043600692e-9,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              12,
+              13,
+              14,
+              18
+            ]
+          },
+          {
+            "rank": 15,
+            "token": "\u003e-",
+            "logprob": "-20.811394",
+            "probability": 9.156435175337243e-10,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 16,
+            "token": "\u003e\u003c",
+            "logprob": "-21.015743",
+            "probability": 7.464122906187276e-10,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 17,
+            "token": "\u003e(",
+            "logprob": "-21.212334",
+            "probability": 6.131975281534042e-10,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 18,
+            "token": "=A",
+            "logprob": "-21.41218",
+            "probability": 5.021209946899303e-10,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              12,
+              13,
+              14,
+              18
+            ]
+          },
+          {
+            "rank": 19,
+            "token": "\u003e\u003e",
+            "logprob": "-21.815636",
+            "probability": 3.3542054942681733e-10,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 20,
+            "token": "\u003eb",
+            "logprob": "-21.860813",
+            "probability": 3.2060444859730613e-10,
+            "canonical_letter": "B",
+            "canonical_value": 0.9473684210526315,
+            "canonical_source_ranks": [
+              20
+            ]
+          }
+        ],
+        "conditional_expected_score": 0.9999990030665552,
+        "conditional_variance": 8.490456060135792e-7,
+        "extracted": true,
+        "degradations": [
+          {
+            "code": "token_fragment"
+          },
+          {
+            "code": "multi_token_score"
+          },
+          {
+            "code": "invalid_score_token"
+          },
+          {
+            "code": "duplicate_form",
+            "detail": "A"
+          }
+        ]
+      },
+      "\u003cscore_3_code_review\u003e": {
+        "schema_version": "evalwitness.score-evidence.v1",
+        "policy_version": "evalwitness.strict-score-policy.v1",
+        "tag": "\u003cscore_3_code_review\u003e",
+        "extraction_mode": "verifier",
+        "alignment_status": "exact",
+        "aligned_position": {
+          "token_index": 55,
+          "token_byte": 1,
+          "stream_byte": 156,
+          "raw_byte": 156
+        },
+        "requested_top_k": 20,
+        "returned_top_k": 20,
+        "visible_probability_mass": 0.9999999262311224,
+        "valid_score_mass": 0.9978083154241283,
+        "unobserved_probability_mass": 7.376887756205264e-8,
+        "score_support": [
+          {
+            "letter": "A",
+            "value": 1,
+            "probability": 0.9977978194653412,
+            "source_ranks": [
+              1,
+              10,
+              12,
+              16,
+              17,
+              18
+            ],
+            "source_forms": [
+              "\u003eA",
+              "_A",
+              "}A",
+              ")A",
+              " A",
+              "=A"
+            ]
+          },
+          {
+            "letter": "B",
+            "value": 0.9473684210526315,
+            "probability": 9.237237203071667e-9,
+            "source_ranks": [
+              13
+            ],
+            "source_forms": [
+              "\u003eb"
+            ]
+          },
+          {
+            "letter": "C",
+            "value": 0.8947368421052632,
+            "probability": 0.000008143284158845671,
+            "source_ranks": [
+              3
+            ],
+            "source_forms": [
+              "\u003eC"
+            ]
+          },
+          {
+            "letter": "S",
+            "value": 0.05263157894736842,
+            "probability": 1.7344522386515095e-7,
+            "source_ranks": [
+              5
+            ],
+            "source_forms": [
+              "\u003eS"
+            ]
+          },
+          {
+            "letter": "T",
+            "value": 0,
+            "probability": 0.0000021699921672079725,
+            "source_ranks": [
+              4
+            ],
+            "source_forms": [
+              "\u003eT"
+            ]
+          }
+        ],
+        "visible_alternatives": [
+          {
+            "rank": 1,
+            "token": "\u003eA",
+            "logprob": "-0.0022046089",
+            "probability": 0.9977978194653412,
+            "chosen": true,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              12,
+              16,
+              17,
+              18
+            ]
+          },
+          {
+            "rank": 2,
+            "token": "\u003e",
+            "logprob": "-6.1233516",
+            "probability": 0.0021910999521258657,
+            "diagnostic": "token_fragment"
+          },
+          {
+            "rank": 3,
+            "token": "\u003eC",
+            "logprob": "-11.718317",
+            "probability": 0.000008143284158845671,
+            "canonical_letter": "C",
+            "canonical_value": 0.8947368421052632,
+            "canonical_source_ranks": [
+              3
+            ]
+          },
+          {
+            "rank": 4,
+            "token": "\u003eT",
+            "logprob": "-13.040787",
+            "probability": 0.0000021699921672079725,
+            "canonical_letter": "T",
+            "canonical_value": 0,
+            "canonical_source_ranks": [
+              4
+            ]
+          },
+          {
+            "rank": 5,
+            "token": "\u003eS",
+            "logprob": "-15.567404",
+            "probability": 1.7344522386515095e-7,
+            "canonical_letter": "S",
+            "canonical_value": 0.05263157894736842,
+            "canonical_source_ranks": [
+              5
+            ]
+          },
+          {
+            "rank": 6,
+            "token": "\u003eThe",
+            "logprob": "-15.63279",
+            "probability": 1.6246715153671437e-7,
+            "diagnostic": "multi_token_score"
+          },
+          {
+            "rank": 7,
+            "token": "A",
+            "logprob": "-16.019854",
+            "probability": 1.1032293493289742e-7,
+            "diagnostic": "token_fragment"
+          },
+          {
+            "rank": 8,
+            "token": "\u003e\u003c/",
+            "logprob": "-16.309479",
+            "probability": 8.258159517102414e-8,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 9,
+            "token": "\u003e\n",
+            "logprob": "-16.645176",
+            "probability": 5.903260019263166e-8,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 10,
+            "token": "_A",
+            "logprob": "-17.292028",
+            "probability": 3.09148866638355e-8,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              12,
+              16,
+              17,
+              18
+            ]
+          },
+          {
+            "rank": 11,
+            "token": "\u003e-",
+            "logprob": "-17.934742",
+            "probability": 1.6257004091795147e-8,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 12,
+            "token": "}A",
+            "logprob": "-18.3336",
+            "probability": 1.090984766584013e-8,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              12,
+              16,
+              17,
+              18
+            ]
+          },
+          {
+            "rank": 13,
+            "token": "\u003eb",
+            "logprob": "-18.500023",
+            "probability": 9.237237203071667e-9,
+            "canonical_letter": "B",
+            "canonical_value": 0.9473684210526315,
+            "canonical_source_ranks": [
+              13
+            ]
+          },
+          {
+            "rank": 14,
+            "token": "\u003e\u003c",
+            "logprob": "-18.642363",
+            "probability": 8.011698907830119e-9,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 15,
+            "token": "\u003e(",
+            "logprob": "-18.734438",
+            "probability": 7.306963787601199e-9,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 16,
+            "token": ")A",
+            "logprob": "-19.088926",
+            "probability": 5.1260728358746874e-9,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              12,
+              16,
+              17,
+              18
+            ]
+          },
+          {
+            "rank": 17,
+            "token": " A",
+            "logprob": "-19.134579",
+            "probability": 4.8973137325652684e-9,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              12,
+              16,
+              17,
+              18
+            ]
+          },
+          {
+            "rank": 18,
+            "token": "=A",
+            "logprob": "-19.217623",
+            "probability": 4.507049997500533e-9,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              12,
+              16,
+              17,
+              18
+            ]
+          },
+          {
+            "rank": 19,
+            "token": "\u003e\u003e",
+            "logprob": "-19.262152",
+            "probability": 4.310758337206801e-9,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 20,
+            "token": "\u003e$",
+            "logprob": "-19.286043",
+            "probability": 4.208990517798611e-9,
+            "diagnostic": "invalid_score_token"
+          }
+        ],
+        "conditional_expected_score": 0.999996801006143,
+        "conditional_variance": 0.0000024212126633910176,
+        "extracted": true,
+        "degradations": [
+          {
+            "code": "token_fragment"
+          },
+          {
+            "code": "multi_token_score"
+          },
+          {
+            "code": "invalid_score_token"
+          },
+          {
+            "code": "duplicate_form",
+            "detail": "A"
+          }
+        ]
+      },
+      "\u003cscore_4_code_review\u003e": {
+        "schema_version": "evalwitness.score-evidence.v1",
+        "policy_version": "evalwitness.strict-score-policy.v1",
+        "tag": "\u003cscore_4_code_review\u003e",
+        "extraction_mode": "verifier",
+        "alignment_status": "exact",
+        "aligned_position": {
+          "token_index": 71,
+          "token_byte": 1,
+          "stream_byte": 201,
+          "raw_byte": 201
+        },
+        "requested_top_k": 20,
+        "returned_top_k": 20,
+        "visible_probability_mass": 1.000000004308718,
+        "valid_score_mass": 0.9999937039259311,
+        "unobserved_probability_mass": 0,
+        "score_support": [
+          {
+            "letter": "A",
+            "value": 1,
+            "probability": 0.9999920130408959,
+            "source_ranks": [
+              1,
+              10,
+              11,
+              13,
+              14,
+              16,
+              17
+            ],
+            "source_forms": [
+              "\u003eA",
+              ")A",
+              "}A",
+              " A",
+              "_A",
+              "\tA",
+              "=A"
+            ]
+          },
+          {
+            "letter": "B",
+            "value": 0.9473684210526315,
+            "probability": 4.1170254725864205e-10,
+            "source_ranks": [
+              20
+            ],
+            "source_forms": [
+              "\u003eb"
+            ]
+          },
+          {
+            "letter": "C",
+            "value": 0.8947368421052632,
+            "probability": 8.434501801104082e-7,
+            "source_ranks": [
+              3
+            ],
+            "source_forms": [
+              "\u003eC"
+            ]
+          },
+          {
+            "letter": "S",
+            "value": 0.05263157894736842,
+            "probability": 3.8366160609323235e-8,
+            "source_ranks": [
+              5
+            ],
+            "source_forms": [
+              "\u003eS"
+            ]
+          },
+          {
+            "letter": "T",
+            "value": 0,
+            "probability": 8.086569919259185e-7,
+            "source_ranks": [
+              4
+            ],
+            "source_forms": [
+              "\u003eT"
+            ]
+          }
+        ],
+        "visible_alternatives": [
+          {
+            "rank": 1,
+            "token": "\u003eA",
+            "logprob": "-7.986991e-06",
+            "probability": 0.9999920130408959,
+            "chosen": true,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              13,
+              14,
+              16,
+              17
+            ]
+          },
+          {
+            "rank": 2,
+            "token": "\u003e",
+            "logprob": "-11.989157",
+            "probability": 0.0000062111965463981045,
+            "diagnostic": "token_fragment"
+          },
+          {
+            "rank": 3,
+            "token": "\u003eC",
+            "logprob": "-13.985765",
+            "probability": 8.434501801104082e-7,
+            "canonical_letter": "C",
+            "canonical_value": 0.8947368421052632,
+            "canonical_source_ranks": [
+              3
+            ]
+          },
+          {
+            "rank": 4,
+            "token": "\u003eT",
+            "logprob": "-14.027891",
+            "probability": 8.086569919259185e-7,
+            "canonical_letter": "T",
+            "canonical_value": 0,
+            "canonical_source_ranks": [
+              4
+            ]
+          },
+          {
+            "rank": 5,
+            "token": "\u003eS",
+            "logprob": "-17.07609",
+            "probability": 3.8366160609323235e-8,
+            "canonical_letter": "S",
+            "canonical_value": 0.05263157894736842,
+            "canonical_source_ranks": [
+              5
+            ]
+          },
+          {
+            "rank": 6,
+            "token": "\u003e\u003c/",
+            "logprob": "-17.097944",
+            "probability": 3.75368019455132e-8,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 7,
+            "token": "\u003eThe",
+            "logprob": "-17.84652",
+            "probability": 1.7756396850584147e-8,
+            "diagnostic": "multi_token_score"
+          },
+          {
+            "rank": 8,
+            "token": "\u003e\n",
+            "logprob": "-18.276089",
+            "probability": 1.1555677064493389e-8,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 9,
+            "token": "A",
+            "logprob": "-18.34986",
+            "probability": 1.0733887971885116e-8,
+            "diagnostic": "token_fragment"
+          },
+          {
+            "rank": 10,
+            "token": ")A",
+            "logprob": "-19.660488",
+            "probability": 2.8944000037265883e-9,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              13,
+              14,
+              16,
+              17
+            ]
+          },
+          {
+            "rank": 11,
+            "token": "}A",
+            "logprob": "-20.388594",
+            "probability": 1.397481708101474e-9,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              13,
+              14,
+              16,
+              17
+            ]
+          },
+          {
+            "rank": 12,
+            "token": "\u003e\u003c",
+            "logprob": "-20.545797",
+            "probability": 1.1941908426893662e-9,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 13,
+            "token": " A",
+            "logprob": "-20.57808",
+            "probability": 1.1562544250950548e-9,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              13,
+              14,
+              16,
+              17
+            ]
+          },
+          {
+            "rank": 14,
+            "token": "_A",
+            "logprob": "-20.64904",
+            "probability": 1.0770500157189418e-9,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              13,
+              14,
+              16,
+              17
+            ]
+          },
+          {
+            "rank": 15,
+            "token": "\u003e-",
+            "logprob": "-20.69511",
+            "probability": 1.0285559589526105e-9,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 16,
+            "token": "\tA",
+            "logprob": "-20.969233",
+            "probability": 7.819479012852399e-10,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              13,
+              14,
+              16,
+              17
+            ]
+          },
+          {
+            "rank": 17,
+            "token": "=A",
+            "logprob": "-20.993961",
+            "probability": 7.62849005525998e-10,
+            "canonical_letter": "A",
+            "canonical_value": 1,
+            "canonical_source_ranks": [
+              1,
+              10,
+              11,
+              13,
+              14,
+              16,
+              17
+            ]
+          },
+          {
+            "rank": 18,
+            "token": "\u003e(",
+            "logprob": "-21.021936",
+            "probability": 7.418040434686544e-10,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 19,
+            "token": "\u003e\u003e",
+            "logprob": "-21.287241",
+            "probability": 5.689429218084992e-10,
+            "diagnostic": "invalid_score_token"
+          },
+          {
+            "rank": 20,
+            "token": "\u003eb",
+            "logprob": "-21.61072",
+            "probability": 4.1170254725864205e-10,
+            "canonical_letter": "B",
+            "canonical_value": 0.9473684210526315,
+            "canonical_source_ranks": [
+              20
+            ]
+          }
+        ],
+        "conditional_expected_score": 0.9999990661843416,
+        "conditional_variance": 8.524422306167928e-7,
+        "extracted": true,
+        "degradations": [
+          {
+            "code": "token_fragment"
+          },
+          {
+            "code": "invalid_score_token"
+          },
+          {
+            "code": "multi_token_score"
+          },
+          {
+            "code": "duplicate_form",
+            "detail": "A"
+          }
+        ]
+      }
+    },
+    "evidence_strength": {
+      "extraction_mode": "verifier",
+      "observations": 5,
+      "extracted_observations": 5,
+      "minimum_returned_top_k": 20,
+      "minimum_visible_probability_mass": 0.9999999262311224,
+      "mean_visible_probability_mass": 0.9999999982706036,
+      "minimum_valid_score_mass": 0.7652230487384407,
+      "mean_valid_score_mass": 0.9524596260231777
+    },
+    "has_logprobs": true,
+    "degenerate_logprobs": false,
+    "observed_top_k": 20,
+    "finish_reason": "stop",
+    "streaming_observed": true,
+    "usage_observed": true,
+    "usage": {
+      "input": 140007,
+      "output": 80,
+      "cached": 139904
+    },
+    "provider_request_id": "29a4746f-9646-4589-8c9e-5e60e5ab76c7",
+    "latency_milliseconds": 2795,
+    "http_attempts": 1,
+    "response_evidence_digest": "b76bd88fa17e0eb4101c83195e5e8cfc41e0e822001a593026fe3c3e48a4bab6"
+  },
+  "build": {
+    "commit": "6d39a0d05a70882a68a1ffa7ea3abeb712b3d78f",
+    "dirty": false,
+    "binary_sha256": "5aed3777982db01acf8622eb7563daa45a0e2d347bb64c23531f318cbe087ea6",
+    "go_version": "go1.27.0",
+    "target": "darwin/arm64"
+  },
+  "observed_at": "2026-08-24T22:02:10.210688Z",
+  "expires_at": "2026-08-27T22:02:10.210688Z",
+  "limitations": [
+    "independent observation; not a provider endorsement",
+    "observed behavior is limited to this request contract and freshness window"
+  ],
+  "attestation_digest": "8541ef45f2d088049e93c8e3d052f9615dfc2b603fb5c4249ca36f23713f44f4"
+}

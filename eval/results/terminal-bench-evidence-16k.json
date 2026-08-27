@@ -1,0 +1,4194 @@
+{
+  "trajectory_set": "forge_gpt54",
+  "route": {
+    "provider": "opencode-go-cn",
+    "model": "deepseek-v4-flash",
+    "base_url": "https://opencode.ai/zen/go/v1",
+    "evaluated_at": "2026-08-07T21:18:17Z",
+    "logprobe_version": "0.1.0-dev"
+  },
+  "tasks": 89,
+  "trials": 445,
+  "swing_tasks": 17,
+  "all_pass_tasks": 63,
+  "all_fail_tasks": 9,
+  "pass_at_1_score": 72.8,
+  "pass_at_1_rate": 0.8179775280898877,
+  "oracle_score": 80,
+  "oracle_rate": 0.898876404494382,
+  "verifier_score": 75,
+  "verifier_rate": 0.8426966292134831,
+  "dry_run": false,
+  "usage": {
+    "calls": 103,
+    "input_tokens": 1915990,
+    "output_tokens": 1276,
+    "cached_tokens": 2048,
+    "cache_hit_calls": 103,
+    "logprob_calls": 103,
+    "text_fallback_calls": 0,
+    "unextracted_scores": 0,
+    "estimated_input_calls": 102,
+    "extraction_mode": "verifier"
+  },
+  "duration_seconds": 0.006,
+  "details": [
+    {
+      "task_name": "adaptive-rejection-sampler",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "bn-fit-modify",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "break-filter-js-from-html",
+      "rewards": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "pass_at_1": 0.4,
+      "oracle": 1,
+      "selected_index": 4,
+      "selected_reward": 1,
+      "selection": {
+        "best_index": 4,
+        "confidence": 0.000015826535061602698,
+        "scores": [
+          0.02675666591988348,
+          0.09075766207499238,
+          0.000011097545084519304,
+          0.9999993915094724,
+          0.9999984071528609
+        ],
+        "wins": [
+          0,
+          1,
+          0,
+          2.5,
+          0.5
+        ],
+        "inconsistent_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "usage": {
+          "calls": 6,
+          "input_tokens": 15204,
+          "output_tokens": 0,
+          "cached_tokens": 0,
+          "cache_hit_calls": 6,
+          "logprob_calls": 6,
+          "text_fallback_calls": 0,
+          "unextracted_scores": 0,
+          "estimated_input_calls": 6,
+          "extraction_mode": "verifier"
+        },
+        "pairs_evaluated": 4,
+        "escalated_pairs": 2,
+        "pair_decisions": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "calls": 2,
+            "mean_difference": -0.10210423120045847,
+            "variance": 0.01576004429770165,
+            "score_mass": 0.8000653298853448,
+            "win_probability": 0.20801539009337022,
+            "confidence": 0.5839692198132596,
+            "winner": 1,
+            "inconsistent": true
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "calls": 1,
+            "mean_difference": -0.9999882319216824,
+            "variance": 0.002501493374192644,
+            "score_mass": 0.7154914842031075,
+            "win_probability": 0,
+            "confidence": 1,
+            "winner": 3
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "calls": 1,
+            "mean_difference": -0.9473450190350761,
+            "variance": 0.002502793599282602,
+            "score_mass": 0.9999928938764145,
+            "win_probability": 0,
+            "confidence": 1,
+            "winner": 3
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "calls": 2,
+            "mean_difference": 9.918440702638698e-7,
+            "variance": 0.0025003179398139464,
+            "score_mass": 0.9493761786877517,
+            "win_probability": 0.5000079132675308,
+            "confidence": 0.000015826535061602698,
+            "winner": 4,
+            "inconsistent": true
+          }
+        ]
+      },
+      "usage": {
+        "calls": 6,
+        "input_tokens": 15204,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 6,
+        "logprob_calls": 6,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0,
+        "estimated_input_calls": 6,
+        "extraction_mode": "verifier"
+      }
+    },
+    {
+      "task_name": "build-cython-ext",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "build-pmars",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "build-pov-ray",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "caffe-cifar-10",
+      "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pass_at_1": 0,
+      "oracle": 0,
+      "selected_index": 0,
+      "selected_reward": 0,
+      "skipped_reason": "all_fail",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "cancel-async-tasks",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "chess-best-move",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "circuit-fibsqrt",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "cobol-modernization",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "code-from-image",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "compile-compcert",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "configure-git-webserver",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "constraints-scheduling",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "count-dataset-tokens",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "crack-7z-hash",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "custom-memory-heap-crash",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "db-wal-recovery",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "distribution-search",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "dna-assembly",
+      "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pass_at_1": 0,
+      "oracle": 0,
+      "selected_index": 0,
+      "selected_reward": 0,
+      "skipped_reason": "all_fail",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "dna-insert",
+      "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pass_at_1": 0,
+      "oracle": 0,
+      "selected_index": 0,
+      "selected_reward": 0,
+      "skipped_reason": "all_fail",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "extract-elf",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "extract-moves-from-video",
+      "rewards": [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "pass_at_1": 0.6,
+      "oracle": 1,
+      "selected_index": 4,
+      "selected_reward": 1,
+      "selection": {
+        "best_index": 4,
+        "confidence": 0.9336564367954852,
+        "scores": [
+          0.22235832063619443,
+          0.18519757522284355,
+          0.09711605003101248,
+          0.25173038550362686,
+          0.19324423159439755
+        ],
+        "wins": [
+          0,
+          1,
+          0,
+          2,
+          1
+        ],
+        "usage": {
+          "calls": 4,
+          "input_tokens": 117797,
+          "output_tokens": 0,
+          "cached_tokens": 0,
+          "cache_hit_calls": 4,
+          "logprob_calls": 4,
+          "text_fallback_calls": 0,
+          "unextracted_scores": 0,
+          "estimated_input_calls": 4,
+          "extraction_mode": "verifier"
+        },
+        "pairs_evaluated": 4,
+        "pair_decisions": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "calls": 1,
+            "mean_difference": -0.06775687595854879,
+            "variance": 0.03005897464980965,
+            "score_mass": 0.05518015949492616,
+            "win_probability": 0.34796863349940965,
+            "confidence": 0.3040627330011807,
+            "winner": 1
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "calls": 1,
+            "mean_difference": -0.307773872491073,
+            "variance": 0.008222282095876183,
+            "score_mass": 0.8680386854419984,
+            "win_probability": 0.0003441653633209918,
+            "confidence": 0.999311669273358,
+            "winner": 3
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "calls": 1,
+            "mean_difference": -0.20536698232200207,
+            "variance": 0.005148766805329386,
+            "score_mass": 0.3911329768880101,
+            "win_probability": 0.002104474004619772,
+            "confidence": 0.9957910519907605,
+            "winner": 3
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "calls": 1,
+            "mean_difference": -0.12858993377854833,
+            "variance": 0.004904824892335732,
+            "score_mass": 0.16577243986170864,
+            "win_probability": 0.03317178160225742,
+            "confidence": 0.9336564367954852,
+            "winner": 4
+          }
+        ]
+      },
+      "usage": {
+        "calls": 4,
+        "input_tokens": 117797,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 4,
+        "logprob_calls": 4,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0,
+        "estimated_input_calls": 4,
+        "extraction_mode": "verifier"
+      }
+    },
+    {
+      "task_name": "feal-differential-cryptanalysis",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "feal-linear-cryptanalysis",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "filter-js-from-html",
+      "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pass_at_1": 0,
+      "oracle": 0,
+      "selected_index": 0,
+      "selected_reward": 0,
+      "skipped_reason": "all_fail",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "financial-document-processor",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "fix-code-vulnerability",
+      "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pass_at_1": 0,
+      "oracle": 0,
+      "selected_index": 0,
+      "selected_reward": 0,
+      "skipped_reason": "all_fail",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "fix-git",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "fix-ocaml-gc",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "gcode-to-text",
+      "rewards": [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "pass_at_1": 0.6,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "selection": {
+        "best_index": 0,
+        "confidence": 0.00014245580193450458,
+        "scores": [
+          0.9215671969693721,
+          0.8572570910887154,
+          0.9910402919966719,
+          0.9736179868461159,
+          0.6545944328998542
+        ],
+        "wins": [
+          2.5,
+          0,
+          1,
+          0.5,
+          0
+        ],
+        "inconsistent_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "usage": {
+          "calls": 7,
+          "input_tokens": 93352,
+          "output_tokens": 0,
+          "cached_tokens": 0,
+          "cache_hit_calls": 7,
+          "logprob_calls": 7,
+          "text_fallback_calls": 0,
+          "unextracted_scores": 0,
+          "estimated_input_calls": 7,
+          "extraction_mode": "verifier"
+        },
+        "pairs_evaluated": 4,
+        "escalated_pairs": 3,
+        "pair_decisions": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "calls": 2,
+            "mean_difference": 0.12493880130184343,
+            "variance": 0.024576369791185097,
+            "score_mass": 0.27789819058425974,
+            "win_probability": 0.7872639046333472,
+            "confidence": 0.5745278092666943,
+            "winner": 0,
+            "inconsistent": true
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "calls": 2,
+            "mean_difference": 0.0085022475366478,
+            "variance": 0.002593675938358839,
+            "score_mass": 0.5662314259565153,
+            "win_probability": 0.5662937113011399,
+            "confidence": 0.13258742260227985,
+            "winner": 2,
+            "inconsistent": true
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "calls": 2,
+            "mean_difference": 0.000008945420551464967,
+            "variance": 0.0025102753437185616,
+            "score_mass": 0.8344699767560464,
+            "win_probability": 0.5000712279009673,
+            "confidence": 0.00014245580193450458,
+            "winner": 0,
+            "inconsistent": true
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "calls": 1,
+            "mean_difference": 0.12794197058657208,
+            "variance": 0.013735017439979133,
+            "score_mass": 0.9989013703394649,
+            "win_probability": 0.8625148092642329,
+            "confidence": 0.7250296185284657,
+            "winner": 0
+          }
+        ]
+      },
+      "usage": {
+        "calls": 7,
+        "input_tokens": 93352,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 7,
+        "logprob_calls": 7,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0,
+        "estimated_input_calls": 7,
+        "extraction_mode": "verifier"
+      }
+    },
+    {
+      "task_name": "git-leak-recovery",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "git-multibranch",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "gpt2-codegolf",
+      "rewards": [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "pass_at_1": 0.6,
+      "oracle": 1,
+      "selected_index": 4,
+      "selected_reward": 0,
+      "selection": {
+        "best_index": 4,
+        "confidence": 0.1893684757613996,
+        "scores": [
+          0.8589444347435805,
+          0.16112282251655607,
+          0.9700496939739375,
+          0.9999385858731195,
+          0.9874759390627381
+        ],
+        "wins": [
+          1,
+          0,
+          0,
+          2.5,
+          0.5
+        ],
+        "usage": {
+          "calls": 5,
+          "input_tokens": 97709,
+          "output_tokens": 0,
+          "cached_tokens": 0,
+          "cache_hit_calls": 5,
+          "logprob_calls": 5,
+          "text_fallback_calls": 0,
+          "unextracted_scores": 0,
+          "estimated_input_calls": 5,
+          "extraction_mode": "verifier"
+        },
+        "pairs_evaluated": 4,
+        "escalated_pairs": 1,
+        "pair_decisions": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "calls": 1,
+            "mean_difference": 0.5908884243358101,
+            "variance": 0.007431702641409103,
+            "score_mass": 0.7012301703976623,
+            "win_probability": 0.9999999999964162,
+            "confidence": 0.9999999999928324,
+            "winner": 0
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "calls": 1,
+            "mean_difference": -0.029942399615024762,
+            "variance": 0.003475451615274266,
+            "score_mass": 0.827431640727925,
+            "win_probability": 0.30576060301454955,
+            "confidence": 0.3884787939709009,
+            "winner": 3
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "calls": 1,
+            "mean_difference": -0.0339746701979754,
+            "variance": 0.0025866303260812565,
+            "score_mass": 0.3973416939385256,
+            "win_probability": 0.25206109932522636,
+            "confidence": 0.4958778013495473,
+            "winner": 3
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "calls": 2,
+            "mean_difference": 0.01249543213488763,
+            "variance": 0.0027194908215638566,
+            "score_mass": 0.2651317439692509,
+            "win_probability": 0.5946842378806998,
+            "confidence": 0.1893684757613996,
+            "winner": 4
+          }
+        ]
+      },
+      "usage": {
+        "calls": 5,
+        "input_tokens": 97709,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 5,
+        "logprob_calls": 5,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0,
+        "estimated_input_calls": 5,
+        "extraction_mode": "verifier"
+      }
+    },
+    {
+      "task_name": "headless-terminal",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "hf-model-inference",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "install-windows-3.11",
+      "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pass_at_1": 0,
+      "oracle": 0,
+      "selected_index": 0,
+      "selected_reward": 0,
+      "skipped_reason": "all_fail",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "kv-store-grpc",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "large-scale-text-editing",
+      "rewards": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 0.8,
+      "oracle": 1,
+      "selected_index": 1,
+      "selected_reward": 0,
+      "selection": {
+        "best_index": 1,
+        "confidence": 0.13750944976072188,
+        "scores": [
+          0.999982955756182,
+          0.9848030407780376,
+          0.9911280723797061,
+          0.9954849088913327,
+          0.9999984917196321
+        ],
+        "wins": [
+          0.5,
+          1.5,
+          0.5,
+          1,
+          0.5
+        ],
+        "inconsistent_pairs": [
+          [
+            2,
+            3
+          ]
+        ],
+        "usage": {
+          "calls": 8,
+          "input_tokens": 57987,
+          "output_tokens": 1276,
+          "cached_tokens": 2048,
+          "cache_hit_calls": 8,
+          "logprob_calls": 8,
+          "text_fallback_calls": 0,
+          "unextracted_scores": 0,
+          "estimated_input_calls": 7,
+          "extraction_mode": "verifier"
+        },
+        "pairs_evaluated": 4,
+        "escalated_pairs": 4,
+        "pair_decisions": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "calls": 2,
+            "mean_difference": 0.01790733424800861,
+            "variance": 0.0028411868932805466,
+            "score_mass": 0.9584623994539361,
+            "win_probability": 0.6315475790185783,
+            "confidence": 0.26309515803715655,
+            "winner": 1
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "calls": 2,
+            "mean_difference": 0.00015443879803267446,
+            "variance": 0.002840800483014079,
+            "score_mass": 0.6550197548482661,
+            "win_probability": 0.5011559671816317,
+            "confidence": 0.0023119343632633793,
+            "winner": 3,
+            "inconsistent": true
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "calls": 2,
+            "mean_difference": -0.008797971571018803,
+            "variance": 0.002580155592125969,
+            "score_mass": 0.7370982088801865,
+            "win_probability": 0.43124527511963906,
+            "confidence": 0.13750944976072188,
+            "winner": 1
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "calls": 2,
+            "mean_difference": -0.018863203523665828,
+            "variance": 0.0028259680701677357,
+            "score_mass": 0.320745542397668,
+            "win_probability": 0.3613549581569649,
+            "confidence": 0.2772900836860702,
+            "winner": 1
+          }
+        ]
+      },
+      "usage": {
+        "calls": 8,
+        "input_tokens": 57987,
+        "output_tokens": 1276,
+        "cached_tokens": 2048,
+        "cache_hit_calls": 8,
+        "logprob_calls": 8,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0,
+        "estimated_input_calls": 7,
+        "extraction_mode": "verifier"
+      }
+    },
+    {
+      "task_name": "largest-eigenval",
+      "rewards": [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "pass_at_1": 0.6,
+      "oracle": 1,
+      "selected_index": 4,
+      "selected_reward": 0,
+      "selection": {
+        "best_index": 4,
+        "confidence": 0.0000392346277299227,
+        "scores": [
+          0.9999978429049161,
+          0.9999980587640002,
+          0.999962054519783,
+          0.9999960473033754,
+          0.9999981817348692
+        ],
+        "wins": [
+          0.5,
+          1,
+          0.5,
+          1.5,
+          0.5
+        ],
+        "inconsistent_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "usage": {
+          "calls": 8,
+          "input_tokens": 76848,
+          "output_tokens": 0,
+          "cached_tokens": 0,
+          "cache_hit_calls": 8,
+          "logprob_calls": 8,
+          "text_fallback_calls": 0,
+          "unextracted_scores": 0,
+          "estimated_input_calls": 8,
+          "extraction_mode": "verifier"
+        },
+        "pairs_evaluated": 4,
+        "escalated_pairs": 4,
+        "pair_decisions": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "calls": 2,
+            "mean_difference": 5.657028507299877e-7,
+            "variance": 0.002500782929860233,
+            "score_mass": 0.9736074597914276,
+            "win_probability": 0.5000045129490966,
+            "confidence": 0.000009025898193293358,
+            "winner": 1,
+            "inconsistent": true
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "calls": 2,
+            "mean_difference": -0.00003200912177436788,
+            "variance": 0.0025070790573733896,
+            "score_mass": 0.9559349057051589,
+            "win_probability": 0.49974496500293436,
+            "confidence": 0.0005100699941312792,
+            "winner": 3,
+            "inconsistent": true
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "calls": 2,
+            "mean_difference": 4.84662153577009e-7,
+            "variance": 0.0025003954740518844,
+            "score_mass": 0.8737936697697378,
+            "win_probability": 0.5000038667386685,
+            "confidence": 0.000007733477336957506,
+            "winner": 3,
+            "inconsistent": true
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "calls": 2,
+            "mean_difference": -0.0000024591300816778627,
+            "variance": 0.0025009445046540826,
+            "score_mass": 0.9253177353952774,
+            "win_probability": 0.49998038268613504,
+            "confidence": 0.0000392346277299227,
+            "winner": 4,
+            "inconsistent": true
+          }
+        ]
+      },
+      "usage": {
+        "calls": 8,
+        "input_tokens": 76848,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 8,
+        "logprob_calls": 8,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0,
+        "estimated_input_calls": 8,
+        "extraction_mode": "verifier"
+      }
+    },
+    {
+      "task_name": "llm-inference-batching-scheduler",
+      "rewards": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "pass_at_1": 0.8,
+      "oracle": 1,
+      "selected_index": 1,
+      "selected_reward": 1,
+      "selection": {
+        "best_index": 1,
+        "confidence": 0.00048649637533215717,
+        "scores": [
+          0.9999924680115313,
+          0.9999348245375422,
+          0.19988149509535136,
+          0.7718762265265031,
+          0.9999970704710461
+        ],
+        "wins": [
+          0.5,
+          2,
+          0,
+          1,
+          0.5
+        ],
+        "inconsistent_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "usage": {
+          "calls": 6,
+          "input_tokens": 167096,
+          "output_tokens": 0,
+          "cached_tokens": 0,
+          "cache_hit_calls": 6,
+          "logprob_calls": 6,
+          "text_fallback_calls": 0,
+          "unextracted_scores": 0,
+          "estimated_input_calls": 6,
+          "extraction_mode": "verifier"
+        },
+        "pairs_evaluated": 4,
+        "escalated_pairs": 2,
+        "pair_decisions": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "calls": 2,
+            "mean_difference": 0.00012263590645511524,
+            "variance": 0.002522829763526141,
+            "score_mass": 0.9867135255505671,
+            "win_probability": 0.5009740546115332,
+            "confidence": 0.0019481092230664299,
+            "winner": 1,
+            "inconsistent": true
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "calls": 1,
+            "mean_difference": -0.6689929694198948,
+            "variance": 0.011236563693492036,
+            "score_mass": 0.26971638117147284,
+            "win_probability": 1.385330183900635e-10,
+            "confidence": 0.999999999722934,
+            "winner": 3
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "calls": 1,
+            "mean_difference": 0.3250901051256787,
+            "variance": 0.00613209994346465,
+            "score_mass": 0.32504635505647655,
+            "win_probability": 0.9999834807632029,
+            "confidence": 0.9999669615264057,
+            "winner": 1
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "calls": 2,
+            "mean_difference": -0.00003052262693481467,
+            "variance": 0.002505905379383555,
+            "score_mass": 0.9637200391307101,
+            "win_probability": 0.4997567518123339,
+            "confidence": 0.00048649637533215717,
+            "winner": 1,
+            "inconsistent": true
+          }
+        ]
+      },
+      "usage": {
+        "calls": 6,
+        "input_tokens": 167096,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 6,
+        "logprob_calls": 6,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0,
+        "estimated_input_calls": 6,
+        "extraction_mode": "verifier"
+      }
+    },
+    {
+      "task_name": "log-summary-date-ranges",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "mailman",
+      "rewards": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "pass_at_1": 0.2,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 0,
+      "selection": {
+        "best_index": 0,
+        "confidence": 0.34711613150161735,
+        "scores": [
+          0.2919653186791525,
+          0.09751400309993186,
+          0.24771170494755512,
+          0.20963272946689523,
+          0.21308242823087475
+        ],
+        "wins": [
+          3,
+          0,
+          0.5,
+          0.5,
+          0
+        ],
+        "inconsistent_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "usage": {
+          "calls": 6,
+          "input_tokens": 65697,
+          "output_tokens": 0,
+          "cached_tokens": 0,
+          "cache_hit_calls": 6,
+          "logprob_calls": 6,
+          "text_fallback_calls": 0,
+          "unextracted_scores": 0,
+          "estimated_input_calls": 6,
+          "extraction_mode": "verifier"
+        },
+        "pairs_evaluated": 4,
+        "escalated_pairs": 2,
+        "pair_decisions": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "calls": 1,
+            "mean_difference": 0.03874470901606722,
+            "variance": 0.003913278535806285,
+            "score_mass": 0.7844285292985248,
+            "win_probability": 0.7321598559224382,
+            "confidence": 0.4643197118448763,
+            "winner": 0
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "calls": 2,
+            "mean_difference": 0.0076888610815139535,
+            "variance": 0.004559719065944784,
+            "score_mass": 0.3749585196459537,
+            "win_probability": 0.5453278772602231,
+            "confidence": 0.09065575452044627,
+            "winner": 3,
+            "inconsistent": true
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "calls": 2,
+            "mean_difference": 0.034164310296139117,
+            "variance": 0.005770117247620695,
+            "score_mass": 0.6356518036110654,
+            "win_probability": 0.6735580657508087,
+            "confidence": 0.34711613150161735,
+            "winner": 0,
+            "inconsistent": true
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "calls": 1,
+            "mean_difference": 0.3131478903266952,
+            "variance": 0.007655808804189282,
+            "score_mass": 0.9997551429666992,
+            "win_probability": 0.999827502134203,
+            "confidence": 0.999655004268406,
+            "winner": 0
+          }
+        ]
+      },
+      "usage": {
+        "calls": 6,
+        "input_tokens": 65697,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 6,
+        "logprob_calls": 6,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0,
+        "estimated_input_calls": 6,
+        "extraction_mode": "verifier"
+      }
+    },
+    {
+      "task_name": "make-doom-for-mips",
+      "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pass_at_1": 0,
+      "oracle": 0,
+      "selected_index": 0,
+      "selected_reward": 0,
+      "skipped_reason": "all_fail",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "make-mips-interpreter",
+      "rewards": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "pass_at_1": 0.2,
+      "oracle": 1,
+      "selected_index": 2,
+      "selected_reward": 0,
+      "selection": {
+        "best_index": 2,
+        "confidence": 0.05924038458783243,
+        "scores": [
+          0.28416696648860845,
+          0.2827511238397729,
+          0.7201482908515836,
+          0.6476877827454138,
+          0.07179168655816577
+        ],
+        "wins": [
+          1,
+          0,
+          2.5,
+          0.5,
+          0
+        ],
+        "usage": {
+          "calls": 5,
+          "input_tokens": 150334,
+          "output_tokens": 0,
+          "cached_tokens": 0,
+          "cache_hit_calls": 5,
+          "logprob_calls": 5,
+          "text_fallback_calls": 0,
+          "unextracted_scores": 0,
+          "estimated_input_calls": 5,
+          "extraction_mode": "verifier"
+        },
+        "pairs_evaluated": 4,
+        "escalated_pairs": 1,
+        "pair_decisions": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "calls": 1,
+            "mean_difference": 0.08509967718011313,
+            "variance": 0.009444519894133453,
+            "score_mass": 0.9997499128841902,
+            "win_probability": 0.8093938991747291,
+            "confidence": 0.6187877983494583,
+            "winner": 0
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "calls": 2,
+            "mean_difference": 0.0038537727925916365,
+            "variance": 0.002689164642226715,
+            "score_mass": 0.33209063193730715,
+            "win_probability": 0.5296201922939162,
+            "confidence": 0.05924038458783243,
+            "winner": 2
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "calls": 1,
+            "mean_difference": -0.7107628990241937,
+            "variance": 0.00939571346915376,
+            "score_mass": 0.2806270236761116,
+            "win_probability": 1.1285417045314716e-13,
+            "confidence": 0.9999999999997743,
+            "winner": 2
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "calls": 1,
+            "mean_difference": 0.5258655994770548,
+            "variance": 0.005794616756611812,
+            "score_mass": 0.05979185416602688,
+            "win_probability": 0.9999999999975451,
+            "confidence": 0.9999999999950901,
+            "winner": 2
+          }
+        ]
+      },
+      "usage": {
+        "calls": 5,
+        "input_tokens": 150334,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 5,
+        "logprob_calls": 5,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0,
+        "estimated_input_calls": 5,
+        "extraction_mode": "verifier"
+      }
+    },
+    {
+      "task_name": "mcmc-sampling-stan",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "merge-diff-arc-agi-task",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "model-extraction-relu-logits",
+      "rewards": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "pass_at_1": 0.2,
+      "oracle": 1,
+      "selected_index": 1,
+      "selected_reward": 1,
+      "selection": {
+        "best_index": 1,
+        "confidence": 0.5164350624604355,
+        "scores": [
+          0.8410834817502045,
+          0.9999913855489361,
+          0.9999929686583188,
+          0.9506887435644745,
+          0.9648885905322699
+        ],
+        "wins": [
+          0,
+          3,
+          0.5,
+          0.5,
+          0
+        ],
+        "inconsistent_pairs": [
+          [
+            2,
+            3
+          ]
+        ],
+        "usage": {
+          "calls": 5,
+          "input_tokens": 50904,
+          "output_tokens": 0,
+          "cached_tokens": 0,
+          "cache_hit_calls": 5,
+          "logprob_calls": 5,
+          "text_fallback_calls": 0,
+          "unextracted_scores": 0,
+          "estimated_input_calls": 5,
+          "extraction_mode": "verifier"
+        },
+        "pairs_evaluated": 4,
+        "escalated_pairs": 1,
+        "pair_decisions": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "calls": 1,
+            "mean_difference": -0.15891508250164632,
+            "variance": 0.009055976811880475,
+            "score_mass": 0.9849197953585069,
+            "win_probability": 0.04746691133966785,
+            "confidence": 0.9050661773206643,
+            "winner": 1
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "calls": 2,
+            "mean_difference": -0.0000065225537589364,
+            "variance": 0.002501226016426066,
+            "score_mass": 0.9920317461638999,
+            "win_probability": 0.4999479703070228,
+            "confidence": 0.00010405938595436925,
+            "winner": 3,
+            "inconsistent": true
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "calls": 1,
+            "mean_difference": 0.09860177120260782,
+            "variance": 0.006348443332296869,
+            "score_mass": 0.6353535271147972,
+            "win_probability": 0.8920523536853522,
+            "confidence": 0.7841047073707044,
+            "winner": 1
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "calls": 1,
+            "mean_difference": 0.035107234743208426,
+            "variance": 0.0025111770155942657,
+            "score_mass": 0.3992348871968097,
+            "win_probability": 0.7582175312302177,
+            "confidence": 0.5164350624604355,
+            "winner": 1
+          }
+        ]
+      },
+      "usage": {
+        "calls": 5,
+        "input_tokens": 50904,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 5,
+        "logprob_calls": 5,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0,
+        "estimated_input_calls": 5,
+        "extraction_mode": "verifier"
+      }
+    },
+    {
+      "task_name": "modernize-scientific-stack",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "mteb-leaderboard",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "pass_at_1": 0.8,
+      "oracle": 1,
+      "selected_index": 1,
+      "selected_reward": 1,
+      "selection": {
+        "best_index": 1,
+        "confidence": 0.9908178240110823,
+        "scores": [
+          0.7815017922523353,
+          0.9999837509628148,
+          0.9080517044404663,
+          0.7582986740639015,
+          0.31273071713718753
+        ],
+        "wins": [
+          0,
+          3,
+          0,
+          1,
+          0
+        ],
+        "usage": {
+          "calls": 5,
+          "input_tokens": 165971,
+          "output_tokens": 0,
+          "cached_tokens": 0,
+          "cache_hit_calls": 5,
+          "logprob_calls": 5,
+          "text_fallback_calls": 0,
+          "unextracted_scores": 0,
+          "estimated_input_calls": 5,
+          "extraction_mode": "verifier"
+        },
+        "pairs_evaluated": 4,
+        "escalated_pairs": 1,
+        "pair_decisions": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "calls": 1,
+            "mean_difference": -0.21848973596876198,
+            "variance": 0.007033659306607651,
+            "score_mass": 0.22714302063773764,
+            "win_probability": 0.004591087994458842,
+            "confidence": 0.9908178240110823,
+            "winner": 1
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "calls": 2,
+            "mean_difference": -0.03807044701816875,
+            "variance": 0.006263794954650981,
+            "score_mass": 0.7015240676495063,
+            "win_probability": 0.3152487507012838,
+            "confidence": 0.36950249859743245,
+            "winner": 3
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "calls": 1,
+            "mean_difference": 0.42950458578284223,
+            "variance": 0.00903486184195269,
+            "score_mass": 0.8683556976535984,
+            "win_probability": 0.9999968879879916,
+            "confidence": 0.9999937759759832,
+            "winner": 1
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "calls": 1,
+            "mean_difference": 0.6872492250781492,
+            "variance": 0.008180473242184832,
+            "score_mass": 0.9333956830131477,
+            "win_probability": 0.999999999999985,
+            "confidence": 0.99999999999997,
+            "winner": 1
+          }
+        ]
+      },
+      "usage": {
+        "calls": 5,
+        "input_tokens": 165971,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 5,
+        "logprob_calls": 5,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0,
+        "estimated_input_calls": 5,
+        "extraction_mode": "verifier"
+      }
+    },
+    {
+      "task_name": "mteb-retrieve",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "multi-source-data-merger",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "nginx-request-logging",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "openssl-selfsigned-cert",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "overfull-hbox",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "password-recovery",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "path-tracing",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "path-tracing-reverse",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "polyglot-c-py",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "polyglot-rust-c",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "portfolio-optimization",
+      "rewards": [
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "pass_at_1": 0.8,
+      "oracle": 1,
+      "selected_index": 4,
+      "selected_reward": 1,
+      "selection": {
+        "best_index": 4,
+        "confidence": 0.4477234489814812,
+        "scores": [
+          0.9873868398575798,
+          0.595943606987175,
+          0.9999977874112873,
+          0.9999775087237914,
+          0.9999940937663798
+        ],
+        "wins": [
+          1.5,
+          0,
+          1,
+          0.5,
+          1
+        ],
+        "inconsistent_pairs": [
+          [
+            2,
+            3
+          ]
+        ],
+        "usage": {
+          "calls": 7,
+          "input_tokens": 55487,
+          "output_tokens": 0,
+          "cached_tokens": 0,
+          "cache_hit_calls": 7,
+          "logprob_calls": 7,
+          "text_fallback_calls": 0,
+          "unextracted_scores": 0,
+          "estimated_input_calls": 7,
+          "extraction_mode": "verifier"
+        },
+        "pairs_evaluated": 4,
+        "escalated_pairs": 3,
+        "pair_decisions": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "calls": 1,
+            "mean_difference": 0.40405426969840386,
+            "variance": 0.00683011795656983,
+            "score_mass": 0.9081587909203498,
+            "win_probability": 0.99999949341363,
+            "confidence": 0.9999989868272601,
+            "winner": 0
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "calls": 2,
+            "mean_difference": 0.00002062747364561801,
+            "variance": 0.00250386367785943,
+            "score_mass": 0.9808133692909385,
+            "win_probability": 0.5001644563905998,
+            "confidence": 0.00032891278119961953,
+            "winner": 2,
+            "inconsistent": true
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "calls": 2,
+            "mean_difference": -0.000021523742436191373,
+            "variance": 0.002503216250566953,
+            "score_mass": 0.603290324890951,
+            "win_probability": 0.4998283757493268,
+            "confidence": 0.0003432485013463715,
+            "winner": 0
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "calls": 2,
+            "mean_difference": -0.037807365761920564,
+            "variance": 0.0040463648819148304,
+            "score_mass": 0.48647055538739875,
+            "win_probability": 0.2761382755092594,
+            "confidence": 0.4477234489814812,
+            "winner": 4
+          }
+        ]
+      },
+      "usage": {
+        "calls": 7,
+        "input_tokens": 55487,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 7,
+        "logprob_calls": 7,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0,
+        "estimated_input_calls": 7,
+        "extraction_mode": "verifier"
+      }
+    },
+    {
+      "task_name": "protein-assembly",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "prove-plus-comm",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "pypi-server",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "pytorch-model-cli",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "pytorch-model-recovery",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "qemu-alpine-ssh",
+      "rewards": [
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "pass_at_1": 0.8,
+      "oracle": 1,
+      "selected_index": 2,
+      "selected_reward": 1,
+      "selection": {
+        "best_index": 2,
+        "confidence": 0.4692578188369768,
+        "scores": [
+          0.9640474919365303,
+          0.9568263784922363,
+          0.9880546093409065,
+          0.05949739227875373,
+          0.9473005941981484
+        ],
+        "wins": [
+          0.5,
+          0.5,
+          3,
+          0,
+          0
+        ],
+        "inconsistent_pairs": [
+          [
+            0,
+            1
+          ]
+        ],
+        "usage": {
+          "calls": 6,
+          "input_tokens": 199379,
+          "output_tokens": 0,
+          "cached_tokens": 0,
+          "cache_hit_calls": 6,
+          "logprob_calls": 6,
+          "text_fallback_calls": 0,
+          "unextracted_scores": 0,
+          "estimated_input_calls": 6,
+          "extraction_mode": "verifier"
+        },
+        "pairs_evaluated": 4,
+        "escalated_pairs": 2,
+        "pair_decisions": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "calls": 2,
+            "mean_difference": -0.001244552792475928,
+            "variance": 0.0028380127980072965,
+            "score_mass": 0.45626847272874044,
+            "win_probability": 0.4906808412121263,
+            "confidence": 0.01863831757574741,
+            "winner": 1,
+            "inconsistent": true
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "calls": 1,
+            "mean_difference": 0.9403712423233702,
+            "variance": 0.0031929593194666107,
+            "score_mass": 0.3987051332373047,
+            "win_probability": 1,
+            "confidence": 1,
+            "winner": 2
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "calls": 2,
+            "mean_difference": -0.033532121459606934,
+            "variance": 0.002861292688179912,
+            "score_mass": 0.5262347125198665,
+            "win_probability": 0.2653710905815116,
+            "confidence": 0.4692578188369768,
+            "winner": 2
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "calls": 1,
+            "mean_difference": 0.03510176550737398,
+            "variance": 0.002509720933148202,
+            "score_mass": 0.6499513383274804,
+            "win_probability": 0.7582468790017713,
+            "confidence": 0.5164937580035427,
+            "winner": 2
+          }
+        ]
+      },
+      "usage": {
+        "calls": 6,
+        "input_tokens": 199379,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 6,
+        "logprob_calls": 6,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0,
+        "estimated_input_calls": 6,
+        "extraction_mode": "verifier"
+      }
+    },
+    {
+      "task_name": "qemu-startup",
+      "rewards": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "pass_at_1": 0.6,
+      "oracle": 1,
+      "selected_index": 1,
+      "selected_reward": 1,
+      "selection": {
+        "best_index": 1,
+        "confidence": 0.1373026079457631,
+        "scores": [
+          0.944158549396282,
+          0.999997154121687,
+          0.7451460177026386,
+          0.9955976794534371,
+          0.8170995647159804
+        ],
+        "wins": [
+          0,
+          2.5,
+          0,
+          1.5,
+          0
+        ],
+        "usage": {
+          "calls": 6,
+          "input_tokens": 40840,
+          "output_tokens": 0,
+          "cached_tokens": 0,
+          "cache_hit_calls": 6,
+          "logprob_calls": 6,
+          "text_fallback_calls": 0,
+          "unextracted_scores": 0,
+          "estimated_input_calls": 6,
+          "extraction_mode": "verifier"
+        },
+        "pairs_evaluated": 4,
+        "escalated_pairs": 2,
+        "pair_decisions": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "calls": 1,
+            "mean_difference": -0.055839638931424185,
+            "variance": 0.003943390416234065,
+            "score_mass": 0.20223968400969256,
+            "win_probability": 0.18694325819725288,
+            "confidence": 0.6261134836054942,
+            "winner": 1
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "calls": 1,
+            "mean_difference": -0.25483144144775227,
+            "variance": 0.005953988075729522,
+            "score_mass": 0.95937797571113,
+            "win_probability": 0.00047905484441840285,
+            "confidence": 0.9990418903111632,
+            "winner": 3
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "calls": 2,
+            "mean_difference": 0.008781735563144322,
+            "variance": 0.002578470386885251,
+            "score_mass": 0.9707261601633806,
+            "win_probability": 0.5686513039728815,
+            "confidence": 0.1373026079457631,
+            "winner": 1
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "calls": 2,
+            "mean_difference": 0.18289407400174662,
+            "variance": 0.03677247032621846,
+            "score_mass": 0.3112666647711458,
+            "win_probability": 0.8298969437758403,
+            "confidence": 0.6597938875516807,
+            "winner": 1
+          }
+        ]
+      },
+      "usage": {
+        "calls": 6,
+        "input_tokens": 40840,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 6,
+        "logprob_calls": 6,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0,
+        "estimated_input_calls": 6,
+        "extraction_mode": "verifier"
+      }
+    },
+    {
+      "task_name": "query-optimize",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "raman-fitting",
+      "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pass_at_1": 0,
+      "oracle": 0,
+      "selected_index": 0,
+      "selected_reward": 0,
+      "skipped_reason": "all_fail",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "regex-chess",
+      "rewards": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "pass_at_1": 0.4,
+      "oracle": 1,
+      "selected_index": 1,
+      "selected_reward": 1,
+      "selection": {
+        "best_index": 1,
+        "confidence": 0.022450654059817943,
+        "scores": [
+          0.20898028066570865,
+          0.9821152461256882,
+          0.9992396401861882,
+          0.8261599981035519,
+          0.8958936716031533
+        ],
+        "wins": [
+          0,
+          2.5,
+          1.5,
+          0,
+          0
+        ],
+        "usage": {
+          "calls": 6,
+          "input_tokens": 162040,
+          "output_tokens": 0,
+          "cached_tokens": 0,
+          "cache_hit_calls": 6,
+          "logprob_calls": 6,
+          "text_fallback_calls": 0,
+          "unextracted_scores": 0,
+          "estimated_input_calls": 6,
+          "extraction_mode": "verifier"
+        },
+        "pairs_evaluated": 4,
+        "escalated_pairs": 2,
+        "pair_decisions": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "calls": 1,
+            "mean_difference": -0.7904493819597523,
+            "variance": 0.005174786956175072,
+            "score_mass": 0.5818562507244731,
+            "win_probability": 0,
+            "confidence": 1,
+            "winner": 1
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "calls": 2,
+            "mean_difference": 0.17378726375761921,
+            "variance": 0.029142515582192486,
+            "score_mass": 0.5854577923837193,
+            "win_probability": 0.8456647251578695,
+            "confidence": 0.691329450315739,
+            "winner": 2
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "calls": 2,
+            "mean_difference": 0.00141796857743004,
+            "variance": 0.0025388713908942972,
+            "score_mass": 0.25839979612891945,
+            "win_probability": 0.511225327029909,
+            "confidence": 0.022450654059817943,
+            "winner": 1
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "calls": 1,
+            "mean_difference": 0.051072417059815356,
+            "variance": 0.002578679201828117,
+            "score_mass": 0.4328154965297423,
+            "win_probability": 0.8427308028448846,
+            "confidence": 0.6854616056897691,
+            "winner": 1
+          }
+        ]
+      },
+      "usage": {
+        "calls": 6,
+        "input_tokens": 162040,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 6,
+        "logprob_calls": 6,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0,
+        "estimated_input_calls": 6,
+        "extraction_mode": "verifier"
+      }
+    },
+    {
+      "task_name": "regex-log",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "reshard-c4-data",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "rstan-to-pystan",
+      "rewards": [
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 0.8,
+      "oracle": 1,
+      "selected_index": 4,
+      "selected_reward": 1,
+      "selection": {
+        "best_index": 4,
+        "confidence": 0.0709040881489793,
+        "scores": [
+          0.1268828190967846,
+          0.9909482646950681,
+          0.9866511255668442,
+          0.9999821670673065,
+          0.9999898654594745
+        ],
+        "wins": [
+          0,
+          1.5,
+          1.5,
+          0.5,
+          0.5
+        ],
+        "usage": {
+          "calls": 7,
+          "input_tokens": 215685,
+          "output_tokens": 0,
+          "cached_tokens": 0,
+          "cache_hit_calls": 7,
+          "logprob_calls": 7,
+          "text_fallback_calls": 0,
+          "unextracted_scores": 0,
+          "estimated_input_calls": 7,
+          "extraction_mode": "verifier"
+        },
+        "pairs_evaluated": 4,
+        "escalated_pairs": 3,
+        "pair_decisions": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "calls": 1,
+            "mean_difference": -0.8550458295415513,
+            "variance": 0.005199332945459344,
+            "score_mass": 0.7335504142082304,
+            "win_probability": 0,
+            "confidence": 1,
+            "winner": 1
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "calls": 2,
+            "mean_difference": -0.01781447775496625,
+            "variance": 0.0028301451166279096,
+            "score_mass": 0.5150547805274969,
+            "win_probability": 0.36886375774276803,
+            "confidence": 0.26227248451446394,
+            "winner": 2
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "calls": 2,
+            "mean_difference": 0.01764620014219792,
+            "variance": 0.0025075164845346468,
+            "score_mass": 0.26151746993142916,
+            "win_probability": 0.6377288419065174,
+            "confidence": 0.2754576838130347,
+            "winner": 2
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "calls": 2,
+            "mean_difference": -0.004525858680884731,
+            "variance": 0.0025869850877329017,
+            "score_mass": 0.16103706232760606,
+            "win_probability": 0.46454795592551035,
+            "confidence": 0.0709040881489793,
+            "winner": 4
+          }
+        ]
+      },
+      "usage": {
+        "calls": 7,
+        "input_tokens": 215685,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 7,
+        "logprob_calls": 7,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0,
+        "estimated_input_calls": 7,
+        "extraction_mode": "verifier"
+      }
+    },
+    {
+      "task_name": "sam-cell-seg",
+      "rewards": [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "pass_at_1": 0.6,
+      "oracle": 1,
+      "selected_index": 4,
+      "selected_reward": 1,
+      "selection": {
+        "best_index": 4,
+        "confidence": 0.13180463635497186,
+        "scores": [
+          0.8270320863029136,
+          0.9881361457784464,
+          0.9999562477632604,
+          0.4492648878486866,
+          0.9824081807707408
+        ],
+        "wins": [
+          0,
+          2,
+          1.5,
+          0,
+          0.5
+        ],
+        "usage": {
+          "calls": 6,
+          "input_tokens": 183660,
+          "output_tokens": 0,
+          "cached_tokens": 0,
+          "cache_hit_calls": 6,
+          "logprob_calls": 6,
+          "text_fallback_calls": 0,
+          "unextracted_scores": 0,
+          "estimated_input_calls": 6,
+          "extraction_mode": "verifier"
+        },
+        "pairs_evaluated": 4,
+        "escalated_pairs": 2,
+        "pair_decisions": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "calls": 1,
+            "mean_difference": -0.17256358799793925,
+            "variance": 0.005440574748271981,
+            "score_mass": 0.852372938279998,
+            "win_probability": 0.009654267579025322,
+            "confidence": 0.9806914648419494,
+            "winner": 1
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "calls": 1,
+            "mean_difference": 0.550659252182879,
+            "variance": 0.008152734052149242,
+            "score_mass": 0.707235397454731,
+            "win_probability": 0.9999999994650469,
+            "confidence": 0.9999999989300938,
+            "winner": 2
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "calls": 2,
+            "mean_difference": -0.008904184716864494,
+            "variance": 0.0025853015865517567,
+            "score_mass": 0.8819476478541024,
+            "win_probability": 0.4304922271782404,
+            "confidence": 0.13901554564351915,
+            "winner": 1
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "calls": 2,
+            "mean_difference": -0.008679588514345138,
+            "variance": 0.002735505175026472,
+            "score_mass": 0.38594213799464006,
+            "win_probability": 0.43409768182251407,
+            "confidence": 0.13180463635497186,
+            "winner": 4
+          }
+        ]
+      },
+      "usage": {
+        "calls": 6,
+        "input_tokens": 183660,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 6,
+        "logprob_calls": 6,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0,
+        "estimated_input_calls": 6,
+        "extraction_mode": "verifier"
+      }
+    },
+    {
+      "task_name": "sanitize-git-repo",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "schemelike-metacircular-eval",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "sparql-university",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "sqlite-db-truncate",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "sqlite-with-gcov",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "torch-pipeline-parallelism",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "torch-tensor-parallelism",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "train-fasttext",
+      "rewards": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pass_at_1": 0,
+      "oracle": 0,
+      "selected_index": 0,
+      "selected_reward": 0,
+      "skipped_reason": "all_fail",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "tune-mjcf",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "video-processing",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "vulnerable-secret",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "winning-avg-corewars",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    },
+    {
+      "task_name": "write-compressor",
+      "rewards": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "pass_at_1": 1,
+      "oracle": 1,
+      "selected_index": 0,
+      "selected_reward": 1,
+      "skipped_reason": "all_pass",
+      "usage": {
+        "calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_tokens": 0,
+        "cache_hit_calls": 0,
+        "logprob_calls": 0,
+        "text_fallback_calls": 0,
+        "unextracted_scores": 0
+      }
+    }
+  ],
+  "baselines": [
+    {
+      "name": "first listed",
+      "feature": "none",
+      "order": "fewest",
+      "decidable_solved": 10,
+      "decidable_total": 17,
+      "score": 73,
+      "paired_tasks": 17,
+      "both_correct": 7,
+      "both_wrong": 2,
+      "subject_only": 5,
+      "baseline_only": 3,
+      "discordant": 8,
+      "mcnemar_p": 0.7265625000000023,
+      "detectable_split": 8,
+      "detectable": true
+    },
+    {
+      "name": "fewest steps",
+      "feature": "steps",
+      "order": "fewest",
+      "decidable_solved": 10,
+      "decidable_total": 17,
+      "score": 73,
+      "paired_tasks": 17,
+      "both_correct": 7,
+      "both_wrong": 2,
+      "subject_only": 5,
+      "baseline_only": 3,
+      "discordant": 8,
+      "mcnemar_p": 0.7265625000000023,
+      "detectable_split": 8,
+      "detectable": true
+    },
+    {
+      "name": "most steps",
+      "feature": "steps",
+      "order": "most",
+      "decidable_solved": 8,
+      "decidable_total": 17,
+      "score": 71,
+      "paired_tasks": 17,
+      "both_correct": 7,
+      "both_wrong": 4,
+      "subject_only": 5,
+      "baseline_only": 1,
+      "discordant": 6,
+      "mcnemar_p": 0.2187500000000001,
+      "detectable_split": 6,
+      "detectable": true
+    },
+    {
+      "name": "fewest output tokens",
+      "feature": "output tokens",
+      "order": "fewest",
+      "decidable_solved": 10,
+      "decidable_total": 17,
+      "score": 73,
+      "paired_tasks": 17,
+      "both_correct": 7,
+      "both_wrong": 2,
+      "subject_only": 5,
+      "baseline_only": 3,
+      "discordant": 8,
+      "mcnemar_p": 0.7265625000000023,
+      "detectable_split": 8,
+      "detectable": true
+    },
+    {
+      "name": "most output tokens",
+      "feature": "output tokens",
+      "order": "most",
+      "decidable_solved": 10,
+      "decidable_total": 17,
+      "score": 73,
+      "paired_tasks": 17,
+      "both_correct": 7,
+      "both_wrong": 2,
+      "subject_only": 5,
+      "baseline_only": 3,
+      "discordant": 8,
+      "mcnemar_p": 0.7265625000000023,
+      "detectable_split": 8,
+      "detectable": true
+    },
+    {
+      "name": "fewest duration",
+      "feature": "duration",
+      "order": "fewest",
+      "decidable_solved": 12,
+      "decidable_total": 17,
+      "score": 75,
+      "paired_tasks": 17,
+      "both_correct": 9,
+      "both_wrong": 2,
+      "subject_only": 3,
+      "baseline_only": 3,
+      "discordant": 6,
+      "mcnemar_p": 1,
+      "detectable_split": 6,
+      "detectable": true
+    },
+    {
+      "name": "most duration",
+      "feature": "duration",
+      "order": "most",
+      "decidable_solved": 7,
+      "decidable_total": 17,
+      "score": 70,
+      "paired_tasks": 17,
+      "both_correct": 6,
+      "both_wrong": 4,
+      "subject_only": 6,
+      "baseline_only": 1,
+      "discordant": 7,
+      "mcnemar_p": 0.12499999999999985,
+      "detectable_split": 7,
+      "detectable": true
+    },
+    {
+      "name": "fewest cost",
+      "feature": "cost",
+      "order": "fewest",
+      "decidable_solved": 10,
+      "decidable_total": 17,
+      "score": 73,
+      "paired_tasks": 17,
+      "both_correct": 7,
+      "both_wrong": 2,
+      "subject_only": 5,
+      "baseline_only": 3,
+      "discordant": 8,
+      "mcnemar_p": 0.7265625000000023,
+      "detectable_split": 8,
+      "detectable": true
+    },
+    {
+      "name": "most cost",
+      "feature": "cost",
+      "order": "most",
+      "decidable_solved": 10,
+      "decidable_total": 17,
+      "score": 73,
+      "paired_tasks": 17,
+      "both_correct": 7,
+      "both_wrong": 2,
+      "subject_only": 5,
+      "baseline_only": 3,
+      "discordant": 8,
+      "mcnemar_p": 0.7265625000000023,
+      "detectable_split": 8,
+      "detectable": true
+    },
+    {
+      "name": "fewest trace bytes",
+      "feature": "trace bytes",
+      "order": "fewest",
+      "decidable_solved": 11,
+      "decidable_total": 17,
+      "score": 74,
+      "paired_tasks": 17,
+      "both_correct": 7,
+      "both_wrong": 1,
+      "subject_only": 5,
+      "baseline_only": 4,
+      "discordant": 9,
+      "mcnemar_p": 1,
+      "detectable_split": 8,
+      "detectable": true
+    },
+    {
+      "name": "most trace bytes",
+      "feature": "trace bytes",
+      "order": "most",
+      "decidable_solved": 10,
+      "decidable_total": 17,
+      "score": 73,
+      "paired_tasks": 17,
+      "both_correct": 9,
+      "both_wrong": 4,
+      "subject_only": 3,
+      "baseline_only": 1,
+      "discordant": 4,
+      "mcnemar_p": 0.6250000000000001,
+      "detectable_split": 0,
+      "detectable": false
+    },
+    {
+      "name": "fewest error words",
+      "feature": "error words",
+      "order": "fewest",
+      "decidable_solved": 12,
+      "decidable_total": 17,
+      "score": 75,
+      "paired_tasks": 17,
+      "both_correct": 8,
+      "both_wrong": 1,
+      "subject_only": 4,
+      "baseline_only": 4,
+      "discordant": 8,
+      "mcnemar_p": 1,
+      "detectable_split": 8,
+      "detectable": true
+    },
+    {
+      "name": "most error words",
+      "feature": "error words",
+      "order": "most",
+      "decidable_solved": 8,
+      "decidable_total": 17,
+      "score": 71,
+      "paired_tasks": 17,
+      "both_correct": 6,
+      "both_wrong": 3,
+      "subject_only": 6,
+      "baseline_only": 2,
+      "discordant": 8,
+      "mcnemar_p": 0.2890625000000008,
+      "detectable_split": 8,
+      "detectable": true
+    }
+  ],
+  "calibration": {
+    "count": 33,
+    "bins": [
+      {
+        "lower": 0,
+        "upper": 0.1,
+        "count": 9,
+        "mean_predicted": 0.006618868713907439,
+        "mean_observed": 0.1111111111111111
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "count": 1,
+        "mean_predicted": 0.18694325819725288,
+        "mean_observed": 0
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "count": 2,
+        "mean_predicted": 0.35466179582818724,
+        "mean_observed": 0.5
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "count": 3,
+        "mean_predicted": 0.4550293073150291,
+        "mean_observed": 0.3333333333333333
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "count": 6,
+        "mean_predicted": 0.530170992932336,
+        "mean_observed": 0.8333333333333334
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "count": 1,
+        "mean_predicted": 0.6315475790185783,
+        "mean_observed": 1
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "count": 2,
+        "mean_predicted": 0.7727407179317825,
+        "mean_observed": 1
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "count": 5,
+        "mean_predicted": 0.854571926945636,
+        "mean_observed": 0.8
+      },
+      {
+        "lower": 0.9,
+        "upper": 1,
+        "count": 4,
+        "mean_predicted": 0.999999999865362,
+        "mean_observed": 0.75
+      }
+    ],
+    "ece": 0.1726649221749778,
+    "mce": 0.3684524209814217,
+    "brier": 0.1705291903774077,
+    "auc": 0.8444444444444444,
+    "accuracy": 0.8181818181818182,
+    "monotone": false,
+    "low_sample": false
+  },
+  "plan": {
+    "strategy": "dynamic-single-elimination",
+    "swing_tasks": 17,
+    "pair_matches": 68,
+    "evidence_tokens_per_trajectory": 16000,
+    "bundled_criteria": true,
+    "calls": {
+      "best": 68,
+      "expected": 85,
+      "worst": 136
+    },
+    "estimated_input_tokens": {
+      "best": 1081584,
+      "expected": 1682700,
+      "worst": 3165376
+    },
+    "estimated_cost_usd": {
+      "best": 0,
+      "expected": 0,
+      "worst": 0
+    },
+    "estimated_duration_seconds": {
+      "best": 51,
+      "expected": 6120,
+      "worst": 12240
+    },
+    "limits": {
+      "max_calls": 170,
+      "max_estimated_input_tokens": 3956720
+    },
+    "hard_duration_seconds": 12240,
+    "call_method": "logical model requests before disk-cache hits; hard call budget counts every outbound provider attempt, including retries, and a limit derived from the plan carries 25% retry headroom",
+    "token_method": "preprocessed prompt bytes / 4; output cost reserves max_tokens per call",
+    "duration_method": "best assumes one second per concurrency wave; expected uses half the request timeout; worst uses the full request timeout"
+  },
+  "budget": {
+    "calls": 0,
+    "estimated_input_tokens": 0,
+    "estimated_cost_usd": 0,
+    "elapsed_seconds": 0.006115416
+  },
+  "escalation": {
+    "pairs_evaluated": 68,
+    "escalated_pairs": 35,
+    "total_pair_calls": 103,
+    "one_call_pairs": 33,
+    "two_call_pairs": 35,
+    "three_call_pairs": 0,
+    "four_call_pairs": 0,
+    "inconsistent_pairs": 17,
+    "mean_confidence": 0.5042090652176355,
+    "mean_score_mass": 0.629096537462311
+  }
+}

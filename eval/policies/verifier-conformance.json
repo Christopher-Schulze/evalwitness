@@ -1,0 +1,6 @@
+{
+  "version": "verifier-conformance-v1",
+  "requirements": {
+    "protocol_conformance": "measured"
+  }
+}

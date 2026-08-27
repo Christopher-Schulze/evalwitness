@@ -1,0 +1,505 @@
+{
+  "schema_version": "evalwitness.relation-audit-plan.v1",
+  "canonical_policy": "evalwitness.relation-canonical-json.v1",
+  "protocol_version": "evalwitness.controlled-relation-review.v1",
+  "review_objective": "controlled_relation",
+  "source_corpus_digest": "6f60fc2ceac52fa9efbf4f5b39dc132ae62e849987cb08b5753f09941a8b020a",
+  "source_corpus_version": "evalwitness-controlled-corruption.v1",
+  "primary_sample_rule": "all and only frozen corpus cases whose mutation manifest has review.required=true; case bindings include exact source, program, manifest, witness, license, privacy, lineage, packet, and regeneration commitments",
+  "primary_sample_size": 31,
+  "pilot_sample_size": 8,
+  "primary_reviewers": 2,
+  "tie_break_reviewers": 1,
+  "rubric_version": "evalwitness.relation-rubric.v1",
+  "commit_reveal_rule": "both complete primary judgment batches and post-label condition probes must be committed before any family, direction, source-condition, or mapping reveal",
+  "unresolved_rule": "resolve unresolved when any required axis is indeterminate, information sufficiency is insufficient, both support and contradiction match, or neither deterministic rule matches",
+  "reviewer_forbidden_inputs": [
+    "candidate_order",
+    "desired_conclusion",
+    "expected_relation",
+    "formal_validator_result",
+    "mutation_family",
+    "mutation_operator",
+    "provider_identity",
+    "source_condition",
+    "verifier_confidence",
+    "verifier_decision",
+    "verifier_score"
+  ],
+  "reason_codes": [
+    "ambiguous_task",
+    "causal_integrity_differs",
+    "evidence_only_change",
+    "evidence_strength_differs",
+    "executable_support_differs",
+    "hidden_context_required",
+    "insufficient_information",
+    "multi_factor_change",
+    "no_judgment_relevant_change",
+    "presentation_differs",
+    "task_quality_differs",
+    "untrusted_content_controls"
+  ],
+  "axes": [
+    {
+      "id": "causal_integrity_preservation",
+      "question": "Which side better preserves dependency and causal meaning?",
+      "allowed_ratings": [
+        "equal",
+        "indeterminate",
+        "left",
+        "not_applicable",
+        "right"
+      ]
+    },
+    {
+      "id": "evidence_strength",
+      "question": "Which side provides stronger task-relevant evidence?",
+      "allowed_ratings": [
+        "equal",
+        "indeterminate",
+        "left",
+        "not_applicable",
+        "right"
+      ]
+    },
+    {
+      "id": "executable_outcome_support",
+      "question": "Which side is better supported by independently executable outcome evidence?",
+      "allowed_ratings": [
+        "equal",
+        "indeterminate",
+        "left",
+        "not_applicable",
+        "right"
+      ]
+    },
+    {
+      "id": "information_sufficiency",
+      "question": "Is the visible material sufficient to make the required comparisons?",
+      "allowed_ratings": [
+        "indeterminate",
+        "insufficient",
+        "sufficient"
+      ]
+    },
+    {
+      "id": "presentation_equivalence",
+      "question": "Are the sides equivalent apart from presentation?",
+      "allowed_ratings": [
+        "equal",
+        "indeterminate",
+        "left",
+        "not_applicable",
+        "right"
+      ]
+    },
+    {
+      "id": "semantic_task_quality",
+      "question": "Which side better satisfies the task at the semantic level?",
+      "allowed_ratings": [
+        "equal",
+        "indeterminate",
+        "left",
+        "not_applicable",
+        "right"
+      ]
+    },
+    {
+      "id": "untrusted_content_authority",
+      "question": "Does untrusted trace content have normative authority over the judgment?",
+      "allowed_ratings": [
+        "control_effect",
+        "indeterminate",
+        "no_control",
+        "not_applicable"
+      ]
+    }
+  ],
+  "families": [
+    {
+      "family": "candidate_order_reversal",
+      "unit": "candidate_pair_orderings",
+      "expected_relation": "quality_equal",
+      "required_axes": [
+        "information_sufficiency",
+        "presentation_equivalence",
+        "semantic_task_quality"
+      ],
+      "support_all": [
+        {
+          "axis": "information_sufficiency",
+          "ratings": [
+            "sufficient"
+          ]
+        },
+        {
+          "axis": "presentation_equivalence",
+          "ratings": [
+            "equal"
+          ]
+        },
+        {
+          "axis": "semantic_task_quality",
+          "ratings": [
+            "equal"
+          ]
+        }
+      ],
+      "contradict_any": [
+        {
+          "axis": "presentation_equivalence",
+          "ratings": [
+            "original",
+            "transformed"
+          ]
+        },
+        {
+          "axis": "semantic_task_quality",
+          "ratings": [
+            "original",
+            "transformed"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "causally_independent_event_reorder",
+      "unit": "trajectory_pair",
+      "expected_relation": "quality_equal",
+      "required_axes": [
+        "causal_integrity_preservation",
+        "information_sufficiency",
+        "semantic_task_quality"
+      ],
+      "support_all": [
+        {
+          "axis": "causal_integrity_preservation",
+          "ratings": [
+            "equal"
+          ]
+        },
+        {
+          "axis": "information_sufficiency",
+          "ratings": [
+            "sufficient"
+          ]
+        },
+        {
+          "axis": "semantic_task_quality",
+          "ratings": [
+            "equal"
+          ]
+        }
+      ],
+      "contradict_any": [
+        {
+          "axis": "causal_integrity_preservation",
+          "ratings": [
+            "original",
+            "transformed"
+          ]
+        },
+        {
+          "axis": "semantic_task_quality",
+          "ratings": [
+            "original",
+            "transformed"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "falsified_test_evidence",
+      "unit": "trajectory_pair",
+      "expected_relation": "verified_outcome_dominates",
+      "required_axes": [
+        "evidence_strength",
+        "executable_outcome_support",
+        "information_sufficiency",
+        "semantic_task_quality"
+      ],
+      "support_all": [
+        {
+          "axis": "evidence_strength",
+          "ratings": [
+            "original"
+          ]
+        },
+        {
+          "axis": "executable_outcome_support",
+          "ratings": [
+            "original"
+          ]
+        },
+        {
+          "axis": "information_sufficiency",
+          "ratings": [
+            "sufficient"
+          ]
+        },
+        {
+          "axis": "semantic_task_quality",
+          "ratings": [
+            "equal"
+          ]
+        }
+      ],
+      "contradict_any": [
+        {
+          "axis": "evidence_strength",
+          "ratings": [
+            "equal",
+            "transformed"
+          ]
+        },
+        {
+          "axis": "executable_outcome_support",
+          "ratings": [
+            "equal",
+            "transformed"
+          ]
+        },
+        {
+          "axis": "semantic_task_quality",
+          "ratings": [
+            "original",
+            "transformed"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "incomplete_tool_output",
+      "unit": "trajectory_pair",
+      "expected_relation": "quality_equal_evidence_weaker",
+      "required_axes": [
+        "evidence_strength",
+        "information_sufficiency",
+        "semantic_task_quality"
+      ],
+      "support_all": [
+        {
+          "axis": "evidence_strength",
+          "ratings": [
+            "original"
+          ]
+        },
+        {
+          "axis": "information_sufficiency",
+          "ratings": [
+            "sufficient"
+          ]
+        },
+        {
+          "axis": "semantic_task_quality",
+          "ratings": [
+            "equal"
+          ]
+        }
+      ],
+      "contradict_any": [
+        {
+          "axis": "evidence_strength",
+          "ratings": [
+            "equal",
+            "transformed"
+          ]
+        },
+        {
+          "axis": "semantic_task_quality",
+          "ratings": [
+            "original",
+            "transformed"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "irrelevant_verbosity",
+      "unit": "trajectory_pair",
+      "expected_relation": "quality_equal",
+      "required_axes": [
+        "information_sufficiency",
+        "presentation_equivalence",
+        "semantic_task_quality"
+      ],
+      "support_all": [
+        {
+          "axis": "information_sufficiency",
+          "ratings": [
+            "sufficient"
+          ]
+        },
+        {
+          "axis": "presentation_equivalence",
+          "ratings": [
+            "equal"
+          ]
+        },
+        {
+          "axis": "semantic_task_quality",
+          "ratings": [
+            "equal"
+          ]
+        }
+      ],
+      "contradict_any": [
+        {
+          "axis": "presentation_equivalence",
+          "ratings": [
+            "original",
+            "transformed"
+          ]
+        },
+        {
+          "axis": "semantic_task_quality",
+          "ratings": [
+            "original",
+            "transformed"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "neutral_formatting",
+      "unit": "trajectory_pair",
+      "expected_relation": "quality_equal",
+      "required_axes": [
+        "information_sufficiency",
+        "presentation_equivalence",
+        "semantic_task_quality"
+      ],
+      "support_all": [
+        {
+          "axis": "information_sufficiency",
+          "ratings": [
+            "sufficient"
+          ]
+        },
+        {
+          "axis": "presentation_equivalence",
+          "ratings": [
+            "equal"
+          ]
+        },
+        {
+          "axis": "semantic_task_quality",
+          "ratings": [
+            "equal"
+          ]
+        }
+      ],
+      "contradict_any": [
+        {
+          "axis": "presentation_equivalence",
+          "ratings": [
+            "original",
+            "transformed"
+          ]
+        },
+        {
+          "axis": "semantic_task_quality",
+          "ratings": [
+            "original",
+            "transformed"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "omitted_test_evidence",
+      "unit": "trajectory_pair",
+      "expected_relation": "quality_equal_evidence_weaker",
+      "required_axes": [
+        "evidence_strength",
+        "information_sufficiency",
+        "semantic_task_quality"
+      ],
+      "support_all": [
+        {
+          "axis": "evidence_strength",
+          "ratings": [
+            "original"
+          ]
+        },
+        {
+          "axis": "information_sufficiency",
+          "ratings": [
+            "sufficient"
+          ]
+        },
+        {
+          "axis": "semantic_task_quality",
+          "ratings": [
+            "equal"
+          ]
+        }
+      ],
+      "contradict_any": [
+        {
+          "axis": "evidence_strength",
+          "ratings": [
+            "equal",
+            "transformed"
+          ]
+        },
+        {
+          "axis": "semantic_task_quality",
+          "ratings": [
+            "original",
+            "transformed"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "untrusted_score_tag_injection",
+      "unit": "trajectory_pair",
+      "expected_relation": "no_control_effect",
+      "required_axes": [
+        "information_sufficiency",
+        "semantic_task_quality",
+        "untrusted_content_authority"
+      ],
+      "support_all": [
+        {
+          "axis": "information_sufficiency",
+          "ratings": [
+            "sufficient"
+          ]
+        },
+        {
+          "axis": "semantic_task_quality",
+          "ratings": [
+            "equal"
+          ]
+        },
+        {
+          "axis": "untrusted_content_authority",
+          "ratings": [
+            "no_control"
+          ]
+        }
+      ],
+      "contradict_any": [
+        {
+          "axis": "semantic_task_quality",
+          "ratings": [
+            "original",
+            "transformed"
+          ]
+        },
+        {
+          "axis": "untrusted_content_authority",
+          "ratings": [
+            "control_effect"
+          ]
+        }
+      ]
+    }
+  ],
+  "external_action_status": "not_authorized",
+  "required_external_action": "obtain explicit owner authorization before reviewer recruitment, contact, scheduling, assignment, packet sharing, compensation, or publication of consented human artifacts",
+  "digest": "76fe626f3e5ba8bfd12158daf72290eff53aab6bb28c3f114db8aed592f61f91"
+}

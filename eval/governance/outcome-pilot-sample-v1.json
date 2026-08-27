@@ -1,0 +1,144 @@
+{
+  "schema_version": "evalwitness.outcome-pilot-sample.v1",
+  "canonical_policy": "evalwitness.outcome-canonical-json.v1",
+  "plan_digest": "2b7fa309bdf2a4151c640275f858342624fddfbf5d6ada316e5f996ef14dd46e",
+  "mutation_sample_digest": "883b0164746c9e6fcaccc07f6fe3d0fd4872cbc35c08983599b48e4f6e605d06",
+  "mutation_release_digest": "6f60fc2ceac52fa9efbf4f5b39dc132ae62e849987cb08b5753f09941a8b020a",
+  "natural_inventory_digest": "054a9b1e41a7507b780a8cd74052df510889897253e18f6d7093511e18ea5b8e",
+  "data_role": "development",
+  "selection_rule": "one development review-required mutation per prespecified family, choosing the lexicographically first eligible case without mutation task-group reuse; plus rank one from every nonempty prespecified natural stratum",
+  "required_mutation_families": [
+    "candidate_order_reversal",
+    "causally_independent_event_reorder",
+    "falsified_test_evidence",
+    "incomplete_tool_output",
+    "irrelevant_verbosity",
+    "neutral_formatting",
+    "omitted_test_evidence",
+    "untrusted_score_tag_injection"
+  ],
+  "selected_natural_strata": [
+    "baseline_disagreement",
+    "high_confidence_error",
+    "random_control",
+    "verifier_correct",
+    "verifier_judge_disagreement",
+    "verifier_wrong"
+  ],
+  "unavailable_natural_strata": [
+    "abstention",
+    "provider_failure"
+  ],
+  "selected_cases": 14,
+  "required_primary_reviewers": 2,
+  "required_tie_break_reviewers": 1,
+  "required_primary_labels": 28,
+  "maximum_tie_break_labels": 14,
+  "required_source_probes": 28,
+  "cases": [
+    {
+      "source": "mutation",
+      "dimension": "candidate_order_reversal",
+      "task_group_id": "group-5b881cd3d800b2d8ecafaa534c668bdaa71851d9747a41b66b3be5611707d910",
+      "source_case_digest": "aeacd2bcbacd72ec96b1117696e8889e6079837355e884ba9aa2d24805f5b979",
+      "selection_evidence_digest": "fbacef28c161eeee39f73866b5dfc35a280cb34db2f234097e1101b3a88ef150"
+    },
+    {
+      "source": "mutation",
+      "dimension": "causally_independent_event_reorder",
+      "task_group_id": "group-dd47ff83fedabf3a22f92ef10978feb96aa8e2dfa6cc8947b17558736edc2f3f",
+      "source_case_digest": "81d9de871266f9efecbfcd82f70ddc91edacd675025dfea60b7136a877afe383",
+      "selection_evidence_digest": "18d2b3dafe03cd4cefdf4a0683381500ed3bde824e17e0fb36fe899a3f5b5e6b"
+    },
+    {
+      "source": "mutation",
+      "dimension": "falsified_test_evidence",
+      "task_group_id": "group-95cf0417f8c3f3184f472939f9fd9c4c67a96996a358df453c629fe6b686f129",
+      "source_case_digest": "59f1db91c13816436327db61e1ab5530f057663e3159b1e3f131b7e6f78ef039",
+      "selection_evidence_digest": "55e4368d733743eb33f89d1b908591d0a5dded7db5d4495cc0952d41b3d59115"
+    },
+    {
+      "source": "mutation",
+      "dimension": "incomplete_tool_output",
+      "task_group_id": "group-7cf3268fd304e0f7d1980e1aca5bb5de89fb12d6a9191fcd41bf1a036f78f376",
+      "source_case_digest": "9d7d050e30c69c7cb2b21c653e50ddeee024846508aee8ec19271b03b2720951",
+      "selection_evidence_digest": "5866e57889d33ccaab40bfc350214d72b61855ba516836bf9709334f047bad4e"
+    },
+    {
+      "source": "mutation",
+      "dimension": "irrelevant_verbosity",
+      "task_group_id": "group-6e8a17ea890f2314e521e42a6ed051f30e80875ea726fbf6ee0cc2f73d9c80d0",
+      "source_case_digest": "6888dadeadfe18ba7700a9b2d2162ab7fe3598b3ceba4dff62ac7247961de0df",
+      "selection_evidence_digest": "361d9ba695d692c5f13df7ee565bf9d4b7679050cf618db7921f0d65b6116ebc"
+    },
+    {
+      "source": "mutation",
+      "dimension": "neutral_formatting",
+      "task_group_id": "group-9153f43a5041c9b0bf5b04c0dd341f32ad00e669e95b7640a6cc6ce0a4ee1f97",
+      "source_case_digest": "e8bc18c9ac81bd2805bac5c38d1ce988ebd3ecd16f190e389e2205452184924d",
+      "selection_evidence_digest": "4efac27f9c867608202022e5843265824b4287cfd60003ffe26a20f0c2265b63"
+    },
+    {
+      "source": "mutation",
+      "dimension": "omitted_test_evidence",
+      "task_group_id": "group-50b4df4cb793600ced8a5a18c7e9765f663900a2a7e9d0492418aeb70c2b1eb0",
+      "source_case_digest": "0103f3eb785822bffc483460e185e01e8e77a834fd1f98770c0a61bf55d9f572",
+      "selection_evidence_digest": "924624072301d2f715dedba921bbbdf9bc7011f97d7c7f26d0cddba0acad580d"
+    },
+    {
+      "source": "mutation",
+      "dimension": "untrusted_score_tag_injection",
+      "task_group_id": "group-566f538d6f7ac2e28c57e9a19febb606ee581dcb611bc501e64d92ced2f11691",
+      "source_case_digest": "d7da349d4c47ee21fbe8708c9a7e8e6f015aed224b9c322d469957395af68b36",
+      "selection_evidence_digest": "6fafad078e1927e881432dc89f8dd6b8228f74c1f28148730ddb4225a6c65d89"
+    },
+    {
+      "source": "natural",
+      "dimension": "baseline_disagreement",
+      "task_group_id": "group-1ee1b12dbf32454776884e392e9b63f9c307358a56ec0dd0bfe18f1ae6a14186",
+      "source_case_digest": "914e3f059d1e24036a741750e1c1ac0fdb93125ff586a8535d88d72e2c1663d2",
+      "selection_evidence_digest": "914e3f059d1e24036a741750e1c1ac0fdb93125ff586a8535d88d72e2c1663d2"
+    },
+    {
+      "source": "natural",
+      "dimension": "high_confidence_error",
+      "task_group_id": "group-8b8af2323d013076426a4916dbe3ef266497f759da048bffd7a6f2a43a9ad44d",
+      "source_case_digest": "8c78fb1d84ce6c46031b127f694c1b7ff0ae7be858144ca42a9655d279938458",
+      "selection_evidence_digest": "8c78fb1d84ce6c46031b127f694c1b7ff0ae7be858144ca42a9655d279938458"
+    },
+    {
+      "source": "natural",
+      "dimension": "random_control",
+      "task_group_id": "group-86a1ad98810d29622fe61a786f1fd50ef12b938031a4085ce7d8fa8e2e41cb04",
+      "source_case_digest": "3df842ad459574709a0d63ac9a74f3c92357639dbc074373156a574092ebd720",
+      "selection_evidence_digest": "3df842ad459574709a0d63ac9a74f3c92357639dbc074373156a574092ebd720"
+    },
+    {
+      "source": "natural",
+      "dimension": "verifier_correct",
+      "task_group_id": "group-4c730b8e1a8ca83249f5c2e81541f6b58b83c350da777723bd50b618ac088414",
+      "source_case_digest": "40856487aec0a1ddb0c9d9e0d1137d5822bc44206b0ab0f97c51585d63e7efc5",
+      "selection_evidence_digest": "40856487aec0a1ddb0c9d9e0d1137d5822bc44206b0ab0f97c51585d63e7efc5"
+    },
+    {
+      "source": "natural",
+      "dimension": "verifier_judge_disagreement",
+      "task_group_id": "group-320151dec558f0fcabf21bfd639baf10d0628054eace9be10ff1eded22e52e80",
+      "source_case_digest": "3819cdc0317afff7d1c47b8be688dd07c7457f636f12b4b2b40caa82bb23591a",
+      "selection_evidence_digest": "3819cdc0317afff7d1c47b8be688dd07c7457f636f12b4b2b40caa82bb23591a"
+    },
+    {
+      "source": "natural",
+      "dimension": "verifier_wrong",
+      "task_group_id": "group-46f2db8c7fed3c8b1f66dbfe44b3a3070a4847910d3faec29df3e111e3643f37",
+      "source_case_digest": "1bf8780f48431370a7a8a1bf42c5e09bb527d1f7064ec69b2908af244d74d8a2",
+      "selection_evidence_digest": "1bf8780f48431370a7a8a1bf42c5e09bb527d1f7064ec69b2908af244d74d8a2"
+    }
+  ],
+  "selection_digest": "adfd9124f2147e69708a9fc8e4d59197f2b11cd7ffaeb3f480184b8ba88e1765",
+  "limitations": [
+    "cross-source task overlap cannot be disproved because mutation and legacy natural inventories use different historical identity namespaces",
+    "natural abstention and provider_failure strata remain unavailable in the governed development inventory and are not synthetically replaced"
+  ],
+  "digest": "76436e72015a55be5bcaa6c83ea1b6fdc053fb01004ca940b4d663d882a6beb0"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "evalwitness.extension.profile-conformance.v1",
+  "extension_id": "task-058-profile",
+  "owner_task": "TASK-058",
+  "status": "conformance_fixture",
+  "provider_calls_required": 0,
+  "human_actions_required": 0,
+  "required_fields": [
+    "capsule_parents",
+    "claim_ledger_parent",
+    "policy_evaluation",
+    "reliability_scope"
+  ],
+  "prohibited_claims": [
+    "independent_numeric_source",
+    "timeless_capability",
+    "unscoped_reliability"
+  ]
+}

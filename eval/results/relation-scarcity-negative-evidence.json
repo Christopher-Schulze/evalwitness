@@ -1,0 +1,150 @@
+{
+  "schema_version": "evalwitness.relation-scarcity-public-evidence.v1",
+  "canonical_policy": "evalwitness.relation-canonical-json.v1",
+  "brief_policy": "evalwitness.relation-scarcity-public-brief.v1",
+  "evidence_kind": "deterministic_public_negative_evidence",
+  "construct_family": "omitted_test_evidence",
+  "availability": {
+    "target": 40,
+    "attempted": 198,
+    "admitted": 3,
+    "rejected": 195,
+    "selected": 3,
+    "shortfall": 37,
+    "exhaustive": true
+  },
+  "study_roles": {
+    "development": 2,
+    "calibration": 1,
+    "test": 0,
+    "primary_estimand_overlap": 0
+  },
+  "inferential_core": {
+    "families": 7,
+    "cases_per_family": 40,
+    "cases": 280
+  },
+  "primary_sample": {
+    "cases": 28,
+    "task_groups": 28,
+    "lineage_clusters": 28
+  },
+  "coverage": [
+    {
+      "source_format": "swe_bench_cache_item_json",
+      "attempted": 80,
+      "admitted": 0,
+      "rejected": 80,
+      "eligible_task_groups": 0,
+      "selected": 0
+    },
+    {
+      "source_format": "terminal_bench_trajectory_json",
+      "attempted": 118,
+      "admitted": 3,
+      "rejected": 115,
+      "eligible_task_groups": 3,
+      "selected": 3
+    }
+  ],
+  "rejection_reasons": [
+    {
+      "id": "unverified_evidence_role",
+      "count": 195
+    }
+  ],
+  "cases": [
+    {
+      "index": 1,
+      "data_role": "calibration",
+      "unit": "trajectory_pair",
+      "case_binding_digest": "ce550ee99de8285cfa36e5472e51246666660b6f6f75b050e8653e0c3d7b582d",
+      "construct_firewall_digest": "6127696ebd396bc8e6f32cb60d2c6a6f33811de4eb9b4c3ae2b131af9ffd2ce4"
+    },
+    {
+      "index": 2,
+      "data_role": "development",
+      "unit": "trajectory_pair",
+      "case_binding_digest": "2555df910507817ae422127ae58220ffca6e0457e00efe1356acc15a6185c2d9",
+      "construct_firewall_digest": "d857562a2510df38453358640c5680098f3b50a1cce4bee57a03e87b89db4c97"
+    },
+    {
+      "index": 3,
+      "data_role": "development",
+      "unit": "trajectory_pair",
+      "case_binding_digest": "32c1972dabeb8aaa715d25ff043650801928ff0c9a3934bd8431c84f45157c9b",
+      "construct_firewall_digest": "ff7df17c7d8949b4ad524ce9ef759874d5539c3d38c3cacd567dae1a07904947"
+    }
+  ],
+  "parents": [
+    {
+      "id": "corpus_development_plan",
+      "digest": "5a7f4f55aafabd03ef9c802a9c48cf198a778228b40ade35e8f074df8d060c85"
+    },
+    {
+      "id": "natural_corpus_audit",
+      "digest": "af0c0fd56fb498586096a8776e0d40794ee93acf5afda67cc000e576bfcef4d2"
+    },
+    {
+      "id": "controlled_corpus_release",
+      "digest": "9b4999dafe2d37ea04c298b80a7aba0a1769755fdfd650cd01bf3a9cc31a2e42"
+    },
+    {
+      "id": "relation_governance_plan",
+      "digest": "6eac462cae0a5b626561d5cbea274a5c3a72c78b6cb9d50a8952be6ccbb6fa8c"
+    },
+    {
+      "id": "relation_primary_sample",
+      "digest": "6b721bcf0fb10e47923b46d92f3c14691cbd0dd98949ab0bf1dc016d8e1c1e43"
+    },
+    {
+      "id": "relation_scarcity_sentinel",
+      "digest": "ec720a56394249a47eb4c0f7ef618471ce14c69ff8c2c13e1e851350c23e71fb"
+    }
+  ],
+  "claims": [
+    {
+      "id": "frozen_corpus_availability",
+      "claim": "Exact availability in the frozen corpus",
+      "status": "supported",
+      "evidence": "supported by the reproduced attempt, firewall, release, and sentinel chain"
+    },
+    {
+      "id": "held_out_omitted_evidence_validity",
+      "claim": "Held-out omitted-evidence validity",
+      "status": "unsupported",
+      "evidence": "unsupported: zero test-role sentinel cases"
+    },
+    {
+      "id": "human_construct_agreement",
+      "claim": "Human construct agreement",
+      "status": "not_run",
+      "evidence": "not run"
+    },
+    {
+      "id": "verifier_robustness",
+      "claim": "Verifier robustness for this construct",
+      "status": "not_measured",
+      "evidence": "not measured"
+    },
+    {
+      "id": "provider_behavior",
+      "claim": "Provider behavior",
+      "status": "not_measured",
+      "evidence": "not measured; no provider was invoked"
+    },
+    {
+      "id": "population_prevalence",
+      "claim": "Population prevalence or universal scarcity",
+      "status": "unsupported",
+      "evidence": "unsupported: the corpus is not a probability sample"
+    },
+    {
+      "id": "external_action",
+      "claim": "Reviewer contact, packet sharing, or publication authority",
+      "status": "not_authorized",
+      "evidence": "not authorized"
+    }
+  ],
+  "digest": "f401b84549b013f20deb9c78366f28b609fa7ff83cad330ac7e01617cd466d4f"
+}

@@ -1,0 +1,388 @@
+{
+  "schema_version": "evalwitness.protocol.vector-corpus.v1",
+  "protocol_version": "1.2.0",
+  "cases": [
+    {
+      "schema_version": "evalwitness.protocol.audit-case.v1",
+      "protocol_version": "1.2.0",
+      "case_id": "syntax.canonical-minimal",
+      "conformance_level": "syntax",
+      "kind": "canonical_encoding",
+      "description": "canonicalizes unordered Unicode JSON while retaining explicit empty protocol arrays",
+      "required_capabilities": ["closed_form"],
+      "invocation": {
+        "schema_version": "evalwitness.protocol.audit-invocation.v1",
+        "invocation_id": "invocation.canonical-minimal",
+        "operation": "canonical_encoding",
+        "offline": true,
+        "timeout_millis": 1000,
+        "max_input_bytes": 1048576,
+        "trajectory_refs": [],
+        "canonical_json": {
+          "source_utf8_hex": "7b227a223a312c2261223a224772c3bcc39f65227d",
+          "expected_canonical_utf8_hex": "7b2261223a224772c3bcc39f65222c227a223a317d",
+          "expected_sha256": "cd74c569378a571e502e83eff9351df2a6f775ba3d7bae6b98513bc2d5ac7139"
+        },
+        "extensions": []
+      },
+      "expected": {"status": "accepted", "evidence_digest": "cd74c569378a571e502e83eff9351df2a6f775ba3d7bae6b98513bc2d5ac7139"},
+      "extensions": []
+    },
+    {
+      "schema_version": "evalwitness.protocol.audit-case.v1", "protocol_version": "1.2.0", "case_id": "syntax.absent-field-valid", "conformance_level": "syntax", "kind": "canonical_encoding", "description": "binds an object with an absent optional field to its own canonical identity", "required_capabilities": ["closed_form"],
+      "invocation": {"schema_version": "evalwitness.protocol.audit-invocation.v1", "invocation_id": "invocation.absent-field", "operation": "canonical_encoding", "offline": true, "timeout_millis": 1000, "max_input_bytes": 1048576, "trajectory_refs": [], "canonical_json": {"source_utf8_hex": "7b2261223a317d", "expected_canonical_utf8_hex": "7b2261223a317d", "expected_sha256": "015abd7f5cc57a2dd94b7590f04ad8084273905ee33ec5cebeae62276a97f862"}, "extensions": []},
+      "expected": {"status": "accepted", "evidence_digest": "015abd7f5cc57a2dd94b7590f04ad8084273905ee33ec5cebeae62276a97f862"}, "extensions": []
+    },
+    {
+      "schema_version": "evalwitness.protocol.audit-case.v1", "protocol_version": "1.2.0", "case_id": "syntax.explicit-null-valid", "conformance_level": "syntax", "kind": "canonical_encoding", "description": "binds explicit null to an identity distinct from field absence", "required_capabilities": ["closed_form"],
+      "invocation": {"schema_version": "evalwitness.protocol.audit-invocation.v1", "invocation_id": "invocation.explicit-null", "operation": "canonical_encoding", "offline": true, "timeout_millis": 1000, "max_input_bytes": 1048576, "trajectory_refs": [], "canonical_json": {"source_utf8_hex": "7b2261223a312c2262223a6e756c6c7d", "expected_canonical_utf8_hex": "7b2261223a312c2262223a6e756c6c7d", "expected_sha256": "46e0ff59f6164548317489fbea1133a48f7a83c325c3535e44559c9619afb76b"}, "extensions": []},
+      "expected": {"status": "accepted", "evidence_digest": "46e0ff59f6164548317489fbea1133a48f7a83c325c3535e44559c9619afb76b"}, "extensions": []
+    },
+    {
+      "schema_version": "evalwitness.protocol.audit-case.v1",
+      "protocol_version": "1.2.0",
+      "case_id": "score.closed-form-valid",
+      "conformance_level": "deterministic_replay",
+      "kind": "score_evidence",
+      "description": "preserves a complete two-token visible distribution and exact closed-form moments",
+      "required_capabilities": ["closed_form"],
+      "invocation": {
+        "schema_version": "evalwitness.protocol.audit-invocation.v1",
+        "invocation_id": "invocation.score-valid",
+        "operation": "score_evidence",
+        "offline": true,
+        "timeout_millis": 1000,
+        "max_input_bytes": 1048576,
+        "trajectory_refs": [],
+        "score_evidence": {
+          "schema_version": "evalwitness.protocol.score-evidence.v1",
+          "policy_version": "evalwitness.protocol.closed-form-policy.v1",
+          "tag": "<score_A>",
+          "extraction_mode": "verifier",
+          "alignment_status": "exact",
+          "aligned_position": {"token_index": 1, "token_byte": 0, "stream_byte": 10, "raw_byte": 10},
+          "requested_top_k": 20,
+          "returned_top_k": 2,
+          "visible_probability_mass_decimal": "1",
+          "valid_score_mass_decimal": "1",
+          "unobserved_probability_mass_decimal": "0",
+          "score_support": [
+            {"letter": "A", "value_decimal": "1", "probability_decimal": "0.75", "source_ranks": [1], "source_forms": ["A"]},
+            {"letter": "T", "value_decimal": "0", "probability_decimal": "0.25", "source_ranks": [2], "source_forms": ["T"]}
+          ],
+          "visible_alternatives": [
+            {"rank": 1, "token": "A", "logprob_decimal": "-0.2876820724517809", "probability_decimal": "0.75", "chosen": true, "canonical_letter": "A", "canonical_value_decimal": "1", "canonical_source_ranks": [1]},
+            {"rank": 2, "token": "T", "logprob_decimal": "-1.3862943611198906", "probability_decimal": "0.25", "chosen": false, "canonical_letter": "T", "canonical_value_decimal": "0", "canonical_source_ranks": [2]}
+          ],
+          "conditional_expected_score_decimal": "0.75",
+          "conditional_variance_decimal": "0.1875",
+          "extracted": true,
+          "degradations": [{"code": "provider_returned_less_than_requested", "detail": "requested 20 alternatives and received 2"}],
+          "requested_model": "sealed-model",
+          "served_model": "sealed-model",
+          "route_limitations": ["returned_top_k_below_requested_top_k"],
+          "request_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "response_evidence_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        "extensions": []
+      },
+      "expected": {"status": "accepted", "score_decimal": "0.75"},
+      "extensions": []
+    },
+    {
+      "schema_version": "evalwitness.protocol.audit-case.v1",
+      "protocol_version": "1.2.0",
+      "case_id": "syntax.trajectory-ref-valid",
+      "conformance_level": "syntax",
+      "kind": "canonical_encoding",
+      "description": "binds a source trajectory and its loss-accounting record without redefining either format",
+      "required_capabilities": ["closed_form"],
+      "invocation": {
+        "schema_version": "evalwitness.protocol.audit-invocation.v1",
+        "invocation_id": "invocation.trajectory-ref-valid",
+        "operation": "canonical_encoding",
+        "offline": true,
+        "timeout_millis": 1000,
+        "max_input_bytes": 1048576,
+        "trajectory_refs": [{
+          "canonical_schema": "evalwitness.trajectory.v1",
+          "source_format": "claude-code-jsonl",
+          "source_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "trajectory_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "accounting_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "trace_envelope_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+          "mapping_report_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "mapping_policy_version": "evalwitness.trace-mapping.v1"
+        }],
+        "canonical_json": {
+          "source_utf8_hex": "7b7d",
+          "expected_canonical_utf8_hex": "7b7d",
+          "expected_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        "extensions": []
+      },
+      "expected": {"status": "accepted"},
+      "extensions": []
+    },
+    {
+      "schema_version": "evalwitness.protocol.audit-case.v1",
+      "protocol_version": "1.2.0",
+      "case_id": "decision.selected-valid",
+      "conformance_level": "deterministic_replay",
+      "kind": "decision_evidence",
+      "description": "binds a selected state to score evidence, budget, and provenance digests",
+      "required_capabilities": ["sealed_replay"],
+      "invocation": {
+        "schema_version": "evalwitness.protocol.audit-invocation.v1",
+        "invocation_id": "invocation.decision-valid",
+        "operation": "decision_evidence",
+        "offline": true,
+        "timeout_millis": 1000,
+        "max_input_bytes": 1048576,
+        "trajectory_refs": [],
+        "decision_evidence": {
+          "schema_version": "evalwitness.protocol.decision-evidence.v1",
+          "policy_version": "evalwitness.protocol.closed-form-decision.v1",
+          "state": "selected",
+          "winner": 0,
+          "conditional_scores_decimal": ["0.75", "0.25"],
+          "decision_strength_decimal": "0.5",
+          "score_evidence_digests": ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"],
+          "budget_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "provenance_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        },
+        "extensions": []
+      },
+      "expected": {"status": "accepted", "decision_state": "selected"},
+      "extensions": []
+    },
+    {
+      "schema_version": "evalwitness.protocol.audit-case.v1",
+      "protocol_version": "1.2.0",
+      "case_id": "decision.tied-valid",
+      "conformance_level": "deterministic_replay",
+      "kind": "decision_evidence",
+      "description": "preserves a tie without inventing a winner",
+      "required_capabilities": ["sealed_replay"],
+      "invocation": {
+        "schema_version": "evalwitness.protocol.audit-invocation.v1", "invocation_id": "invocation.decision-tied", "operation": "decision_evidence", "offline": true, "timeout_millis": 1000, "max_input_bytes": 1048576, "trajectory_refs": [],
+        "decision_evidence": {"schema_version": "evalwitness.protocol.decision-evidence.v1", "policy_version": "evalwitness.protocol.closed-form-decision.v1", "state": "tied", "conditional_scores_decimal": ["0.5", "0.5"], "decision_strength_decimal": "0", "score_evidence_digests": ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"], "budget_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "provenance_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"},
+        "extensions": []
+      },
+      "expected": {"status": "accepted", "decision_state": "tied"},
+      "extensions": []
+    },
+    {
+      "schema_version": "evalwitness.protocol.audit-case.v1",
+      "protocol_version": "1.2.0",
+      "case_id": "decision.abstained-valid",
+      "conformance_level": "deterministic_replay",
+      "kind": "decision_evidence",
+      "description": "preserves an abstention and its explicit reason without inventing a winner",
+      "required_capabilities": ["sealed_replay"],
+      "invocation": {
+        "schema_version": "evalwitness.protocol.audit-invocation.v1", "invocation_id": "invocation.decision-abstained", "operation": "decision_evidence", "offline": true, "timeout_millis": 1000, "max_input_bytes": 1048576, "trajectory_refs": [],
+        "decision_evidence": {"schema_version": "evalwitness.protocol.decision-evidence.v1", "policy_version": "evalwitness.protocol.closed-form-decision.v1", "state": "abstained", "abstention_reason": "insufficient_evidence", "conditional_scores_decimal": ["0.5", "0.5"], "decision_strength_decimal": "0", "score_evidence_digests": ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"], "budget_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "provenance_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"},
+        "extensions": []
+      },
+      "expected": {"status": "accepted", "decision_state": "abstained"},
+      "extensions": []
+    },
+    {
+      "schema_version": "evalwitness.protocol.audit-case.v1", "protocol_version": "1.2.0", "case_id": "decision.invalid-valid", "conformance_level": "deterministic_replay", "kind": "decision_evidence", "description": "preserves a typed invalid terminal state without inventing a winner", "required_capabilities": ["sealed_replay"],
+      "invocation": {"schema_version": "evalwitness.protocol.audit-invocation.v1", "invocation_id": "invocation.decision-invalid", "operation": "decision_evidence", "offline": true, "timeout_millis": 1000, "max_input_bytes": 1048576, "trajectory_refs": [], "decision_evidence": {"schema_version": "evalwitness.protocol.decision-evidence.v1", "policy_version": "evalwitness.protocol.closed-form-decision.v1", "state": "invalid", "conditional_scores_decimal": ["0.5"], "decision_strength_decimal": "0", "score_evidence_digests": ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"], "budget_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "provenance_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"}, "extensions": []},
+      "expected": {"status": "accepted", "decision_state": "invalid"}, "extensions": []
+    },
+    {
+      "schema_version": "evalwitness.protocol.audit-case.v1", "protocol_version": "1.2.0", "case_id": "decision.budget-exhausted-valid", "conformance_level": "deterministic_replay", "kind": "decision_evidence", "description": "preserves budget exhaustion as a terminal state without inventing a winner", "required_capabilities": ["sealed_replay"],
+      "invocation": {"schema_version": "evalwitness.protocol.audit-invocation.v1", "invocation_id": "invocation.decision-budget", "operation": "decision_evidence", "offline": true, "timeout_millis": 1000, "max_input_bytes": 1048576, "trajectory_refs": [], "decision_evidence": {"schema_version": "evalwitness.protocol.decision-evidence.v1", "policy_version": "evalwitness.protocol.closed-form-decision.v1", "state": "budget_exhausted", "conditional_scores_decimal": ["0.5"], "decision_strength_decimal": "0", "score_evidence_digests": ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"], "budget_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "provenance_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"}, "extensions": []},
+      "expected": {"status": "accepted", "decision_state": "budget_exhausted"}, "extensions": []
+    },
+    {
+      "schema_version": "evalwitness.protocol.audit-case.v1", "protocol_version": "1.2.0", "case_id": "decision.provider-failed-valid", "conformance_level": "deterministic_replay", "kind": "decision_evidence", "description": "preserves provider failure as a terminal state without inventing a winner", "required_capabilities": ["sealed_replay"],
+      "invocation": {"schema_version": "evalwitness.protocol.audit-invocation.v1", "invocation_id": "invocation.decision-provider", "operation": "decision_evidence", "offline": true, "timeout_millis": 1000, "max_input_bytes": 1048576, "trajectory_refs": [], "decision_evidence": {"schema_version": "evalwitness.protocol.decision-evidence.v1", "policy_version": "evalwitness.protocol.closed-form-decision.v1", "state": "provider_failed", "conditional_scores_decimal": ["0.5"], "decision_strength_decimal": "0", "score_evidence_digests": ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"], "budget_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "provenance_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"}, "extensions": []},
+      "expected": {"status": "accepted", "decision_state": "provider_failed"}, "extensions": []
+    },
+    {
+      "schema_version": "evalwitness.protocol.audit-case.v1",
+      "protocol_version": "1.2.0",
+      "case_id": "replay.exact-valid",
+      "conformance_level": "deterministic_replay",
+      "kind": "replay_evidence",
+      "description": "accepts only an exact checksum-bound sealed replay observation",
+      "required_capabilities": ["sealed_replay"],
+      "invocation": {
+        "schema_version": "evalwitness.protocol.audit-invocation.v1",
+        "invocation_id": "invocation.replay-valid",
+        "operation": "replay_evidence",
+        "offline": true,
+        "timeout_millis": 1000,
+        "max_input_bytes": 1048576,
+        "trajectory_refs": [],
+        "replay_evidence": {
+          "request_fingerprint": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "response_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "evidence_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "replay_status": "exact"
+        },
+        "extensions": []
+      },
+      "expected": {"status": "accepted"},
+      "extensions": []
+    },
+    {
+      "schema_version": "evalwitness.protocol.audit-case.v1",
+      "protocol_version": "1.2.0",
+      "case_id": "attestation.bounded-valid",
+      "conformance_level": "syntax",
+      "kind": "attestation",
+      "description": "preserves an expiring bounded route observation without promoting it to reliability",
+      "required_capabilities": ["sealed_replay"],
+      "invocation": {
+        "schema_version": "evalwitness.protocol.audit-invocation.v1",
+        "invocation_id": "invocation.attestation-valid",
+        "operation": "attestation",
+        "offline": true,
+        "timeout_millis": 1000,
+        "max_input_bytes": 1048576,
+        "trajectory_refs": [],
+        "attestation_evidence": {
+          "schema_version": "evalwitness.capability-attestation.v1",
+          "attestation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "state": "bounded_qualified",
+          "evidence_ceiling": "bounded_qualified",
+          "observed_at": "2026-08-09T00:00:00Z",
+          "expires_at": "2026-08-09T01:00:00Z",
+          "request_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "route_limitations": ["single bounded observation"]
+        },
+        "extensions": []
+      },
+      "expected": {"status": "accepted"},
+      "extensions": []
+    },
+    {
+      "schema_version": "evalwitness.protocol.audit-case.v1",
+      "protocol_version": "1.2.0",
+      "case_id": "extension.optional-preserved",
+      "conformance_level": "syntax",
+      "kind": "extension",
+      "description": "preserves an unknown optional reverse-domain extension without changing core semantics",
+      "required_capabilities": ["closed_form"],
+      "invocation": {
+        "schema_version": "evalwitness.protocol.audit-invocation.v1",
+        "invocation_id": "invocation.extension-optional",
+        "operation": "extension",
+        "offline": true,
+        "timeout_millis": 1000,
+        "max_input_bytes": 1048576,
+        "trajectory_refs": [],
+        "extensions": [{"namespace": "com.example.optional", "schema": "com.example.optional.v1", "required": false, "payload": {"note": "preserved"}}]
+      },
+      "expected": {"status": "accepted"},
+      "extensions": []
+    },
+    {
+      "schema_version": "evalwitness.protocol.audit-case.v1",
+      "protocol_version": "1.2.0",
+      "case_id": "extension.reliance-valid",
+      "conformance_level": "syntax",
+      "kind": "extension",
+      "description": "carries an intervention and contrast while limiting interpretation to verifier-output reliance",
+      "required_capabilities": ["closed_form"],
+      "invocation": {
+        "schema_version": "evalwitness.protocol.audit-invocation.v1",
+        "invocation_id": "invocation.extension-reliance",
+        "operation": "extension",
+        "offline": true,
+        "timeout_millis": 1000,
+        "max_input_bytes": 1048576,
+        "trajectory_refs": [],
+        "extensions": [{
+          "namespace": "org.evalwitness.reliability.v1",
+          "schema": "evalwitness.protocol.reliability-extension.v1",
+          "required": true,
+          "payload": {
+            "schema_version": "evalwitness.protocol.reliability-extension.v1",
+            "evidence_factors": [{"factor_id": "factor.test-output", "kind": "outcome_evidence", "description": "verified command output"}],
+            "evidence_interventions": [{"intervention_id": "intervention.remove-output", "factor_id": "factor.test-output", "parent_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "child_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "changed_event_ids": ["event-001"], "changed_field_paths": ["/events/event-001/output/text"], "validator": "evalwitness.intervention.v1"}],
+            "reliance_contrasts": [{"contrast_id": "contrast.output", "factor_id": "factor.test-output", "intervention_id": "intervention.remove-output", "baseline_result_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "intervention_result_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd", "effect_decimal": "-0.2", "uncertainty_decimal": "0.05", "interpretation": "verifier_output_reliance"}]
+          }
+        }]
+      },
+      "expected": {"status": "accepted"},
+      "extensions": []
+    },
+    {
+      "schema_version": "evalwitness.protocol.audit-case.v1",
+      "protocol_version": "1.1.0",
+      "case_id": "compatibility.minor-1.1",
+      "conformance_level": "syntax",
+      "kind": "compatibility",
+      "description": "accepts the prior additive minor protocol revision",
+      "required_capabilities": ["closed_form"],
+      "invocation": {"schema_version": "evalwitness.protocol.audit-invocation.v1", "invocation_id": "invocation.compatibility-1.1", "operation": "compatibility", "offline": true, "timeout_millis": 1000, "max_input_bytes": 1048576, "trajectory_refs": [], "extensions": []},
+      "expected": {"status": "accepted"},
+      "extensions": []
+    }
+  ],
+  "mutations": [
+    {"case_id": "negative.missing-schema", "base_case_id": "syntax.canonical-minimal", "json_pointer": "/schema_version", "operation": "remove", "conformance_level": "syntax", "kind": "canonical_encoding", "expected": {"status": "rejected"}, "description": "rejects a missing required root field"},
+    {"case_id": "negative.unknown-root-field", "base_case_id": "syntax.canonical-minimal", "json_pointer": "/unexpected", "operation": "add", "value": true, "conformance_level": "syntax", "kind": "canonical_encoding", "expected": {"status": "rejected"}, "description": "rejects an unknown core field"},
+    {"case_id": "negative.incompatible-major", "base_case_id": "syntax.canonical-minimal", "json_pointer": "/protocol_version", "operation": "replace", "value": "2.0.0", "conformance_level": "syntax", "kind": "compatibility", "expected": {"status": "rejected"}, "description": "rejects an incompatible major protocol revision"},
+    {"case_id": "negative.resource-limit", "base_case_id": "syntax.canonical-minimal", "json_pointer": "/invocation/max_input_bytes", "operation": "replace", "value": 4194305, "conformance_level": "syntax", "kind": "canonical_encoding", "expected": {"status": "rejected"}, "description": "rejects a case-selected input bound above the protocol ceiling"},
+    {"case_id": "negative.operation-mismatch", "base_case_id": "syntax.canonical-minimal", "json_pointer": "/invocation/operation", "operation": "replace", "value": "score_evidence", "conformance_level": "syntax", "kind": "canonical_encoding", "expected": {"status": "rejected"}, "description": "rejects a case and invocation operation mismatch"},
+    {"case_id": "negative.alignment", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/alignment_status", "operation": "replace", "value": "missing", "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects extracted evidence without exact alignment"},
+    {"case_id": "negative.visible-mass", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/visible_probability_mass_decimal", "operation": "replace", "value": "0.9", "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects a visible mass inconsistent with alternatives"},
+    {"case_id": "negative.valid-mass", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/valid_score_mass_decimal", "operation": "replace", "value": "0.9", "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects a valid mass inconsistent with canonical support"},
+    {"case_id": "negative.expected-score", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/conditional_expected_score_decimal", "operation": "replace", "value": "0.5", "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects a naked score inconsistent with distribution support"},
+    {"case_id": "negative.support-order", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/score_support", "operation": "replace", "value": [{"letter": "T", "value_decimal": "0", "probability_decimal": "0.25", "source_ranks": [2], "source_forms": ["T"]}, {"letter": "A", "value_decimal": "1", "probability_decimal": "0.75", "source_ranks": [1], "source_forms": ["A"]}], "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects non-canonical support ordering"},
+    {"case_id": "negative.request-digest", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/request_fingerprint", "operation": "replace", "value": "bad", "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects an invalid request checksum"},
+    {"case_id": "negative.decision-naked", "base_case_id": "decision.selected-valid", "json_pointer": "/invocation/decision_evidence/score_evidence_digests", "operation": "replace", "value": [], "conformance_level": "deterministic_replay", "kind": "decision_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects a decision without score-evidence bindings"},
+    {"case_id": "negative.abstention-reason", "base_case_id": "decision.selected-valid", "json_pointer": "/invocation/decision_evidence/state", "operation": "replace", "value": "abstained", "conformance_level": "deterministic_replay", "kind": "decision_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects an abstention without a typed reason"},
+    {"case_id": "negative.replay-legacy", "base_case_id": "replay.exact-valid", "json_pointer": "/invocation/replay_evidence/replay_status", "operation": "replace", "value": "legacy", "conformance_level": "deterministic_replay", "kind": "replay_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects legacy inspection evidence as deterministic replay"},
+    {"case_id": "negative.attestation-expiry", "base_case_id": "attestation.bounded-valid", "json_pointer": "/invocation/attestation_evidence/expires_at", "operation": "replace", "value": "2026-08-08T23:00:00Z", "conformance_level": "syntax", "kind": "attestation", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects an attestation expiring before observation"},
+    {"case_id": "negative.required-extension", "base_case_id": "extension.optional-preserved", "json_pointer": "/invocation/extensions", "operation": "replace", "value": [{"namespace": "com.example.required", "schema": "com.example.required.v1", "required": true, "payload": {"note": "unknown"}}], "conformance_level": "syntax", "kind": "extension", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "fails closed on an unknown required extension"},
+    {"case_id": "negative.variance", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/conditional_variance_decimal", "operation": "replace", "value": "0.1", "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects variance inconsistent with canonical support"},
+    {"case_id": "negative.alternative-rank", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/visible_alternatives/0/rank", "operation": "replace", "value": 2, "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects alternatives whose declared rank differs from array order"},
+    {"case_id": "negative.chosen-count", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/visible_alternatives/0/chosen", "operation": "replace", "value": false, "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects evidence without exactly one chosen token"},
+    {"case_id": "negative.source-rank-order", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/score_support/0/source_ranks", "operation": "replace", "value": [2,1], "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects unsorted source-rank provenance"},
+    {"case_id": "negative.source-forms-empty", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/score_support/0/source_forms", "operation": "replace", "value": [], "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects canonical support without source forms"},
+    {"case_id": "negative.unobserved-mass", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/unobserved_probability_mass_decimal", "operation": "replace", "value": "0.1", "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects visible and unobserved mass that do not conserve one"},
+    {"case_id": "negative.response-digest", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/response_evidence_digest", "operation": "replace", "value": "bad", "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects malformed response-evidence provenance"},
+    {"case_id": "negative.capability-digest", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/capability_attestation_digest", "operation": "add", "value": "bad", "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects malformed optional capability provenance"},
+    {"case_id": "negative.route-order", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/route_limitations", "operation": "replace", "value": ["z_limit","a_limit"], "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects non-canonical route-limitation ordering"},
+    {"case_id": "negative.degradation-duplicate", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/degradations", "operation": "replace", "value": [{"code":"duplicate"},{"code":"duplicate"}], "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects duplicate typed degradations"},
+    {"case_id": "negative.top-k-bound", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/requested_top_k", "operation": "replace", "value": 1, "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects returned Top-k above requested Top-k"},
+    {"case_id": "negative.logprob-decimal", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/visible_alternatives/0/logprob_decimal", "operation": "replace", "value": "NaN", "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects non-canonical logprob text"},
+    {"case_id": "negative.probability-bound", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/visible_alternatives/0/probability_decimal", "operation": "replace", "value": "1.1", "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects probability outside the unit interval"},
+    {"case_id": "negative.score-value-bound", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/score_support/0/value_decimal", "operation": "replace", "value": "1.1", "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects canonical score values outside the unit interval"},
+    {"case_id": "negative.decision-state", "base_case_id": "decision.selected-valid", "json_pointer": "/invocation/decision_evidence/state", "operation": "replace", "value": "invented", "conformance_level": "deterministic_replay", "kind": "decision_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects an unknown decision state"},
+    {"case_id": "negative.decision-winner", "base_case_id": "decision.selected-valid", "json_pointer": "/invocation/decision_evidence/winner", "operation": "replace", "value": 9, "conformance_level": "deterministic_replay", "kind": "decision_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects an out-of-bounds selected winner"},
+    {"case_id": "negative.decision-score-digest", "base_case_id": "decision.selected-valid", "json_pointer": "/invocation/decision_evidence/score_evidence_digests/0", "operation": "replace", "value": "bad", "conformance_level": "deterministic_replay", "kind": "decision_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects malformed score-evidence bindings"},
+    {"case_id": "negative.decision-budget-digest", "base_case_id": "decision.selected-valid", "json_pointer": "/invocation/decision_evidence/budget_digest", "operation": "replace", "value": "bad", "conformance_level": "deterministic_replay", "kind": "decision_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects malformed budget provenance"},
+    {"case_id": "negative.decision-provenance-digest", "base_case_id": "decision.selected-valid", "json_pointer": "/invocation/decision_evidence/provenance_digest", "operation": "replace", "value": "bad", "conformance_level": "deterministic_replay", "kind": "decision_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects malformed decision provenance"},
+    {"case_id": "negative.replay-response-digest", "base_case_id": "replay.exact-valid", "json_pointer": "/invocation/replay_evidence/response_digest", "operation": "replace", "value": "bad", "conformance_level": "deterministic_replay", "kind": "replay_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects malformed replay response identity"},
+    {"case_id": "negative.replay-evidence-digest", "base_case_id": "replay.exact-valid", "json_pointer": "/invocation/replay_evidence/evidence_digest", "operation": "replace", "value": "bad", "conformance_level": "deterministic_replay", "kind": "replay_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects malformed replay evidence identity"},
+    {"case_id": "negative.attestation-digest", "base_case_id": "attestation.bounded-valid", "json_pointer": "/invocation/attestation_evidence/attestation_digest", "operation": "replace", "value": "bad", "conformance_level": "syntax", "kind": "attestation", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects malformed attestation identity"},
+    {"case_id": "negative.attestation-request-digest", "base_case_id": "attestation.bounded-valid", "json_pointer": "/invocation/attestation_evidence/request_fingerprint", "operation": "replace", "value": "bad", "conformance_level": "syntax", "kind": "attestation", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects malformed attested request identity"},
+    {"case_id": "negative.attestation-time", "base_case_id": "attestation.bounded-valid", "json_pointer": "/invocation/attestation_evidence/observed_at", "operation": "replace", "value": "not-a-time", "conformance_level": "syntax", "kind": "attestation", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects non-RFC3339 observation time"},
+    {"case_id": "negative.extension-namespace", "base_case_id": "extension.optional-preserved", "json_pointer": "/invocation/extensions/0/namespace", "operation": "replace", "value": "invalid", "conformance_level": "syntax", "kind": "extension", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects a non-reverse-domain extension namespace"},
+    {"case_id": "negative.extension-duplicate", "base_case_id": "extension.optional-preserved", "json_pointer": "/invocation/extensions", "operation": "replace", "value": [{"namespace":"com.example.optional","schema":"com.example.optional.v1","required":false,"payload":{"note":"one"}},{"namespace":"com.example.optional","schema":"com.example.optional.v1","required":false,"payload":{"note":"two"}}], "conformance_level": "syntax", "kind": "extension", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects duplicate extension namespaces"},
+    {"case_id": "negative.reliability-interpretation", "base_case_id": "extension.reliance-valid", "json_pointer": "/invocation/extensions/0/payload/reliance_contrasts/0/interpretation", "operation": "replace", "value": "agent_step_causality", "conformance_level": "syntax", "kind": "extension", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects causal overclaiming in the reliance extension"},
+    {"case_id": "negative.case-byte-limit", "base_case_id": "syntax.canonical-minimal", "json_pointer": "/invocation/max_input_bytes", "operation": "replace", "value": 1, "conformance_level": "syntax", "kind": "canonical_encoding", "expected": {"status": "rejected"}, "description": "rejects a case larger than its declared per-invocation byte ceiling"},
+    {"case_id": "negative.nonselected-winner", "base_case_id": "decision.abstained-valid", "json_pointer": "/invocation/decision_evidence/winner", "operation": "add", "value": 0, "conformance_level": "deterministic_replay", "kind": "decision_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects a winner on a non-selected terminal state"},
+    {"case_id": "negative.nonselected-strength", "base_case_id": "decision.tied-valid", "json_pointer": "/invocation/decision_evidence/decision_strength_decimal", "operation": "replace", "value": "0.1", "conformance_level": "deterministic_replay", "kind": "decision_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects nonzero decision strength on a non-selected terminal state"},
+    {"case_id": "negative.canonical-duplicate-key", "base_case_id": "syntax.canonical-minimal", "json_pointer": "/invocation/canonical_json/source_utf8_hex", "operation": "replace", "value": "7b2261223a312c2261223a327d", "conformance_level": "syntax", "kind": "canonical_encoding", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects duplicate JSON object keys"},
+    {"case_id": "negative.canonical-float", "base_case_id": "syntax.canonical-minimal", "json_pointer": "/invocation/canonical_json/source_utf8_hex", "operation": "replace", "value": "7b2261223a312e307d", "conformance_level": "syntax", "kind": "canonical_encoding", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects JSON floating-point numbers"},
+    {"case_id": "negative.canonical-negative-zero", "base_case_id": "syntax.canonical-minimal", "json_pointer": "/invocation/canonical_json/source_utf8_hex", "operation": "replace", "value": "7b2261223a2d307d", "conformance_level": "syntax", "kind": "canonical_encoding", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects JSON negative zero"},
+    {"case_id": "negative.canonical-unsafe-integer", "base_case_id": "syntax.canonical-minimal", "json_pointer": "/invocation/canonical_json/source_utf8_hex", "operation": "replace", "value": "7b2261223a393030373139393235343734303939327d", "conformance_level": "syntax", "kind": "canonical_encoding", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects an integer outside the interoperable range"},
+    {"case_id": "negative.canonical-unpaired-surrogate", "base_case_id": "syntax.canonical-minimal", "json_pointer": "/invocation/canonical_json/source_utf8_hex", "operation": "replace", "value": "7b2261223a225c7564383030227d", "conformance_level": "syntax", "kind": "canonical_encoding", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects an unpaired escaped Unicode surrogate"},
+    {"case_id": "negative.canonical-trailing-json", "base_case_id": "syntax.canonical-minimal", "json_pointer": "/invocation/canonical_json/source_utf8_hex", "operation": "replace", "value": "7b7d207b7d", "conformance_level": "syntax", "kind": "canonical_encoding", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects trailing JSON content"},
+    {"case_id": "negative.canonical-invalid-utf8", "base_case_id": "syntax.canonical-minimal", "json_pointer": "/invocation/canonical_json/source_utf8_hex", "operation": "replace", "value": "ff", "conformance_level": "syntax", "kind": "canonical_encoding", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects non-UTF-8 source bytes"},
+    {"case_id": "negative.canonical-expected-bytes", "base_case_id": "syntax.canonical-minimal", "json_pointer": "/invocation/canonical_json/expected_canonical_utf8_hex", "operation": "replace", "value": "7b7d", "conformance_level": "syntax", "kind": "canonical_encoding", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects a mismatched expected canonical byte sequence"},
+    {"case_id": "negative.canonical-expected-digest", "base_case_id": "syntax.canonical-minimal", "json_pointer": "/invocation/canonical_json/expected_sha256", "operation": "replace", "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "conformance_level": "syntax", "kind": "canonical_encoding", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects a mismatched expected canonical digest"},
+    {"case_id": "negative.support-rank-bound", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/score_support/0/source_ranks", "operation": "replace", "value": [3], "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects canonical support pointing beyond returned alternatives"},
+    {"case_id": "negative.alternative-support-mismatch", "base_case_id": "score.closed-form-valid", "json_pointer": "/invocation/score_evidence/visible_alternatives/0/canonical_letter", "operation": "replace", "value": "B", "conformance_level": "deterministic_replay", "kind": "score_evidence", "expected": {"status": "rejected", "finding_code": "protocol.semantic.invalid"}, "description": "rejects disagreement between a visible alternative and canonical support"}
+  ]
+}

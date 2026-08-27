@@ -1,0 +1,62 @@
+{
+  "header": {
+    "schema_version": "evalwitness.verification-lineage-assessment.v1",
+    "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+    "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+    "object_id": "offline-assessment-stdout-success",
+    "task_id": "TASK-069",
+    "task_group_id": "synthetic-stdout_success",
+    "data_role": "adapter_development",
+    "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+    "parents": [
+      {
+        "relation": "candidate",
+        "schema_version": "evalwitness.verification-lineage-candidate.v1",
+        "object_id": "offline-candidate-stdout-success",
+        "task_id": "TASK-069",
+        "task_group_id": "synthetic-stdout_success",
+        "digest": "4be901a26a698894613830f0f009f535a825be4b1bde897d547ad685cf30239d"
+      },
+      {
+        "relation": "witness",
+        "schema_version": "evalwitness.execution-witness.v1",
+        "object_id": "offline-witness-stdout-success",
+        "task_id": "TASK-069",
+        "task_group_id": "synthetic-stdout_success",
+        "digest": "d41a8c35255b7176a3721f3481e45e6c5da9be198cbca1f6bf31bbf9cad848c9"
+      }
+    ],
+    "digest": "d74a7bcd38296518993203cfcc4ec6cc36b659e65270d48284926aa858018aff"
+  },
+  "candidate_id": "offline-candidate-stdout-success",
+  "terminal_state": "direct_verification_invocation",
+  "state_disposition": "eligible",
+  "precedence_applied": 10,
+  "proof_record_ids": [
+    "proof-command",
+    "proof-result"
+  ],
+  "result_provenance": [
+    "exit_status",
+    "subprocess_stderr",
+    "subprocess_stdout"
+  ],
+  "failability": {
+    "property": "fixed fixture exits zero",
+    "operands_digest": "0acd92a29b32590a27cfd6056efd2cb0ab28d3b5f09571392b39f927c7eebafd",
+    "observable": "exit status and separated subprocess streams",
+    "failure_condition": "nonzero exit would falsify successful verification",
+    "failable": true,
+    "reason": "failable_failure_path"
+  },
+  "freshness": {
+    "state": "current",
+    "observed_state_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+    "valid_from": "2026-08-10T15:00:05.09Z",
+    "valid_until": "0001-01-01T00:00:00Z",
+    "evaluated_at": "2026-08-10T15:00:05.09Z",
+    "invalidation_edges": null
+  },
+  "equivalent_channel_survives": false,
+  "reviewer_mode": "deterministic_lineage_analysis"
+}

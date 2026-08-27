@@ -1,0 +1,751 @@
+{
+  "schema_version": "evalwitness.verification-evidence-challenge.v1",
+  "canonical_policy": "evalwitness.mutation-canonical-json.v1",
+  "classifier_version": "evalwitness.verification-evidence-classifier.v1",
+  "cases": [
+    {
+      "id": "natural_diff_result_contains_agent_planning",
+      "category": "source_derived_natural_negative",
+      "invariant": "a linked result body containing agent planning prose is not subprocess verification evidence",
+      "source_binding": {
+        "mutation_id": "mutation-a5d2ee38ab2bd1242971fefcda3eb9ccb3841f2ab45a9e2d1a40f90a0fe7088f",
+        "trajectory_digest": "0f11d96e23a90a764203428631fe859dccf2edc7ef8af268fddca904566f2264",
+        "target_event_id": "evt_ba1af769f28c3b552ff7c682"
+      },
+      "fixture_trajectory_digest": "482adfad1c5d18e930ad5c21c52361c2d52f90406437ca33ec1e388883661ed9",
+      "expected_status": "rejected",
+      "expected_rejection_reasons": [
+        "claim_specific_evidence_not_weakened",
+        "result_provenance_unbound"
+      ],
+      "assessment": {
+        "schema_version": "evalwitness.verification-evidence-assessment.v1",
+        "canonical_policy": "evalwitness.mutation-canonical-json.v1",
+        "classifier_version": "evalwitness.verification-evidence-classifier.v1",
+        "source_format": "terminal_bench_trajectory_json",
+        "source_trajectory_digest": "482adfad1c5d18e930ad5c21c52361c2d52f90406437ca33ec1e388883661ed9",
+        "target_event_id": "evt_f61dce3fc2ede07fc0cbdc05",
+        "status": "rejected",
+        "semantic_role": "outcome_probe",
+        "invocation": {
+          "parser_version": "evalwitness.shell-invocation.v1",
+          "tool_call_event_id": "evt_382a33890618837e7c71feed",
+          "command_event_id": "evt_222fbb5ebdc0f6fa082dcf3c",
+          "evidence_event_id": "evt_f61dce3fc2ede07fc0cbdc05",
+          "segment_index": 0,
+          "executable": "diff",
+          "arguments": [
+            "-u",
+            "/tmp/mystery.err",
+            "/tmp/reversed.err"
+          ],
+          "wrapper_chain": [],
+          "semantic_role": "outcome_probe",
+          "direct_invocation": true,
+          "parse_status": "parsed",
+          "decision": "direct_verification_invocation"
+        },
+        "result_channel": "tool_result_output",
+        "result_status": "completed",
+        "result_error": false,
+        "content_kind": "mixed_agent_narration",
+        "content_digest": "452bd817ba59a16588c00f035ff67306a3d6306314f9db7b8e33e2372a30b3cc",
+        "content_bytes": 116,
+        "provenance_bound": false,
+        "verification_failable": true,
+        "remaining_decisive_channels": [],
+        "evidence_weakened": false,
+        "checks": [
+          {
+            "name": "direct_verification_invocation",
+            "expected": "proven",
+            "observed": "executable=diff direct=true decision=direct_verification_invocation",
+            "passed": true
+          },
+          {
+            "name": "result_provenance_bound",
+            "expected": "bound",
+            "observed": "mixed_agent_narration",
+            "passed": false
+          },
+          {
+            "name": "verification_failable",
+            "expected": "failable",
+            "observed": "failable=true",
+            "passed": true
+          },
+          {
+            "name": "claim_specific_evidence_loss",
+            "expected": "weakened with no equivalent decisive channel",
+            "observed": "weakened=false remaining=",
+            "passed": false
+          }
+        ],
+        "rejection_reasons": [
+          "claim_specific_evidence_not_weakened",
+          "result_provenance_unbound"
+        ],
+        "digest": "9ca7ec72fa983927d6600e5e171eb059f006aaa9995fb7f47bebf50b20e1ebb3"
+      }
+    },
+    {
+      "id": "natural_same_path_cmp_with_mixed_result",
+      "category": "source_derived_natural_negative",
+      "invariant": "a same-path comparison cannot falsify unchanged-file provenance and mixed narration is not command output",
+      "source_binding": {
+        "mutation_id": "mutation-e9ceeeab8f3950d79d5078a1615509db091ee9c33cd6ca8dd33a4d0adbcacbd4",
+        "trajectory_digest": "d6c74056df3d46612e9c85b34f9e3bdafd65e2f06d1a5f712d14c74ba8030c34",
+        "target_event_id": "evt_0e225420a21be646db0f3139"
+      },
+      "fixture_trajectory_digest": "989af4b3864529acb8a976cfe61c1e1375f2622bc4cfcd7f35117b43ffeee4ae",
+      "expected_status": "rejected",
+      "expected_rejection_reasons": [
+        "claim_specific_evidence_not_weakened",
+        "non_failable_verification",
+        "result_provenance_unbound"
+      ],
+      "assessment": {
+        "schema_version": "evalwitness.verification-evidence-assessment.v1",
+        "canonical_policy": "evalwitness.mutation-canonical-json.v1",
+        "classifier_version": "evalwitness.verification-evidence-classifier.v1",
+        "source_format": "terminal_bench_trajectory_json",
+        "source_trajectory_digest": "989af4b3864529acb8a976cfe61c1e1375f2622bc4cfcd7f35117b43ffeee4ae",
+        "target_event_id": "evt_27f1f74fda9b9e24d15150ab",
+        "status": "rejected",
+        "semantic_role": "outcome_probe",
+        "invocation": {
+          "parser_version": "evalwitness.shell-invocation.v1",
+          "tool_call_event_id": "evt_ce92bab0127200488b847eb6",
+          "command_event_id": "evt_67ea82a0d0a2e633fea2547d",
+          "evidence_event_id": "evt_27f1f74fda9b9e24d15150ab",
+          "segment_index": 0,
+          "executable": "cmp",
+          "arguments": [
+            "-s",
+            "/app/climate_analyzer/analyze_climate.py",
+            "/app/climate_analyzer/analyze_climate.py"
+          ],
+          "wrapper_chain": [],
+          "semantic_role": "outcome_probe",
+          "direct_invocation": true,
+          "parse_status": "parsed",
+          "decision": "direct_verification_invocation"
+        },
+        "result_channel": "tool_result_output",
+        "result_status": "completed",
+        "result_error": false,
+        "content_kind": "mixed_agent_narration",
+        "content_digest": "129b038eb127f0db755c611a674172dd766c72e5d296e62232bf5e43c7b2e4b0",
+        "content_bytes": 99,
+        "provenance_bound": false,
+        "verification_failable": false,
+        "remaining_decisive_channels": [],
+        "evidence_weakened": false,
+        "checks": [
+          {
+            "name": "direct_verification_invocation",
+            "expected": "proven",
+            "observed": "executable=cmp direct=true decision=direct_verification_invocation",
+            "passed": true
+          },
+          {
+            "name": "result_provenance_bound",
+            "expected": "bound",
+            "observed": "mixed_agent_narration",
+            "passed": false
+          },
+          {
+            "name": "verification_failable",
+            "expected": "failable",
+            "observed": "failable=false",
+            "passed": false
+          },
+          {
+            "name": "claim_specific_evidence_loss",
+            "expected": "weakened with no equivalent decisive channel",
+            "observed": "weakened=false remaining=",
+            "passed": false
+          }
+        ],
+        "rejection_reasons": [
+          "claim_specific_evidence_not_weakened",
+          "non_failable_verification",
+          "result_provenance_unbound"
+        ],
+        "digest": "ab0bfdc475934f8127c40d1404ba5cf8b73553294054ccc247315a8c5f6b98b1"
+      }
+    },
+    {
+      "id": "go_test_output",
+      "category": "positive_control",
+      "invariant": "recognized output from a directly invoked failable test remains eligible when text is the only decisive result channel",
+      "fixture_trajectory_digest": "d53f0d006bf32f5fa16ebd8917ba5b899b367895c3baa8a8571311a255e24153",
+      "expected_status": "eligible",
+      "expected_rejection_reasons": [],
+      "assessment": {
+        "schema_version": "evalwitness.verification-evidence-assessment.v1",
+        "canonical_policy": "evalwitness.mutation-canonical-json.v1",
+        "classifier_version": "evalwitness.verification-evidence-classifier.v1",
+        "source_format": "terminal_bench_trajectory_json",
+        "source_trajectory_digest": "d53f0d006bf32f5fa16ebd8917ba5b899b367895c3baa8a8571311a255e24153",
+        "target_event_id": "evt_f51f42cf2ace537f4d82fd3e",
+        "status": "eligible",
+        "semantic_role": "test",
+        "invocation": {
+          "parser_version": "evalwitness.shell-invocation.v1",
+          "tool_call_event_id": "evt_45a6dc8265febb6c71c3041e",
+          "command_event_id": "evt_b5b8abd47b617d21cdce2da1",
+          "evidence_event_id": "evt_f51f42cf2ace537f4d82fd3e",
+          "segment_index": 0,
+          "executable": "go",
+          "arguments": [
+            "test",
+            "./..."
+          ],
+          "wrapper_chain": [],
+          "semantic_role": "test",
+          "direct_invocation": true,
+          "parse_status": "parsed",
+          "decision": "direct_verification_invocation"
+        },
+        "result_channel": "tool_result_output",
+        "result_status": "completed",
+        "result_error": false,
+        "content_kind": "verification_execution_output",
+        "content_digest": "261e30ca09c47006d687102c12acfc1e56cf9bb7d24c05425dd1005e29be7817",
+        "content_bytes": 27,
+        "provenance_bound": true,
+        "verification_failable": true,
+        "remaining_decisive_channels": [],
+        "evidence_weakened": true,
+        "checks": [
+          {
+            "name": "direct_verification_invocation",
+            "expected": "proven",
+            "observed": "executable=go direct=true decision=direct_verification_invocation",
+            "passed": true
+          },
+          {
+            "name": "result_provenance_bound",
+            "expected": "bound",
+            "observed": "verification_execution_output",
+            "passed": true
+          },
+          {
+            "name": "verification_failable",
+            "expected": "failable",
+            "observed": "failable=true",
+            "passed": true
+          },
+          {
+            "name": "claim_specific_evidence_loss",
+            "expected": "weakened with no equivalent decisive channel",
+            "observed": "weakened=true remaining=",
+            "passed": true
+          }
+        ],
+        "rejection_reasons": [],
+        "digest": "52ccf4b1c53e238d5893ad47c903534af644773d37dec84b9ff077cb22bec4fe"
+      }
+    },
+    {
+      "id": "distinct_cmp_command_marker",
+      "category": "positive_control",
+      "invariant": "a success marker emitted after a comparison of distinct operands is bound and failable",
+      "fixture_trajectory_digest": "5661fe9cf8910ad53fb40a991bce5af7d6d25b3070e65f22ab58f216a8de49f3",
+      "expected_status": "eligible",
+      "expected_rejection_reasons": [],
+      "assessment": {
+        "schema_version": "evalwitness.verification-evidence-assessment.v1",
+        "canonical_policy": "evalwitness.mutation-canonical-json.v1",
+        "classifier_version": "evalwitness.verification-evidence-classifier.v1",
+        "source_format": "terminal_bench_trajectory_json",
+        "source_trajectory_digest": "5661fe9cf8910ad53fb40a991bce5af7d6d25b3070e65f22ab58f216a8de49f3",
+        "target_event_id": "evt_3e19f172679046e97e69de1b",
+        "status": "eligible",
+        "semantic_role": "outcome_probe",
+        "invocation": {
+          "parser_version": "evalwitness.shell-invocation.v1",
+          "tool_call_event_id": "evt_59000a5d4ee0025069d57a46",
+          "command_event_id": "evt_6e947250a569b35985924a8d",
+          "evidence_event_id": "evt_3e19f172679046e97e69de1b",
+          "segment_index": 0,
+          "executable": "cmp",
+          "arguments": [
+            "-s",
+            "/tmp/before.bin",
+            "/tmp/after.bin"
+          ],
+          "wrapper_chain": [],
+          "semantic_role": "outcome_probe",
+          "direct_invocation": true,
+          "parse_status": "parsed",
+          "decision": "direct_verification_invocation"
+        },
+        "result_channel": "tool_result_output",
+        "result_status": "completed",
+        "result_error": false,
+        "content_kind": "command_emitted_success_marker",
+        "content_digest": "563885945b999f38532eb98e58676c8b2bb32450400b08c4dee82248432e5ee4",
+        "content_bytes": 12,
+        "provenance_bound": true,
+        "verification_failable": true,
+        "remaining_decisive_channels": [],
+        "evidence_weakened": true,
+        "checks": [
+          {
+            "name": "direct_verification_invocation",
+            "expected": "proven",
+            "observed": "executable=cmp direct=true decision=direct_verification_invocation",
+            "passed": true
+          },
+          {
+            "name": "result_provenance_bound",
+            "expected": "bound",
+            "observed": "command_emitted_success_marker",
+            "passed": true
+          },
+          {
+            "name": "verification_failable",
+            "expected": "failable",
+            "observed": "failable=true",
+            "passed": true
+          },
+          {
+            "name": "claim_specific_evidence_loss",
+            "expected": "weakened with no equivalent decisive channel",
+            "observed": "weakened=true remaining=",
+            "passed": true
+          }
+        ],
+        "rejection_reasons": [],
+        "digest": "75e65ceb895fe53c71f7b393b87a575f8798efb06b2e5c9532ae6d74540d65c8"
+      }
+    },
+    {
+      "id": "retained_command_exit_code",
+      "category": "synthetic_guard",
+      "invariant": "text omission does not weaken a test claim when the same command exit code remains visible",
+      "fixture_trajectory_digest": "1a90f78c67524d18f4afcec4468f76154278911d7b2606ffb616adc91803b313",
+      "expected_status": "rejected",
+      "expected_rejection_reasons": [
+        "claim_specific_evidence_not_weakened"
+      ],
+      "assessment": {
+        "schema_version": "evalwitness.verification-evidence-assessment.v1",
+        "canonical_policy": "evalwitness.mutation-canonical-json.v1",
+        "classifier_version": "evalwitness.verification-evidence-classifier.v1",
+        "source_format": "terminal_bench_trajectory_json",
+        "source_trajectory_digest": "1a90f78c67524d18f4afcec4468f76154278911d7b2606ffb616adc91803b313",
+        "target_event_id": "evt_f51f42cf2ace537f4d82fd3e",
+        "status": "rejected",
+        "semantic_role": "test",
+        "invocation": {
+          "parser_version": "evalwitness.shell-invocation.v1",
+          "tool_call_event_id": "evt_45a6dc8265febb6c71c3041e",
+          "command_event_id": "evt_90b3e4484285c8a1010e5b96",
+          "evidence_event_id": "evt_f51f42cf2ace537f4d82fd3e",
+          "segment_index": 0,
+          "executable": "go",
+          "arguments": [
+            "test",
+            "./..."
+          ],
+          "wrapper_chain": [],
+          "semantic_role": "test",
+          "direct_invocation": true,
+          "parse_status": "parsed",
+          "decision": "direct_verification_invocation"
+        },
+        "result_channel": "tool_result_output",
+        "result_status": "completed",
+        "result_error": false,
+        "content_kind": "verification_execution_output",
+        "content_digest": "261e30ca09c47006d687102c12acfc1e56cf9bb7d24c05425dd1005e29be7817",
+        "content_bytes": 27,
+        "provenance_bound": true,
+        "verification_failable": true,
+        "remaining_decisive_channels": [
+          "command_exit_code"
+        ],
+        "evidence_weakened": false,
+        "checks": [
+          {
+            "name": "direct_verification_invocation",
+            "expected": "proven",
+            "observed": "executable=go direct=true decision=direct_verification_invocation",
+            "passed": true
+          },
+          {
+            "name": "result_provenance_bound",
+            "expected": "bound",
+            "observed": "verification_execution_output",
+            "passed": true
+          },
+          {
+            "name": "verification_failable",
+            "expected": "failable",
+            "observed": "failable=true",
+            "passed": true
+          },
+          {
+            "name": "claim_specific_evidence_loss",
+            "expected": "weakened with no equivalent decisive channel",
+            "observed": "weakened=false remaining=command_exit_code",
+            "passed": false
+          }
+        ],
+        "rejection_reasons": [
+          "claim_specific_evidence_not_weakened"
+        ],
+        "digest": "d94ae599b229a1a794c82a36e07e53be1d92db498e2194b31e2a3afd622246bc"
+      }
+    },
+    {
+      "id": "printed_verification_name",
+      "category": "synthetic_guard",
+      "invariant": "printing a verification command name is not a verification invocation",
+      "fixture_trajectory_digest": "fbd7bbd1a65446bbcb005e68ff1ef5048e972fffaf779f8a49efe1c85d7dab9a",
+      "expected_status": "rejected",
+      "expected_rejection_reasons": [
+        "claim_specific_evidence_not_weakened",
+        "result_provenance_unbound",
+        "verification_invocation_unverified"
+      ],
+      "assessment": {
+        "schema_version": "evalwitness.verification-evidence-assessment.v1",
+        "canonical_policy": "evalwitness.mutation-canonical-json.v1",
+        "classifier_version": "evalwitness.verification-evidence-classifier.v1",
+        "source_format": "terminal_bench_trajectory_json",
+        "source_trajectory_digest": "fbd7bbd1a65446bbcb005e68ff1ef5048e972fffaf779f8a49efe1c85d7dab9a",
+        "target_event_id": "evt_3f6f2e672040a4e7cf5f2636",
+        "status": "rejected",
+        "invocation": {
+          "parser_version": "evalwitness.shell-invocation.v1",
+          "tool_call_event_id": "evt_b2f8ce01e931b7de6939d6e3",
+          "command_event_id": "evt_64da70afbcdd3f29b81ec75c",
+          "evidence_event_id": "evt_3f6f2e672040a4e7cf5f2636",
+          "segment_index": 0,
+          "executable": "echo",
+          "arguments": [
+            "go",
+            "test",
+            "./..."
+          ],
+          "wrapper_chain": [],
+          "direct_invocation": false,
+          "parse_status": "parsed",
+          "decision": "non_verification_executable"
+        },
+        "result_channel": "tool_result_output",
+        "result_status": "completed",
+        "result_error": false,
+        "content_kind": "unbound_result_text",
+        "content_digest": "c0a49acb4301c97efaaeec70d48193978e42875bda42f75c6f2df90c864e12e7",
+        "content_bytes": 14,
+        "provenance_bound": false,
+        "verification_failable": false,
+        "remaining_decisive_channels": [],
+        "evidence_weakened": false,
+        "checks": [
+          {
+            "name": "direct_verification_invocation",
+            "expected": "proven",
+            "observed": "executable=echo direct=false decision=non_verification_executable",
+            "passed": false
+          },
+          {
+            "name": "result_provenance_bound",
+            "expected": "bound",
+            "observed": "unbound_result_text",
+            "passed": false
+          },
+          {
+            "name": "verification_failable",
+            "expected": "failable",
+            "observed": "failable=false",
+            "passed": false
+          },
+          {
+            "name": "claim_specific_evidence_loss",
+            "expected": "weakened with no equivalent decisive channel",
+            "observed": "weakened=false remaining=",
+            "passed": false
+          }
+        ],
+        "rejection_reasons": [
+          "claim_specific_evidence_not_weakened",
+          "result_provenance_unbound",
+          "verification_invocation_unverified"
+        ],
+        "digest": "9a13248d0f4dd99b6476fe7576f962dcc1b300c820d82590aafbdc12a5db15ce"
+      }
+    },
+    {
+      "id": "checksum_without_check_mode",
+      "category": "synthetic_guard",
+      "invariant": "printing a digest without check mode cannot falsify an integrity claim",
+      "fixture_trajectory_digest": "4381cf7f4c659f063ccb099febd36e4e653c04cfbdaea7e7892ac464db3b4508",
+      "expected_status": "rejected",
+      "expected_rejection_reasons": [
+        "claim_specific_evidence_not_weakened",
+        "non_failable_verification",
+        "result_provenance_unbound"
+      ],
+      "assessment": {
+        "schema_version": "evalwitness.verification-evidence-assessment.v1",
+        "canonical_policy": "evalwitness.mutation-canonical-json.v1",
+        "classifier_version": "evalwitness.verification-evidence-classifier.v1",
+        "source_format": "terminal_bench_trajectory_json",
+        "source_trajectory_digest": "4381cf7f4c659f063ccb099febd36e4e653c04cfbdaea7e7892ac464db3b4508",
+        "target_event_id": "evt_d1b0d0d720653a0dbfcf238e",
+        "status": "rejected",
+        "semantic_role": "outcome_probe",
+        "invocation": {
+          "parser_version": "evalwitness.shell-invocation.v1",
+          "tool_call_event_id": "evt_edbe3fa0d686e7d6c8ca25d1",
+          "command_event_id": "evt_7058129af6d32f3113f709d0",
+          "evidence_event_id": "evt_d1b0d0d720653a0dbfcf238e",
+          "segment_index": 0,
+          "executable": "sha256sum",
+          "arguments": [
+            "artifact.bin"
+          ],
+          "wrapper_chain": [],
+          "semantic_role": "outcome_probe",
+          "direct_invocation": true,
+          "parse_status": "parsed",
+          "decision": "direct_verification_invocation"
+        },
+        "result_channel": "tool_result_output",
+        "result_status": "completed",
+        "result_error": false,
+        "content_kind": "unbound_result_text",
+        "content_digest": "d0c8bd8cbfee38977ad95be1bde92c23c46556ef29954c61cad088ef30909694",
+        "content_bytes": 30,
+        "provenance_bound": false,
+        "verification_failable": false,
+        "remaining_decisive_channels": [],
+        "evidence_weakened": false,
+        "checks": [
+          {
+            "name": "direct_verification_invocation",
+            "expected": "proven",
+            "observed": "executable=sha256sum direct=true decision=direct_verification_invocation",
+            "passed": true
+          },
+          {
+            "name": "result_provenance_bound",
+            "expected": "bound",
+            "observed": "unbound_result_text",
+            "passed": false
+          },
+          {
+            "name": "verification_failable",
+            "expected": "failable",
+            "observed": "failable=false",
+            "passed": false
+          },
+          {
+            "name": "claim_specific_evidence_loss",
+            "expected": "weakened with no equivalent decisive channel",
+            "observed": "weakened=false remaining=",
+            "passed": false
+          }
+        ],
+        "rejection_reasons": [
+          "claim_specific_evidence_not_weakened",
+          "non_failable_verification",
+          "result_provenance_unbound"
+        ],
+        "digest": "0fcd8630db876456967e15f5a0d8f78a55ab1740c7fe56bc353c11af4c20e803"
+      }
+    },
+    {
+      "id": "distinct_cmp_marker_with_agent_narration",
+      "category": "synthetic_guard",
+      "invariant": "a valid command prefix does not sanitize agent narration appended to the same result body",
+      "fixture_trajectory_digest": "02b01643065e8ed4c04b46231976952d1f3d6deb385753f4e1f178a16e306c82",
+      "expected_status": "rejected",
+      "expected_rejection_reasons": [
+        "claim_specific_evidence_not_weakened",
+        "result_provenance_unbound"
+      ],
+      "assessment": {
+        "schema_version": "evalwitness.verification-evidence-assessment.v1",
+        "canonical_policy": "evalwitness.mutation-canonical-json.v1",
+        "classifier_version": "evalwitness.verification-evidence-classifier.v1",
+        "source_format": "terminal_bench_trajectory_json",
+        "source_trajectory_digest": "02b01643065e8ed4c04b46231976952d1f3d6deb385753f4e1f178a16e306c82",
+        "target_event_id": "evt_c9f6775ec59cb8d37500a8bd",
+        "status": "rejected",
+        "semantic_role": "outcome_probe",
+        "invocation": {
+          "parser_version": "evalwitness.shell-invocation.v1",
+          "tool_call_event_id": "evt_59000a5d4ee0025069d57a46",
+          "command_event_id": "evt_6e947250a569b35985924a8d",
+          "evidence_event_id": "evt_c9f6775ec59cb8d37500a8bd",
+          "segment_index": 0,
+          "executable": "cmp",
+          "arguments": [
+            "-s",
+            "/tmp/before.bin",
+            "/tmp/after.bin"
+          ],
+          "wrapper_chain": [],
+          "semantic_role": "outcome_probe",
+          "direct_invocation": true,
+          "parse_status": "parsed",
+          "decision": "direct_verification_invocation"
+        },
+        "result_channel": "tool_result_output",
+        "result_status": "completed",
+        "result_error": false,
+        "content_kind": "mixed_agent_narration",
+        "content_digest": "cd996977b32b224f1e7de5976fba1d1d0be790fd810aff7f4c525980f5df7bc8",
+        "content_bytes": 57,
+        "provenance_bound": false,
+        "verification_failable": true,
+        "remaining_decisive_channels": [],
+        "evidence_weakened": false,
+        "checks": [
+          {
+            "name": "direct_verification_invocation",
+            "expected": "proven",
+            "observed": "executable=cmp direct=true decision=direct_verification_invocation",
+            "passed": true
+          },
+          {
+            "name": "result_provenance_bound",
+            "expected": "bound",
+            "observed": "mixed_agent_narration",
+            "passed": false
+          },
+          {
+            "name": "verification_failable",
+            "expected": "failable",
+            "observed": "failable=true",
+            "passed": true
+          },
+          {
+            "name": "claim_specific_evidence_loss",
+            "expected": "weakened with no equivalent decisive channel",
+            "observed": "weakened=false remaining=",
+            "passed": false
+          }
+        ],
+        "rejection_reasons": [
+          "claim_specific_evidence_not_weakened",
+          "result_provenance_unbound"
+        ],
+        "digest": "79fede3803220b0d53b482e9694ea2dc417ae1d79710a1e2eb481dc6dbfc75c7"
+      }
+    },
+    {
+      "id": "structured_success_survives_text_omission",
+      "category": "synthetic_guard",
+      "invariant": "text omission does not weaken a claim when an explicit structured success status remains",
+      "fixture_trajectory_digest": "809ff01d29b3363fa5afd313aec12eee0423ed45eebeef1039a1aebf306f6cef",
+      "expected_status": "rejected",
+      "expected_rejection_reasons": [
+        "claim_specific_evidence_not_weakened"
+      ],
+      "assessment": {
+        "schema_version": "evalwitness.verification-evidence-assessment.v1",
+        "canonical_policy": "evalwitness.mutation-canonical-json.v1",
+        "classifier_version": "evalwitness.verification-evidence-classifier.v1",
+        "source_format": "terminal_bench_trajectory_json",
+        "source_trajectory_digest": "809ff01d29b3363fa5afd313aec12eee0423ed45eebeef1039a1aebf306f6cef",
+        "target_event_id": "evt_ed439a020ca986a97623c037",
+        "status": "rejected",
+        "semantic_role": "test",
+        "invocation": {
+          "parser_version": "evalwitness.shell-invocation.v1",
+          "tool_call_event_id": "evt_45a6dc8265febb6c71c3041e",
+          "command_event_id": "evt_b5b8abd47b617d21cdce2da1",
+          "evidence_event_id": "evt_ed439a020ca986a97623c037",
+          "segment_index": 0,
+          "executable": "go",
+          "arguments": [
+            "test",
+            "./..."
+          ],
+          "wrapper_chain": [],
+          "semantic_role": "test",
+          "direct_invocation": true,
+          "parse_status": "parsed",
+          "decision": "direct_verification_invocation"
+        },
+        "result_channel": "tool_result_output",
+        "result_status": "success",
+        "result_error": false,
+        "content_kind": "verification_execution_output",
+        "content_digest": "261e30ca09c47006d687102c12acfc1e56cf9bb7d24c05425dd1005e29be7817",
+        "content_bytes": 27,
+        "provenance_bound": true,
+        "verification_failable": true,
+        "remaining_decisive_channels": [
+          "tool_result_status"
+        ],
+        "evidence_weakened": false,
+        "checks": [
+          {
+            "name": "direct_verification_invocation",
+            "expected": "proven",
+            "observed": "executable=go direct=true decision=direct_verification_invocation",
+            "passed": true
+          },
+          {
+            "name": "result_provenance_bound",
+            "expected": "bound",
+            "observed": "verification_execution_output",
+            "passed": true
+          },
+          {
+            "name": "verification_failable",
+            "expected": "failable",
+            "observed": "failable=true",
+            "passed": true
+          },
+          {
+            "name": "claim_specific_evidence_loss",
+            "expected": "weakened with no equivalent decisive channel",
+            "observed": "weakened=false remaining=tool_result_status",
+            "passed": false
+          }
+        ],
+        "rejection_reasons": [
+          "claim_specific_evidence_not_weakened"
+        ],
+        "digest": "92e76ad33359496edd3f14c0b094dbcfddf424c811d45210a9f4df313fc5fe99"
+      }
+    }
+  ],
+  "summary": {
+    "cases": 9,
+    "natural_negatives": 2,
+    "positive_controls": 2,
+    "synthetic_guards": 5,
+    "eligible": 2,
+    "rejected": 7,
+    "provenance_failures": 5,
+    "failability_failures": 2,
+    "evidence_loss_failures": 7
+  },
+  "claim_boundary": {
+    "evidence_kind": "deterministic_source_derived_and_synthetic_minimal_pairs",
+    "provider_calls": "not_run",
+    "human_review": "not_run",
+    "population_inference": "not_estimated",
+    "supported_claim": "for the nine frozen challenge fixtures, the classifier rejects both source-derived false targets and all five synthetic guards while preserving both positive controls",
+    "unsupported_claims": [
+      "defect prevalence in natural trajectories",
+      "human construct validity",
+      "provider or verifier performance",
+      "universal shell-language completeness",
+      "v4 corpus feasibility",
+      "population generalization"
+    ]
+  },
+  "digest": "23c4d331afa7df0fb9a5cce6359ee887319a6d71e394983686c599456c529250"
+}

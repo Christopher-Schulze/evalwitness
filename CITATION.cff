@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use EvalWitness, cite this software and the exact verified release manifest."
+type: software
+title: "EvalWitness: a verifier audit lab for coding-agent trajectories"
+authors:
+  - family-names: Schulze
+    given-names: Christopher
+version: 0.2.0
+license: MIT
+keywords:
+  - coding agents
+  - evaluation
+  - evidence provenance
+  - LLM verifier
+  - reproducibility
+  - trajectory audit
+abstract: >-
+  EvalWitness is a provider-portable, reproducible verifier audit lab for
+  coding-agent trajectories. It combines a production-oriented Go service with
+  strict score evidence, exact replay, content-addressed capsules, controlled
+  falsification, and bounded empirical analysis. Evidence, verifier inputs,
+  decisions, negative controls, and public claims remain independently
+  checkable.

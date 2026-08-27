@@ -1,0 +1,5 @@
+{"timestamp":"2026-01-01T00:00:00Z","type":"session_meta","payload":{"id":"session-fixture","cli_version":"fixture"}}
+{"timestamp":"2026-01-01T00:00:01Z","type":"response_item","payload":{"type":"message","id":"message-1","role":"user","content":[{"type":"input_text","text":"Inspect the fixture repository."}]}}
+{"timestamp":"2026-01-01T00:00:02Z","type":"response_item","payload":{"type":"function_call","id":"call-item-1","call_id":"call-1","name":"shell","arguments":"{\"command\":\"go test ./...\"}","status":"completed"}}
+{"timestamp":"2026-01-01T00:00:03Z","type":"response_item","payload":{"type":"function_call_output","id":"result-item-1","call_id":"call-1","output":"ok","status":"completed"}}
+{"timestamp":"2026-01-01T00:00:04Z","type":"event_msg","payload":{"type":"token_count","info":{"total_token_usage":{"input_tokens":30,"cached_input_tokens":10,"cache_write_input_tokens":0,"output_tokens":5,"reasoning_output_tokens":1,"total_tokens":35},"last_token_usage":{"input_tokens":30,"cached_input_tokens":10,"cache_write_input_tokens":0,"output_tokens":5,"reasoning_output_tokens":1,"total_tokens":35},"model_context_window":128000}}}

@@ -1,0 +1,308 @@
+{
+  "schema_version": "evalwitness.verification-lineage-schema-inventory.v1",
+  "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+  "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+  "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+  "documents": [
+    {
+      "document_type": "assessment",
+      "schema_version": "evalwitness.verification-lineage-assessment.v1",
+      "schema_id": "https://evalwitness.dev/schemas/verification-lineage-assessment.v1.json",
+      "schema_digest": "ef8ff9d2e4c88fe840ac942f09e16eac8cb81ae6e745470db5953ec7d8d96246",
+      "parent_requirements": [
+        {
+          "relation": "candidate",
+          "schema_versions": [
+            "evalwitness.verification-lineage-candidate.v1"
+          ],
+          "minimum": 1,
+          "maximum": 1,
+          "same_task": true,
+          "same_task_group": true
+        },
+        {
+          "relation": "witness",
+          "schema_versions": [
+            "evalwitness.execution-witness.v1"
+          ],
+          "minimum": 1,
+          "maximum": 1,
+          "same_task": true,
+          "same_task_group": true
+        }
+      ]
+    },
+    {
+      "document_type": "audit",
+      "schema_version": "evalwitness.verification-lineage-audit.v1",
+      "schema_id": "https://evalwitness.dev/schemas/verification-lineage-audit.v1.json",
+      "schema_digest": "13aca6b891a0ef1d6c5479eca4554b41ac1df9f4af60da02625ad5828e51d680",
+      "parent_requirements": [
+        {
+          "relation": "plan",
+          "schema_versions": [
+            "evalwitness.verification-lineage-plan.v1"
+          ],
+          "minimum": 1,
+          "maximum": 1,
+          "same_task": true,
+          "same_task_group": false
+        },
+        {
+          "relation": "assessment",
+          "schema_versions": [
+            "evalwitness.verification-lineage-assessment.v1"
+          ],
+          "minimum": 1,
+          "maximum": -1,
+          "same_task": true,
+          "same_task_group": false
+        },
+        {
+          "relation": "capability",
+          "schema_versions": [
+            "evalwitness.trace-capability-vector.v1"
+          ],
+          "minimum": 1,
+          "maximum": -1,
+          "same_task": true,
+          "same_task_group": false
+        }
+      ]
+    },
+    {
+      "document_type": "bom",
+      "schema_version": "evalwitness.verification-evidence-bom.v1",
+      "schema_id": "https://evalwitness.dev/schemas/verification-evidence-bom.v1.json",
+      "schema_digest": "5f30cf86f12fe913540519e2ed79b4d4461aed993141d5b9d32f31084442990a",
+      "parent_requirements": [
+        {
+          "relation": "source",
+          "schema_versions": [
+            "evalwitness.verification-lineage-source.v1"
+          ],
+          "minimum": 1,
+          "maximum": 1,
+          "same_task": true,
+          "same_task_group": true
+        },
+        {
+          "relation": "witness",
+          "schema_versions": [
+            "evalwitness.execution-witness.v1"
+          ],
+          "minimum": 1,
+          "maximum": 1,
+          "same_task": true,
+          "same_task_group": true
+        },
+        {
+          "relation": "candidate",
+          "schema_versions": [
+            "evalwitness.verification-lineage-candidate.v1"
+          ],
+          "minimum": 1,
+          "maximum": 1,
+          "same_task": true,
+          "same_task_group": true
+        },
+        {
+          "relation": "assessment",
+          "schema_versions": [
+            "evalwitness.verification-lineage-assessment.v1"
+          ],
+          "minimum": 1,
+          "maximum": 1,
+          "same_task": true,
+          "same_task_group": true
+        },
+        {
+          "relation": "audit",
+          "schema_versions": [
+            "evalwitness.verification-lineage-audit.v1"
+          ],
+          "minimum": 1,
+          "maximum": 1,
+          "same_task": true,
+          "same_task_group": false
+        }
+      ]
+    },
+    {
+      "document_type": "candidate",
+      "schema_version": "evalwitness.verification-lineage-candidate.v1",
+      "schema_id": "https://evalwitness.dev/schemas/verification-lineage-candidate.v1.json",
+      "schema_digest": "448abbe0d6bc74100ed4327fcd6bc5c570a09730a58574371daf3ca84e6fd65b",
+      "parent_requirements": [
+        {
+          "relation": "source",
+          "schema_versions": [
+            "evalwitness.verification-lineage-source.v1"
+          ],
+          "minimum": 1,
+          "maximum": 1,
+          "same_task": true,
+          "same_task_group": true
+        },
+        {
+          "relation": "witness",
+          "schema_versions": [
+            "evalwitness.execution-witness.v1"
+          ],
+          "minimum": 1,
+          "maximum": 1,
+          "same_task": true,
+          "same_task_group": true
+        }
+      ]
+    },
+    {
+      "document_type": "capability-vector",
+      "schema_version": "evalwitness.trace-capability-vector.v1",
+      "schema_id": "https://evalwitness.dev/schemas/trace-capability-vector.v1.json",
+      "schema_digest": "0523e0afa54e12d13e4c18119ceeac4d0edae2078aa19abf9e10de172050e247",
+      "parent_requirements": [
+        {
+          "relation": "plan",
+          "schema_versions": [
+            "evalwitness.verification-lineage-plan.v1"
+          ],
+          "minimum": 1,
+          "maximum": 1,
+          "same_task": true,
+          "same_task_group": false
+        }
+      ]
+    },
+    {
+      "document_type": "dataset-card",
+      "schema_version": "evalwitness.verification-lineage-dataset-card.v1",
+      "schema_id": "https://evalwitness.dev/schemas/verification-lineage-dataset-card.v1.json",
+      "schema_digest": "9e11b39ceeddec7a3aec38771c10ff8cec942e01ff52fc255a5d0f6f60ba4042",
+      "parent_requirements": [
+        {
+          "relation": "plan",
+          "schema_versions": [
+            "evalwitness.verification-lineage-plan.v1"
+          ],
+          "minimum": 1,
+          "maximum": 1,
+          "same_task": true,
+          "same_task_group": false
+        },
+        {
+          "relation": "audit",
+          "schema_versions": [
+            "evalwitness.verification-lineage-audit.v1"
+          ],
+          "minimum": 1,
+          "maximum": -1,
+          "same_task": true,
+          "same_task_group": false
+        },
+        {
+          "relation": "capability",
+          "schema_versions": [
+            "evalwitness.trace-capability-vector.v1"
+          ],
+          "minimum": 1,
+          "maximum": -1,
+          "same_task": true,
+          "same_task_group": false
+        }
+      ]
+    },
+    {
+      "document_type": "execution-witness",
+      "schema_version": "evalwitness.execution-witness.v1",
+      "schema_id": "https://evalwitness.dev/schemas/execution-witness.v1.json",
+      "schema_digest": "82dd941ce6e38e327d05bf514e4615de4f35ba5063b0a3702306a949ada509ef",
+      "parent_requirements": [
+        {
+          "relation": "source",
+          "schema_versions": [
+            "evalwitness.verification-lineage-source.v1"
+          ],
+          "minimum": 1,
+          "maximum": 1,
+          "same_task": true,
+          "same_task_group": true
+        }
+      ]
+    },
+    {
+      "document_type": "plan",
+      "schema_version": "evalwitness.verification-lineage-plan.v1",
+      "schema_id": "https://evalwitness.dev/schemas/verification-lineage-plan.v1.json",
+      "schema_digest": "a598e4630c97969679d19a20989998eb859ea54b9e1e27f0728cb8105d0364bb",
+      "parent_requirements": null
+    },
+    {
+      "document_type": "release",
+      "schema_version": "evalwitness.verification-lineage-release.v1",
+      "schema_id": "https://evalwitness.dev/schemas/verification-lineage-release.v1.json",
+      "schema_digest": "5677f2a658cbb66d9d0813f412148ec4b6398e76ba34d446e8a44207c27ec4c2",
+      "parent_requirements": [
+        {
+          "relation": "plan",
+          "schema_versions": [
+            "evalwitness.verification-lineage-plan.v1"
+          ],
+          "minimum": 1,
+          "maximum": 1,
+          "same_task": true,
+          "same_task_group": false
+        },
+        {
+          "relation": "audit",
+          "schema_versions": [
+            "evalwitness.verification-lineage-audit.v1"
+          ],
+          "minimum": 1,
+          "maximum": 1,
+          "same_task": true,
+          "same_task_group": false
+        },
+        {
+          "relation": "bom",
+          "schema_versions": [
+            "evalwitness.verification-evidence-bom.v1"
+          ],
+          "minimum": 1,
+          "maximum": -1,
+          "same_task": true,
+          "same_task_group": false
+        },
+        {
+          "relation": "dataset_card",
+          "schema_versions": [
+            "evalwitness.verification-lineage-dataset-card.v1"
+          ],
+          "minimum": 1,
+          "maximum": 1,
+          "same_task": true,
+          "same_task_group": false
+        }
+      ]
+    },
+    {
+      "document_type": "source",
+      "schema_version": "evalwitness.verification-lineage-source.v1",
+      "schema_id": "https://evalwitness.dev/schemas/verification-lineage-source.v1.json",
+      "schema_digest": "75724cdf452f917ee624147ddd60d4b59bb43e9bac61650e4e7569abaa6703e8",
+      "parent_requirements": [
+        {
+          "relation": "plan",
+          "schema_versions": [
+            "evalwitness.verification-lineage-plan.v1"
+          ],
+          "minimum": 1,
+          "maximum": 1,
+          "same_task": true,
+          "same_task_group": false
+        }
+      ]
+    }
+  ],
+  "digest": "4ffb32aa9efa9bb9fc8cffaa7d9416a95c558acd3fe6e2feaca22bfb92ccdfc5"
+}

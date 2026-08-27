@@ -1,0 +1,19 @@
+{
+  "schema_version": "evalwitness.extension.verifier-relation-conformance.v1",
+  "extension_id": "task-056-verifier-relation",
+  "owner_task": "TASK-056",
+  "status": "conformance_fixture",
+  "provider_calls_required": 0,
+  "human_actions_required": 0,
+  "required_fields": [
+    "differential_oracle",
+    "metamorphic_relation",
+    "mutation_identity",
+    "relation_witness"
+  ],
+  "prohibited_claims": [
+    "human_construct_validity",
+    "population_prevalence",
+    "provider_robustness"
+  ]
+}

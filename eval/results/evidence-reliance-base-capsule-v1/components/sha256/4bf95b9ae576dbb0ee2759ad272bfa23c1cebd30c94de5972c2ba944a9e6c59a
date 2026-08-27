@@ -1,0 +1,535 @@
+{
+  "schema_version": "evalwitness.trace-source-specification-registry.v1",
+  "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+  "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+  "researched_at": "2026-08-10T00:00:00Z",
+  "provider_calls_allowed": 0,
+  "laboratory_may_launch_agents": false,
+  "specifications": [
+    {
+      "id": "agent_trace_json",
+      "format": "agent_trace_json",
+      "format_version": "0.1.0",
+      "upstream_repository": "https://github.com/cursor/agent-trace",
+      "upstream_commit": "2754f077f3e50c1fb5088183f5c9362077cc8ca1",
+      "license": "CC-BY-4.0",
+      "license_evidence": {
+        "url": "https://github.com/cursor/agent-trace/blob/2754f077f3e50c1fb5088183f5c9362077cc8ca1/README.md#license",
+        "upstream_commit": "2754f077f3e50c1fb5088183f5c9362077cc8ca1",
+        "content_digest": "bd9f6c10a3e5253ae6260a7bba4d9cbabcca168d2bfb771470432b9b7cf655df",
+        "mutable": false
+      },
+      "specification_status": "versioned_rfc",
+      "schema_url": "https://agent-trace.dev/schemas/v1/trace-record.json",
+      "admission": "attribution_control_only",
+      "redistribution_policy": "redistributable_with_attribution",
+      "normative_sources": [
+        {
+          "url": "https://github.com/cursor/agent-trace/blob/2754f077f3e50c1fb5088183f5c9362077cc8ca1/README.md",
+          "upstream_commit": "2754f077f3e50c1fb5088183f5c9362077cc8ca1",
+          "content_digest": "bd9f6c10a3e5253ae6260a7bba4d9cbabcca168d2bfb771470432b9b7cf655df",
+          "mutable": false
+        }
+      ],
+      "capability_basis": "versioned RFC trace-record schema",
+      "expected_capabilities": [
+        {
+          "field": "call_id",
+          "representability": "unsupported",
+          "evidence": "Agent Trace 0.1.0 records attribution rather than runtime execution"
+        },
+        {
+          "field": "command_display",
+          "representability": "unsupported",
+          "evidence": "Agent Trace 0.1.0 records attribution rather than runtime execution"
+        },
+        {
+          "field": "exit_status",
+          "representability": "unsupported",
+          "evidence": "Agent Trace 0.1.0 records attribution rather than runtime execution"
+        },
+        {
+          "field": "redaction_provenance",
+          "representability": "unsupported",
+          "evidence": "Agent Trace 0.1.0 records attribution rather than runtime execution"
+        },
+        {
+          "field": "result",
+          "representability": "unsupported",
+          "evidence": "Agent Trace 0.1.0 records attribution rather than runtime execution"
+        },
+        {
+          "field": "role",
+          "representability": "optional",
+          "evidence": "Agent Trace 0.1.0 records attribution rather than runtime execution"
+        },
+        {
+          "field": "source_record",
+          "representability": "required",
+          "evidence": "Agent Trace 0.1.0 records attribution rather than runtime execution"
+        },
+        {
+          "field": "timestamps",
+          "representability": "required",
+          "evidence": "Agent Trace 0.1.0 records attribution rather than runtime execution"
+        },
+        {
+          "field": "tool_call",
+          "representability": "unsupported",
+          "evidence": "Agent Trace 0.1.0 records attribution rather than runtime execution"
+        },
+        {
+          "field": "transaction_boundaries",
+          "representability": "unsupported",
+          "evidence": "Agent Trace 0.1.0 records attribution rather than runtime execution"
+        }
+      ],
+      "limitations": [
+        "quality_assessment_is_an_explicit_non_goal",
+        "runtime_command_and_result_lineage_is_not_defined"
+      ]
+    },
+    {
+      "id": "claude_code_jsonl",
+      "format": "claude_code_jsonl",
+      "format_version": "unversioned-export",
+      "upstream_repository": "https://github.com/anthropics/claude-code",
+      "upstream_commit": "2bb60696142b493eafaeacfe00eac51d16c50c4f",
+      "license": "Anthropic-commercial-terms",
+      "license_evidence": {
+        "url": "https://github.com/anthropics/claude-code/blob/2bb60696142b493eafaeacfe00eac51d16c50c4f/LICENSE.md",
+        "upstream_commit": "2bb60696142b493eafaeacfe00eac51d16c50c4f",
+        "content_digest": "728158fd1037143fad6907e8fa34804177e598b7326519503fe83cafdef849e6",
+        "mutable": false
+      },
+      "specification_status": "unversioned_documented_storage",
+      "schema_url": "",
+      "admission": "golden_vectors_required_before_confirmatory_use",
+      "redistribution_policy": "owner_authorization_required",
+      "normative_sources": [
+        {
+          "url": "https://code.claude.com/docs/en/claude-directory",
+          "upstream_commit": "",
+          "content_digest": "",
+          "mutable": true
+        }
+      ],
+      "capability_basis": "official storage documentation without a stable field schema",
+      "expected_capabilities": [
+        {
+          "field": "call_id",
+          "representability": "unspecified",
+          "evidence": "official documentation describes JSONL record classes but no stable field contract"
+        },
+        {
+          "field": "command_display",
+          "representability": "unspecified",
+          "evidence": "official documentation describes JSONL record classes but no stable field contract"
+        },
+        {
+          "field": "exit_status",
+          "representability": "unspecified",
+          "evidence": "official documentation describes JSONL record classes but no stable field contract"
+        },
+        {
+          "field": "redaction_provenance",
+          "representability": "unspecified",
+          "evidence": "official documentation describes JSONL record classes but no stable field contract"
+        },
+        {
+          "field": "result",
+          "representability": "unspecified",
+          "evidence": "official documentation describes JSONL record classes but no stable field contract"
+        },
+        {
+          "field": "role",
+          "representability": "unspecified",
+          "evidence": "official documentation describes JSONL record classes but no stable field contract"
+        },
+        {
+          "field": "source_record",
+          "representability": "unspecified",
+          "evidence": "official documentation describes JSONL record classes but no stable field contract"
+        },
+        {
+          "field": "timestamps",
+          "representability": "unspecified",
+          "evidence": "official documentation describes JSONL record classes but no stable field contract"
+        },
+        {
+          "field": "tool_call",
+          "representability": "unspecified",
+          "evidence": "official documentation describes JSONL record classes but no stable field contract"
+        },
+        {
+          "field": "transaction_boundaries",
+          "representability": "unspecified",
+          "evidence": "official documentation describes JSONL record classes but no stable field contract"
+        }
+      ],
+      "limitations": [
+        "exports_can_contain_secrets_and_private_reasoning",
+        "no_stable_versioned_field_schema",
+        "redistribution_is_not_granted_by_the_product_license"
+      ]
+    },
+    {
+      "id": "codex_rollout_jsonl",
+      "format": "codex_rollout_jsonl",
+      "format_version": "unversioned-export",
+      "upstream_repository": "https://github.com/openai/codex",
+      "upstream_commit": "1c042dd4d823b451ae44029abaf0e13b7cef8904",
+      "license": "Apache-2.0",
+      "license_evidence": {
+        "url": "https://github.com/openai/codex/blob/1c042dd4d823b451ae44029abaf0e13b7cef8904/LICENSE",
+        "upstream_commit": "1c042dd4d823b451ae44029abaf0e13b7cef8904",
+        "content_digest": "d17f227e4df5da1600391338865ce0f3055211760a36688f816941d58232d8dc",
+        "mutable": false
+      },
+      "specification_status": "commit_pinned_implementation_contract",
+      "schema_url": "",
+      "admission": "golden_vectors_required_before_confirmatory_use",
+      "redistribution_policy": "source_redistributable_capture_content_requires_separate_authority",
+      "normative_sources": [
+        {
+          "url": "https://github.com/openai/codex/blob/1c042dd4d823b451ae44029abaf0e13b7cef8904/codex-rs/protocol/src/protocol.rs",
+          "upstream_commit": "1c042dd4d823b451ae44029abaf0e13b7cef8904",
+          "content_digest": "03c395d104f2609793061c929145bd9fdde8250b1a282ac11a1bc49a414f1f03",
+          "mutable": false
+        }
+      ],
+      "capability_basis": "commit-pinned Rust serialization types, not a separately versioned rollout schema",
+      "expected_capabilities": [
+        {
+          "field": "call_id",
+          "representability": "optional",
+          "evidence": "RolloutLine and RolloutItem source types at the pinned commit"
+        },
+        {
+          "field": "command_display",
+          "representability": "optional",
+          "evidence": "RolloutLine and RolloutItem source types at the pinned commit"
+        },
+        {
+          "field": "exit_status",
+          "representability": "optional",
+          "evidence": "RolloutLine and RolloutItem source types at the pinned commit"
+        },
+        {
+          "field": "redaction_provenance",
+          "representability": "unsupported",
+          "evidence": "RolloutLine and RolloutItem source types at the pinned commit"
+        },
+        {
+          "field": "result",
+          "representability": "optional",
+          "evidence": "RolloutLine and RolloutItem source types at the pinned commit"
+        },
+        {
+          "field": "role",
+          "representability": "optional",
+          "evidence": "RolloutLine and RolloutItem source types at the pinned commit"
+        },
+        {
+          "field": "source_record",
+          "representability": "required",
+          "evidence": "RolloutLine and RolloutItem source types at the pinned commit"
+        },
+        {
+          "field": "timestamps",
+          "representability": "required",
+          "evidence": "RolloutLine and RolloutItem source types at the pinned commit"
+        },
+        {
+          "field": "tool_call",
+          "representability": "optional",
+          "evidence": "RolloutLine and RolloutItem source types at the pinned commit"
+        },
+        {
+          "field": "transaction_boundaries",
+          "representability": "optional",
+          "evidence": "RolloutLine and RolloutItem source types at the pinned commit"
+        }
+      ],
+      "limitations": [
+        "record_shape_can_change_without_a_rollout_schema_version",
+        "sensitive_capture_content_has_separate_release_authority"
+      ]
+    },
+    {
+      "id": "opencode_export_json",
+      "format": "opencode_export_json",
+      "format_version": "unversioned-export",
+      "upstream_repository": "https://github.com/anomalyco/opencode",
+      "upstream_commit": "550d1ffd24718454925c4636e937878f0274de48",
+      "license": "MIT",
+      "license_evidence": {
+        "url": "https://github.com/anomalyco/opencode/blob/550d1ffd24718454925c4636e937878f0274de48/LICENSE",
+        "upstream_commit": "550d1ffd24718454925c4636e937878f0274de48",
+        "content_digest": "625f0f619133f89bbbb2abe37369613dfa1885eba1e50d02170deb62bb42cb6b",
+        "mutable": false
+      },
+      "specification_status": "commit_pinned_implementation_contract",
+      "schema_url": "",
+      "admission": "golden_vectors_required_before_confirmatory_use",
+      "redistribution_policy": "source_redistributable_capture_content_requires_separate_authority",
+      "normative_sources": [
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/550d1ffd24718454925c4636e937878f0274de48/packages/opencode/src/cli/cmd/export.ts",
+          "upstream_commit": "550d1ffd24718454925c4636e937878f0274de48",
+          "content_digest": "ce20051b0ee3241459eb5566ac6ea83fbc6d701b13db866b8c9e7f5acc1bd328",
+          "mutable": false
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/550d1ffd24718454925c4636e937878f0274de48/packages/opencode/src/session/message-v2.ts",
+          "upstream_commit": "550d1ffd24718454925c4636e937878f0274de48",
+          "content_digest": "828789508afda97a1570b96413dd40ee9d9119dd25d057b5f0a985154378e619",
+          "mutable": false
+        }
+      ],
+      "capability_basis": "commit-pinned export implementation and message-part types, not a separately versioned export schema",
+      "expected_capabilities": [
+        {
+          "field": "call_id",
+          "representability": "optional",
+          "evidence": "export and message-v2 source types at the pinned commit"
+        },
+        {
+          "field": "command_display",
+          "representability": "optional",
+          "evidence": "export and message-v2 source types at the pinned commit"
+        },
+        {
+          "field": "exit_status",
+          "representability": "unspecified",
+          "evidence": "export and message-v2 source types at the pinned commit"
+        },
+        {
+          "field": "redaction_provenance",
+          "representability": "optional",
+          "evidence": "export and message-v2 source types at the pinned commit"
+        },
+        {
+          "field": "result",
+          "representability": "optional",
+          "evidence": "export and message-v2 source types at the pinned commit"
+        },
+        {
+          "field": "role",
+          "representability": "required",
+          "evidence": "export and message-v2 source types at the pinned commit"
+        },
+        {
+          "field": "source_record",
+          "representability": "required",
+          "evidence": "export and message-v2 source types at the pinned commit"
+        },
+        {
+          "field": "timestamps",
+          "representability": "optional",
+          "evidence": "export and message-v2 source types at the pinned commit"
+        },
+        {
+          "field": "tool_call",
+          "representability": "optional",
+          "evidence": "export and message-v2 source types at the pinned commit"
+        },
+        {
+          "field": "transaction_boundaries",
+          "representability": "optional",
+          "evidence": "export and message-v2 source types at the pinned commit"
+        }
+      ],
+      "limitations": [
+        "exit_status_semantics_are_not_a_stable_export_contract",
+        "record_shape_can_change_without_an_export_schema_version"
+      ]
+    },
+    {
+      "id": "otel_genai_development",
+      "format": "otel_genai_development",
+      "format_version": "development@46d43c8949afb53765a202e89f4534eeb75ca3fa",
+      "upstream_repository": "https://github.com/open-telemetry/semantic-conventions-genai",
+      "upstream_commit": "46d43c8949afb53765a202e89f4534eeb75ca3fa",
+      "license": "Apache-2.0",
+      "license_evidence": {
+        "url": "https://github.com/open-telemetry/semantic-conventions-genai/blob/46d43c8949afb53765a202e89f4534eeb75ca3fa/LICENSE",
+        "upstream_commit": "46d43c8949afb53765a202e89f4534eeb75ca3fa",
+        "content_digest": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "mutable": false
+      },
+      "specification_status": "development_no_schema_url",
+      "schema_url": "",
+      "admission": "rejected_until_immutable_schema_url",
+      "redistribution_policy": "source_redistributable_under_apache_2_0",
+      "normative_sources": [
+        {
+          "url": "https://github.com/open-telemetry/semantic-conventions-genai/blob/46d43c8949afb53765a202e89f4534eeb75ca3fa/README.md",
+          "upstream_commit": "46d43c8949afb53765a202e89f4534eeb75ca3fa",
+          "content_digest": "8ab882b40b743b3474de8d651671e0421e82dd0a8a48967d1bd0d7b06380b46d",
+          "mutable": false
+        },
+        {
+          "url": "https://github.com/open-telemetry/semantic-conventions-genai/blob/46d43c8949afb53765a202e89f4534eeb75ca3fa/model/gen-ai/registry.yaml",
+          "upstream_commit": "46d43c8949afb53765a202e89f4534eeb75ca3fa",
+          "content_digest": "e9bb6ace35e86823b57cb6e3e0e4ed5596888e59d219b1fb26fdf93006f6cfff",
+          "mutable": false
+        }
+      ],
+      "capability_basis": "development source snapshot; capability is descriptive and not an admitted interchange contract",
+      "expected_capabilities": [
+        {
+          "field": "call_id",
+          "representability": "optional",
+          "evidence": "development registry contains tool call ID, arguments, result, roles, and execute_tool operation"
+        },
+        {
+          "field": "command_display",
+          "representability": "unsupported",
+          "evidence": "development registry contains tool call ID, arguments, result, roles, and execute_tool operation"
+        },
+        {
+          "field": "exit_status",
+          "representability": "unsupported",
+          "evidence": "development registry contains tool call ID, arguments, result, roles, and execute_tool operation"
+        },
+        {
+          "field": "redaction_provenance",
+          "representability": "unsupported",
+          "evidence": "development registry contains tool call ID, arguments, result, roles, and execute_tool operation"
+        },
+        {
+          "field": "result",
+          "representability": "optional",
+          "evidence": "development registry contains tool call ID, arguments, result, roles, and execute_tool operation"
+        },
+        {
+          "field": "role",
+          "representability": "optional",
+          "evidence": "development registry contains tool call ID, arguments, result, roles, and execute_tool operation"
+        },
+        {
+          "field": "source_record",
+          "representability": "required",
+          "evidence": "development registry contains tool call ID, arguments, result, roles, and execute_tool operation"
+        },
+        {
+          "field": "timestamps",
+          "representability": "optional",
+          "evidence": "development registry contains tool call ID, arguments, result, roles, and execute_tool operation"
+        },
+        {
+          "field": "tool_call",
+          "representability": "optional",
+          "evidence": "development registry contains tool call ID, arguments, result, roles, and execute_tool operation"
+        },
+        {
+          "field": "transaction_boundaries",
+          "representability": "optional",
+          "evidence": "development registry contains tool call ID, arguments, result, roles, and execute_tool operation"
+        }
+      ],
+      "limitations": [
+        "official_schema_url_is_todo",
+        "source_snapshot_is_not_an_admitted_stable_interchange_version"
+      ]
+    },
+    {
+      "id": "otlp_json_genai",
+      "format": "otlp_json_genai",
+      "format_version": "otlp-json-1.8.0+semconv-1.41.0",
+      "upstream_repository": "https://github.com/open-telemetry/opentelemetry-proto",
+      "upstream_commit": "c0a98a1847d3124ac5f9ecd02d0e2d2732bbb590",
+      "license": "Apache-2.0",
+      "license_evidence": {
+        "url": "https://github.com/open-telemetry/opentelemetry-proto/blob/c0a98a1847d3124ac5f9ecd02d0e2d2732bbb590/LICENSE",
+        "upstream_commit": "c0a98a1847d3124ac5f9ecd02d0e2d2732bbb590",
+        "content_digest": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "mutable": false
+      },
+      "specification_status": "versioned_release",
+      "schema_url": "https://opentelemetry.io/schemas/1.41.0",
+      "admission": "supported_pinned_interchange",
+      "redistribution_policy": "source_redistributable_under_apache_2_0",
+      "normative_sources": [
+        {
+          "url": "https://github.com/open-telemetry/opentelemetry-proto/blob/c0a98a1847d3124ac5f9ecd02d0e2d2732bbb590/opentelemetry/proto/trace/v1/trace.proto",
+          "upstream_commit": "c0a98a1847d3124ac5f9ecd02d0e2d2732bbb590",
+          "content_digest": "be3014cf9a3aedc61d045621106a1643f2c9df5d4d13e2ba8c274ccc9d59ee36",
+          "mutable": false
+        },
+        {
+          "url": "https://github.com/open-telemetry/semantic-conventions/blob/e018fe6f91862f5ed63c082f87697cddac596784/model/gen-ai/registry.yaml",
+          "upstream_commit": "e018fe6f91862f5ed63c082f87697cddac596784",
+          "content_digest": "55ec5102aaa0fbdc1afcef0cebcca5676b6a549507f781425558e2c25d4d137f",
+          "mutable": false
+        },
+        {
+          "url": "https://github.com/open-telemetry/semantic-conventions/blob/e018fe6f91862f5ed63c082f87697cddac596784/model/gen-ai/spans.yaml",
+          "upstream_commit": "e018fe6f91862f5ed63c082f87697cddac596784",
+          "content_digest": "ff7f1823dd0a3723455bdb2729b489093b3d687b0af680643e5a01455011d558",
+          "mutable": false
+        }
+      ],
+      "capability_basis": "released OTLP trace structure plus immutable GenAI semantic-conventions schema",
+      "expected_capabilities": [
+        {
+          "field": "call_id",
+          "representability": "optional",
+          "evidence": "OTLP span structure and GenAI 1.41.0 attributes at pinned release commits"
+        },
+        {
+          "field": "command_display",
+          "representability": "unsupported",
+          "evidence": "OTLP span structure and GenAI 1.41.0 attributes at pinned release commits"
+        },
+        {
+          "field": "exit_status",
+          "representability": "unsupported",
+          "evidence": "OTLP span structure and GenAI 1.41.0 attributes at pinned release commits"
+        },
+        {
+          "field": "redaction_provenance",
+          "representability": "unsupported",
+          "evidence": "OTLP span structure and GenAI 1.41.0 attributes at pinned release commits"
+        },
+        {
+          "field": "result",
+          "representability": "optional",
+          "evidence": "OTLP span structure and GenAI 1.41.0 attributes at pinned release commits"
+        },
+        {
+          "field": "role",
+          "representability": "optional",
+          "evidence": "OTLP span structure and GenAI 1.41.0 attributes at pinned release commits"
+        },
+        {
+          "field": "source_record",
+          "representability": "required",
+          "evidence": "OTLP span structure and GenAI 1.41.0 attributes at pinned release commits"
+        },
+        {
+          "field": "timestamps",
+          "representability": "required",
+          "evidence": "OTLP span structure and GenAI 1.41.0 attributes at pinned release commits"
+        },
+        {
+          "field": "tool_call",
+          "representability": "optional",
+          "evidence": "OTLP span structure and GenAI 1.41.0 attributes at pinned release commits"
+        },
+        {
+          "field": "transaction_boundaries",
+          "representability": "optional",
+          "evidence": "OTLP span structure and GenAI 1.41.0 attributes at pinned release commits"
+        }
+      ],
+      "limitations": [
+        "command_display_has_no_genai_1_41_0_semantic_field",
+        "process_exit_status_has_no_genai_1_41_0_semantic_field",
+        "redaction_provenance_has_no_genai_1_41_0_semantic_field"
+      ]
+    }
+  ],
+  "digest": "4c955b5dc3eccf672c9befc0de7506d3079ba6d9a4a60af994cc535d8c720d44"
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "evalwitness.trace-fixture-manifest.v1",
+  "fixtures": [
+    {
+      "path": "agent-trace-0.1.0.json",
+      "format": "agent-trace",
+      "version": "0.1.0",
+      "upstream_commit": "2754f077f3e50c1fb5088183f5c9362077cc8ca1",
+      "license": "CC-BY-4.0",
+      "derivation": "minimal synthetic record shaped by the pinned upstream JSON schema"
+    },
+    {
+      "path": "otlp-genai-1.41.0.json",
+      "format": "otlp-json",
+      "version": "OTLP 1.8.0 with OpenTelemetry semantic conventions 1.41.0",
+      "upstream_commit": "c0a98a1847d3124ac5f9ecd02d0e2d2732bbb590",
+      "license": "Apache-2.0",
+      "derivation": "minimal synthetic OTLP JSON trace shaped by the pinned protobuf and semantic-convention schemas"
+    }
+  ]
+}

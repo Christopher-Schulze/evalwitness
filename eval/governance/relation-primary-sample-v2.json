@@ -1,0 +1,102 @@
+{
+  "schema_version": "evalwitness.relation-primary-sample.v2",
+  "canonical_policy": "evalwitness.relation-canonical-json.v1",
+  "protocol_version": "evalwitness.controlled-relation-review.v2",
+  "review_objective": "controlled_relation",
+  "plan_digest": "dcaba51fcf41b8c3eeb6cedd03ec4646ac6cb80f3457d589122ff4bd82fe4bf0",
+  "source_corpus_digest": "d0485f3484743a3d4ff907b295c0c9be11db21d2231664e5018fa2f047b6bf11",
+  "source_corpus_spec_digest": "94989d548973dad7bfc04418781ed4f25df1b81d6ddd1fbeacc581fefaef0979",
+  "source_mutation_program_digest": "30e368b56c42e24bb0cbaf30da1ff9d982a45d6499beca7745db95d2a30ac958",
+  "source_construct_audit_digest": "822d8034a4a75faaf337a4abd6e51743e38104c3ffca9ce7f214e751f5d026db",
+  "selection_rule": "exactly two calibration and two test cases per governed family, selected lexicographically with unique source task groups and jointly with the development pilot to preserve zero source, task-group, or lineage overlap; case bindings include exact source, program, manifest, witness, construct-firewall, license, privacy, lineage, packet, and regeneration commitments",
+  "selected_cases": 32,
+  "unique_source_ids": 36,
+  "unique_task_groups": 32,
+  "unique_lineage_clusters": 24,
+  "trajectory_pair_units": 28,
+  "candidate_order_units": 4,
+  "selection_digest": "efa2f692d790c6eb74115c6fe439a72145c87452e3788f67e548a0a5c260749d",
+  "family_counts": [
+    {
+      "id": "candidate_order_reversal",
+      "count": 4
+    },
+    {
+      "id": "causally_independent_event_reorder",
+      "count": 4
+    },
+    {
+      "id": "falsified_test_evidence",
+      "count": 4
+    },
+    {
+      "id": "incomplete_tool_output",
+      "count": 4
+    },
+    {
+      "id": "irrelevant_verbosity",
+      "count": 4
+    },
+    {
+      "id": "neutral_formatting",
+      "count": 4
+    },
+    {
+      "id": "omitted_test_evidence",
+      "count": 4
+    },
+    {
+      "id": "untrusted_score_tag_injection",
+      "count": 4
+    }
+  ],
+  "split_counts": [
+    {
+      "id": "calibration",
+      "count": 16
+    },
+    {
+      "id": "test",
+      "count": 16
+    }
+  ],
+  "control_counts": [
+    {
+      "id": "decoy",
+      "count": 4
+    },
+    {
+      "id": "negative",
+      "count": 12
+    },
+    {
+      "id": "relation",
+      "count": 16
+    }
+  ],
+  "source_format_counts": [
+    {
+      "id": "swe_bench_cache_item_json",
+      "count": 14
+    },
+    {
+      "id": "terminal_bench_trajectory_json",
+      "count": 22
+    }
+  ],
+  "bindings": {
+    "cases": "6af57e42a1b66b9e777c6bb408f6269654a14055ee8c8a012bfacdf2e2c3bb50",
+    "sources": "a17b91cf66619a78082faedb6ef5e8ab39fa4b70ce6240d60e6f52f843481aed",
+    "programs": "7b9f9fd20807077c99d2a76a89449770e2d143eac5293fa9fa979acaadb1f64a",
+    "manifests": "9e5553cc6ecfb6f15e4878089a2dfc2c2b4eacd8b961842fe44e0431c9725dc0",
+    "witnesses": "8bfd50577a252753347e92abde458667f3abcd1bb09889bcad21914883344a10",
+    "licenses": "f847d4536ee4cecedfaf979d492f132f672e1751143a69a5aa304a9041f4671d",
+    "privacy": "52b52647deb15b98f82602a2a820296190edda5bfd97fcccdd8d1d68b7e6bc17",
+    "lineage": "7c4a2e15fd95bbb58e160e2e27fc550e326d773076b3411609146def5da68d90",
+    "packets": "c0765821b61d56c95181533571e5390c15b50935fda5368a48312b7e6798fe87",
+    "regeneration": "b85743a6ad7f027dcf4e155badd1e773336612c9a1dcf6f178423a69c3d926d4",
+    "construct_firewalls": "4974b394e405e2d3c77769bf3b1de04cd9a6d96eba3f2a67d12ca0954c3b5108"
+  },
+  "external_action_status": "not_authorized",
+  "digest": "5734229be49d6e08ad4b63ed24b1e57ec91074ed2fc45bf598314b51782a3076"
+}

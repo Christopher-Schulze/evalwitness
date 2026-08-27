@@ -1,0 +1,690 @@
+{
+  "schema_version": 1,
+  "artifact_id": "evalwitness-eval-data-v1",
+  "reviewed_findings": [
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/swebench_verified_trajs/claude_4.5_opus_high_reasoning/data_cache.json",
+      "line": 1,
+      "file_sha256": "a9699967f18a85684f5e069f89d79cb15ad3663653762ae9766d2a17dc847000"
+    },
+    {
+      "rule": "private_home_path",
+      "path": "trajectories/swebench_verified_trajs/claude_4.5_opus_high_reasoning/data_cache.json",
+      "line": 1,
+      "file_sha256": "a9699967f18a85684f5e069f89d79cb15ad3663653762ae9766d2a17dc847000"
+    },
+    {
+      "rule": "quoted_password",
+      "path": "trajectories/swebench_verified_trajs/claude_4.5_opus_high_reasoning/data_cache.json",
+      "line": 1,
+      "file_sha256": "a9699967f18a85684f5e069f89d79cb15ad3663653762ae9766d2a17dc847000"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/swebench_verified_trajs/claude_opus_46/data_cache.json",
+      "line": 1,
+      "file_sha256": "4181ecb372181340e7bbe16217280f8dd3e72cdae9f5d22051be050a714a2014"
+    },
+    {
+      "rule": "private_home_path",
+      "path": "trajectories/swebench_verified_trajs/claude_opus_46/data_cache.json",
+      "line": 1,
+      "file_sha256": "4181ecb372181340e7bbe16217280f8dd3e72cdae9f5d22051be050a714a2014"
+    },
+    {
+      "rule": "quoted_password",
+      "path": "trajectories/swebench_verified_trajs/claude_opus_46/data_cache.json",
+      "line": 1,
+      "file_sha256": "4181ecb372181340e7bbe16217280f8dd3e72cdae9f5d22051be050a714a2014"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/swebench_verified_trajs/gemini_3_flash_high_reasoning/data_cache0.json",
+      "line": 1,
+      "file_sha256": "e9d2cffe9c55d8f675ce9d182fd128662b400852356cec8bb2a5f9096e4fef91"
+    },
+    {
+      "rule": "private_home_path",
+      "path": "trajectories/swebench_verified_trajs/gemini_3_flash_high_reasoning/data_cache0.json",
+      "line": 1,
+      "file_sha256": "e9d2cffe9c55d8f675ce9d182fd128662b400852356cec8bb2a5f9096e4fef91"
+    },
+    {
+      "rule": "quoted_password",
+      "path": "trajectories/swebench_verified_trajs/gemini_3_flash_high_reasoning/data_cache0.json",
+      "line": 1,
+      "file_sha256": "e9d2cffe9c55d8f675ce9d182fd128662b400852356cec8bb2a5f9096e4fef91"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/swebench_verified_trajs/gemini_3_flash_high_reasoning/data_cache1.json",
+      "line": 1,
+      "file_sha256": "8fb883daf59e93da9d14ce38910b266f658088e769363503c111501b21d410b5"
+    },
+    {
+      "rule": "private_home_path",
+      "path": "trajectories/swebench_verified_trajs/gemini_3_flash_high_reasoning/data_cache1.json",
+      "line": 1,
+      "file_sha256": "8fb883daf59e93da9d14ce38910b266f658088e769363503c111501b21d410b5"
+    },
+    {
+      "rule": "quoted_password",
+      "path": "trajectories/swebench_verified_trajs/gemini_3_flash_high_reasoning/data_cache1.json",
+      "line": 1,
+      "file_sha256": "8fb883daf59e93da9d14ce38910b266f658088e769363503c111501b21d410b5"
+    },
+    {
+      "rule": "private_home_path",
+      "path": "trajectories/swebench_verified_trajs/gemini_3_flash_high_reasoning/data_cache2.json",
+      "line": 1,
+      "file_sha256": "035e6c8e0aaba10bff1f32642672ab742da8758f220e34ca0803cf7b569b739c"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/git-leak-recovery/git-leak-recovery__2ssrBAQ_trajectory.json",
+      "line": 221,
+      "file_sha256": "338b249ff1134048afd968f844fd969be7698bd5de02f6034706891d26e5868e"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/git-leak-recovery/git-leak-recovery__4TBgMc3_trajectory.json",
+      "line": 252,
+      "file_sha256": "afbeb16dbe7c6245128abbe62988ecc6cfa309a6bb2c533747446cac025cc119"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/git-leak-recovery/git-leak-recovery__8y5pfQe_trajectory.json",
+      "line": 220,
+      "file_sha256": "03db4c0ad578b79653cb173273939aa031af56e12852bf924b5cbab0f847a858"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/git-leak-recovery/git-leak-recovery__FNaTJsX_trajectory.json",
+      "line": 228,
+      "file_sha256": "b53449245127842fb1a413e8940c699906f36b8f7152cf7cf5f993397f870ced"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/git-leak-recovery/git-leak-recovery__x2MJQ7k_trajectory.json",
+      "line": 221,
+      "file_sha256": "2a4d8f5b650f13f535b7d6225ba877a4eb92ad2cd434c23a7f9e3cb1b842af32"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/git-multibranch/git-multibranch__SWnAusU_trajectory.json",
+      "line": 177,
+      "file_sha256": "ed600352732c642ed805e94ed0bf0712c854ef8a87c643d7297324b5d899363a"
+    },
+    {
+      "rule": "cookie_header",
+      "path": "trajectories/terminal_trajs/forge_gpt54/gpt2-codegolf/gpt2-codegolf__HQQRhid_trajectory.json",
+      "line": 340,
+      "file_sha256": "16d76ba8d03ab8ced372be5bc07ffc2b30a0ad58343c81a9b491e14bfc09bc38"
+    },
+    {
+      "rule": "cookie_header",
+      "path": "trajectories/terminal_trajs/forge_gpt54/gpt2-codegolf/gpt2-codegolf__woypDDk_trajectory.json",
+      "line": 646,
+      "file_sha256": "8db27b9b0e2d77a6d9c0ebc076b0822dd02ca157a4de09b22baca602856065f1"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/install-windows-3.11/install-windows-3.11__Pbwb3AS_trajectory.json",
+      "line": 128,
+      "file_sha256": "4b3ca01510ef45597abf29d9f4380b4676f13e6e1254b5e241671feb0623c0a8"
+    },
+    {
+      "rule": "private_home_path",
+      "path": "trajectories/terminal_trajs/forge_gpt54/mteb-leaderboard/mteb-leaderboard__4EqueW4_trajectory.json",
+      "line": 442,
+      "file_sha256": "e303b37603e10d0d20156f6a0daa7e7ee26e197174601812e308c030e7e60b83"
+    },
+    {
+      "rule": "private_home_path",
+      "path": "trajectories/terminal_trajs/forge_gpt54/mteb-leaderboard/mteb-leaderboard__6VEUkF9_trajectory.json",
+      "line": 1907,
+      "file_sha256": "d329dfd49d19ba23dcffb260db736189421635c25316d9a5ecb7377677d055a5"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/password-recovery/password-recovery__J5KKG7G_trajectory.json",
+      "line": 31,
+      "file_sha256": "0283261745b68d9e6411ac408759532dea610941f748c67cd234beff6d15919c"
+    },
+    {
+      "rule": "quoted_password",
+      "path": "trajectories/terminal_trajs/forge_gpt54/password-recovery/password-recovery__J5KKG7G_trajectory.json",
+      "line": 180,
+      "file_sha256": "0283261745b68d9e6411ac408759532dea610941f748c67cd234beff6d15919c"
+    },
+    {
+      "rule": "quoted_password",
+      "path": "trajectories/terminal_trajs/forge_gpt54/password-recovery/password-recovery__J5KKG7G_trajectory.json",
+      "line": 186,
+      "file_sha256": "0283261745b68d9e6411ac408759532dea610941f748c67cd234beff6d15919c"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/password-recovery/password-recovery__MsAhoU6_trajectory.json",
+      "line": 143,
+      "file_sha256": "540ff033806ac4d99f1f4bd33b8599cbec4998eaf0d764cf122776368ee605c4"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/password-recovery/password-recovery__MsAhoU6_trajectory.json",
+      "line": 31,
+      "file_sha256": "540ff033806ac4d99f1f4bd33b8599cbec4998eaf0d764cf122776368ee605c4"
+    },
+    {
+      "rule": "quoted_password",
+      "path": "trajectories/terminal_trajs/forge_gpt54/password-recovery/password-recovery__MsAhoU6_trajectory.json",
+      "line": 130,
+      "file_sha256": "540ff033806ac4d99f1f4bd33b8599cbec4998eaf0d764cf122776368ee605c4"
+    },
+    {
+      "rule": "quoted_password",
+      "path": "trajectories/terminal_trajs/forge_gpt54/password-recovery/password-recovery__MsAhoU6_trajectory.json",
+      "line": 136,
+      "file_sha256": "540ff033806ac4d99f1f4bd33b8599cbec4998eaf0d764cf122776368ee605c4"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/password-recovery/password-recovery__QngRJeV_trajectory.json",
+      "line": 296,
+      "file_sha256": "ec822e97651f3b68d5e2eaf8eccf1d7ee8638534c65989f01f1a4738a5af9b9a"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/password-recovery/password-recovery__QngRJeV_trajectory.json",
+      "line": 302,
+      "file_sha256": "ec822e97651f3b68d5e2eaf8eccf1d7ee8638534c65989f01f1a4738a5af9b9a"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/password-recovery/password-recovery__QngRJeV_trajectory.json",
+      "line": 309,
+      "file_sha256": "ec822e97651f3b68d5e2eaf8eccf1d7ee8638534c65989f01f1a4738a5af9b9a"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/password-recovery/password-recovery__QngRJeV_trajectory.json",
+      "line": 31,
+      "file_sha256": "ec822e97651f3b68d5e2eaf8eccf1d7ee8638534c65989f01f1a4738a5af9b9a"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/password-recovery/password-recovery__QngRJeV_trajectory.json",
+      "line": 331,
+      "file_sha256": "ec822e97651f3b68d5e2eaf8eccf1d7ee8638534c65989f01f1a4738a5af9b9a"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/password-recovery/password-recovery__QngRJeV_trajectory.json",
+      "line": 384,
+      "file_sha256": "ec822e97651f3b68d5e2eaf8eccf1d7ee8638534c65989f01f1a4738a5af9b9a"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/password-recovery/password-recovery__QngRJeV_trajectory.json",
+      "line": 390,
+      "file_sha256": "ec822e97651f3b68d5e2eaf8eccf1d7ee8638534c65989f01f1a4738a5af9b9a"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/password-recovery/password-recovery__QngRJeV_trajectory.json",
+      "line": 397,
+      "file_sha256": "ec822e97651f3b68d5e2eaf8eccf1d7ee8638534c65989f01f1a4738a5af9b9a"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/password-recovery/password-recovery__QngRJeV_trajectory.json",
+      "line": 525,
+      "file_sha256": "ec822e97651f3b68d5e2eaf8eccf1d7ee8638534c65989f01f1a4738a5af9b9a"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/password-recovery/password-recovery__RqAd3Z5_trajectory.json",
+      "line": 237,
+      "file_sha256": "453e26d701c829f531913aefadbf2a69fb8f050f6c8965e082a823f2cef24966"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/password-recovery/password-recovery__RqAd3Z5_trajectory.json",
+      "line": 31,
+      "file_sha256": "453e26d701c829f531913aefadbf2a69fb8f050f6c8965e082a823f2cef24966"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/password-recovery/password-recovery__ed9QcuY_trajectory.json",
+      "line": 31,
+      "file_sha256": "43e4e89c14bbd3f51de1d6699180f453eb2586fdee2d1d2acadf4b9a6afac88f"
+    },
+    {
+      "rule": "private_home_path",
+      "path": "trajectories/terminal_trajs/forge_gpt54/qemu-alpine-ssh/qemu-alpine-ssh__QCXQS7c_trajectory.json",
+      "line": 680,
+      "file_sha256": "b2240331b1421ee9e0ecd4f3f22976a3445c7b8c077cd0dc8edcfb386ce575e5"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/qemu-alpine-ssh/qemu-alpine-ssh__UNsJvu5_trajectory.json",
+      "line": 1019,
+      "file_sha256": "f09928260ee8addb3a414cb21cf802ec6920a1a5c2a7a48ed3ff477853300956"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/qemu-alpine-ssh/qemu-alpine-ssh__UNsJvu5_trajectory.json",
+      "line": 730,
+      "file_sha256": "f09928260ee8addb3a414cb21cf802ec6920a1a5c2a7a48ed3ff477853300956"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/qemu-alpine-ssh/qemu-alpine-ssh__UNsJvu5_trajectory.json",
+      "line": 782,
+      "file_sha256": "f09928260ee8addb3a414cb21cf802ec6920a1a5c2a7a48ed3ff477853300956"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/qemu-alpine-ssh/qemu-alpine-ssh__UNsJvu5_trajectory.json",
+      "line": 834,
+      "file_sha256": "f09928260ee8addb3a414cb21cf802ec6920a1a5c2a7a48ed3ff477853300956"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/qemu-alpine-ssh/qemu-alpine-ssh__UNsJvu5_trajectory.json",
+      "line": 871,
+      "file_sha256": "f09928260ee8addb3a414cb21cf802ec6920a1a5c2a7a48ed3ff477853300956"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/qemu-alpine-ssh/qemu-alpine-ssh__UNsJvu5_trajectory.json",
+      "line": 908,
+      "file_sha256": "f09928260ee8addb3a414cb21cf802ec6920a1a5c2a7a48ed3ff477853300956"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/qemu-alpine-ssh/qemu-alpine-ssh__UNsJvu5_trajectory.json",
+      "line": 945,
+      "file_sha256": "f09928260ee8addb3a414cb21cf802ec6920a1a5c2a7a48ed3ff477853300956"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/qemu-alpine-ssh/qemu-alpine-ssh__UNsJvu5_trajectory.json",
+      "line": 982,
+      "file_sha256": "f09928260ee8addb3a414cb21cf802ec6920a1a5c2a7a48ed3ff477853300956"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/qemu-alpine-ssh/qemu-alpine-ssh__Vr7tpGm_trajectory.json",
+      "line": 1029,
+      "file_sha256": "ccde961b55f8d8630fb5c1b0f898d0b477704defcceb446c24a5263b84a16a57"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/qemu-alpine-ssh/qemu-alpine-ssh__Vr7tpGm_trajectory.json",
+      "line": 1051,
+      "file_sha256": "ccde961b55f8d8630fb5c1b0f898d0b477704defcceb446c24a5263b84a16a57"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/qemu-alpine-ssh/qemu-alpine-ssh__Vr7tpGm_trajectory.json",
+      "line": 1073,
+      "file_sha256": "ccde961b55f8d8630fb5c1b0f898d0b477704defcceb446c24a5263b84a16a57"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/qemu-alpine-ssh/qemu-alpine-ssh__Vr7tpGm_trajectory.json",
+      "line": 957,
+      "file_sha256": "ccde961b55f8d8630fb5c1b0f898d0b477704defcceb446c24a5263b84a16a57"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/qemu-alpine-ssh/qemu-alpine-ssh__h2ZzBxq_trajectory.json",
+      "line": 821,
+      "file_sha256": "f8b7006da4ab33c65f1c8642128260a94ff369ae9ef477fc5ff69bd80c5bbdab"
+    },
+    {
+      "rule": "private_home_path",
+      "path": "trajectories/terminal_trajs/forge_gpt54/qemu-alpine-ssh/qemu-alpine-ssh__zX9qQ9K_trajectory.json",
+      "line": 1055,
+      "file_sha256": "9d86388897be8b5e2d51db64dcf581332c7d6fc1b8992632766f6e910df88414"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__2otAK22_trajectory.json",
+      "line": 161,
+      "file_sha256": "ec261a0c7075c343d529b063f1b0d660d1cf404ed0ba0191c53032436f5d64f1"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__2otAK22_trajectory.json",
+      "line": 167,
+      "file_sha256": "ec261a0c7075c343d529b063f1b0d660d1cf404ed0ba0191c53032436f5d64f1"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__2otAK22_trajectory.json",
+      "line": 84,
+      "file_sha256": "ec261a0c7075c343d529b063f1b0d660d1cf404ed0ba0191c53032436f5d64f1"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__2otAK22_trajectory.json",
+      "line": 273,
+      "file_sha256": "ec261a0c7075c343d529b063f1b0d660d1cf404ed0ba0191c53032436f5d64f1"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__2otAK22_trajectory.json",
+      "line": 161,
+      "file_sha256": "ec261a0c7075c343d529b063f1b0d660d1cf404ed0ba0191c53032436f5d64f1"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__2otAK22_trajectory.json",
+      "line": 167,
+      "file_sha256": "ec261a0c7075c343d529b063f1b0d660d1cf404ed0ba0191c53032436f5d64f1"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__2otAK22_trajectory.json",
+      "line": 84,
+      "file_sha256": "ec261a0c7075c343d529b063f1b0d660d1cf404ed0ba0191c53032436f5d64f1"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__CPKvPTD_trajectory.json",
+      "line": 173,
+      "file_sha256": "b4ee23bf4d95fb5aa687ebb89faec3793fcddbec6fff7613466857517715d716"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__CPKvPTD_trajectory.json",
+      "line": 179,
+      "file_sha256": "b4ee23bf4d95fb5aa687ebb89faec3793fcddbec6fff7613466857517715d716"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__CPKvPTD_trajectory.json",
+      "line": 198,
+      "file_sha256": "b4ee23bf4d95fb5aa687ebb89faec3793fcddbec6fff7613466857517715d716"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__CPKvPTD_trajectory.json",
+      "line": 238,
+      "file_sha256": "b4ee23bf4d95fb5aa687ebb89faec3793fcddbec6fff7613466857517715d716"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__CPKvPTD_trajectory.json",
+      "line": 277,
+      "file_sha256": "b4ee23bf4d95fb5aa687ebb89faec3793fcddbec6fff7613466857517715d716"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__CPKvPTD_trajectory.json",
+      "line": 283,
+      "file_sha256": "b4ee23bf4d95fb5aa687ebb89faec3793fcddbec6fff7613466857517715d716"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__CPKvPTD_trajectory.json",
+      "line": 392,
+      "file_sha256": "b4ee23bf4d95fb5aa687ebb89faec3793fcddbec6fff7613466857517715d716"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__CPKvPTD_trajectory.json",
+      "line": 398,
+      "file_sha256": "b4ee23bf4d95fb5aa687ebb89faec3793fcddbec6fff7613466857517715d716"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__CPKvPTD_trajectory.json",
+      "line": 173,
+      "file_sha256": "b4ee23bf4d95fb5aa687ebb89faec3793fcddbec6fff7613466857517715d716"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__CPKvPTD_trajectory.json",
+      "line": 179,
+      "file_sha256": "b4ee23bf4d95fb5aa687ebb89faec3793fcddbec6fff7613466857517715d716"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__CPKvPTD_trajectory.json",
+      "line": 198,
+      "file_sha256": "b4ee23bf4d95fb5aa687ebb89faec3793fcddbec6fff7613466857517715d716"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__CPKvPTD_trajectory.json",
+      "line": 238,
+      "file_sha256": "b4ee23bf4d95fb5aa687ebb89faec3793fcddbec6fff7613466857517715d716"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__CPKvPTD_trajectory.json",
+      "line": 277,
+      "file_sha256": "b4ee23bf4d95fb5aa687ebb89faec3793fcddbec6fff7613466857517715d716"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__CPKvPTD_trajectory.json",
+      "line": 283,
+      "file_sha256": "b4ee23bf4d95fb5aa687ebb89faec3793fcddbec6fff7613466857517715d716"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__CPKvPTD_trajectory.json",
+      "line": 392,
+      "file_sha256": "b4ee23bf4d95fb5aa687ebb89faec3793fcddbec6fff7613466857517715d716"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__CPKvPTD_trajectory.json",
+      "line": 398,
+      "file_sha256": "b4ee23bf4d95fb5aa687ebb89faec3793fcddbec6fff7613466857517715d716"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__NRs9zwp_trajectory.json",
+      "line": 133,
+      "file_sha256": "bcba3dbe40de104ee2f9a9c94f8167fadfef26dd3b357dff75e0c507b6c987c3"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__NRs9zwp_trajectory.json",
+      "line": 139,
+      "file_sha256": "bcba3dbe40de104ee2f9a9c94f8167fadfef26dd3b357dff75e0c507b6c987c3"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__NRs9zwp_trajectory.json",
+      "line": 192,
+      "file_sha256": "bcba3dbe40de104ee2f9a9c94f8167fadfef26dd3b357dff75e0c507b6c987c3"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__NRs9zwp_trajectory.json",
+      "line": 198,
+      "file_sha256": "bcba3dbe40de104ee2f9a9c94f8167fadfef26dd3b357dff75e0c507b6c987c3"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__NRs9zwp_trajectory.json",
+      "line": 242,
+      "file_sha256": "bcba3dbe40de104ee2f9a9c94f8167fadfef26dd3b357dff75e0c507b6c987c3"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__NRs9zwp_trajectory.json",
+      "line": 248,
+      "file_sha256": "bcba3dbe40de104ee2f9a9c94f8167fadfef26dd3b357dff75e0c507b6c987c3"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__NRs9zwp_trajectory.json",
+      "line": 84,
+      "file_sha256": "bcba3dbe40de104ee2f9a9c94f8167fadfef26dd3b357dff75e0c507b6c987c3"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__NRs9zwp_trajectory.json",
+      "line": 133,
+      "file_sha256": "bcba3dbe40de104ee2f9a9c94f8167fadfef26dd3b357dff75e0c507b6c987c3"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__NRs9zwp_trajectory.json",
+      "line": 139,
+      "file_sha256": "bcba3dbe40de104ee2f9a9c94f8167fadfef26dd3b357dff75e0c507b6c987c3"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__NRs9zwp_trajectory.json",
+      "line": 192,
+      "file_sha256": "bcba3dbe40de104ee2f9a9c94f8167fadfef26dd3b357dff75e0c507b6c987c3"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__NRs9zwp_trajectory.json",
+      "line": 198,
+      "file_sha256": "bcba3dbe40de104ee2f9a9c94f8167fadfef26dd3b357dff75e0c507b6c987c3"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__NRs9zwp_trajectory.json",
+      "line": 242,
+      "file_sha256": "bcba3dbe40de104ee2f9a9c94f8167fadfef26dd3b357dff75e0c507b6c987c3"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__NRs9zwp_trajectory.json",
+      "line": 248,
+      "file_sha256": "bcba3dbe40de104ee2f9a9c94f8167fadfef26dd3b357dff75e0c507b6c987c3"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__NRs9zwp_trajectory.json",
+      "line": 84,
+      "file_sha256": "bcba3dbe40de104ee2f9a9c94f8167fadfef26dd3b357dff75e0c507b6c987c3"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__R9RxnKn_trajectory.json",
+      "line": 140,
+      "file_sha256": "ef6a53bdc78e182517d67402c9a9d80bb2f3090cfc87c6dd7313920842e1a11a"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__R9RxnKn_trajectory.json",
+      "line": 155,
+      "file_sha256": "ef6a53bdc78e182517d67402c9a9d80bb2f3090cfc87c6dd7313920842e1a11a"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__R9RxnKn_trajectory.json",
+      "line": 161,
+      "file_sha256": "ef6a53bdc78e182517d67402c9a9d80bb2f3090cfc87c6dd7313920842e1a11a"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__R9RxnKn_trajectory.json",
+      "line": 84,
+      "file_sha256": "ef6a53bdc78e182517d67402c9a9d80bb2f3090cfc87c6dd7313920842e1a11a"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__R9RxnKn_trajectory.json",
+      "line": 140,
+      "file_sha256": "ef6a53bdc78e182517d67402c9a9d80bb2f3090cfc87c6dd7313920842e1a11a"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__R9RxnKn_trajectory.json",
+      "line": 155,
+      "file_sha256": "ef6a53bdc78e182517d67402c9a9d80bb2f3090cfc87c6dd7313920842e1a11a"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__R9RxnKn_trajectory.json",
+      "line": 161,
+      "file_sha256": "ef6a53bdc78e182517d67402c9a9d80bb2f3090cfc87c6dd7313920842e1a11a"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__R9RxnKn_trajectory.json",
+      "line": 84,
+      "file_sha256": "ef6a53bdc78e182517d67402c9a9d80bb2f3090cfc87c6dd7313920842e1a11a"
+    },
+    {
+      "rule": "private_home_path",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__R9RxnKn_trajectory.json",
+      "line": 140,
+      "file_sha256": "ef6a53bdc78e182517d67402c9a9d80bb2f3090cfc87c6dd7313920842e1a11a"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__ghj6oJJ_trajectory.json",
+      "line": 129,
+      "file_sha256": "5dc3eb964427ff75ad7e495f501df059929fadaddafe21df6e7b1d60d309b731"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__ghj6oJJ_trajectory.json",
+      "line": 135,
+      "file_sha256": "5dc3eb964427ff75ad7e495f501df059929fadaddafe21df6e7b1d60d309b731"
+    },
+    {
+      "rule": "aws_access_key",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__ghj6oJJ_trajectory.json",
+      "line": 84,
+      "file_sha256": "5dc3eb964427ff75ad7e495f501df059929fadaddafe21df6e7b1d60d309b731"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__ghj6oJJ_trajectory.json",
+      "line": 129,
+      "file_sha256": "5dc3eb964427ff75ad7e495f501df059929fadaddafe21df6e7b1d60d309b731"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__ghj6oJJ_trajectory.json",
+      "line": 135,
+      "file_sha256": "5dc3eb964427ff75ad7e495f501df059929fadaddafe21df6e7b1d60d309b731"
+    },
+    {
+      "rule": "github_token",
+      "path": "trajectories/terminal_trajs/forge_gpt54/sanitize-git-repo/sanitize-git-repo__ghj6oJJ_trajectory.json",
+      "line": 84,
+      "file_sha256": "5dc3eb964427ff75ad7e495f501df059929fadaddafe21df6e7b1d60d309b731"
+    },
+    {
+      "rule": "private_home_path",
+      "path": "trajectories/terminal_trajs/forge_gpt54/torch-pipeline-parallelism/torch-pipeline-parallelism__2m6VvUH_trajectory.json",
+      "line": 585,
+      "file_sha256": "7f81886b161085fbdfe1a3118f18afd4084f2bd1f8107eacfbf90643a65e2c2b"
+    },
+    {
+      "rule": "private_home_path",
+      "path": "trajectories/terminal_trajs/forge_gpt54/torch-pipeline-parallelism/torch-pipeline-parallelism__fBePfU8_trajectory.json",
+      "line": 949,
+      "file_sha256": "788cb95a28fa53b31c3aa364294d8729d7f83d034c05b02e0ce4fee36a483ead"
+    },
+    {
+      "rule": "private_home_path",
+      "path": "trajectories/terminal_trajs/forge_gpt54/torch-pipeline-parallelism/torch-pipeline-parallelism__fBePfU8_trajectory.json",
+      "line": 955,
+      "file_sha256": "788cb95a28fa53b31c3aa364294d8729d7f83d034c05b02e0ce4fee36a483ead"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "trajectories/terminal_trajs/forge_gpt54/vulnerable-secret/vulnerable-secret__UBBRoE4_trajectory.json",
+      "line": 124,
+      "file_sha256": "c6e936497d45facb4094093b26087e713bdf8a34f568647e687606f60d38c9eb"
+    }
+  ]
+}

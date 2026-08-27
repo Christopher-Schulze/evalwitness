@@ -1,0 +1,523 @@
+{
+  "schema_version": "evalwitness.construct-repair-evidence.v1",
+  "canonical_policy": "evalwitness.mutation-canonical-json.v1",
+  "corpus": {
+    "audited_at": "2026-08-09",
+    "plan_digest": "75ce0c5eb2ab464d48685b1342af5ed64c194e03a671723eaaf772514fa87873",
+    "audit_digest": "822d8034a4a75faaf337a4abd6e51743e38104c3ffca9ce7f214e751f5d026db",
+    "release_digest": "d0485f3484743a3d4ff907b295c0c9be11db21d2231664e5018fa2f047b6bf11",
+    "mutation_program_digest": "30e368b56c42e24bb0cbaf30da1ff9d982a45d6499beca7745db95d2a30ac958",
+    "sources": 200,
+    "source_tasks": 100,
+    "total_attempts": 873,
+    "applied_attempts": 738,
+    "rejected_attempts": 135,
+    "selected_cases": 320,
+    "coverage_cells": 16
+  },
+  "cases": [
+    {
+      "id": "generic_completion_evidence_role",
+      "family": "omitted_test_evidence",
+      "failure_mode": "operation_completion_misclassified_as_test_evidence",
+      "repair_invariant": "evidence_target_requires_test_check_build_or_outcome_probe_lineage",
+      "source_trajectory_digest": "3e5d7e1807160c516c6e1bb5b8f8cc095ed3ec9fefc69991d574ab913234d233",
+      "legacy_manifest": {
+        "schema_version": "evalwitness.mutation-manifest.v1",
+        "canonical_policy": "evalwitness.mutation-canonical-json.v1",
+        "relation_contract_version": "evalwitness.controlled-relation.v1",
+        "corpus_version": "evalwitness-construct-repair-fixtures.v1",
+        "mutation_id": "mutation-a3df0e7bf1278ed9fce63faf31895f45115f7e11aedb41a24c527f17a478678b",
+        "source": {
+          "task_id": "public-synthetic-regression",
+          "repository_id": "evalwitness",
+          "source_family": "public-synthetic-construct-repair",
+          "source_format": "claude_code_jsonl",
+          "source_location": "eval/fixtures/construct-repair",
+          "source_revision": "v1",
+          "source_digest": "2ac9be1f37be1e9df4bf95cb2714e9e74dc325d429765de003a30831619fe9bc",
+          "trajectory_digest": "3e5d7e1807160c516c6e1bb5b8f8cc095ed3ec9fefc69991d574ab913234d233",
+          "outcome": {
+            "kind": "synthetic_regression",
+            "value": "not_an_empirical_outcome",
+            "witness_digest": "7f9665920f7c3018617c54d5fc7bdde3a9d7dfbd1205dfb96561933b79f1fcfa"
+          }
+        },
+        "program": {
+          "version": "evalwitness.trajectory-mutation.v1",
+          "family": "omitted_test_evidence",
+          "seed": "evalwitness-construct-repair-frozen-seed",
+          "operator": "remove_test_evidence",
+          "parameters": [
+            {
+              "name": "operation",
+              "value": "omit"
+            }
+          ]
+        },
+        "intervention_class": "evidence_availability",
+        "expected_relation": "quality_equal_evidence_weaker",
+        "affected": {
+          "event_ids": [
+            "evt_e14f20a06d629fe8fea68f54"
+          ],
+          "field_paths": [
+            "/events/evt_e14f20a06d629fe8fea68f54/evidence"
+          ],
+          "file_aliases": []
+        },
+        "validator": {
+          "id": "evalwitness.construct-repair",
+          "version": "v1",
+          "kind": "preservation",
+          "contract_digest": "0d8f5a034f09e437687596687679aaad92031aae191338e59b57ef818cd7afee",
+          "timeout_millis": 1000,
+          "maximum_output_bytes": 65536
+        },
+        "preservation": {
+          "boundary_version": "evalwitness.evidence-boundary.v1",
+          "quality_projection_before": "e837b67da8c8498194095bb52855fc005cc16e16703f2c125ec79add3293b46b",
+          "quality_projection_after": "e837b67da8c8498194095bb52855fc005cc16e16703f2c125ec79add3293b46b",
+          "evidence_projection_before": "653ba569aca38cf34ccb808ba72f5887c7a4e0db5c590337fd3ad9a726d1e49d",
+          "evidence_projection_after": "f5b9ddc44142760cd2e5a20a19f1c49fb6b35d1cd66108aac0d6088072b4cca6",
+          "causal_graph_before": "c51df7f02b91ba550ba65113cff36df9d445f3abc89068ecef767dbfc5f8bd04",
+          "causal_graph_after": "c51df7f02b91ba550ba65113cff36df9d445f3abc89068ecef767dbfc5f8bd04",
+          "changed_groups": [
+            "evidence_availability"
+          ],
+          "preserved_groups": [
+            "causal_graph",
+            "semantic_quality"
+          ],
+          "ambiguity_reasons": null
+        },
+        "witness": {
+          "schema_version": "evalwitness.mutation-witness.v1",
+          "validator_id": "evalwitness.construct-repair",
+          "validator_version": "v1",
+          "relation": "quality_equal_evidence_weaker",
+          "label_state": "proven",
+          "checks": [
+            {
+              "name": "evidence_operator_effect",
+              "expected": "omit",
+              "observed": "before_bytes=5 after_bytes=0",
+              "passed": true
+            },
+            {
+              "name": "causal_graph_preserved",
+              "expected": "equal",
+              "observed": "equal",
+              "passed": true
+            },
+            {
+              "name": "quality_projection_preserved",
+              "expected": "equal",
+              "observed": "equal",
+              "passed": true
+            },
+            {
+              "name": "evidence_projection_changed",
+              "expected": "different",
+              "observed": "different",
+              "passed": true
+            }
+          ],
+          "digest": "769ff71d6797b99f1b4055cad98872288ac36383a45a03746dff1ee2053b523c"
+        },
+        "license": {
+          "spdx": "CC0-1.0",
+          "source_url": "https://github.com/Christopher-Schulze/evalwitness",
+          "source_revision": "v1",
+          "redistribution": "permitted",
+          "attribution": "EvalWitness synthetic regression fixture"
+        },
+        "privacy": {
+          "classification": "public",
+          "redaction_policy_digest": "d77a63bd52c564b2583ddc08b70d7835c3de928f008ad0eefd9dbe0d1fa5dbde",
+          "public_release_allowed": true
+        },
+        "split_group_id": "public-synthetic-regression",
+        "original_trajectory_digest": "3e5d7e1807160c516c6e1bb5b8f8cc095ed3ec9fefc69991d574ab913234d233",
+        "mutated_trajectory_digest": "bd67e01af278101cfad6cb0d082d7e3bb11216c368bae1a14f1d5160a04bc35b",
+        "review": {
+          "required": false,
+          "sampling_stratum": "synthetic-regression",
+          "blind_packet_digest": "42728c662c3ea6df6b1e73e0270e0eaca4ef5957984b2eba056c561a264f6b85"
+        },
+        "digest": "a3df0e7bf1278ed9fce63faf31895f45115f7e11aedb41a24c527f17a478678b"
+      },
+      "corrected_firewall": {
+        "schema_version": "evalwitness.construct-firewall.v1",
+        "canonical_policy": "evalwitness.mutation-canonical-json.v1",
+        "program_version": "evalwitness.trajectory-mutation.v2",
+        "family": "omitted_test_evidence",
+        "status": "rejected",
+        "source_trajectory_digest": "3e5d7e1807160c516c6e1bb5b8f8cc095ed3ec9fefc69991d574ab913234d233",
+        "target_event_ids": [
+          "evt_e14f20a06d629fe8fea68f54"
+        ],
+        "proof_event_ids": [
+          "evt_e14f20a06d629fe8fea68f54"
+        ],
+        "checks": [
+          {
+            "name": "verified_execution_lineage",
+            "expected": "test, check, build, or outcome_probe",
+            "observed": "unverified",
+            "passed": false
+          }
+        ],
+        "rejection_reasons": [
+          "unverified_evidence_role"
+        ],
+        "digest": "a985d26ed49e3ee7170f165fc1b0a3b5ad6e44e93f76bcd8d3b4f74c41871d50"
+      },
+      "expected_rejection_reasons": [
+        "unverified_evidence_role"
+      ]
+    },
+    {
+      "id": "pathological_executable_text_presentation",
+      "family": "neutral_formatting",
+      "failure_mode": "pathological_token_per_paragraph_presentation_admitted",
+      "repair_invariant": "natural_reversible_wrap_preserves_tokens_and_rejects_executable_text",
+      "source_trajectory_digest": "a6f27cd17aaa1b3cfdc22de01f780d9367c124dc4635b3d7fa8ee645e13d0d60",
+      "legacy_manifest": {
+        "schema_version": "evalwitness.mutation-manifest.v1",
+        "canonical_policy": "evalwitness.mutation-canonical-json.v1",
+        "relation_contract_version": "evalwitness.controlled-relation.v1",
+        "corpus_version": "evalwitness-construct-repair-fixtures.v1",
+        "mutation_id": "mutation-3444db2f87549c73213b72671e1716005ae41c8722c615864b3d7ecc6ea54f2c",
+        "source": {
+          "task_id": "public-synthetic-regression",
+          "repository_id": "evalwitness",
+          "source_family": "public-synthetic-construct-repair",
+          "source_format": "plain_text",
+          "source_location": "eval/fixtures/construct-repair",
+          "source_revision": "v1",
+          "source_digest": "3d4c13ba41e912e60f03a16ccb130afd334f6b466dfd95ef410398c15a45d3e1",
+          "trajectory_digest": "a6f27cd17aaa1b3cfdc22de01f780d9367c124dc4635b3d7fa8ee645e13d0d60",
+          "outcome": {
+            "kind": "synthetic_regression",
+            "value": "not_an_empirical_outcome",
+            "witness_digest": "7f9665920f7c3018617c54d5fc7bdde3a9d7dfbd1205dfb96561933b79f1fcfa"
+          }
+        },
+        "program": {
+          "version": "evalwitness.trajectory-mutation.v1",
+          "family": "neutral_formatting",
+          "seed": "evalwitness-construct-repair-frozen-seed",
+          "operator": "normalize_neutral_formatting",
+          "parameters": [
+            {
+              "name": "operation",
+              "value": "format"
+            }
+          ]
+        },
+        "intervention_class": "presentation",
+        "expected_relation": "quality_equal",
+        "affected": {
+          "event_ids": [
+            "evt_9a01e4c54601b0123e3be08d"
+          ],
+          "field_paths": [
+            "/events/evt_9a01e4c54601b0123e3be08d/text"
+          ],
+          "file_aliases": []
+        },
+        "validator": {
+          "id": "evalwitness.construct-repair",
+          "version": "v1",
+          "kind": "preservation",
+          "contract_digest": "0d8f5a034f09e437687596687679aaad92031aae191338e59b57ef818cd7afee",
+          "timeout_millis": 1000,
+          "maximum_output_bytes": 65536
+        },
+        "preservation": {
+          "boundary_version": "evalwitness.evidence-boundary.v1",
+          "quality_projection_before": "f6e1d4a30fcb53319d7f28314c7913d18e466e211341f097d09b506559f12328",
+          "quality_projection_after": "f6e1d4a30fcb53319d7f28314c7913d18e466e211341f097d09b506559f12328",
+          "evidence_projection_before": "f6e1d4a30fcb53319d7f28314c7913d18e466e211341f097d09b506559f12328",
+          "evidence_projection_after": "f6e1d4a30fcb53319d7f28314c7913d18e466e211341f097d09b506559f12328",
+          "causal_graph_before": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "causal_graph_after": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "changed_groups": [
+            "presentation"
+          ],
+          "preserved_groups": [
+            "causal_graph",
+            "evidence_semantics",
+            "semantic_quality"
+          ],
+          "ambiguity_reasons": null
+        },
+        "witness": {
+          "schema_version": "evalwitness.mutation-witness.v1",
+          "validator_id": "evalwitness.construct-repair",
+          "validator_version": "v1",
+          "relation": "quality_equal",
+          "label_state": "proven",
+          "checks": [
+            {
+              "name": "text_operator_effect",
+              "expected": "content changed",
+              "observed": "changed=true",
+              "passed": true
+            },
+            {
+              "name": "causal_graph_preserved",
+              "expected": "equal",
+              "observed": "equal",
+              "passed": true
+            },
+            {
+              "name": "quality_projection_preserved",
+              "expected": "equal",
+              "observed": "equal",
+              "passed": true
+            },
+            {
+              "name": "evidence_projection_preserved",
+              "expected": "equal",
+              "observed": "equal",
+              "passed": true
+            }
+          ],
+          "digest": "17700b67d3297af34422f90a0f78e8bb0ca14d02dee378c71a37973a7b92d902"
+        },
+        "license": {
+          "spdx": "CC0-1.0",
+          "source_url": "https://github.com/Christopher-Schulze/evalwitness",
+          "source_revision": "v1",
+          "redistribution": "permitted",
+          "attribution": "EvalWitness synthetic regression fixture"
+        },
+        "privacy": {
+          "classification": "public",
+          "redaction_policy_digest": "d77a63bd52c564b2583ddc08b70d7835c3de928f008ad0eefd9dbe0d1fa5dbde",
+          "public_release_allowed": true
+        },
+        "split_group_id": "public-synthetic-regression",
+        "original_trajectory_digest": "a6f27cd17aaa1b3cfdc22de01f780d9367c124dc4635b3d7fa8ee645e13d0d60",
+        "mutated_trajectory_digest": "07120a1199ab1b140d3b644ddad57543a25e522d411f63ad606febdd3feb2803",
+        "review": {
+          "required": false,
+          "sampling_stratum": "synthetic-regression",
+          "blind_packet_digest": "b85b7283b339445c68cb746d3d3ccf8a2c56252a2466d6cac0c7fd5afa0c6bfd"
+        },
+        "digest": "3444db2f87549c73213b72671e1716005ae41c8722c615864b3d7ecc6ea54f2c"
+      },
+      "corrected_firewall": {
+        "schema_version": "evalwitness.construct-firewall.v1",
+        "canonical_policy": "evalwitness.mutation-canonical-json.v1",
+        "program_version": "evalwitness.trajectory-mutation.v2",
+        "family": "neutral_formatting",
+        "status": "rejected",
+        "source_trajectory_digest": "a6f27cd17aaa1b3cfdc22de01f780d9367c124dc4635b3d7fa8ee645e13d0d60",
+        "target_event_ids": [],
+        "proof_event_ids": [],
+        "semantic_role": "assistant_prose",
+        "checks": [
+          {
+            "name": "natural_prose_target",
+            "expected": "wrappable prose",
+            "observed": "absent",
+            "passed": false
+          }
+        ],
+        "rejection_reasons": [
+          "unnatural_formatting"
+        ],
+        "digest": "edf49e2966b007ad2651d9d55bd453163ae1b9ff857d0d1e9c7fd4d048f4cd7b"
+      },
+      "expected_rejection_reasons": [
+        "unnatural_formatting"
+      ]
+    },
+    {
+      "id": "shared_tool_transaction_reorder",
+      "family": "causally_independent_event_reorder",
+      "failure_mode": "reference_and_transaction_dependencies_omitted_from_independence_graph",
+      "repair_invariant": "full_transaction_reference_and_call_identity_dependency_closure",
+      "source_trajectory_digest": "3e5d7e1807160c516c6e1bb5b8f8cc095ed3ec9fefc69991d574ab913234d233",
+      "legacy_manifest": {
+        "schema_version": "evalwitness.mutation-manifest.v1",
+        "canonical_policy": "evalwitness.mutation-canonical-json.v1",
+        "relation_contract_version": "evalwitness.controlled-relation.v1",
+        "corpus_version": "evalwitness-construct-repair-fixtures.v1",
+        "mutation_id": "mutation-eceb4345159b25aed8468b41667faaaa49365c7d25a82127c353f17f66a030ef",
+        "source": {
+          "task_id": "public-synthetic-regression",
+          "repository_id": "evalwitness",
+          "source_family": "public-synthetic-construct-repair",
+          "source_format": "claude_code_jsonl",
+          "source_location": "eval/fixtures/construct-repair",
+          "source_revision": "v1",
+          "source_digest": "2ac9be1f37be1e9df4bf95cb2714e9e74dc325d429765de003a30831619fe9bc",
+          "trajectory_digest": "3e5d7e1807160c516c6e1bb5b8f8cc095ed3ec9fefc69991d574ab913234d233",
+          "outcome": {
+            "kind": "synthetic_regression",
+            "value": "not_an_empirical_outcome",
+            "witness_digest": "7f9665920f7c3018617c54d5fc7bdde3a9d7dfbd1205dfb96561933b79f1fcfa"
+          }
+        },
+        "program": {
+          "version": "evalwitness.trajectory-mutation.v1",
+          "family": "causally_independent_event_reorder",
+          "seed": "evalwitness-construct-repair-frozen-seed",
+          "operator": "swap_causally_independent_events",
+          "parameters": [
+            {
+              "name": "left_event",
+              "value": "evt_07dea94af4f4cf40abe9ae56"
+            },
+            {
+              "name": "right_event",
+              "value": "evt_7fe1218e22b37c1aebfa077a"
+            }
+          ]
+        },
+        "intervention_class": "presentation",
+        "expected_relation": "quality_equal",
+        "affected": {
+          "event_ids": [
+            "evt_07dea94af4f4cf40abe9ae56",
+            "evt_7fe1218e22b37c1aebfa077a"
+          ],
+          "field_paths": [
+            "/events/evt_07dea94af4f4cf40abe9ae56/order",
+            "/events/evt_7fe1218e22b37c1aebfa077a/order"
+          ],
+          "file_aliases": []
+        },
+        "validator": {
+          "id": "evalwitness.construct-repair",
+          "version": "v1",
+          "kind": "preservation",
+          "contract_digest": "0d8f5a034f09e437687596687679aaad92031aae191338e59b57ef818cd7afee",
+          "timeout_millis": 1000,
+          "maximum_output_bytes": 65536
+        },
+        "preservation": {
+          "boundary_version": "evalwitness.evidence-boundary.v1",
+          "quality_projection_before": "e837b67da8c8498194095bb52855fc005cc16e16703f2c125ec79add3293b46b",
+          "quality_projection_after": "e837b67da8c8498194095bb52855fc005cc16e16703f2c125ec79add3293b46b",
+          "evidence_projection_before": "653ba569aca38cf34ccb808ba72f5887c7a4e0db5c590337fd3ad9a726d1e49d",
+          "evidence_projection_after": "653ba569aca38cf34ccb808ba72f5887c7a4e0db5c590337fd3ad9a726d1e49d",
+          "causal_graph_before": "c51df7f02b91ba550ba65113cff36df9d445f3abc89068ecef767dbfc5f8bd04",
+          "causal_graph_after": "c51df7f02b91ba550ba65113cff36df9d445f3abc89068ecef767dbfc5f8bd04",
+          "changed_groups": [
+            "presentation"
+          ],
+          "preserved_groups": [
+            "causal_graph",
+            "evidence_semantics",
+            "semantic_quality"
+          ],
+          "ambiguity_reasons": null
+        },
+        "witness": {
+          "schema_version": "evalwitness.mutation-witness.v1",
+          "validator_id": "evalwitness.construct-repair",
+          "validator_version": "v1",
+          "relation": "quality_equal",
+          "label_state": "proven",
+          "checks": [
+            {
+              "name": "causal_independence",
+              "expected": "no path in either direction",
+              "observed": "no path in either direction",
+              "passed": true
+            },
+            {
+              "name": "causal_graph_preserved",
+              "expected": "equal",
+              "observed": "equal",
+              "passed": true
+            },
+            {
+              "name": "quality_projection_preserved",
+              "expected": "equal",
+              "observed": "equal",
+              "passed": true
+            },
+            {
+              "name": "evidence_projection_preserved",
+              "expected": "equal",
+              "observed": "equal",
+              "passed": true
+            }
+          ],
+          "digest": "a852560c5fd3b1768939851ec8ddb62446dc2c241f731450715b1718731a098e"
+        },
+        "license": {
+          "spdx": "CC0-1.0",
+          "source_url": "https://github.com/Christopher-Schulze/evalwitness",
+          "source_revision": "v1",
+          "redistribution": "permitted",
+          "attribution": "EvalWitness synthetic regression fixture"
+        },
+        "privacy": {
+          "classification": "public",
+          "redaction_policy_digest": "d77a63bd52c564b2583ddc08b70d7835c3de928f008ad0eefd9dbe0d1fa5dbde",
+          "public_release_allowed": true
+        },
+        "split_group_id": "public-synthetic-regression",
+        "original_trajectory_digest": "3e5d7e1807160c516c6e1bb5b8f8cc095ed3ec9fefc69991d574ab913234d233",
+        "mutated_trajectory_digest": "90a7fd25e5ffd41da1332696a6e9df4d725823048bfaf64a52cf07f473537cfa",
+        "review": {
+          "required": false,
+          "sampling_stratum": "synthetic-regression",
+          "blind_packet_digest": "3c176a395f571c8e645c8cb2d1fe1596a440ba16cd6f3b6bc94f8952ed4a83ff"
+        },
+        "digest": "eceb4345159b25aed8468b41667faaaa49365c7d25a82127c353f17f66a030ef"
+      },
+      "corrected_firewall": {
+        "schema_version": "evalwitness.construct-firewall.v1",
+        "canonical_policy": "evalwitness.mutation-canonical-json.v1",
+        "program_version": "evalwitness.trajectory-mutation.v2",
+        "family": "causally_independent_event_reorder",
+        "status": "rejected",
+        "source_trajectory_digest": "3e5d7e1807160c516c6e1bb5b8f8cc095ed3ec9fefc69991d574ab913234d233",
+        "target_event_ids": [],
+        "proof_event_ids": [],
+        "semantic_role": "transaction_independent_events",
+        "checks": [
+          {
+            "name": "dependency_components_distinct",
+            "expected": "distinct",
+            "observed": "shared",
+            "passed": false
+          }
+        ],
+        "rejection_reasons": [
+          "transaction_dependency"
+        ],
+        "digest": "3deeb8f6bd3f5fbc7d43f5059a4a8759870c7b08259c0b20bb0fbabe3d8cb642"
+      },
+      "expected_rejection_reasons": [
+        "transaction_dependency"
+      ]
+    }
+  ],
+  "summary": {
+    "fixtures": 3,
+    "legacy_accepted": 3,
+    "corrected_rejected": 3
+  },
+  "claim_boundary": {
+    "evidence_kind": "deterministic_public_regression_fixtures",
+    "provider_calls": "not_run",
+    "human_review": "not_run",
+    "population_inference": "not_estimated",
+    "supported_claim": "v1 accepts each frozen synthetic regression fixture while v2 rejects it under the recorded closed reason",
+    "unsupported_claims": [
+      "human construct validity",
+      "population prevalence of the defects",
+      "provider or verifier performance"
+    ]
+  },
+  "digest": "b166f124cc7e3f31b26676bba08602fca2d29a9df95f0f80a91c421f34e137c9"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "evalwitness.extension.outcome-conformance.v1",
+  "extension_id": "task-057-outcome",
+  "owner_task": "TASK-057",
+  "status": "conformance_fixture",
+  "provider_calls_required": 0,
+  "human_actions_required": 0,
+  "required_fields": [
+    "authorization_state",
+    "blinding_state",
+    "label_batch",
+    "terminal_ledger"
+  ],
+  "prohibited_claims": [
+    "human_result_before_authorization",
+    "independent_review",
+    "structural_readiness_as_validity"
+  ]
+}

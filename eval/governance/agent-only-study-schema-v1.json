@@ -1,0 +1,473 @@
+{
+  "$id": "https://evalwitness.dev/schemas/agent-only-study.v1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "agent_only": {
+      "const": true
+    },
+    "audit_digest": {
+      "type": "string"
+    },
+    "canonical_policy": {
+      "const": "evalwitness.agent-only-canonical-json.v1"
+    },
+    "cases": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "blind_packet_digest": {
+            "type": "string"
+          },
+          "case_id": {
+            "type": "string"
+          },
+          "expected_relation": {
+            "type": "string"
+          },
+          "family": {
+            "type": "string"
+          },
+          "final_label": {
+            "type": "string"
+          },
+          "firewall_digest": {
+            "type": "string"
+          },
+          "manifest_digest": {
+            "type": "string"
+          },
+          "primary_a": {
+            "additionalProperties": false,
+            "properties": {
+              "checks": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "expected": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "observed": {
+                      "type": "string"
+                    },
+                    "passed": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "expected",
+                    "observed",
+                    "passed"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "evidence_digest": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "validator_id": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "validator_id",
+              "version",
+              "label",
+              "checks",
+              "evidence_digest"
+            ],
+            "type": "object"
+          },
+          "primary_agreement": {
+            "type": "boolean"
+          },
+          "primary_b": {
+            "additionalProperties": false,
+            "properties": {
+              "checks": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "expected": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "observed": {
+                      "type": "string"
+                    },
+                    "passed": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "expected",
+                    "observed",
+                    "passed"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "evidence_digest": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "validator_id": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "validator_id",
+              "version",
+              "label",
+              "checks",
+              "evidence_digest"
+            ],
+            "type": "object"
+          },
+          "resolution": {
+            "type": "string"
+          },
+          "source_audit": {
+            "additionalProperties": false,
+            "properties": {
+              "manifest_outcome_witness_digest": {
+                "type": "string"
+              },
+              "manifest_source_digest": {
+                "type": "string"
+              },
+              "manifest_trajectory_digest": {
+                "type": "string"
+              },
+              "outcome_witness_digests": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "source_digests": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "source_ids": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "source_set_digest": {
+                "type": "string"
+              },
+              "sources": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "outcome_witness_digest": {
+                      "type": "string"
+                    },
+                    "repository_id": {
+                      "type": "string"
+                    },
+                    "source_digest": {
+                      "type": "string"
+                    },
+                    "source_family": {
+                      "type": "string"
+                    },
+                    "source_format": {
+                      "type": "string"
+                    },
+                    "split": {
+                      "type": "string"
+                    },
+                    "split_group_id": {
+                      "type": "string"
+                    },
+                    "task_id": {
+                      "type": "string"
+                    },
+                    "trajectory_digest": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "task_id",
+                    "repository_id",
+                    "source_family",
+                    "source_format",
+                    "split_group_id",
+                    "split",
+                    "source_digest",
+                    "trajectory_digest",
+                    "outcome_witness_digest"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "trajectory_digests": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "source_ids",
+              "sources",
+              "manifest_source_digest",
+              "manifest_trajectory_digest",
+              "manifest_outcome_witness_digest",
+              "source_digests",
+              "trajectory_digests",
+              "outcome_witness_digests",
+              "source_set_digest"
+            ],
+            "type": "object"
+          },
+          "split": {
+            "type": "string"
+          },
+          "tie_break": {
+            "additionalProperties": false,
+            "properties": {
+              "checks": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "expected": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "observed": {
+                      "type": "string"
+                    },
+                    "passed": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "expected",
+                    "observed",
+                    "passed"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "evidence_digest": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "validator_id": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "validator_id",
+              "version",
+              "label",
+              "checks",
+              "evidence_digest"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "case_id",
+          "family",
+          "split",
+          "expected_relation",
+          "manifest_digest",
+          "firewall_digest",
+          "blind_packet_digest",
+          "source_audit",
+          "primary_a",
+          "primary_b",
+          "primary_agreement",
+          "resolution",
+          "final_label"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "claim_boundary": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "counts": {
+      "additionalProperties": false,
+      "properties": {
+        "accepted": {
+          "type": "integer"
+        },
+        "calibration": {
+          "type": "integer"
+        },
+        "cases": {
+          "type": "integer"
+        },
+        "primary_agreements": {
+          "type": "integer"
+        },
+        "rejected": {
+          "type": "integer"
+        },
+        "test": {
+          "type": "integer"
+        },
+        "tie_breaks": {
+          "type": "integer"
+        },
+        "unresolved": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "cases",
+        "calibration",
+        "test",
+        "accepted",
+        "rejected",
+        "unresolved",
+        "primary_agreements",
+        "tie_breaks"
+      ],
+      "type": "object"
+    },
+    "digest": {
+      "type": "string"
+    },
+    "human_reviewers": {
+      "type": "integer"
+    },
+    "plan_digest": {
+      "type": "string"
+    },
+    "primary_roles": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "provider_calls": {
+      "type": "integer"
+    },
+    "release_digest": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "evalwitness.agent-only-study.v1"
+    },
+    "selection": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "type": "string"
+        },
+        "calibration_chosen": {
+          "type": "integer"
+        },
+        "calibration_target": {
+          "type": "integer"
+        },
+        "calibration_unique_split_groups": {
+          "type": "integer"
+        },
+        "cross_split_group_overlap": {
+          "type": "integer"
+        },
+        "seed": {
+          "type": "string"
+        },
+        "test_chosen": {
+          "type": "integer"
+        },
+        "test_target": {
+          "type": "integer"
+        },
+        "test_unique_split_groups": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "algorithm",
+        "seed",
+        "calibration_target",
+        "test_target",
+        "calibration_chosen",
+        "test_chosen",
+        "calibration_unique_split_groups",
+        "test_unique_split_groups",
+        "cross_split_group_overlap"
+      ],
+      "type": "object"
+    },
+    "study_id": {
+      "type": "string"
+    },
+    "tie_break_role": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "canonical_policy",
+    "study_id",
+    "title",
+    "agent_only",
+    "plan_digest",
+    "audit_digest",
+    "release_digest",
+    "selection",
+    "primary_roles",
+    "tie_break_role",
+    "cases",
+    "counts",
+    "provider_calls",
+    "human_reviewers",
+    "claim_boundary",
+    "digest"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,8 @@
+{
+  "version": "offline-replay-v1",
+  "requirements": {
+    "protocol_conformance": "measured",
+    "replay_integrity": "measured",
+    "calibration": "measured"
+  }
+}

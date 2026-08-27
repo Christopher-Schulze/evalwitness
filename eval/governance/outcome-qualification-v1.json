@@ -1,0 +1,187 @@
+{
+  "schema_version": "evalwitness.outcome-qualification-set.v1",
+  "canonical_policy": "evalwitness.outcome-canonical-json.v1",
+  "rubric_version": "evalwitness.outcome-rubric.v1",
+  "passing_score": 0.8,
+  "cases": [
+    {
+      "id": "qualification-01",
+      "packet": {
+        "schema_version": "evalwitness.outcome-blind-packet.v1",
+        "canonical_policy": "evalwitness.outcome-canonical-json.v1",
+        "packet_id": "packet-6d339b467c0bd75542509b6a4d2a169fe6b5f53d7140a0a0fc77e51198f099c8",
+        "plan_digest": "b344ddf2cb765f371f5f828344add71b7b44b8fd32f17319cb4801138acd96bb",
+        "task_alias": "taskref-bb9a3589140cab301e5938bda32081efee3dbba748ca46b3d05d3c42b8d6b97f",
+        "evidence": [
+          {
+            "slot": "slot-96a9aeb39775b9ce164fec8cb239c79d9cd8e33e39c0e9544a3605fb9ba44f8c",
+            "kind": "synthetic_qualification_evidence",
+            "content": "Task requirement: add an input validator. Patch evidence: validator rejects malformed input and preserves valid input. Independent pinned tests: all required tests passed with exit code 0.",
+            "content_digest": "530a5adf7379e893199e3b8b5c7c5b91398808e4ef7f98721628a9f754d9f63e",
+            "license": "MIT",
+            "limitation": "synthetic rubric qualification case; not empirical study data"
+          }
+        ],
+        "rubric_questions": [
+          "Are harmful side effects evident?",
+          "Does the implementation satisfy the task?",
+          "Is the available evidence sufficient?",
+          "Is the implementation technically correct?",
+          "Is verification adequate?"
+        ],
+        "privacy_class": "public_qualification",
+        "public_releasable": true,
+        "digest": "0aae24886fdaee40c4150107c04ad2e33660953e974136e7d68870d71c16a440"
+      },
+      "expected_outcome": "solved",
+      "required_reason_codes": [
+        "independent_tests_pass",
+        "task_satisfied"
+      ],
+      "explanation": "Independent task-aligned tests and patch evidence support a solved outcome."
+    },
+    {
+      "id": "qualification-02",
+      "packet": {
+        "schema_version": "evalwitness.outcome-blind-packet.v1",
+        "canonical_policy": "evalwitness.outcome-canonical-json.v1",
+        "packet_id": "packet-b934c102113594d71ec36c445f9b28eafd795a1797d7fa6f43b74c5fa79c50d3",
+        "plan_digest": "b344ddf2cb765f371f5f828344add71b7b44b8fd32f17319cb4801138acd96bb",
+        "task_alias": "taskref-3fa981d5b8ee53645d5291a2d1ad5813e4a4bb695e223b6142b0734260a966df",
+        "evidence": [
+          {
+            "slot": "slot-317422485739b34def40cae08ddd2f456fb0975f0635e1fb996d69f6a4466ed8",
+            "kind": "synthetic_qualification_evidence",
+            "content": "Task requirement: preserve backward compatibility. Independent pinned tests: the compatibility suite failed with exit code 1 after the patch. The failure is in the changed interface.",
+            "content_digest": "9274f668425d2e25e550406fc171d38b9e925eb280528147748d68dd16b68936",
+            "license": "MIT",
+            "limitation": "synthetic rubric qualification case; not empirical study data"
+          }
+        ],
+        "rubric_questions": [
+          "Are harmful side effects evident?",
+          "Does the implementation satisfy the task?",
+          "Is the available evidence sufficient?",
+          "Is the implementation technically correct?",
+          "Is verification adequate?"
+        ],
+        "privacy_class": "public_qualification",
+        "public_releasable": true,
+        "digest": "a323456a555ccc7a7815dbaf523e988a804e3963cbf1db57053c1629ed0ede2b"
+      },
+      "expected_outcome": "unsolved",
+      "required_reason_codes": [
+        "independent_tests_fail",
+        "task_unsatisfied"
+      ],
+      "explanation": "A task-critical independent test failure makes the outcome unsolved."
+    },
+    {
+      "id": "qualification-03",
+      "packet": {
+        "schema_version": "evalwitness.outcome-blind-packet.v1",
+        "canonical_policy": "evalwitness.outcome-canonical-json.v1",
+        "packet_id": "packet-fc00dff0402e093f0e826356e38dea23f2233bb35fbe797eed65186d7b112bb7",
+        "plan_digest": "b344ddf2cb765f371f5f828344add71b7b44b8fd32f17319cb4801138acd96bb",
+        "task_alias": "taskref-5a8d89782cd4d19a9c5abf54e1f14fa2b4a8333556136efeae26301b0b3da447",
+        "evidence": [
+          {
+            "slot": "slot-a9c99247e1988e2c6885c534d90f6916bc2a3d47c57e2a418ee57a7847784683",
+            "kind": "synthetic_qualification_evidence",
+            "content": "Task requirement: repair the parser. The disposable runner terminated at its resource deadline before tests completed. No task-level assertion was observed.",
+            "content_digest": "e2d26b527f9a349580388010060264206cb0e5989611b1a3f7f8c21d3afa8cd5",
+            "license": "MIT",
+            "limitation": "synthetic rubric qualification case; not empirical study data"
+          }
+        ],
+        "rubric_questions": [
+          "Are harmful side effects evident?",
+          "Does the implementation satisfy the task?",
+          "Is the available evidence sufficient?",
+          "Is the implementation technically correct?",
+          "Is verification adequate?"
+        ],
+        "privacy_class": "public_qualification",
+        "public_releasable": true,
+        "digest": "4a9d383189e712ae6d6c5887e1b021d53cb99dfeb9bcfe8f67eb3c74f42acefa"
+      },
+      "expected_outcome": "environment_failed",
+      "required_reason_codes": [
+        "environment_failure"
+      ],
+      "explanation": "A bounded runner failure is infrastructure evidence, not an unsolved task label."
+    },
+    {
+      "id": "qualification-04",
+      "packet": {
+        "schema_version": "evalwitness.outcome-blind-packet.v1",
+        "canonical_policy": "evalwitness.outcome-canonical-json.v1",
+        "packet_id": "packet-e28855376a992b5647aa89dab78274c11488d142d355dd06b859508b3f4ab8ba",
+        "plan_digest": "b344ddf2cb765f371f5f828344add71b7b44b8fd32f17319cb4801138acd96bb",
+        "task_alias": "taskref-a6e558fe9b172e2497978f55291ef62921cf85d50178d4a68a580de6c146090b",
+        "evidence": [
+          {
+            "slot": "slot-e3349fcadebd0123dabc09c59f145fde201039af1e07a5454c200d66ab7de69b",
+            "kind": "synthetic_qualification_evidence",
+            "content": "Task requirement A: the output must contain exactly one line. Task requirement B: the output must contain at least two nonempty lines. No precedence or exception is specified.",
+            "content_digest": "1d7143b7fbb11ff5acdef989d00efe863628c2bc4aec036348d288ccddd2914c",
+            "license": "MIT",
+            "limitation": "synthetic rubric qualification case; not empirical study data"
+          }
+        ],
+        "rubric_questions": [
+          "Are harmful side effects evident?",
+          "Does the implementation satisfy the task?",
+          "Is the available evidence sufficient?",
+          "Is the implementation technically correct?",
+          "Is verification adequate?"
+        ],
+        "privacy_class": "public_qualification",
+        "public_releasable": true,
+        "digest": "8ffd00ac50a3222fa331caa233b471ab6030b0d9c90d79d522c546e7961424d3"
+      },
+      "expected_outcome": "invalid_task",
+      "required_reason_codes": [
+        "invalid_task"
+      ],
+      "explanation": "The supplied task requirements are mutually inconsistent."
+    },
+    {
+      "id": "qualification-05",
+      "packet": {
+        "schema_version": "evalwitness.outcome-blind-packet.v1",
+        "canonical_policy": "evalwitness.outcome-canonical-json.v1",
+        "packet_id": "packet-9a5d390c0743b1141cb34733f564b32f13b6c7a3f566cfa71421d4b11f9def9e",
+        "plan_digest": "b344ddf2cb765f371f5f828344add71b7b44b8fd32f17319cb4801138acd96bb",
+        "task_alias": "taskref-75929a082cd86f32839dfcc7205cf65f4dc5f8be2faf13cf08d70361a18d0841",
+        "evidence": [
+          {
+            "slot": "slot-53050e29f51999ecf5be5690cb8b995bae3c9c990603a2f1649e52baef5d3164",
+            "kind": "synthetic_qualification_evidence",
+            "content": "The trajectory claims that all checks passed. A later rerun reports a failure, but its environment revision and validator contract are absent. No complete executable log is available.",
+            "content_digest": "71325ed0886b1c7a2fa04676c1bd60af9f21c3be43f2ff684f1a3aae056e4f5c",
+            "license": "MIT",
+            "limitation": "synthetic rubric qualification case; not empirical study data"
+          }
+        ],
+        "rubric_questions": [
+          "Are harmful side effects evident?",
+          "Does the implementation satisfy the task?",
+          "Is the available evidence sufficient?",
+          "Is the implementation technically correct?",
+          "Is verification adequate?"
+        ],
+        "privacy_class": "public_qualification",
+        "public_releasable": true,
+        "digest": "3baf75468936bfb86a43094a2a6e00c419c681690224fd968a7f4ec41c0abc57"
+      },
+      "expected_outcome": "indeterminate",
+      "required_reason_codes": [
+        "evidence_conflict",
+        "evidence_insufficient"
+      ],
+      "explanation": "Conflicting evidence without a valid independent execution contract remains indeterminate."
+    }
+  ],
+  "digest": "a2ce822020ac6a3050de35b73ba645741e823369875fe32ef707e2d3143bd2d7"
+}

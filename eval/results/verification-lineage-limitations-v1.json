@@ -1,0 +1,54 @@
+{
+  "version": "evalwitness.verification-lineage-limitations.v1",
+  "ledger_id": "task_069-development-limitations-v1",
+  "offline_proof_digest": "37d13927ac10606e9ea90f470d46e046cea9a6059c7e4d2c38e5a5d50f768d13",
+  "corpus_feasibility": "not_feasible_current_generation",
+  "evidence_role": "adapter_development",
+  "limitations": [
+    {
+      "id": "capsule_integration",
+      "status": "not_implemented",
+      "boundary": "the development artifacts are content addressed but are not yet TASK 050 capsules",
+      "required_resolution": "implement and verify the TASK 050 capsule and claim-ledger boundary"
+    },
+    {
+      "id": "empirical_survival",
+      "status": "not_measured",
+      "boundary": "two sealed development fixtures do not estimate lineage survival",
+      "required_resolution": "admit paired role-isolated research sources and run the prospective audit"
+    },
+    {
+      "id": "format_transfer",
+      "status": "unsupported",
+      "boundary": "all v1 native mappings were used during development",
+      "required_resolution": "run a protocol-v2 format holdout isolated before development"
+    },
+    {
+      "id": "human_construct_validity",
+      "status": "not_run",
+      "boundary": "no reviewer was contacted and no human agreement was measured",
+      "required_resolution": "obtain explicit authorization and complete the blinded review protocol"
+    },
+    {
+      "id": "population_prevalence",
+      "status": "unsupported",
+      "boundary": "zero research task groups are admitted",
+      "required_resolution": "acquire the frozen minimum 20 calibration and 20 locked-test task groups"
+    },
+    {
+      "id": "provider_quality",
+      "status": "out_of_scope",
+      "boundary": "format and agent implementation are not randomized provider effects",
+      "required_resolution": "use a separately preregistered factorized provider study"
+    },
+    {
+      "id": "syntax_transfer",
+      "status": "unsupported",
+      "boundary": "the syntax-family candidate universe was not sealed before development",
+      "required_resolution": "freeze the complete candidate universe before protocol-v2 outcomes"
+    }
+  ],
+  "provider_calls_required": 0,
+  "agent_launches_required": 0,
+  "digest": "8dc18157c9c985675ba9886dc397031f2286d975186b2af88f18c01a7b7cabbe"
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": "evalwitness.relation-primary-sample.v1",
+  "canonical_policy": "evalwitness.relation-canonical-json.v1",
+  "protocol_version": "evalwitness.controlled-relation-review.v1",
+  "review_objective": "controlled_relation",
+  "plan_digest": "76fe626f3e5ba8bfd12158daf72290eff53aab6bb28c3f114db8aed592f61f91",
+  "source_corpus_digest": "6f60fc2ceac52fa9efbf4f5b39dc132ae62e849987cb08b5753f09941a8b020a",
+  "selection_rule": "all and only frozen corpus cases whose mutation manifest has review.required=true; case bindings include exact source, program, manifest, witness, license, privacy, lineage, packet, and regeneration commitments",
+  "selected_cases": 31,
+  "unique_source_ids": 34,
+  "unique_task_groups": 28,
+  "trajectory_pair_units": 26,
+  "candidate_order_units": 5,
+  "selection_digest": "4261c63feb43a3ca0531cf20bf6cd773fb8bbb421f1732dd836719d309e346ba",
+  "family_counts": [
+    {
+      "id": "candidate_order_reversal",
+      "count": 5
+    },
+    {
+      "id": "causally_independent_event_reorder",
+      "count": 3
+    },
+    {
+      "id": "falsified_test_evidence",
+      "count": 1
+    },
+    {
+      "id": "incomplete_tool_output",
+      "count": 2
+    },
+    {
+      "id": "irrelevant_verbosity",
+      "count": 7
+    },
+    {
+      "id": "neutral_formatting",
+      "count": 3
+    },
+    {
+      "id": "omitted_test_evidence",
+      "count": 6
+    },
+    {
+      "id": "untrusted_score_tag_injection",
+      "count": 4
+    }
+  ],
+  "split_counts": [
+    {
+      "id": "calibration",
+      "count": 6
+    },
+    {
+      "id": "development",
+      "count": 18
+    },
+    {
+      "id": "test",
+      "count": 7
+    }
+  ],
+  "control_counts": [
+    {
+      "id": "decoy",
+      "count": 4
+    },
+    {
+      "id": "negative",
+      "count": 11
+    },
+    {
+      "id": "relation",
+      "count": 16
+    }
+  ],
+  "bindings": {
+    "cases": "0357abebce03b2421748d312fbbff78b60d27eb9ba524f2f74c9e1302d8a4c4a",
+    "sources": "083032a1fcfab0d671b3224f33a696a5ded968bf202846c7d18dc9a1ab75fe55",
+    "programs": "bbd0e88f13a94b8ab93c364771e4a66118674f642d34a18b44726f30e16e2a21",
+    "manifests": "6ab77e551906fe511ecc33ab9077c5487a5682f93be59cab906c699da8b81fb9",
+    "witnesses": "3494fc9cd8f4b81d50e2152675ad566c4f1dd8725518075b86a9929a01d84c0d",
+    "licenses": "ab06a7f48d7d523e058eb63e33820171dff7163e90d714629676012e06aa7b1b",
+    "privacy": "65f57f098625bc5416321baaea82c3d19e60d4cc9b7f1f5b88e3b14ebe30f89a",
+    "lineage": "f1e4b5ec86f89c31429ab766df74b04702ac4bb5ba45a51350ec7a9e809b1c6e",
+    "packets": "05528f22d30e8b82cc0f3be12ba07014e09befe4baf6aa9e5f4ce34c13d11130",
+    "regeneration": "5574734d69016f0a3bbf7763e7f1c1d45cf38d2bc7b44c8db469f2fdbd563264"
+  },
+  "external_action_status": "not_authorized",
+  "digest": "87626b14513f84194caa92a12353e869630837aa3aafde521dcd02a82e33dd46"
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": "evalwitness.golden-fixture-manifest.v1",
+  "fixtures": [
+    {
+      "file": "claude-code.jsonl",
+      "source_format": "claude_code_jsonl",
+      "source_digest": "63ca02adb5b4ec0216ab40ba04baf185805776ca4a3795839ab72dd1723bb2bd",
+      "trajectory_digest": "efd3133b2d9cb9641f32a9d8d8bcf1d6498aa67ab83524b8fe2321afc6eb0a8e",
+      "source_records": 3,
+      "canonical_events": 7,
+      "provider_usage_observations": 1
+    },
+    {
+      "file": "codex-rollout.jsonl",
+      "source_format": "codex_rollout_jsonl",
+      "source_digest": "efd5168c1bbd3245604d2113403ac5de464c3642f2cace96317034ef9b01510f",
+      "trajectory_digest": "abf75f77d420cb9d8619a1ba7d2f37c197c3fe2b52fcf460b9a7c2cf81890e22",
+      "source_records": 5,
+      "canonical_events": 6,
+      "provider_usage_observations": 1
+    },
+    {
+      "file": "opencode-export.json",
+      "source_format": "opencode_export_json",
+      "source_digest": "76f7de9254b29970b381cd5358669683ad3643fcecfb4861d2b0ac535fc2de6f",
+      "trajectory_digest": "5630fd4f7571b2184b6ed394e1118396db0a69851a55dfab3a3371de33068c88",
+      "source_records": 3,
+      "canonical_events": 8,
+      "provider_usage_observations": 1
+    },
+    {
+      "file": "terminal-bench.json",
+      "source_format": "terminal_bench_trajectory_json",
+      "source_digest": "d882329a10df07f32eb66f9b23662582342a0f592fc2a9ba544c140812c4d461",
+      "trajectory_digest": "36b0dc21b13fcd612f5a7f02b0d1f987cb553bbffe45236f88ccbce9d646ca4f",
+      "source_records": 4,
+      "canonical_events": 7,
+      "provider_usage_observations": 0
+    },
+    {
+      "file": "swe-bench.json",
+      "source_format": "swe_bench_cache_item_json",
+      "source_digest": "f33c8134bca9b0ec71ecf7a60f196e748706bb7f706327452d7356480dd5e15a",
+      "trajectory_digest": "9f790c9bc9312d6797f603aee30a5162a31fe29486c1cba65a768b1f9b22c58f",
+      "source_records": 6,
+      "canonical_events": 8,
+      "provider_usage_observations": 0
+    },
+    {
+      "file": "plain.txt",
+      "source_format": "plain_text",
+      "source_digest": "b55d477e51f2088b1469f83feb5e6d828f3bab86c8c71e14c8b9ec6f58bc7094",
+      "trajectory_digest": "f58d90bb55361d4e0dbe585c0603281b61f8e882c96b02a7c1e7809c57fc1da5",
+      "source_records": 1,
+      "canonical_events": 1,
+      "provider_usage_observations": 0
+    }
+  ]
+}

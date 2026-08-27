@@ -1,0 +1,13 @@
+{
+  "name": "evalwitness",
+  "transport": "stdio",
+  "command": "/absolute/path/to/evalwitness",
+  "args": ["mcp-serve"],
+  "env": {
+    "EVALWITNESS_PROVIDER": "your-provider",
+    "EVALWITNESS_WIRE_FORMAT": "openai",
+    "EVALWITNESS_BASE_URL": "https://your-provider.example/v1",
+    "EVALWITNESS_MODEL": "your-model",
+    "EVALWITNESS_API_KEY": "${EVALWITNESS_API_KEY}"
+  }
+}

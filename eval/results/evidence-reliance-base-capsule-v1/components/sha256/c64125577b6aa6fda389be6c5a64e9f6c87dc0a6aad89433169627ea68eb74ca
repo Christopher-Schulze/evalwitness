@@ -1,0 +1,19 @@
+{
+  "schema_version": "evalwitness.trace-envelope.v1",
+  "mapping_policy_version": "evalwitness.trace-mapping.v1",
+  "source": {
+    "format": "codex_rollout_jsonl",
+    "schema_version": "unversioned-export+evalwitness.trace-mapping.v1",
+    "media_type": "application/x-ndjson"
+  },
+  "source_digest": "efd5168c1bbd3245604d2113403ac5de464c3642f2cace96317034ef9b01510f",
+  "capture_interval": {
+    "start": "2026-01-01T00:00:00Z",
+    "end": "2026-01-01T00:00:04Z"
+  },
+  "agent": {},
+  "privacy_class": "metadata_only",
+  "canonical_trajectory_digest": "abf75f77d420cb9d8619a1ba7d2f37c197c3fe2b52fcf460b9a7c2cf81890e22",
+  "mapping_report_digest": "0af88dc3eaed7406f13ad7d25a3b634eaa406bcf39abddf26b4c660dad35109d",
+  "digest": "e2f7a74f99b3651299e5a682cddde607034fa175699e7158e97da42784cca98d"
+}

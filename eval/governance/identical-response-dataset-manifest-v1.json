@@ -1,0 +1,25 @@
+{
+  "schema_version": "evalwitness.identical-response-dataset-manifest.v1",
+  "dataset": {
+    "id": "identical-response-corpus-v1",
+    "source": "controlled-corruption-v3 governed release (Terminal-Bench 2 + SWE-bench public traces)",
+    "version": "evalwitness-controlled-corruption.v3",
+    "license": "Apache-2.0 (60 groups) / MIT (40 groups), reference_only redistribution",
+    "acquired_at": "2026-08-22T00:00:00Z",
+    "dataset_digest": "9b4999dafe2d37ea04c298b80a7aba0a1769755fdfd650cd01bf3a9cc31a2e42",
+    "task_ids_digest": "8e47345b592e17ebf33008c5ca7edede1488f4106e33551973500159ba081349",
+    "outcome_labels_digest": "06ffa2445fe65dd969c9051c88e949efdda1f56b634085a2d9fd1827ee42434e",
+    "trajectory_set_digest": "d1d39a7ff30141d8c00d7e83c8dc7ad4f1b461434a4f2e9f8cdff41a62cfda38",
+    "task_count": 100,
+    "permitted_roles": [
+      "development",
+      "calibration"
+    ],
+    "previously_accessed": true,
+    "exclusions": []
+  },
+  "frozen_split_digest": "6035f58f62df5c5d02b00db2fe21be4717551c6f959833e485f216066bd09648",
+  "split_algorithm_note": "roles are the frozen controlled-corruption-v3 assignment (60 development / 20 calibration / 20 test), recorded not regenerated per TASK 049 freeze-before-outcomes",
+  "lineage_cluster_role_purity": "verified: no lineage cluster crosses data roles",
+  "contamination_boundary": "upstream trajectory bodies are reference_only and never re-published; the prospective study re-runs extracted task prompts and captures fresh provider responses whose redistribution basis is a separate verification"
+}

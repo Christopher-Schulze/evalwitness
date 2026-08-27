@@ -1,0 +1,141 @@
+{
+  "header": {
+    "schema_version": "evalwitness.verification-lineage-dataset-card.v1",
+    "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+    "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+    "object_id": "task_069-development-dataset-card-v1",
+    "task_id": "TASK-069",
+    "task_group_id": "study",
+    "data_role": "adapter_development",
+    "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+    "parents": [
+      {
+        "relation": "plan",
+        "schema_version": "evalwitness.verification-lineage-plan.v1",
+        "object_id": "task_069-verification-lineage-v1",
+        "task_id": "TASK-069",
+        "task_group_id": "study",
+        "digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c"
+      },
+      {
+        "relation": "audit",
+        "schema_version": "evalwitness.verification-lineage-audit.v1",
+        "object_id": "offline-audit-stdout-success",
+        "task_id": "TASK-069",
+        "task_group_id": "study",
+        "digest": "f2a1b543986c7fad5cb665855c958869137ec9e6eae342adef1e09fa236be745"
+      },
+      {
+        "relation": "capability",
+        "schema_version": "evalwitness.trace-capability-vector.v1",
+        "object_id": "capability-claude_code_jsonl",
+        "task_id": "TASK-069",
+        "task_group_id": "study",
+        "digest": "a484b0c8e8602604db600e0181eaffdd51aaaecac74dbcdfbda69a552f476aa5"
+      },
+      {
+        "relation": "capability",
+        "schema_version": "evalwitness.trace-capability-vector.v1",
+        "object_id": "capability-codex_rollout_jsonl",
+        "task_id": "TASK-069",
+        "task_group_id": "study",
+        "digest": "513ce19684ca845c4300e40ff4a88ef7b0cb995fbd688f698844d085e520de37"
+      },
+      {
+        "relation": "capability",
+        "schema_version": "evalwitness.trace-capability-vector.v1",
+        "object_id": "capability-opencode_export_json",
+        "task_id": "TASK-069",
+        "task_group_id": "study",
+        "digest": "9bb1e41f8670c5ef225d972be59f6d9816b26af992252e4f4d237fc35e4eec9d"
+      }
+    ],
+    "digest": "1a50d635eba0926f2954dee9dbd03bb2221b229669cb14967b7a11766225a1df"
+  },
+  "dataset_id": "task_069-development-evidence-v1",
+  "title": "EvalWitness verification-lineage development evidence",
+  "purpose": "reproduce native-format conformance, one accepted five-layer chain, and one non-failable counterexample without empirical generalization",
+  "source_populations": [
+    "checked_in_synthetic_execution_controls",
+    "historical_vendor_adapter_goldens",
+    "pinned_upstream_interoperability_fixtures"
+  ],
+  "formats": [
+    "claude_code_jsonl",
+    "codex_rollout_jsonl",
+    "opencode_export_json"
+  ],
+  "agent_ecosystems": [
+    "claude_code_adapter_fixture",
+    "codex_adapter_fixture",
+    "opencode_adapter_fixture"
+  ],
+  "roles": [
+    "adapter_development"
+  ],
+  "cluster_dimensions": [
+    "lineage_id",
+    "near_duplicate_id",
+    "repository_id",
+    "source_session_id",
+    "task_id"
+  ],
+  "inclusion_criteria": [
+    "checked_in_public_or_licensed_fixture",
+    "deterministic_provider_free_reproduction",
+    "strict_source_and_lineage_validation"
+  ],
+  "exclusion_criteria": [
+    "missing_independent_execution_witness_for_behavior_claim",
+    "research_role_not_admitted",
+    "restricted_or_redistribution_unresolved_content"
+  ],
+  "counts": [
+    {
+      "name": "accepted_boms",
+      "value": 1
+    },
+    {
+      "name": "adapter_conformance_checks",
+      "value": 504
+    },
+    {
+      "name": "development_fixtures",
+      "value": 2
+    },
+    {
+      "name": "empirical_task_groups",
+      "value": 0
+    },
+    {
+      "name": "golden_vectors",
+      "value": 63
+    },
+    {
+      "name": "research_admitted_sources",
+      "value": 0
+    }
+  ],
+  "license": "repository license plus source-specific fixture licenses recorded in the sealed source registry",
+  "privacy_projection": "public synthetic and metadata-safe development evidence only",
+  "redaction_loss_policy": "redaction remains an explicit measured loss and never proves behavior absence",
+  "intended_uses": [
+    "adapter regression testing",
+    "offline portfolio demonstration",
+    "verification-lineage method development"
+  ],
+  "out_of_scope_uses": [
+    "agent behavior prevalence",
+    "empirical lineage survival",
+    "provider or model ranking",
+    "task correctness"
+  ],
+  "known_limitations": [
+    "format holdout is development contaminated",
+    "no research source is admitted",
+    "syntax-family candidate universe was not sealed",
+    "two fixtures are not an empirical denominator"
+  ],
+  "reproduction_command": "scripts/tests/run-claimcheck.sh",
+  "provider_calls_required": 0
+}

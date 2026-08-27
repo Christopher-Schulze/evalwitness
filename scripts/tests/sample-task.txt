@@ -1,0 +1,1 @@
+Write a Python function `add(a, b)` that returns the sum of two integers. Save it to `solution.py` and run a quick test that prints `add(2, 3)` which must output `5`.

@@ -1,0 +1,1551 @@
+{
+  "schema_version": "evalwitness.stress-development-case-study.v1",
+  "canonical_policy": "evalwitness.stress-canonical-json.v1",
+  "case_study_id": "first-listed-candidate-order-one-minimal",
+  "data_role": "adapter_development",
+  "status": "mechanism_demonstration",
+  "task": {
+    "path": "scripts/tests/sample-task.txt",
+    "sha256": "cd6f1473b598478a557b0586118fb0cb6ac762bb1e23eb1d4442a6241db719a0",
+    "bytes": 167
+  },
+  "task_requirement": "Write a Python function `add(a, b)` that returns the sum of two integers. Save it to `solution.py` and run a quick test that prints `add(2, 3)` which must output `5`.",
+  "trajectories": [
+    {
+      "path": "scripts/tests/sample-traj-a.txt",
+      "sha256": "30c070899ce824c02de231a51a439f939c384422c718e70352f1a30cac61afb9",
+      "bytes": 352
+    },
+    {
+      "path": "scripts/tests/sample-traj-b.txt",
+      "sha256": "889a240ccf845f92155e7fa7b524acee417f1cb1c0b8be63471832ea96193583",
+      "bytes": 388
+    }
+  ],
+  "license": {
+    "path": "LICENSE",
+    "sha256": "a241c1fcf73642ed28ebb55d1b6281efff38f3892fe36ef184dbdebb8101191d",
+    "bytes": 1068
+  },
+  "license_spdx": "MIT",
+  "fixture_set_digest": "410ee59c6b129649cb7a846524e3271b721f296b1a66499e4b81355ebb457890",
+  "relation": {
+    "schema_version": "evalwitness.stress-relation.v1",
+    "canonical_policy": "evalwitness.stress-canonical-json.v1",
+    "id": "v3-sensitivity-candidate_order_reversal",
+    "revision": 1,
+    "kind": "invariance",
+    "applicability": {
+      "unit": "candidate_pair",
+      "minimum_trajectories": 2,
+      "maximum_trajectories": 2,
+      "required_source_formats": [
+        "plain_text"
+      ],
+      "requirements": [
+        {
+          "kind": "exact_replay",
+          "value": "required"
+        },
+        {
+          "kind": "formal_witness",
+          "value": "evalwitness.mutation-witness.v1"
+        },
+        {
+          "kind": "owner_attestation",
+          "value": "evalwitness.relation-owner-inspection-public-attestation.v1"
+        },
+        {
+          "kind": "v3_construct_firewall",
+          "value": "evalwitness.construct-firewall.v2"
+        },
+        {
+          "kind": "v3_mutation_manifest",
+          "value": "evalwitness.mutation-manifest.v1"
+        }
+      ]
+    },
+    "transform": {
+      "kind": "mutation",
+      "identifier": "reverse_candidate_order",
+      "version": "evalwitness.trajectory-mutation.v3",
+      "mutation_family": "candidate_order_reversal",
+      "intervention_class": "presentation",
+      "expected_formal_relation": "quality_equal",
+      "declared_changed_layer": "ingestion"
+    },
+    "constraints": [
+      {
+        "id": "selected-trajectory-stability",
+        "metric": "decision",
+        "operator": "equal",
+        "absolute_tolerance": 0,
+        "minimum_effect": 0,
+        "required": true
+      }
+    ],
+    "invalid_states": [
+      "construct_rejected",
+      "cross_version_substitution",
+      "custody_invalid",
+      "formal_witness_invalid",
+      "human_contradicted",
+      "locked_partition_already_used",
+      "not_applicable",
+      "privacy_invalid",
+      "replay_mismatch",
+      "source_unavailable",
+      "transform_invalid"
+    ],
+    "repeat_policy": {
+      "kind": "fixed",
+      "minimum_repetitions": 3,
+      "maximum_repetitions": 3,
+      "stop_rule": "fixed_repetitions"
+    },
+    "statistical_family": {
+      "id": "v3-sensitivity-candidate_order_reversal",
+      "estimand": "sensitivity",
+      "cluster_unit": "source_task",
+      "multiplicity_method": "bonferroni",
+      "denominator_policy": "eligible_source_task_relations_stratified_by_admission_with_all_post_admission_outcomes",
+      "failure_policy": {
+        "invalid": "invalid",
+        "missing_score": "abstained",
+        "provider_failure": "provider_failed",
+        "route_failure": "provider_failed",
+        "timeout": "provider_failed",
+        "abstention": "abstained",
+        "budget_exhaustion": "inconclusive",
+        "retry_exhaustion": "provider_failed",
+        "incomplete_cell": "inconclusive",
+        "unsupported": "unsupported",
+        "denominator_policy": "retain_every_registered_case_by_admission_and_outcome_without_complete_case_deletion"
+      }
+    },
+    "stage_expectations": [
+      {
+        "stage": "ingestion",
+        "expectation": "must_differ"
+      },
+      {
+        "stage": "request_construction",
+        "expectation": "may_differ"
+      },
+      {
+        "stage": "provider_response",
+        "expectation": "may_differ"
+      },
+      {
+        "stage": "score_extraction",
+        "expectation": "may_differ"
+      },
+      {
+        "stage": "decision_policy",
+        "expectation": "may_differ"
+      },
+      {
+        "stage": "rendering",
+        "expectation": "may_differ"
+      }
+    ],
+    "digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01"
+  },
+  "observation": {
+    "control_arm_id": "zero-cost-first-listed",
+    "original_order": [
+      "trajectory-a",
+      "trajectory-b"
+    ],
+    "transformed_order": [
+      "trajectory-b",
+      "trajectory-a"
+    ],
+    "original_selected": "trajectory-a",
+    "transformed_selected": "trajectory-b",
+    "constraint": {
+      "constraint_id": "selected-trajectory-stability",
+      "metric": "decision",
+      "operator": "equal",
+      "status": "violated",
+      "original_state": "trajectory-a",
+      "transformed_state": "trajectory-b"
+    },
+    "outcome": "violated",
+    "completed_repetitions": 3,
+    "provider_calls": 0,
+    "network_required": false,
+    "digest": "96005de5414ba548fb1cf3a9d9856964c8b8b9c7f4c4b23bf7873db49cccd448"
+  },
+  "counterexample": {
+    "schema_version": "evalwitness.stress-counterexample.v1",
+    "canonical_policy": "evalwitness.stress-canonical-json.v1",
+    "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+    "source_result_digest": "96005de5414ba548fb1cf3a9d9856964c8b8b9c7f4c4b23bf7873db49cccd448",
+    "case_id": "development-candidate-order-control",
+    "original_input_digest": "c9cd24e6bec796e116bec55f4635f952b6670d94cdf0ce35e8e88e147e07d6af",
+    "reduced_input_digest": "d8376a2a0250a35e9d60cc2d969bf5d2495a0a8bc34a584bbae5062e1150efc8",
+    "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+    "public_release_allowed": true,
+    "algorithm": "evalwitness.deterministic-restart-greedy-reducer.v1",
+    "minimality": "one_minimal",
+    "original_units": [
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-a-line-001"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-a-line-002"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-a-line-003"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-a-line-004"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-a-line-005"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-a-line-006"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-a-line-007"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-a-line-008"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-a-line-009"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-a-line-010"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-a-line-011"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-a-line-012"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-a-line-013"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-a-line-014"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-a-line-015"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-a-line-016"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-b-line-001"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-b-line-002"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-b-line-003"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-b-line-004"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-b-line-005"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-b-line-006"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-b-line-007"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-b-line-008"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-b-line-009"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-b-line-010"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-b-line-011"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-b-line-012"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-b-line-013"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-b-line-014"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-b-line-015"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-b-line-016"
+      }
+    ],
+    "final_units": [
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-a-line-013"
+      },
+      {
+        "kind": "fixture_line",
+        "id": "trajectory-b-line-013"
+      }
+    ],
+    "original_observation": {
+      "schema_version": "evalwitness.stress-reduction-observation.v1",
+      "canonical_policy": "evalwitness.stress-canonical-json.v1",
+      "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+      "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+      "relation_revalidated": true,
+      "privacy_revalidated": true,
+      "violation_preserved": true,
+      "relation_proof_digest": "6a5093481a55aa266d9476a1017c10a9e83bc6f5c2df1e5871b035e4c078ae11",
+      "privacy_proof_digest": "e8794396619f606350ebe11fb795e14cc4102e40b7c6e3494cb5172190d175c4",
+      "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+      "digest": "b6545e63c74e92a2ef0c1d0fac51cdb3204be1c3e4ea5c2597d959b6e51a71bb"
+    },
+    "steps": [
+      {
+        "index": 0,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-001",
+        "before_digest": "c9cd24e6bec796e116bec55f4635f952b6670d94cdf0ce35e8e88e147e07d6af",
+        "candidate_digest": "edeec43a6f5be9721846262004990d4816822c872b4b0f4233aa4422b3faa9d8",
+        "after_digest": "edeec43a6f5be9721846262004990d4816822c872b4b0f4233aa4422b3faa9d8",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "fb959db23f0a09a1972246269c8c8d5c64fa0766ffc68c41e5babfdfb950a87b",
+          "privacy_proof_digest": "f89c6a3e981bb98321052e56d15eb045418581eb589e34a376aaafe7920be146",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "1511e12d626ad2197509673b8a1ff368c598ba8e9f8ba4e8cad6048472d52830"
+        }
+      },
+      {
+        "index": 1,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-002",
+        "before_digest": "edeec43a6f5be9721846262004990d4816822c872b4b0f4233aa4422b3faa9d8",
+        "candidate_digest": "95468aa9b9fb0ec07810af2f149796ceb9fd86d291e47fb54421b7939a9f63bf",
+        "after_digest": "95468aa9b9fb0ec07810af2f149796ceb9fd86d291e47fb54421b7939a9f63bf",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "e20c4a7ba6850073ca9fb29cd8d76a77c76213498583f56cfdc80db4b1c99fb0",
+          "privacy_proof_digest": "2580947cf2fb5c9948771529a5d51aadf7cbabfbd01d7e78d60902465c55a0cd",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "a63cc336826686902edc34383973f7ec09bc379ddd77aeac430ec2e18e2b2561"
+        }
+      },
+      {
+        "index": 2,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-003",
+        "before_digest": "95468aa9b9fb0ec07810af2f149796ceb9fd86d291e47fb54421b7939a9f63bf",
+        "candidate_digest": "4aa581debb10b078ec32a5761885727e3f3fdc38b1be9575807b797b140ef296",
+        "after_digest": "4aa581debb10b078ec32a5761885727e3f3fdc38b1be9575807b797b140ef296",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "38685c0aaabc6a2a03bbfc542e8af00e1fd480fd6118379c61dc859242fa9995",
+          "privacy_proof_digest": "ff1b290c31dbbe04daab9c010f393c553e56c9148302162926ab8e032b084cb8",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "ef2c191072e5c8523d7264ed6d4d25fd0e854a3449d40a17493ecb32ccee553b"
+        }
+      },
+      {
+        "index": 3,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-004",
+        "before_digest": "4aa581debb10b078ec32a5761885727e3f3fdc38b1be9575807b797b140ef296",
+        "candidate_digest": "862ffa5f6f9aa1ba1c0ad9127b813ec30abcd8936f15b0cca8e25bec083917e3",
+        "after_digest": "862ffa5f6f9aa1ba1c0ad9127b813ec30abcd8936f15b0cca8e25bec083917e3",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "fbe79bff1c7cf26871f5c9a06a4b53800e84c47159dde1dc20b28babe3026f5d",
+          "privacy_proof_digest": "91911054bc5b9f4ca284a7e428f3c3a5cd7348d396d7879f1a0ade9bd20eacfc",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "432afcd22d7458aae9e62ece9f2ded235a63bd46f1eceb12e6c33883ca769854"
+        }
+      },
+      {
+        "index": 4,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-005",
+        "before_digest": "862ffa5f6f9aa1ba1c0ad9127b813ec30abcd8936f15b0cca8e25bec083917e3",
+        "candidate_digest": "fef2f09f7595aa85487e67a1e184a4200d94d2dd9ee25afbc35111f91bb242cf",
+        "after_digest": "fef2f09f7595aa85487e67a1e184a4200d94d2dd9ee25afbc35111f91bb242cf",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "5d1008669a5f4fc5a60e94bc1ad56fb8cce259488b98e88ebe6b272590dc629c",
+          "privacy_proof_digest": "b75cfb74c95b87e2d5799b893e018b2ba1df809362f23afc01677f71e69f165f",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "1e49fad3e3130342caadad208c13252434b16b50ad9684b912d10a1183f99216"
+        }
+      },
+      {
+        "index": 5,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-006",
+        "before_digest": "fef2f09f7595aa85487e67a1e184a4200d94d2dd9ee25afbc35111f91bb242cf",
+        "candidate_digest": "e6057592dd863348717411bce68a253a36436c17252e0e74b6de06ada77c94a9",
+        "after_digest": "e6057592dd863348717411bce68a253a36436c17252e0e74b6de06ada77c94a9",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "5931032a71c4299dc535530150ead189d21f3e257750d86c3c95875048c6f1be",
+          "privacy_proof_digest": "fe7f779c9c88ad76c90a4e9c2635991315b57db9d43c943a59c228ef312dff0a",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "6a18fcff38478ad0224e7c1d55217c774e2b4450671d5d739af2f1f0e4c14fdb"
+        }
+      },
+      {
+        "index": 6,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-007",
+        "before_digest": "e6057592dd863348717411bce68a253a36436c17252e0e74b6de06ada77c94a9",
+        "candidate_digest": "451b3fc27cf6de358d3234fb82f669fab9c96d3235d215d89545804490e9fabc",
+        "after_digest": "451b3fc27cf6de358d3234fb82f669fab9c96d3235d215d89545804490e9fabc",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "461a5b0cf10425ddd39c8e5e3224fe606ae95a4051b5c68e4433e199416319ce",
+          "privacy_proof_digest": "1c8b938733727489cc1529373c08af0352c373dfba2bd75079cee081772559a2",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "faa6b525a42dc0c6f9527ff529b4dd50b4ca9c5d1b6916de34e2cc1688af34b7"
+        }
+      },
+      {
+        "index": 7,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-008",
+        "before_digest": "451b3fc27cf6de358d3234fb82f669fab9c96d3235d215d89545804490e9fabc",
+        "candidate_digest": "1ed24fbd94a12f47eee71366526d29c2b2a5ac662c067961bac8f45dd8ea174a",
+        "after_digest": "1ed24fbd94a12f47eee71366526d29c2b2a5ac662c067961bac8f45dd8ea174a",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "bb2b92e25a470326f6cd5a8dfcb5813bc4bd395cb2be2070e136608692680abf",
+          "privacy_proof_digest": "8da92c10581d727f794c6977357320544f779a3389984bdcc5d968af1480b1ac",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "c4c31fbb83aad531bc5582680e61ec5cb1bf4f16feb066970725e69a492b4b7a"
+        }
+      },
+      {
+        "index": 8,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-009",
+        "before_digest": "1ed24fbd94a12f47eee71366526d29c2b2a5ac662c067961bac8f45dd8ea174a",
+        "candidate_digest": "fb25797a7e4ebaca0076d5f1009a8f32791d0ebdaa129b9ea53806a58ef9dda6",
+        "after_digest": "fb25797a7e4ebaca0076d5f1009a8f32791d0ebdaa129b9ea53806a58ef9dda6",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "038fb9c6607b6dc135ca6bd88f9210b57044721bbb8c4c86e2ee275170acdb55",
+          "privacy_proof_digest": "4902d9abb78455b7c4e895405a2964bc9916110d1f4a91278f20c2378ee719e9",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "2c34f53170d3885a6cdfe7b9fdf5f6570e14aab4f229b07b79706b3b91280d87"
+        }
+      },
+      {
+        "index": 9,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-010",
+        "before_digest": "fb25797a7e4ebaca0076d5f1009a8f32791d0ebdaa129b9ea53806a58ef9dda6",
+        "candidate_digest": "a9246a43243b0c7e7226092e3eb144afe6bfeea69bfc94b9cac577c9857ccfe9",
+        "after_digest": "a9246a43243b0c7e7226092e3eb144afe6bfeea69bfc94b9cac577c9857ccfe9",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "6c20e7efbae30b75a05beb26fa29c67c80b2ac948221306e60cd3350661e9762",
+          "privacy_proof_digest": "c3dffc0cc80ccae080ef5fbf506a5858e3b4d9fcbea4ed8a6289b1e40cf5bbd3",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "6ec9f034f5a9527751b124905f0f9062183be6027856f696aacf28a9ceed69bb"
+        }
+      },
+      {
+        "index": 10,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-011",
+        "before_digest": "a9246a43243b0c7e7226092e3eb144afe6bfeea69bfc94b9cac577c9857ccfe9",
+        "candidate_digest": "37c3a0652daf4e9b14d3df94564a812869735b8e6efb6d3e4ee046df7d5611be",
+        "after_digest": "37c3a0652daf4e9b14d3df94564a812869735b8e6efb6d3e4ee046df7d5611be",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "1fae1c4beda68bfe617010d1f97e3986208f3eb472416a4dfd4142eb7f0eb0b1",
+          "privacy_proof_digest": "91e6413878fe9e161f522084030587403f75fc3ddd4a734371b40d77fb168844",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "5c8e483b6d674ed681df25f6ebe32cf4519bc0d4544d5a969503cb3af819044d"
+        }
+      },
+      {
+        "index": 11,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-012",
+        "before_digest": "37c3a0652daf4e9b14d3df94564a812869735b8e6efb6d3e4ee046df7d5611be",
+        "candidate_digest": "18290e00685dd601b4824ce9c4fdb628ef4ad622c8e69df433c041f6382bb2ba",
+        "after_digest": "18290e00685dd601b4824ce9c4fdb628ef4ad622c8e69df433c041f6382bb2ba",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "1f054061bbb6517d9c0dedaf942398a1a828aae1b3dc0ee93a4a6508cf998e4c",
+          "privacy_proof_digest": "986ac3983773e4add90b0348d85af2f39bed0b490dff3a662f0bf4bd335b0180",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "5ef7334a134939cd7c56aa63217d4f9c78d4997912f7e416249e8899c92afbc3"
+        }
+      },
+      {
+        "index": 12,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-013",
+        "before_digest": "18290e00685dd601b4824ce9c4fdb628ef4ad622c8e69df433c041f6382bb2ba",
+        "candidate_digest": "5ce75b1f037775c2e48594a1740426dd24ce3483311ebe0aab6942a96c851b30",
+        "after_digest": "18290e00685dd601b4824ce9c4fdb628ef4ad622c8e69df433c041f6382bb2ba",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "7857d5ac8eeb293566d8c3292fae096e6a1f3784f351615d0216f8edcd6cf333",
+          "privacy_proof_digest": "63bdaee9f46f22293ab9924b4acad62239b57ce9157e5eaa95981c16b994f402",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "809bbf0a0e9b4e1246ffff1d9592e09afa4afb97c662ff3d37553ef02cb8d3f7"
+        }
+      },
+      {
+        "index": 13,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-014",
+        "before_digest": "18290e00685dd601b4824ce9c4fdb628ef4ad622c8e69df433c041f6382bb2ba",
+        "candidate_digest": "f065c09ea8b91f03bf956fd90feb88b1e8c2160044b31562537c82b652bfeb93",
+        "after_digest": "f065c09ea8b91f03bf956fd90feb88b1e8c2160044b31562537c82b652bfeb93",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "0a6ed52a89318adaea78bc4a9886e45dd8ea92f2434033865e0f740f1f40f9c3",
+          "privacy_proof_digest": "1bc942d3e278a2abe8547beca6ed24e4cca4105359a06e89b851b4cbdaf237ac",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "b40604130c911624d3a2729303409956ea5b3daf14f1c6667005be5539537147"
+        }
+      },
+      {
+        "index": 14,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-013",
+        "before_digest": "f065c09ea8b91f03bf956fd90feb88b1e8c2160044b31562537c82b652bfeb93",
+        "candidate_digest": "050407c943ac00d7fcb162ad3ce2ec7145824442940d6ab0d3435fb63d9f2c9a",
+        "after_digest": "f065c09ea8b91f03bf956fd90feb88b1e8c2160044b31562537c82b652bfeb93",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "5faa5fdbcfef572158a9e80f2121a0b3401e9293ff3817b0bf3986bb915e89e8",
+          "privacy_proof_digest": "d0589e20447693582be47da45cee74988c5693e01b6742b28bd4eafca3c0b96f",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "49697b33bd6ba912a9cbe5d0160632170617e04a6fd28f54ab89ef5b2aa06c70"
+        }
+      },
+      {
+        "index": 15,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-015",
+        "before_digest": "f065c09ea8b91f03bf956fd90feb88b1e8c2160044b31562537c82b652bfeb93",
+        "candidate_digest": "7c81645913b5e6c079b463004cd8b4fb1413f0ff08c74aaec4023ea4a0a4c81f",
+        "after_digest": "7c81645913b5e6c079b463004cd8b4fb1413f0ff08c74aaec4023ea4a0a4c81f",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "1135892e3430bb22b3cad2a6f41fda2fdcc053c916fac03a286145964b00ec61",
+          "privacy_proof_digest": "66254bde1b3a406c4d0ce927144a7d6b1902e4fdeb37a070fe7f514f2d1cc5ec",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "d800c5f6be937e769dfcdc99bd77029a5fa862cb0d76a3f54bda011f933351a5"
+        }
+      },
+      {
+        "index": 16,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-013",
+        "before_digest": "7c81645913b5e6c079b463004cd8b4fb1413f0ff08c74aaec4023ea4a0a4c81f",
+        "candidate_digest": "b762bf5945829686cbb383069568f710b63772fb9cf5e1efa6e10341ed90994c",
+        "after_digest": "7c81645913b5e6c079b463004cd8b4fb1413f0ff08c74aaec4023ea4a0a4c81f",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "149bd48d6264e5d6a962ce708de57b0c1525e5718760be3e430a9186e6ddeb6e",
+          "privacy_proof_digest": "1b067e91ab69fd716e258dc24de00a9afdd72f57f5a1601464434326a127e4d7",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "cfdf4df88f196d4a81e750743b4b6c2dcf5eced9f2965f612b5957516d4dce06"
+        }
+      },
+      {
+        "index": 17,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-016",
+        "before_digest": "7c81645913b5e6c079b463004cd8b4fb1413f0ff08c74aaec4023ea4a0a4c81f",
+        "candidate_digest": "4e06f4e4a07865c9112d8e3bc797ff48724d303091a02f8d19d82365bd3577dc",
+        "after_digest": "4e06f4e4a07865c9112d8e3bc797ff48724d303091a02f8d19d82365bd3577dc",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "647a29672afd8912b7f4c0b7a0cc38e8cf978f92035ab64447f3328cd62504d7",
+          "privacy_proof_digest": "d8ff9a852ae9fe4539475a022521f96c38a3c96c7aa0582f2229b89b023c74d2",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "01406190424dbb7feb8272a855de4c918cdbc4cd2d7191eebaed7a2dbe612976"
+        }
+      },
+      {
+        "index": 18,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-013",
+        "before_digest": "4e06f4e4a07865c9112d8e3bc797ff48724d303091a02f8d19d82365bd3577dc",
+        "candidate_digest": "2caf6ade2fd37ec0ac7aba4f466f3a64113209839a4c9ad7a8badf510f74d454",
+        "after_digest": "4e06f4e4a07865c9112d8e3bc797ff48724d303091a02f8d19d82365bd3577dc",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "2c1524303f9db347398aceca369015732fdd48be6a95f81376453a1997137499",
+          "privacy_proof_digest": "9ee29dbc9f9406dd096b5da3a352fa7493af1e3966555fe20bb9083ddd7969a0",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "22f8a5617bb59868ab3209b1b02d1003750851e6436a6d7b9ffa493c717091f2"
+        }
+      },
+      {
+        "index": 19,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-b-line-001",
+        "before_digest": "4e06f4e4a07865c9112d8e3bc797ff48724d303091a02f8d19d82365bd3577dc",
+        "candidate_digest": "9e3c0f6c36a24bc4bd84a4d1cb8fb75f6bcb2f6d924e44105cfbe8c07bf2c483",
+        "after_digest": "9e3c0f6c36a24bc4bd84a4d1cb8fb75f6bcb2f6d924e44105cfbe8c07bf2c483",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "8743e58f55eb403ec3379a485d99a3cf77e122e20377e33479a820050f49fe71",
+          "privacy_proof_digest": "925b194fb920cf7ebf9dbca697a11165318ff5094369395bfe265ca6af37dedc",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "45c1a4e08bc13682802a1114e080d43cb7149bdec151c3ac54678f877e46007a"
+        }
+      },
+      {
+        "index": 20,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-013",
+        "before_digest": "9e3c0f6c36a24bc4bd84a4d1cb8fb75f6bcb2f6d924e44105cfbe8c07bf2c483",
+        "candidate_digest": "791c610d483f936c6fd1e6deb28c10aff121bf01d3d51475517ea91c3ad6bad9",
+        "after_digest": "9e3c0f6c36a24bc4bd84a4d1cb8fb75f6bcb2f6d924e44105cfbe8c07bf2c483",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "45805da7aa2fc7965acfc266eb74c997343ce8c76be97d9bf575f18575487858",
+          "privacy_proof_digest": "6894d054f899981cb993e249f299ca30740905a2c2a001b86ec1c88e862a200a",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "4c5443629ee547a56e568b22ae660f983ed48e40dab2708c0b7da69bf90dc58e"
+        }
+      },
+      {
+        "index": 21,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-b-line-002",
+        "before_digest": "9e3c0f6c36a24bc4bd84a4d1cb8fb75f6bcb2f6d924e44105cfbe8c07bf2c483",
+        "candidate_digest": "67005981005e1c80092a4fde324f56a7df37844df55fe5cd9cd465d6d33671cb",
+        "after_digest": "67005981005e1c80092a4fde324f56a7df37844df55fe5cd9cd465d6d33671cb",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "f8f92c2e41298812f99cc75072eb65c279989c7636dda0913425c1c030db5122",
+          "privacy_proof_digest": "89a3b6d9c2c082ccf9966312915a27c57bc92944e8cc857410ae3dbf142aeece",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "36dc7b516c4dc977acb01eb0fcebaca85015fae7fef93e584c59034b48687563"
+        }
+      },
+      {
+        "index": 22,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-013",
+        "before_digest": "67005981005e1c80092a4fde324f56a7df37844df55fe5cd9cd465d6d33671cb",
+        "candidate_digest": "ae961b6d15c3d2c1dd3d165fc4e0671d43816d73ebf5729fee6bc9aa3a2460e5",
+        "after_digest": "67005981005e1c80092a4fde324f56a7df37844df55fe5cd9cd465d6d33671cb",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "22bcb895c760059470706b108a30b35d7d18bbf84b0d9ce6f8529db8901541e0",
+          "privacy_proof_digest": "d8653d4a605c9ac313c37fd93aec1d64d171968a54dcc5f7d81e8d5901799dad",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "bdca3363b77b755d80b7ccd3713a27cd90494d84ba3258490a83e84f42974c90"
+        }
+      },
+      {
+        "index": 23,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-b-line-003",
+        "before_digest": "67005981005e1c80092a4fde324f56a7df37844df55fe5cd9cd465d6d33671cb",
+        "candidate_digest": "4f98f0b6497994cfb8eafe777d73e925626e841621ad355ce99c0dc382b54235",
+        "after_digest": "4f98f0b6497994cfb8eafe777d73e925626e841621ad355ce99c0dc382b54235",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "f08c42857f6638ecb0ea4227e0de44cc88c6d07690211eb65e42bba7b247f69d",
+          "privacy_proof_digest": "462d2ddba39f519b6a4e0256070dd26b91e5a1c45aec9f02c5418a7bf4e414a6",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "fa259fb1bf65f5304431d5bd9eb86e7f683d6ee4e02a26cbafe7127c1c7e32a6"
+        }
+      },
+      {
+        "index": 24,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-013",
+        "before_digest": "4f98f0b6497994cfb8eafe777d73e925626e841621ad355ce99c0dc382b54235",
+        "candidate_digest": "6ef84ff19f92c6f57cb175baa071b554a2e165be15c41300789c682f5102f4e4",
+        "after_digest": "4f98f0b6497994cfb8eafe777d73e925626e841621ad355ce99c0dc382b54235",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "458618aff62b3f4f93dbdedbcb26dccb00a868863b7bf08f060e5a8644451267",
+          "privacy_proof_digest": "e5b9fd3bbc088b8954273736957bc74cd891388890c59506c980575bd08cb3d2",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "175950ee008f6c8cee126a3741e610fc99fd9fbdfde166970c041f32f577ef8e"
+        }
+      },
+      {
+        "index": 25,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-b-line-004",
+        "before_digest": "4f98f0b6497994cfb8eafe777d73e925626e841621ad355ce99c0dc382b54235",
+        "candidate_digest": "3fcdedf3398eec19c5b1234c6a9c27ac0970d6d96f4e43540318587c396867bb",
+        "after_digest": "3fcdedf3398eec19c5b1234c6a9c27ac0970d6d96f4e43540318587c396867bb",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "2101fd631b7de87b996df368fd64fdbc208fd9b4bbdadd4a45d5c9ad274d90bc",
+          "privacy_proof_digest": "e7635f288cae5cbc72b898d06e56609b795aa994dbcced64a353d22053c75632",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "6bfb78946d2058343d4d446602b67dea879fb919b3ccdf6e42542f02041c973f"
+        }
+      },
+      {
+        "index": 26,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-013",
+        "before_digest": "3fcdedf3398eec19c5b1234c6a9c27ac0970d6d96f4e43540318587c396867bb",
+        "candidate_digest": "2821f3a6a8b8c43223781e8a045472bc15295b16c989dba5e734d3515dad92ea",
+        "after_digest": "3fcdedf3398eec19c5b1234c6a9c27ac0970d6d96f4e43540318587c396867bb",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "e2fbb10d82f6be6322da22880f4b38b61b7a4a8d0aedc1b8c7e22e38ca3fb03f",
+          "privacy_proof_digest": "146ca6e87cc8fdd71b6591e905bf54253bd7ee3769ebe3df625f68fac2e6f6e3",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "e36c08972ba644967d16b4570c35045833f5ee6313603ef7d14934cef80668a5"
+        }
+      },
+      {
+        "index": 27,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-b-line-005",
+        "before_digest": "3fcdedf3398eec19c5b1234c6a9c27ac0970d6d96f4e43540318587c396867bb",
+        "candidate_digest": "445ac6374391bc9d073faf9ecdf372aacad2010759364033a6f91c3dc350af7a",
+        "after_digest": "445ac6374391bc9d073faf9ecdf372aacad2010759364033a6f91c3dc350af7a",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "597d4c227e59eb309f376389d582668d96ecb108ac4091d2f1402d41500318b9",
+          "privacy_proof_digest": "ae6b35362815294e4040e02c14801848238bf6204a769bf20d81b6fbe1a6a757",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "6a4f98f3ef720cd866f8d0b3bc4dcf7c6af129042009ca8e90898327ce82db48"
+        }
+      },
+      {
+        "index": 28,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-013",
+        "before_digest": "445ac6374391bc9d073faf9ecdf372aacad2010759364033a6f91c3dc350af7a",
+        "candidate_digest": "0f6a1732d1ebd409fc91a6213c57f83115efaf25bcf46b2305b4c4f4883921db",
+        "after_digest": "445ac6374391bc9d073faf9ecdf372aacad2010759364033a6f91c3dc350af7a",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "8e1dca1b37602997bcb6ffbce1f4751eaebdea8e774c9d7803b305a3cb4542e3",
+          "privacy_proof_digest": "3251b0aa1e3320321302f8b048a0e6402639ab7c9de6747bdd3f121c261dfb25",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "ff342c0e1b3910473e5cfd15a9c1a530d6d7a919b16256387765b9577f87ca8f"
+        }
+      },
+      {
+        "index": 29,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-b-line-006",
+        "before_digest": "445ac6374391bc9d073faf9ecdf372aacad2010759364033a6f91c3dc350af7a",
+        "candidate_digest": "f1bf16d14cd332d8d5205978e7b9506597b6d39114d03d417d305b11de8bb461",
+        "after_digest": "f1bf16d14cd332d8d5205978e7b9506597b6d39114d03d417d305b11de8bb461",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "f6cc36933083b43c7769e148137412c33e5e9635a89bf5f277fb7c8faabfd033",
+          "privacy_proof_digest": "3b5579315c349b42d7a47d97b75c95fb6ee56ee36bfd9ec4395d503ff6a51684",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "bfabc59437d62af7875a96cd0d6762ebb5a200ac367c2c9af6cdb5887a214af0"
+        }
+      },
+      {
+        "index": 30,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-013",
+        "before_digest": "f1bf16d14cd332d8d5205978e7b9506597b6d39114d03d417d305b11de8bb461",
+        "candidate_digest": "937c75d63db8bf9d7740fd49487dc4f196f9ea31e2301b515ef823647c64766f",
+        "after_digest": "f1bf16d14cd332d8d5205978e7b9506597b6d39114d03d417d305b11de8bb461",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "ed933afea3994c61d01d94789113ae0dca4c1e0192122004236732232fdb46a2",
+          "privacy_proof_digest": "039c9387017c11ac8d7d78cbfa5949ea9d03d3f0f2955104f2930246b6a2654e",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "aa57c02a24dc15e967038d72d7f7fe6e781da2b46e1a0464d456a63a8470a3df"
+        }
+      },
+      {
+        "index": 31,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-b-line-007",
+        "before_digest": "f1bf16d14cd332d8d5205978e7b9506597b6d39114d03d417d305b11de8bb461",
+        "candidate_digest": "13c1901a18c40221dbc825ebf66a38cd2406bf5d364c07b99b62152b8c2820e4",
+        "after_digest": "13c1901a18c40221dbc825ebf66a38cd2406bf5d364c07b99b62152b8c2820e4",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "e337d5fcbcfd07e08fc8b5f3b8317939e216a4b721a605d418fae9e46e4f40f0",
+          "privacy_proof_digest": "7d2db0b1febee0138f86e28acb783e0ded43a34b27f456c754837a5e53b53e16",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "cc00741cda1223ef69ef42dcbd357e2b6e939eef29897ada5397f39364bfb3ed"
+        }
+      },
+      {
+        "index": 32,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-013",
+        "before_digest": "13c1901a18c40221dbc825ebf66a38cd2406bf5d364c07b99b62152b8c2820e4",
+        "candidate_digest": "e03f2c04341c26660659e9db39a9af53bcdcfdc4988a40382d9d06783ba256b0",
+        "after_digest": "13c1901a18c40221dbc825ebf66a38cd2406bf5d364c07b99b62152b8c2820e4",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "15f618b31a49c868a9ada745014fa0e38c2d4faf7e168d32d919bfd64c4afdd5",
+          "privacy_proof_digest": "d25fd78993b73df618c28c35f41acd7376c6ad348c0eafcc1f3923c6b946ba14",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "1a0388e7055da76d8e912af04fca832c7cf57a752da9bf90d30f2ba0806eb06e"
+        }
+      },
+      {
+        "index": 33,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-b-line-008",
+        "before_digest": "13c1901a18c40221dbc825ebf66a38cd2406bf5d364c07b99b62152b8c2820e4",
+        "candidate_digest": "3e67d65ca5a4077a77cc4adb002eed77f80748d1f06efec02b0b4bf1349f8bd3",
+        "after_digest": "3e67d65ca5a4077a77cc4adb002eed77f80748d1f06efec02b0b4bf1349f8bd3",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "6a78a3a0a4f0fe7d460dcc4ebd6e9a5d4650f070198af310a8a8e1d1375aadce",
+          "privacy_proof_digest": "686414f5610c7824362e26ad8cbcc4a6e4e07fa0421de34e233e9c323aeb3db1",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "b4f83c832cfd4e2487182d547d66675c90748ef22619747159a9fb04987a64e3"
+        }
+      },
+      {
+        "index": 34,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-013",
+        "before_digest": "3e67d65ca5a4077a77cc4adb002eed77f80748d1f06efec02b0b4bf1349f8bd3",
+        "candidate_digest": "c06cb0f751962a0183a50657dd39e9b73eb2af30c9ef8b948b611a8d74e561a3",
+        "after_digest": "3e67d65ca5a4077a77cc4adb002eed77f80748d1f06efec02b0b4bf1349f8bd3",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "2b63c84fab93b7f4758e1b6a0ccacc00c38bababa9bbf202529c8330f60d09f4",
+          "privacy_proof_digest": "1f5f0b765269c91441e33eddc4f42dcfcfeeda704970c5f3f2ef866ce49ca8c1",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "b6f309e83a597778672bff366295472e2b269820dd06fd80e090e3d8f1ffef9f"
+        }
+      },
+      {
+        "index": 35,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-b-line-009",
+        "before_digest": "3e67d65ca5a4077a77cc4adb002eed77f80748d1f06efec02b0b4bf1349f8bd3",
+        "candidate_digest": "0e857eb1e8a1ef3891afec9ff0e79670b12b1a3db5cc3991a304502b838a73f8",
+        "after_digest": "0e857eb1e8a1ef3891afec9ff0e79670b12b1a3db5cc3991a304502b838a73f8",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "29f97a70120e977128a19b0023aa511c1e314cdfe3e5f40b970fd56943c4ddfb",
+          "privacy_proof_digest": "d90264cec525f461589f2e8018d09f9c6b58c211e5092ba80f3cae16e7d69dd1",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "e962ef2634a1a42bbeb17db530417452434d4c8cd9f46c9c60ffe087d6e9dfb5"
+        }
+      },
+      {
+        "index": 36,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-013",
+        "before_digest": "0e857eb1e8a1ef3891afec9ff0e79670b12b1a3db5cc3991a304502b838a73f8",
+        "candidate_digest": "a09b16df609d74bc4479e154159110d8f3ed97c7b335a3d60a9fe387148bd2c8",
+        "after_digest": "0e857eb1e8a1ef3891afec9ff0e79670b12b1a3db5cc3991a304502b838a73f8",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "80c9dfe9bab28ce2a3f3f9bcaf0e12a0961107c0456b174b3da79103088eaeb0",
+          "privacy_proof_digest": "6d65ec32d4a737b4d5564dadc1c4d472ae13288d55ba221728ab79b75d9e6d79",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "8f6049737b09d794f00c119f29577fb66c132b76fcef1815a184d19baef5c478"
+        }
+      },
+      {
+        "index": 37,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-b-line-010",
+        "before_digest": "0e857eb1e8a1ef3891afec9ff0e79670b12b1a3db5cc3991a304502b838a73f8",
+        "candidate_digest": "001e7cc3ee902bec047c185ef6d1ec6aa93a5a302f45abf9d74ef9e8b7920f8b",
+        "after_digest": "001e7cc3ee902bec047c185ef6d1ec6aa93a5a302f45abf9d74ef9e8b7920f8b",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "c39add7dd9417b39eb3c925dd0b9d2f5be8de19827992bc7d61a5e20ec8c7ffc",
+          "privacy_proof_digest": "f7e3bd7a36a9a72a5fda723dfe4034af58d3666d8439d75d7b2efac962d426e7",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "a275505fa6798540ce27caac2bc861ee599cab53ed7c1734253bc5bab78c909c"
+        }
+      },
+      {
+        "index": 38,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-013",
+        "before_digest": "001e7cc3ee902bec047c185ef6d1ec6aa93a5a302f45abf9d74ef9e8b7920f8b",
+        "candidate_digest": "aadaa7b6665f7a6e0f1cfa28d4e9d73f97748c74cada5565e07604ce03394948",
+        "after_digest": "001e7cc3ee902bec047c185ef6d1ec6aa93a5a302f45abf9d74ef9e8b7920f8b",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "1e08d8943ff0974a1d14b5b462f7cb10bb911cdbacaebcbf73386b3eaa760048",
+          "privacy_proof_digest": "d483b410b9b688aa281d0876dd0b29bf4ad3b3ddec9f5cd243b32368dc890501",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "84db9a67a6c0e4a5261060b482036148342279f058802a67335a6f0eaa0eadf1"
+        }
+      },
+      {
+        "index": 39,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-b-line-011",
+        "before_digest": "001e7cc3ee902bec047c185ef6d1ec6aa93a5a302f45abf9d74ef9e8b7920f8b",
+        "candidate_digest": "3cd6f4a091bd5692e7f7439918837808d8e7a352cbff0bc7409f3feb796a282d",
+        "after_digest": "3cd6f4a091bd5692e7f7439918837808d8e7a352cbff0bc7409f3feb796a282d",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "eed971e499a5a3e5f6785a419796779497470a2322abcf5ccd66f17b720e539d",
+          "privacy_proof_digest": "d387befdd7ce2d0df4d028e87c4384378d509e635502f40cadc91963e5a48769",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "26cf6f11e16dc4bf58c3ad305bda376ab55e79749a6b507267575a64865d1f58"
+        }
+      },
+      {
+        "index": 40,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-013",
+        "before_digest": "3cd6f4a091bd5692e7f7439918837808d8e7a352cbff0bc7409f3feb796a282d",
+        "candidate_digest": "b87f42eba42509c329acb4259586e269888dc36aa44b2292fd086173dc19dbdd",
+        "after_digest": "3cd6f4a091bd5692e7f7439918837808d8e7a352cbff0bc7409f3feb796a282d",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "acbc002f0e6a18f8ed0dfbf7e77787bdab452c30c843f7e3a12dbc99911a4019",
+          "privacy_proof_digest": "c18405aba72c27b36348097bab4ac11289ea8aeb8907e6dbc4779cdae4d2ab0d",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "90da865aab56729d1ec41ca62ae339c5d9d9b7a5484badbaaa0f44cc2e1d4f37"
+        }
+      },
+      {
+        "index": 41,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-b-line-012",
+        "before_digest": "3cd6f4a091bd5692e7f7439918837808d8e7a352cbff0bc7409f3feb796a282d",
+        "candidate_digest": "1e7407098be9d0405d970777c9c7978f3e38530da47708eba0b4547cc7fc4e81",
+        "after_digest": "1e7407098be9d0405d970777c9c7978f3e38530da47708eba0b4547cc7fc4e81",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "c170bb41a8b97f39d652f3ddd7318997101de36f1281657022426f114e246bde",
+          "privacy_proof_digest": "1d49a01ddd891820b7b1a4f13d07a2e1c6ad9bebef538a949e1f033d1b372449",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "80fd3d513e29b844ee0d72a653a3098e96783c34f24539244f2896a3d44f9c5b"
+        }
+      },
+      {
+        "index": 42,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-013",
+        "before_digest": "1e7407098be9d0405d970777c9c7978f3e38530da47708eba0b4547cc7fc4e81",
+        "candidate_digest": "45115c65e16a54f8bf5ee38961d002e3d84f483e92884892342b1f0b6096bcc3",
+        "after_digest": "1e7407098be9d0405d970777c9c7978f3e38530da47708eba0b4547cc7fc4e81",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "e6651a8eb25fa77282185522be6acbc4725f4911c04b238dd5489a7a654f151d",
+          "privacy_proof_digest": "00bdd3cb517d47688ff0828f04d7d472e3b73236bf0ac6ff83e8ab2aaa8dc6e8",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "2c37fb6d14c0bd37fff6196e9a56063a295edeea7ceb5296e8c92858b26e2a67"
+        }
+      },
+      {
+        "index": 43,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-b-line-013",
+        "before_digest": "1e7407098be9d0405d970777c9c7978f3e38530da47708eba0b4547cc7fc4e81",
+        "candidate_digest": "04df7b37e7602fdc144e5bf53be95d636f6650b161b992da34884eaae942c0ea",
+        "after_digest": "1e7407098be9d0405d970777c9c7978f3e38530da47708eba0b4547cc7fc4e81",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "e0b1c9abd476438cf1a465b0a395ab10310a98a95e08ac2665aaaced64f9f65d",
+          "privacy_proof_digest": "5c9b533cd6b78f191f4413da246772e4f783f2fc2f4588345743d96897f843e2",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "a01ea8e17156eebcd83bc06b82a48bd4ff0456cbb39f60113426b39a92b04f6d"
+        }
+      },
+      {
+        "index": 44,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-b-line-014",
+        "before_digest": "1e7407098be9d0405d970777c9c7978f3e38530da47708eba0b4547cc7fc4e81",
+        "candidate_digest": "2d24176878b1e9a2697d9de44396edccd4aca62485067f5644b1083a959f9401",
+        "after_digest": "2d24176878b1e9a2697d9de44396edccd4aca62485067f5644b1083a959f9401",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "026505ec8ba8c965c0ad4d0e0ca80ded66324ae67414a05b865769426d26a379",
+          "privacy_proof_digest": "610a3b3c50ad4ef2439c978d9e29477ed4461c824dd7bd702066d050fbaf4f31",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "256284740941a189f4ece4913c02b3665b8c8a50916b04754ba4f970ff6cf822"
+        }
+      },
+      {
+        "index": 45,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-013",
+        "before_digest": "2d24176878b1e9a2697d9de44396edccd4aca62485067f5644b1083a959f9401",
+        "candidate_digest": "0bf2827903af69f2651cfdfee6f2e0b71baa066afaaa739379ee19addb1c7cf8",
+        "after_digest": "2d24176878b1e9a2697d9de44396edccd4aca62485067f5644b1083a959f9401",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "52090346ee9d364e2d78f01fe69cd4d63aed98e1c3f7d0a20797760227f4dfd3",
+          "privacy_proof_digest": "9dcfefdff1995a5ce36322b57ae0e82e34610189217569fea1b0075d3ff6e1ac",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "13e8f3ccfd4f98454587cb2b5faf672eeabe143ea2dd94569283ef2f825e7a2f"
+        }
+      },
+      {
+        "index": 46,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-b-line-013",
+        "before_digest": "2d24176878b1e9a2697d9de44396edccd4aca62485067f5644b1083a959f9401",
+        "candidate_digest": "0dc857f6c87a49f7681aff71b18ed934142fae46a1fd900d29d4c9438fc78ba9",
+        "after_digest": "2d24176878b1e9a2697d9de44396edccd4aca62485067f5644b1083a959f9401",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "aac1f4ab21bf1e108a151b737208855ec612743b10927a9214ad8b5d18256bfc",
+          "privacy_proof_digest": "3e091b06f27f786396c702ea69be7d3ba4c821d5f17ae504c90854839a1ecc78",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "1f06a699d25eb7aaa4acb42f2552955db4fbf9d23e411fd2a07a5d9096f668fb"
+        }
+      },
+      {
+        "index": 47,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-b-line-015",
+        "before_digest": "2d24176878b1e9a2697d9de44396edccd4aca62485067f5644b1083a959f9401",
+        "candidate_digest": "d995c47397dfdc7fe80ebc3ad2aaf1f96213e9d9aa8049da30e6bb768fece93c",
+        "after_digest": "d995c47397dfdc7fe80ebc3ad2aaf1f96213e9d9aa8049da30e6bb768fece93c",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "e28377cde5d8b415231c36f49017ed557c0777e3d06c7ae99402fca4e050a291",
+          "privacy_proof_digest": "b07d0aff7cad15d4a8a205931718b7ea41e3e1cb8b7cf3248d4e24cf68b2acef",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "b6ddb8fd914ac522843be8df6c45928f512b22114a37d96417f012717e344e46"
+        }
+      },
+      {
+        "index": 48,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-013",
+        "before_digest": "d995c47397dfdc7fe80ebc3ad2aaf1f96213e9d9aa8049da30e6bb768fece93c",
+        "candidate_digest": "3f7017b5ede07319068eb7e2dc90749df98e85318a544b739b4aa736ac537d99",
+        "after_digest": "d995c47397dfdc7fe80ebc3ad2aaf1f96213e9d9aa8049da30e6bb768fece93c",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "75efef14b98fb5c1785042f6e9019532e91779ab7ba025a10667264042cc3e31",
+          "privacy_proof_digest": "98ccd9fdae3706a6b29b9b333f668e175c1147b89e70e6c99c79e530a91c2e42",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "765593d16e770a1ddf81a77db41c2bd0cdd5adb39c529884bb7073e3eabf0c2d"
+        }
+      },
+      {
+        "index": 49,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-b-line-013",
+        "before_digest": "d995c47397dfdc7fe80ebc3ad2aaf1f96213e9d9aa8049da30e6bb768fece93c",
+        "candidate_digest": "6a250adb3c411af5f153eba77c0c8904f6c7df7721f4a046b7989e4da7dbe4f7",
+        "after_digest": "d995c47397dfdc7fe80ebc3ad2aaf1f96213e9d9aa8049da30e6bb768fece93c",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "9c8ebf8282693d224d7a93703f62d8124324cb238efa663d0587a06883a899a9",
+          "privacy_proof_digest": "d68aaf762ee054a7ab77e3b0b7771977f94a73b6ddb4fffeec9508eee9db1ff3",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "3592141f1d8d4303873755cfb1b1b1abbee68ea890b1608c30463025e355cb7d"
+        }
+      },
+      {
+        "index": 50,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-b-line-016",
+        "before_digest": "d995c47397dfdc7fe80ebc3ad2aaf1f96213e9d9aa8049da30e6bb768fece93c",
+        "candidate_digest": "d8376a2a0250a35e9d60cc2d969bf5d2495a0a8bc34a584bbae5062e1150efc8",
+        "after_digest": "d8376a2a0250a35e9d60cc2d969bf5d2495a0a8bc34a584bbae5062e1150efc8",
+        "decision": "accepted",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": true,
+          "privacy_revalidated": true,
+          "violation_preserved": true,
+          "relation_proof_digest": "046783c1be7c7c456d3a1feeb5de84c72a16bcbce6158eb6a7f3d35789a7eef6",
+          "privacy_proof_digest": "69bfd332f46b9d5993c6c0abecb2adbdd32a2ab133bbd08e9ea2766d53179fdb",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "0ce001e835a1cf5ed30b28a0d15e43bd0702bdfa76df47dc952b5717106bd312"
+        }
+      },
+      {
+        "index": 51,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-a-line-013",
+        "before_digest": "d8376a2a0250a35e9d60cc2d969bf5d2495a0a8bc34a584bbae5062e1150efc8",
+        "candidate_digest": "3b29b7094ef14934d243bdc7c482aad04f683eec5f531d04ba960207d2ee989f",
+        "after_digest": "d8376a2a0250a35e9d60cc2d969bf5d2495a0a8bc34a584bbae5062e1150efc8",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "133776325dc928e42a25de42ec91cd2708e81838e9b992cbeee7cf5bddcc816f",
+          "privacy_proof_digest": "3174370298fe58364e603d04011a0cf779bf969e88de0521567e946530ca1e6f",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "b3bfb00cfff5cb526c51a94349f5b811845dad19b23123c480c5c99a0a0b13f6"
+        }
+      },
+      {
+        "index": 52,
+        "unit_kind": "fixture_line",
+        "unit_id": "trajectory-b-line-013",
+        "before_digest": "d8376a2a0250a35e9d60cc2d969bf5d2495a0a8bc34a584bbae5062e1150efc8",
+        "candidate_digest": "444b5e96bf33383fa430235b21b49f5a7e8b6f9796d46138ac17e1e9df0c6b4c",
+        "after_digest": "d8376a2a0250a35e9d60cc2d969bf5d2495a0a8bc34a584bbae5062e1150efc8",
+        "decision": "rejected",
+        "observation": {
+          "schema_version": "evalwitness.stress-reduction-observation.v1",
+          "canonical_policy": "evalwitness.stress-canonical-json.v1",
+          "relation_digest": "03d039d9cb8fcd41cb958ee28101ae1b5d91c48ca1540731460558974957ca01",
+          "privacy_policy_digest": "dc0c0bb71a25fd3c59571c983cc9b60579d71e315373121ff8d4dba30703d95a",
+          "relation_revalidated": false,
+          "privacy_revalidated": true,
+          "violation_preserved": false,
+          "relation_proof_digest": "1c90d9b89ac0b00db83a4c89383142ef6ff97f2b23857eafac870d1b041c5acf",
+          "privacy_proof_digest": "0c7835438c8d69bac6384dd2f43616e20d71a4133edb7a194101c3cea6f01161",
+          "replay_result_digest": "89e68bb2cbf3e4c333051c6e1c2dacbf62d1ac4334a6452cebf95c97f05808b3",
+          "digest": "3eeed0d24bfa1a2c53d05ac7910a1b66d4ca2440e73b45bb9491b326c5f45d42"
+        }
+      }
+    ],
+    "accepted_reductions": 30,
+    "digest": "3bcddd427a270adbb69cb5447c1815f811b440e285d96bf5ec86e4e2b2c0d94f"
+  },
+  "final_witness": [
+    {
+      "unit_id": "trajectory-a-line-013",
+      "fixture_path": "scripts/tests/sample-traj-a.txt",
+      "line": 13,
+      "content": "5"
+    },
+    {
+      "unit_id": "trajectory-b-line-013",
+      "fixture_path": "scripts/tests/sample-traj-b.txt",
+      "line": 13,
+      "content": "-1"
+    }
+  ],
+  "original_line_units": 32,
+  "final_line_units": 2,
+  "accepted_reductions": 30,
+  "reduction_percent": 93.75,
+  "empirical_units": 0,
+  "provider_calls": 0,
+  "network_required": false,
+  "claim_boundary": "provider-free development mechanism evidence only; zero empirical units; no verifier, provider, population, held-out, or global-minimum claim",
+  "allowed_claims": [
+    "checked_in_fixture_reproduction",
+    "deterministic_candidate_order_negative_control",
+    "shared_one_minimal_reducer_mechanism"
+  ],
+  "forbidden_claims": [
+    "global_minimum",
+    "held_out_confirmation",
+    "model_or_provider_comparison",
+    "population_generalization",
+    "verifier_reliability_estimate"
+  ],
+  "digest": "b4a7adb23505a88ee0ab79c73957bce5fbd15539a0e5e687590719d3ec4ee84b"
+}

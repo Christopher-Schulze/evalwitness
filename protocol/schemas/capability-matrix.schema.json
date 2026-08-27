@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://evalwitness.dev/protocol/1.2/schemas/capability-matrix.schema.json",
+  "title": "EvalWitness CapabilityMatrix",
+  "type": "object",
+  "required": ["schema_version", "statuses"],
+  "properties": {"schema_version": {"const": "evalwitness.protocol.capability-matrix.v1"}, "statuses": {"type": "array", "minItems": 5, "maxItems": 5, "items": {"type": "object", "required": ["conformance_level", "passed", "failed", "skipped", "unsupported", "not_run", "reasons"], "properties": {"conformance_level": {"$ref": "shared.schema.json#/$defs/conformanceLevel"}, "passed": {"type": "integer", "minimum": 0}, "failed": {"type": "integer", "minimum": 0}, "skipped": {"type": "integer", "minimum": 0}, "unsupported": {"type": "integer", "minimum": 0}, "not_run": {"type": "integer", "minimum": 0}, "reasons": {"type": "array", "items": {"type": "string"}}}, "additionalProperties": false}}},
+  "additionalProperties": false
+}

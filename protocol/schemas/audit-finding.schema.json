@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://evalwitness.dev/protocol/1.2/schemas/audit-finding.schema.json",
+  "title": "EvalWitness AuditFinding",
+  "type": "object",
+  "required": ["schema_version", "code", "severity", "path", "message", "invariant"],
+  "properties": {"schema_version": {"const": "evalwitness.protocol.audit-finding.v1"}, "code": {"$ref": "shared.schema.json#/$defs/identifier"}, "severity": {"enum": ["info", "warning", "error"]}, "path": {"type": "string", "minLength": 1}, "message": {"type": "string", "minLength": 1}, "invariant": {"type": "string", "minLength": 1}},
+  "additionalProperties": false
+}

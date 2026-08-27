@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://evalwitness.dev/protocol/1.2/schemas/audit-case.schema.json",
+  "title": "EvalWitness AuditCase",
+  "type": "object",
+  "required": ["schema_version", "protocol_version", "case_id", "conformance_level", "kind", "description", "required_capabilities", "invocation", "expected", "extensions"],
+  "properties": {
+    "schema_version": {"const": "evalwitness.protocol.audit-case.v1"},
+    "protocol_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "case_id": {"$ref": "shared.schema.json#/$defs/identifier"},
+    "conformance_level": {"$ref": "shared.schema.json#/$defs/conformanceLevel"},
+    "kind": {"$ref": "shared.schema.json#/$defs/caseKind"},
+    "description": {"type": "string", "minLength": 1, "maxLength": 4096},
+    "required_capabilities": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "invocation": {"$ref": "audit-invocation.schema.json"},
+    "expected": {"type": "object", "required": ["status"], "properties": {"status": {"enum": ["accepted", "rejected", "unsupported"]}, "finding_code": {"type": "string"}, "score_decimal": {"$ref": "shared.schema.json#/$defs/decimal"}, "decision_state": {"type": "string"}, "evidence_digest": {"$ref": "shared.schema.json#/$defs/digest"}}, "additionalProperties": false},
+    "extensions": {"$ref": "shared.schema.json#/$defs/extensions"}
+  },
+  "additionalProperties": false
+}

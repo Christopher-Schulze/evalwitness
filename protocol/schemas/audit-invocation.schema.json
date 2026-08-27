@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://evalwitness.dev/protocol/1.2/schemas/audit-invocation.schema.json",
+  "title": "EvalWitness AuditInvocation",
+  "type": "object",
+  "required": ["schema_version", "invocation_id", "operation", "offline", "timeout_millis", "max_input_bytes", "trajectory_refs", "extensions"],
+  "properties": {
+    "schema_version": {"const": "evalwitness.protocol.audit-invocation.v1"},
+    "invocation_id": {"$ref": "shared.schema.json#/$defs/identifier"},
+    "operation": {"$ref": "shared.schema.json#/$defs/caseKind"},
+    "offline": {"const": true},
+    "timeout_millis": {"type": "integer", "minimum": 1, "maximum": 60000},
+    "max_input_bytes": {"type": "integer", "minimum": 1, "maximum": 4194304},
+    "trajectory_refs": {"type": "array", "maxItems": 256, "items": {"$ref": "shared.schema.json#/$defs/trajectoryRef"}},
+    "canonical_json": {"$ref": "shared.schema.json#/$defs/canonicalJSONInput"},
+    "request_vector": {"$ref": "shared.schema.json#/$defs/requestVector"},
+    "score_evidence": {"$ref": "score-evidence.schema.json"},
+    "decision_evidence": {"$ref": "decision-evidence.schema.json"},
+    "replay_evidence": {"$ref": "shared.schema.json#/$defs/replayEvidence"},
+    "attestation_evidence": {"$ref": "shared.schema.json#/$defs/attestationEvidence"},
+    "extensions": {"$ref": "shared.schema.json#/$defs/extensions"}
+  },
+  "allOf": [
+    {"if": {"properties": {"operation": {"const": "canonical_encoding"}}}, "then": {"required": ["canonical_json"], "not": {"anyOf": [{"required": ["request_vector"]}, {"required": ["score_evidence"]}, {"required": ["decision_evidence"]}, {"required": ["replay_evidence"]}, {"required": ["attestation_evidence"]}]}}},
+    {"if": {"properties": {"operation": {"const": "request_fingerprint"}}}, "then": {"required": ["request_vector"], "not": {"anyOf": [{"required": ["canonical_json"]}, {"required": ["score_evidence"]}, {"required": ["decision_evidence"]}, {"required": ["replay_evidence"]}, {"required": ["attestation_evidence"]}]}}},
+    {"if": {"properties": {"operation": {"const": "score_evidence"}}}, "then": {"required": ["score_evidence"], "not": {"anyOf": [{"required": ["canonical_json"]}, {"required": ["request_vector"]}, {"required": ["decision_evidence"]}, {"required": ["replay_evidence"]}, {"required": ["attestation_evidence"]}]}}},
+    {"if": {"properties": {"operation": {"const": "decision_evidence"}}}, "then": {"required": ["decision_evidence"], "not": {"anyOf": [{"required": ["canonical_json"]}, {"required": ["request_vector"]}, {"required": ["score_evidence"]}, {"required": ["replay_evidence"]}, {"required": ["attestation_evidence"]}]}}},
+    {"if": {"properties": {"operation": {"const": "replay_evidence"}}}, "then": {"required": ["replay_evidence"], "not": {"anyOf": [{"required": ["canonical_json"]}, {"required": ["request_vector"]}, {"required": ["score_evidence"]}, {"required": ["decision_evidence"]}, {"required": ["attestation_evidence"]}]}}},
+    {"if": {"properties": {"operation": {"const": "attestation"}}}, "then": {"required": ["attestation_evidence"], "not": {"anyOf": [{"required": ["canonical_json"]}, {"required": ["request_vector"]}, {"required": ["score_evidence"]}, {"required": ["decision_evidence"]}, {"required": ["replay_evidence"]}]}}},
+    {"if": {"properties": {"operation": {"enum": ["extension", "compatibility"]}}}, "then": {"not": {"anyOf": [{"required": ["canonical_json"]}, {"required": ["request_vector"]}, {"required": ["score_evidence"]}, {"required": ["decision_evidence"]}, {"required": ["replay_evidence"]}, {"required": ["attestation_evidence"]}]}}}
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,9 @@
+{
+  "digest": "f48f1b13ca734da49f055dec7355053d23b34afb954da75dea4c3ce4f769478c",
+  "requirements": {
+    "a": "measured",
+    "calibration_selective_risk": "measured",
+    "held_out_discrimination": "measured"
+  },
+  "version": "evalwitness.research-held-out-policy.v1"
+}

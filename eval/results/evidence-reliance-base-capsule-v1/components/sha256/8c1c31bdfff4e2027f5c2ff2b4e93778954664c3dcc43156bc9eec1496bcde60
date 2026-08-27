@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://evalwitness.dev/protocol/1.2/schemas/audit-run.schema.json",
+  "title": "EvalWitness AuditRun",
+  "type": "object",
+  "required": ["schema_version", "protocol_version", "run_id", "evaluator", "corpus_digest", "request_corpus_digest", "schema_artifact_digest", "offline", "results", "capability_matrix", "findings", "run_digest"],
+  "properties": {"schema_version": {"const": "evalwitness.protocol.audit-run.v1"}, "protocol_version": {"type": "string"}, "run_id": {"type": "string", "minLength": 1}, "evaluator": {"$ref": "evaluator-descriptor.schema.json"}, "corpus_digest": {"$ref": "shared.schema.json#/$defs/digest"}, "request_corpus_digest": {"anyOf": [{"const": ""}, {"$ref": "shared.schema.json#/$defs/digest"}]}, "schema_artifact_digest": {"$ref": "shared.schema.json#/$defs/digest"}, "offline": {"const": true}, "results": {"type": "array", "items": {"$ref": "shared.schema.json#/$defs/caseResult"}}, "capability_matrix": {"$ref": "capability-matrix.schema.json"}, "findings": {"type": "array", "items": {"$ref": "audit-finding.schema.json"}}, "run_digest": {"$ref": "shared.schema.json#/$defs/digest"}},
+  "additionalProperties": false
+}

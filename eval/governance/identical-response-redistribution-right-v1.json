@@ -1,0 +1,65 @@
+{
+  "schema_version": "evalwitness.identical-response-redistribution-right.v1",
+  "evidence": [
+    {
+      "route_id": "deepseek-direct-deepseek-v4",
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com",
+      "model": "deepseek-v4-flash|deepseek-v4-pro",
+      "document_title": "DeepSeek Open Platform Terms of Service",
+      "primary_source_url": "https://cdn.deepseek.com/policies/en-US/deepseek-open-platform-terms-of-service.html",
+      "retrieval_date": "2026-08-18",
+      "effective_date": "2026-04-29",
+      "assignment_clause": "We assign any rights, title, and interests—if any—in the Outputs of the Services to you",
+      "permitted_uses": [
+        "academic research",
+        "derivative product development",
+        "personal use"
+      ],
+      "conditions": [
+        "do not use DeepSeek brand identifiers in a way that implies endorsement or a partnership",
+        "disclose to end users that the content is AI-generated and may contain errors"
+      ],
+      "spdx_expression": "NOASSERTION",
+      "attribution": "DeepSeek Open Platform Terms of Service Section 4.2; attribution to DeepSeek is not a license condition, but brand misuse is prohibited by Section 5",
+      "scope": "provider response bytes (Output) from the exact request, not the provider model weights or the upstream benchmark trajectories",
+      "verdict": "output_rights_assigned_with_conditions"
+    },
+    {
+      "route_id": "opencode-go-deepseek-v4-flash-0731",
+      "provider": "opencode-go-cn",
+      "base_url": "https://opencode.ai/zen/go/v1",
+      "model": "deepseek-v4-flash",
+      "document_title": "OpenCode Terms of Use",
+      "primary_source_url": "https://opencode.ai/legal/terms-of-service",
+      "retrieval_date": "2026-08-18",
+      "effective_date": "2026-03-06",
+      "assignment_clause": "We hereby assign to you all our right, title, and interest, if any, in and to Output",
+      "permitted_uses": [
+        "own internal use"
+      ],
+      "conditions": [
+        "the Services are for your own internal use, not on behalf of or for the benefit of any third party",
+        "do not use Output to develop artificial intelligence models that compete with the Services or any Third Party Models",
+        "do not represent that Output was human-generated when it was not"
+      ],
+      "spdx_expression": "NOASSERTION",
+      "attribution": "OpenCode Terms of Use, Who Owns the Services and Content section; output ownership is assigned, but the internal-use and no-competing-model conditions apply",
+      "scope": "provider response bytes (Output) from the exact request, not the provider model weights or the upstream benchmark trajectories",
+      "verdict": "output_rights_assigned_subject_to_internal_use_review"
+    }
+  ],
+  "summary": {
+    "routes": 2,
+    "output_rights_assigned": 2,
+    "verdict": "both_candidate_routes_assign_output_rights",
+    "release_decision_remains_with": "owner review of the exact publication scope against the recorded conditions; this record is evidence, not authorization",
+    "unsupported_claims": [
+      "a legal opinion that any specific publication is lawful",
+      "a license to redistribute the provider model weights",
+      "a license to redistribute the upstream benchmark trajectory bodies",
+      "authorization to make live provider calls"
+    ]
+  },
+  "digest": "9136cdc7d9e7a3621ae54aba17304aa16ac3314791f5c3b9eb0980adb40ceb67"
+}

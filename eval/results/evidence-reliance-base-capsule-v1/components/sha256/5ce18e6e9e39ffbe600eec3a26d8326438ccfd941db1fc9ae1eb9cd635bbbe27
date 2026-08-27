@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://evalwitness.dev/protocol/1.2/schemas/invocation-result.schema.json",
+  "title": "EvalWitness InvocationResult",
+  "type": "object",
+  "required": ["schema_version", "invocation_id", "status", "findings", "evidence_digest", "extensions"],
+  "properties": {"schema_version": {"const": "evalwitness.protocol.invocation-result.v1"}, "invocation_id": {"$ref": "shared.schema.json#/$defs/identifier"}, "status": {"enum": ["accepted", "rejected", "unsupported", "cancelled", "failed"]}, "score_evidence": {"$ref": "score-evidence.schema.json"}, "decision_evidence": {"$ref": "decision-evidence.schema.json"}, "findings": {"type": "array", "items": {"$ref": "audit-finding.schema.json"}}, "observed_artifact_digest": {"$ref": "shared.schema.json#/$defs/digest"}, "evidence_digest": {"$ref": "shared.schema.json#/$defs/digest"}, "extensions": {"$ref": "shared.schema.json#/$defs/extensions"}},
+  "additionalProperties": false
+}

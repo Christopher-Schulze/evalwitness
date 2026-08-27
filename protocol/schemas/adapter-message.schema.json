@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://evalwitness.dev/protocol/1.2/schemas/adapter-message.schema.json",
+  "title": "EvalWitness AdapterMessage",
+  "type": "object",
+  "required": ["schema_version", "protocol_version", "message_type", "message_id", "payload"],
+  "properties": {"schema_version": {"const": "evalwitness.protocol.adapter-message.v1"}, "protocol_version": {"type": "string"}, "message_type": {"enum": ["hello", "hello_ack", "describe", "descriptor", "begin_run", "run_started", "evaluate", "evaluation_result", "cancel", "cancelled", "end_run", "run_result", "error"]}, "message_id": {"$ref": "shared.schema.json#/$defs/identifier"}, "reply_to": {"$ref": "shared.schema.json#/$defs/identifier"}, "run_id": {"type": "string"}, "payload": {}},
+  "additionalProperties": false
+}

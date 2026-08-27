@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://evalwitness.dev/protocol/1.2/schemas/reliability-extension.schema.json",
+  "title": "EvalWitness Reliability Extension",
+  "type": "object",
+  "required": ["schema_version", "evidence_factors", "evidence_interventions", "reliance_contrasts"],
+  "properties": {
+    "schema_version": {"const": "evalwitness.protocol.reliability-extension.v1"},
+    "evidence_factors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["factor_id", "kind", "description"],
+        "properties": {
+          "factor_id": {"$ref": "shared.schema.json#/$defs/identifier"},
+          "kind": {"type": "string", "minLength": 1},
+          "description": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": false
+      }
+    },
+    "evidence_interventions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["intervention_id", "factor_id", "parent_digest", "child_digest", "changed_event_ids", "changed_field_paths", "validator"],
+        "properties": {
+          "intervention_id": {"$ref": "shared.schema.json#/$defs/identifier"},
+          "factor_id": {"$ref": "shared.schema.json#/$defs/identifier"},
+          "parent_digest": {"$ref": "shared.schema.json#/$defs/digest"},
+          "child_digest": {"$ref": "shared.schema.json#/$defs/digest"},
+          "changed_event_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "shared.schema.json#/$defs/identifier"}},
+          "changed_field_paths": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "validator": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": false
+      }
+    },
+    "reliance_contrasts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["contrast_id", "factor_id", "intervention_id", "baseline_result_digest", "intervention_result_digest", "effect_decimal", "uncertainty_decimal", "interpretation"],
+        "properties": {
+          "contrast_id": {"$ref": "shared.schema.json#/$defs/identifier"},
+          "factor_id": {"$ref": "shared.schema.json#/$defs/identifier"},
+          "intervention_id": {"$ref": "shared.schema.json#/$defs/identifier"},
+          "baseline_result_digest": {"$ref": "shared.schema.json#/$defs/digest"},
+          "intervention_result_digest": {"$ref": "shared.schema.json#/$defs/digest"},
+          "effect_decimal": {"$ref": "shared.schema.json#/$defs/decimal"},
+          "uncertainty_decimal": {"$ref": "shared.schema.json#/$defs/decimal"},
+          "interpretation": {"const": "verifier_output_reliance"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

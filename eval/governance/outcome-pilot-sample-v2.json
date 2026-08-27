@@ -1,0 +1,77 @@
+{
+  "schema_version": "evalwitness.outcome-pilot-sample.v2",
+  "canonical_policy": "evalwitness.outcome-canonical-json.v1",
+  "plan_digest": "2b7fa309bdf2a4151c640275f858342624fddfbf5d6ada316e5f996ef14dd46e",
+  "natural_inventory_digest": "054a9b1e41a7507b780a8cd74052df510889897253e18f6d7093511e18ea5b8e",
+  "objective": "single_trajectory_outcome",
+  "data_role": "development",
+  "selection_rule": "rank one from every nonempty prespecified natural stratum; no mutation, pair, pair-order, or expected-relation unit is eligible",
+  "selected_natural_strata": [
+    "baseline_disagreement",
+    "high_confidence_error",
+    "random_control",
+    "verifier_correct",
+    "verifier_judge_disagreement",
+    "verifier_wrong"
+  ],
+  "unavailable_natural_strata": [
+    "abstention",
+    "provider_failure"
+  ],
+  "selected_cases": 6,
+  "required_primary_reviewers": 2,
+  "required_tie_break_reviewers": 1,
+  "required_primary_labels": 12,
+  "maximum_tie_break_labels": 6,
+  "required_source_probes": 12,
+  "cases": [
+    {
+      "objective": "single_trajectory_outcome",
+      "stratum": "baseline_disagreement",
+      "task_group_id": "group-1ee1b12dbf32454776884e392e9b63f9c307358a56ec0dd0bfe18f1ae6a14186",
+      "source_case_digest": "914e3f059d1e24036a741750e1c1ac0fdb93125ff586a8535d88d72e2c1663d2",
+      "selection_evidence_digest": "914e3f059d1e24036a741750e1c1ac0fdb93125ff586a8535d88d72e2c1663d2"
+    },
+    {
+      "objective": "single_trajectory_outcome",
+      "stratum": "high_confidence_error",
+      "task_group_id": "group-8b8af2323d013076426a4916dbe3ef266497f759da048bffd7a6f2a43a9ad44d",
+      "source_case_digest": "8c78fb1d84ce6c46031b127f694c1b7ff0ae7be858144ca42a9655d279938458",
+      "selection_evidence_digest": "8c78fb1d84ce6c46031b127f694c1b7ff0ae7be858144ca42a9655d279938458"
+    },
+    {
+      "objective": "single_trajectory_outcome",
+      "stratum": "random_control",
+      "task_group_id": "group-86a1ad98810d29622fe61a786f1fd50ef12b938031a4085ce7d8fa8e2e41cb04",
+      "source_case_digest": "3df842ad459574709a0d63ac9a74f3c92357639dbc074373156a574092ebd720",
+      "selection_evidence_digest": "3df842ad459574709a0d63ac9a74f3c92357639dbc074373156a574092ebd720"
+    },
+    {
+      "objective": "single_trajectory_outcome",
+      "stratum": "verifier_correct",
+      "task_group_id": "group-4c730b8e1a8ca83249f5c2e81541f6b58b83c350da777723bd50b618ac088414",
+      "source_case_digest": "40856487aec0a1ddb0c9d9e0d1137d5822bc44206b0ab0f97c51585d63e7efc5",
+      "selection_evidence_digest": "40856487aec0a1ddb0c9d9e0d1137d5822bc44206b0ab0f97c51585d63e7efc5"
+    },
+    {
+      "objective": "single_trajectory_outcome",
+      "stratum": "verifier_judge_disagreement",
+      "task_group_id": "group-320151dec558f0fcabf21bfd639baf10d0628054eace9be10ff1eded22e52e80",
+      "source_case_digest": "3819cdc0317afff7d1c47b8be688dd07c7457f636f12b4b2b40caa82bb23591a",
+      "selection_evidence_digest": "3819cdc0317afff7d1c47b8be688dd07c7457f636f12b4b2b40caa82bb23591a"
+    },
+    {
+      "objective": "single_trajectory_outcome",
+      "stratum": "verifier_wrong",
+      "task_group_id": "group-46f2db8c7fed3c8b1f66dbfe44b3a3070a4847910d3faec29df3e111e3643f37",
+      "source_case_digest": "1bf8780f48431370a7a8a1bf42c5e09bb527d1f7064ec69b2908af244d74d8a2",
+      "selection_evidence_digest": "1bf8780f48431370a7a8a1bf42c5e09bb527d1f7064ec69b2908af244d74d8a2"
+    }
+  ],
+  "selection_digest": "5d4591bc0d26f001e439745714315c44fe6ce30eea41f38a44ff0abec853d83b",
+  "limitations": [
+    "natural abstention and provider_failure strata remain unavailable in the governed development inventory and are not synthetically replaced",
+    "the development pilot estimates rubric ambiguity and workflow feasibility; it is not a confirmatory verifier-performance evaluation"
+  ],
+  "digest": "994dbbfb18c40494d1b664f4a6b45ac5b4182dcbd7f7f9293ba1f3e8eea03ff7"
+}

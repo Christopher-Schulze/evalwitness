@@ -1,0 +1,123 @@
+@import "tailwindcss" source(none);
+@source "./";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-paper: var(--paper);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-graphite: var(--graphite);
+  --color-verified: var(--verified);
+  --color-verified-strong: var(--verified-strong);
+  --color-verified-soft: var(--verified-soft);
+  --color-break: var(--break);
+  --color-break-strong: var(--break-strong);
+  --color-break-soft: var(--break-soft);
+  --color-unavailable: var(--unavailable);
+  --color-unavailable-strong: var(--unavailable-strong);
+  --color-unavailable-soft: var(--unavailable-soft);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-ui);
+  --font-mono: var(--font-data);
+  --shadow-panel: 0 1px 0 rgb(19 25 36 / 0.04), 0 18px 52px rgb(19 25 36 / 0.055);
+  --shadow-control: 0 1px 4px rgb(19 25 36 / 0.1);
+  --shadow-dialog: 0 28px 90px rgb(19 25 36 / 0.22);
+}
+
+:root {
+  color-scheme: light;
+  --background: #f4f5f2;
+  --paper: #ffffff;
+  --foreground: #181c23;
+  --muted: #eef0ed;
+  --muted-foreground: #596270;
+  --border: #dfe2df;
+  --border-strong: #c6cbd0;
+  --graphite: #252a32;
+  --verified: #1d5ee8;
+  --verified-strong: #1249c1;
+  --verified-soft: #edf3ff;
+  --break: #bf321d;
+  --break-strong: #9d2817;
+  --break-soft: #fff0ec;
+  --unavailable: #b56b00;
+  --unavailable-strong: #825006;
+  --unavailable-soft: #fff6dc;
+  --ring: #1d5ee8;
+  --font-ui: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-data: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    min-width: 320px;
+    scroll-behavior: smooth;
+    background: var(--background);
+  }
+
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    background:
+      linear-gradient(90deg, rgb(24 28 35 / 0.025) 1px, transparent 1px) 0 0 / 64px 64px,
+      var(--background);
+    color: var(--foreground);
+    font-family: var(--font-ui);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  body:has([data-evidence-dialog]) {
+    overflow: hidden;
+  }
+
+  button,
+  [role="button"],
+  [role="tab"] {
+    font-family: inherit;
+  }
+
+  ::selection {
+    background: #c9d9ff;
+    color: #10141c;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  [data-print-hidden="true"] {
+    display: none !important;
+  }
+
+  section,
+  article,
+  table {
+    break-inside: avoid;
+  }
+}

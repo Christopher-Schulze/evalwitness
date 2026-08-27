@@ -1,0 +1,167 @@
+{
+  "schema_version": "evalwitness.verification-lineage-source-inventory.v1",
+  "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+  "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+  "inventory_state": "pre_acquisition_candidate_inventory",
+  "task_group_counts_inspected": false,
+  "external_action_status": "not_authorized",
+  "provider_calls_allowed": 0,
+  "laboratory_may_launch_agents": false,
+  "candidates": [
+    {
+      "id": "checked_in_agent_trace_synthetic",
+      "source_class": "checked_in_controls",
+      "materialized": true,
+      "paths": [
+        "internal/preprocess/testdata/trace/agent-trace-0.1.0.json",
+        "internal/preprocess/testdata/trace/manifest.json"
+      ],
+      "manifest_digest": "7342988b349710d4b2668e83405513fdf78118b2e62374e8fde9727a8d7a8aed",
+      "formats": [
+        "agent_trace_json"
+      ],
+      "permitted_roles": [
+        "adapter_development"
+      ],
+      "license_status": "verified_cc_by_4_0",
+      "consent_status": "not_applicable_synthetic",
+      "privacy_status": "synthetic_public",
+      "redistribution_status": "verified_with_attribution",
+      "export_version_status": "pinned_0_1_0",
+      "task_lineage_status": "synthetic_fixture_only",
+      "near_duplicate_status": "isolated_control",
+      "authoritative_capture_status": "absent_synthetic_attribution_record",
+      "admission_status": "admitted_adapter_development_only",
+      "reasons": [
+        "not_a_native_agent_execution",
+        "runtime_verification_lineage_is_not_representable"
+      ]
+    },
+    {
+      "id": "checked_in_otlp_synthetic",
+      "source_class": "checked_in_controls",
+      "materialized": true,
+      "paths": [
+        "internal/preprocess/testdata/trace/manifest.json",
+        "internal/preprocess/testdata/trace/otlp-genai-1.41.0.json"
+      ],
+      "manifest_digest": "7342988b349710d4b2668e83405513fdf78118b2e62374e8fde9727a8d7a8aed",
+      "formats": [
+        "otlp_json_genai"
+      ],
+      "permitted_roles": [
+        "adapter_development"
+      ],
+      "license_status": "verified_apache_2_0",
+      "consent_status": "not_applicable_synthetic",
+      "privacy_status": "synthetic_public",
+      "redistribution_status": "verified_apache_2_0",
+      "export_version_status": "pinned_otlp_1_8_0_semconv_1_41_0",
+      "task_lineage_status": "synthetic_fixture_only",
+      "near_duplicate_status": "isolated_control",
+      "authoritative_capture_status": "absent_synthetic_trace",
+      "admission_status": "admitted_adapter_development_only",
+      "reasons": [
+        "no_independent_execution_witness",
+        "not_a_native_agent_execution"
+      ]
+    },
+    {
+      "id": "checked_in_vendor_goldens",
+      "source_class": "checked_in_controls",
+      "materialized": true,
+      "paths": [
+        "internal/preprocess/testdata/golden/claude-code.jsonl",
+        "internal/preprocess/testdata/golden/codex-rollout.jsonl",
+        "internal/preprocess/testdata/golden/manifest.json",
+        "internal/preprocess/testdata/golden/opencode-export.json"
+      ],
+      "manifest_digest": "45cec90046d02209c1acf6f740f724b07bec5322b5d44d8be77461a1e41ceddd",
+      "formats": [
+        "claude_code_jsonl",
+        "codex_rollout_jsonl",
+        "opencode_export_json"
+      ],
+      "permitted_roles": [
+        "adapter_development"
+      ],
+      "license_status": "unresolved_per_source",
+      "consent_status": "unresolved_for_task_069",
+      "privacy_status": "historically_sanitized_not_task_069_attested",
+      "redistribution_status": "unresolved_per_source",
+      "export_version_status": "unversioned_historical_shapes",
+      "task_lineage_status": "missing_task_069_source_manifest",
+      "near_duplicate_status": "unresolved",
+      "authoritative_capture_status": "absent",
+      "admission_status": "rejected_for_corpus_adapter_development_only",
+      "reasons": [
+        "authoritative_execution_witness_absent",
+        "license_consent_and_task_lineage_not_sealed",
+        "manifest_proves_conversion_counts_not_research_admissibility"
+      ]
+    },
+    {
+      "id": "explicitly_authorized_owner_captures",
+      "source_class": "explicitly_authorized_owner_captures",
+      "materialized": false,
+      "paths": null,
+      "manifest_digest": "",
+      "formats": [
+        "claude_code_jsonl",
+        "codex_rollout_jsonl",
+        "opencode_export_json"
+      ],
+      "permitted_roles": [
+        "adapter_development",
+        "capture_calibration",
+        "locked_test"
+      ],
+      "license_status": "requires_owner_authority",
+      "consent_status": "required_not_obtained",
+      "privacy_status": "requires_pre_capture_policy",
+      "redistribution_status": "not_authorized",
+      "export_version_status": "requires_exact_cli_and_export_identity",
+      "task_lineage_status": "not_assigned",
+      "near_duplicate_status": "not_assessed",
+      "authoritative_capture_status": "requires_paired_capture",
+      "admission_status": "not_admitted_external_action_not_authorized",
+      "reasons": [
+        "capture_command_and_spend_boundary_not_sealed",
+        "owner_authorization_not_obtained",
+        "source_bytes_not_materialized"
+      ]
+    },
+    {
+      "id": "public_licensed_native_exports",
+      "source_class": "public_licensed_native_exports",
+      "materialized": false,
+      "paths": null,
+      "manifest_digest": "",
+      "formats": [
+        "claude_code_jsonl",
+        "codex_rollout_jsonl",
+        "opencode_export_json"
+      ],
+      "permitted_roles": [
+        "adapter_development",
+        "capture_calibration",
+        "locked_test"
+      ],
+      "license_status": "requires_per_source_verification",
+      "consent_status": "requires_publication_basis",
+      "privacy_status": "requires_per_source_review",
+      "redistribution_status": "requires_per_source_verification",
+      "export_version_status": "requires_exact_native_export_identity",
+      "task_lineage_status": "not_assigned",
+      "near_duplicate_status": "not_assessed",
+      "authoritative_capture_status": "requires_paired_capture_or_typed_absence",
+      "admission_status": "not_admitted_no_source_selected",
+      "reasons": [
+        "no_candidate_source_selected",
+        "source_bytes_not_materialized",
+        "task_group_counts_not_inspected"
+      ]
+    }
+  ],
+  "digest": "d1d60e91a0301867b72ee821d4146a1e1d05b310a28aad8f30bcbd33362e3b39"
+}

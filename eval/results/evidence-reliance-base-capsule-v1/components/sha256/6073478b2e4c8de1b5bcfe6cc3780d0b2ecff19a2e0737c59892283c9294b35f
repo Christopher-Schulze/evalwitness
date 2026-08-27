@@ -1,0 +1,49 @@
+{
+  "schema_version": "evalwitness.trace-mapping-report.v1",
+  "policy_version": "evalwitness.trace-mapping.v1",
+  "source_records": 5,
+  "source_fields": 5,
+  "lossless": false,
+  "entries": [
+    {
+      "source_path": "/records/0",
+      "target_path": "/events/evt_ff0d557668ec1d306745430e",
+      "disposition": "normalized",
+      "count": 1
+    },
+    {
+      "source_path": "/records/1",
+      "target_path": "/events/evt_3796f43976cc08b787afecf4",
+      "disposition": "normalized",
+      "count": 1
+    },
+    {
+      "source_path": "/records/2",
+      "target_path": "/events/evt_f19b8326ba4112b26f3e55e3,evt_5ba2bf35747150b470c4738f",
+      "disposition": "normalized",
+      "count": 1
+    },
+    {
+      "source_path": "/records/3",
+      "target_path": "/events/evt_baaad181519543bac73fd2b1",
+      "disposition": "normalized",
+      "count": 1
+    },
+    {
+      "source_path": "/records/4",
+      "target_path": "/events/evt_b82cb73222119ccb221e06e2",
+      "disposition": "normalized",
+      "count": 1
+    }
+  ],
+  "totals": {
+    "exact": 0,
+    "normalized": 5,
+    "synthesized": 0,
+    "redacted": 0,
+    "unsupported": 0,
+    "ambiguous": 0,
+    "dropped": 0
+  },
+  "digest": "0af88dc3eaed7406f13ad7d25a3b634eaa406bcf39abddf26b4c660dad35109d"
+}

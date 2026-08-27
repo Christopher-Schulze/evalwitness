@@ -1,0 +1,16 @@
+--- Agent Step 1 ---
+Let me write the function.
+[Command] cat > solution.py << 'EOF'
+def add(a, b):
+    return a * b
+EOF
+[Output]
+(no output, file written)
+
+--- Agent Step 2 ---
+[Command] python3 -c "from solution import add; print(add(2, 3))"
+[Output]
+6
+
+--- Agent Step 3 ---
+Wait, that returned 6 but the task expects 5. The function multiplies instead of adding. The output does not match expectations.

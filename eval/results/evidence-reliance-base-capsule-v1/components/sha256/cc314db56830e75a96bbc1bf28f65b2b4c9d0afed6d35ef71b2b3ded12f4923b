@@ -1,0 +1,93 @@
+{
+  "schema_version": "evalwitness.relation-scarcity-sentinel.v3",
+  "canonical_policy": "evalwitness.relation-canonical-json.v1",
+  "protocol_version": "evalwitness.controlled-relation-governance.v3",
+  "review_objective": "controlled_relation",
+  "plan_digest": "6eac462cae0a5b626561d5cbea274a5c3a72c78b6cb9d50a8952be6ccbb6fa8c",
+  "primary_sample_digest": "6b721bcf0fb10e47923b46d92f3c14691cbd0dd98949ab0bf1dc016d8e1c1e43",
+  "source_corpus_digest": "9b4999dafe2d37ea04c298b80a7aba0a1769755fdfd650cd01bf3a9cc31a2e42",
+  "source_corpus_plan_digest": "5a7f4f55aafabd03ef9c802a9c48cf198a778228b40ade35e8f074df8d060c85",
+  "source_construct_audit_digest": "af0c0fd56fb498586096a8776e0d40794ee93acf5afda67cc000e576bfcef4d2",
+  "source_mutation_program_digest": "f37ec74f8096a23c5fb0e6696d279f2689f98d7e904fcef038464ca51720b3f8",
+  "selection_rule": "all and only three naturally eligible omitted_test_evidence cases from the frozen v3 release, retained descriptively outside the primary estimand with their observed 2 development, 1 calibration, and 0 test roles",
+  "family": "omitted_test_evidence",
+  "selected_cases": 3,
+  "split_counts": [
+    {
+      "id": "calibration",
+      "count": 1
+    },
+    {
+      "id": "development",
+      "count": 2
+    }
+  ],
+  "test_cases": 0,
+  "primary_overlap": 0,
+  "exhaustive": true,
+  "analysis_use": "descriptive_only_excluded_from_primary_estimand",
+  "held_out_claim_available": false,
+  "cases": [
+    {
+      "family": "omitted_test_evidence",
+      "case_id": "mutation-5abb8ed1fd5422eefb090f7fbc57da8ae1a1dc44bdf4fa08c8725c7dfb162c53",
+      "data_role": "calibration",
+      "unit": "trajectory_pair",
+      "task_group_id": "group-a4a1c9352d2b15686c7bc506a0130838b2d20b3cc0c87ca71423569afdceec00",
+      "source_ids": [
+        "source-f86c57b70de74fb8f9e9393215147c9da244df800736e4e19d9abcb8179f9c4d"
+      ],
+      "lineage_cluster_ids": [
+        "lineage-daf67c81ec849b1eaf62bc7881121e109d0b10ce54bac693dcd3229136140a2c"
+      ],
+      "case_binding_digest": "ce550ee99de8285cfa36e5472e51246666660b6f6f75b050e8653e0c3d7b582d",
+      "construct_firewall_digest": "6127696ebd396bc8e6f32cb60d2c6a6f33811de4eb9b4c3ae2b131af9ffd2ce4"
+    },
+    {
+      "family": "omitted_test_evidence",
+      "case_id": "mutation-a5d2ee38ab2bd1242971fefcda3eb9ccb3841f2ab45a9e2d1a40f90a0fe7088f",
+      "data_role": "development",
+      "unit": "trajectory_pair",
+      "task_group_id": "group-d19a5c6bef46f92137827eba292d8f5368d1603aa297c3cce0f586091c5420f1",
+      "source_ids": [
+        "source-0f11d96e23a90a764203428631fe859dccf2edc7ef8af268fddca904566f2264"
+      ],
+      "lineage_cluster_ids": [
+        "lineage-fd103414d80fa153af6bf89e7a20cc16bfd5abe0cfb47183787ccce7f7ec9688"
+      ],
+      "case_binding_digest": "2555df910507817ae422127ae58220ffca6e0457e00efe1356acc15a6185c2d9",
+      "construct_firewall_digest": "d857562a2510df38453358640c5680098f3b50a1cce4bee57a03e87b89db4c97"
+    },
+    {
+      "family": "omitted_test_evidence",
+      "case_id": "mutation-e9ceeeab8f3950d79d5078a1615509db091ee9c33cd6ca8dd33a4d0adbcacbd4",
+      "data_role": "development",
+      "unit": "trajectory_pair",
+      "task_group_id": "group-5a848cc2e3b9135716e69f86f0abeef8d087d9410028efe4dec02511cec4e029",
+      "source_ids": [
+        "source-d6c74056df3d46612e9c85b34f9e3bdafd65e2f06d1a5f712d14c74ba8030c34"
+      ],
+      "lineage_cluster_ids": [
+        "lineage-a4fbccf9da387c498a7fb10b3993f9cc887cfb1d792fc5afa379e199044256c7"
+      ],
+      "case_binding_digest": "32c1972dabeb8aaa715d25ff043650801928ff0c9a3934bd8431c84f45157c9b",
+      "construct_firewall_digest": "ff7df17c7d8949b4ad524ce9ef759874d5539c3d38c3cacd567dae1a07904947"
+    }
+  ],
+  "bindings": {
+    "cases": "86e39467182271c274ab2c5f30e210270e0cc582f4dd9ef48c43577f520d28d1",
+    "sources": "09bb256e9488dbdf69d42b2a7fc156852753ab03b56f15317f86dfc7d3e56929",
+    "programs": "994d5645283d0e877cf008021e0c1ce04ffb710c7ebe7da124eea61e08a0f79d",
+    "manifests": "24e5cc558ced2abef4b2c4d125e31b7257063dc12e161acc492fb838bbe2a130",
+    "witnesses": "24f4ff4824d72ef27e8713532e3b2cbcdec6ace286497e8349b42643e5d62238",
+    "licenses": "ccbda87de6ba37ba6bfb9f7d16921ccbb5a6e82eaa7d7073d3dc07835fd9df19",
+    "privacy": "01045045b23b6418c4ac371fe570c440dbb4f392cff612e7bc33dbfbe58fc49a",
+    "lineage": "5bdcf64de5e133046cfd51e0e33dc6a5dd363f8e1ffee95fe2c572276e84e10b",
+    "packets": "4973f3e78a5b996a72b36970117c2d51c8a79a7cd0718221c2b24150fbc30b9c",
+    "regeneration": "8dd7c843ca11d4f8faeb215993c7e2f1fadef6dca674e28df19854d6ccff9ab7",
+    "construct_firewalls": "1776f7a339537e2dc488d3cef401df5c598bef6982b8f971c7b675bfd9fc343b"
+  },
+  "empirical_status": "not_run",
+  "external_action_status": "not_authorized",
+  "digest": "ec720a56394249a47eb4c0f7ef618471ce14c69ff8c2c13e1e851350c23e71fb"
+}

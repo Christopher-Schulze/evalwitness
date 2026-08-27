@@ -1,0 +1,47 @@
+{
+  "version": "evalwitness.verification-lineage-loss-certificate.v1",
+  "certificate_id": "task_069-same-path-loss-v1",
+  "offline_proof_digest": "37d13927ac10606e9ea90f470d46e046cea9a6059c7e4d2c38e5a5d50f768d13",
+  "case_id": "same_path_comparison_false_target",
+  "vector_id": "codex_rollout_jsonl/same_path_comparison_false_target",
+  "format": "codex_rollout_jsonl",
+  "first_loss_state": "non_failable_verification",
+  "disposition": "terminal_ineligible",
+  "precedence": 7,
+  "failability_resolution": "non_failable",
+  "failability_reason": "self_comparison",
+  "native_input_digest": "4d9e4a7e185380fe154eb38314b0766ebe34ac850a30637af52f8de6c7b1d1cf",
+  "operands_digest": "fea940354fe89c2cdc2cb5989f4231dbc95c5d4c3dd52918e730ba396ee0b9b0",
+  "layers": [
+    {
+      "layer": "runtime_witness",
+      "status": "survived"
+    },
+    {
+      "layer": "native_export",
+      "status": "survived"
+    },
+    {
+      "layer": "canonical_graph",
+      "status": "survived"
+    },
+    {
+      "layer": "retained_bundle",
+      "status": "first_loss"
+    },
+    {
+      "layer": "verifier_request",
+      "status": "not_reached"
+    }
+  ],
+  "public_safe": true,
+  "restricted_content": false,
+  "supported_claim": "the sealed same-path comparison becomes terminally ineligible at semantic failability and cannot reach retained evidence or a verifier request",
+  "unsupported_claims": [
+    "agent behavior prevalence",
+    "provider quality",
+    "task correctness",
+    "universal parser performance"
+  ],
+  "digest": "ae3db349798c7fe9dfc716a8003b35e42fd129e993721c4dfcccf3c571d9db8c"
+}

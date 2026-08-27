@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "artifact_id": "evalwitness-tracked-public-v1",
+  "reviewed_findings": [
+    {
+      "rule": "credential_assignment",
+      "path": "governance/identical-response-capture-bai-flash-v5.jsonl",
+      "line": 22,
+      "file_sha256": "b314261d77ae8f027e731017d40eec3ccbfc909a1c67e011b8191addd673bd2e"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "governance/identical-response-capture-bai-flash-v5.jsonl",
+      "line": 23,
+      "file_sha256": "b314261d77ae8f027e731017d40eec3ccbfc909a1c67e011b8191addd673bd2e"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "governance/identical-response-capture-bai-flash-v5.jsonl",
+      "line": 26,
+      "file_sha256": "b314261d77ae8f027e731017d40eec3ccbfc909a1c67e011b8191addd673bd2e"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "governance/identical-response-capture-bai-flash-v5.jsonl",
+      "line": 41,
+      "file_sha256": "b314261d77ae8f027e731017d40eec3ccbfc909a1c67e011b8191addd673bd2e"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "governance/identical-response-capture-bai-flash-v5.jsonl",
+      "line": 52,
+      "file_sha256": "b314261d77ae8f027e731017d40eec3ccbfc909a1c67e011b8191addd673bd2e"
+    },
+    {
+      "rule": "credential_assignment",
+      "path": "governance/identical-response-capture-bai-flash-v5.jsonl",
+      "line": 59,
+      "file_sha256": "b314261d77ae8f027e731017d40eec3ccbfc909a1c67e011b8191addd673bd2e"
+    },
+    {
+      "rule": "private_home_path",
+      "path": "governance/identical-response-capture-bai-flash-v5.jsonl",
+      "line": 36,
+      "file_sha256": "b314261d77ae8f027e731017d40eec3ccbfc909a1c67e011b8191addd673bd2e"
+    },
+    {
+      "rule": "private_home_path",
+      "path": "governance/identical-response-capture-bai-flash-v5.jsonl",
+      "line": 52,
+      "file_sha256": "b314261d77ae8f027e731017d40eec3ccbfc909a1c67e011b8191addd673bd2e"
+    },
+    {
+      "rule": "private_home_path",
+      "path": "governance/identical-response-capture-bai-flash-v5.jsonl",
+      "line": 56,
+      "file_sha256": "b314261d77ae8f027e731017d40eec3ccbfc909a1c67e011b8191addd673bd2e"
+    },
+    {
+      "rule": "quoted_password",
+      "path": "governance/identical-response-capture-bai-flash-v5.jsonl",
+      "line": 41,
+      "file_sha256": "b314261d77ae8f027e731017d40eec3ccbfc909a1c67e011b8191addd673bd2e"
+    }
+  ]
+}

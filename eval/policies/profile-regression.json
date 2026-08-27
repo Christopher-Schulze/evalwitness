@@ -1,0 +1,7 @@
+{
+  "version": "profile-regression-v1",
+  "requirements": {
+    "calibration": "measured",
+    "selective_risk": "measured"
+  }
+}

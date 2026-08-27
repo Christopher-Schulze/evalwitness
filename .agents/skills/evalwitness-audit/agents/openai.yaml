@@ -1,0 +1,4 @@
+interface:
+  display_name: "EvalWitness Audit"
+  short_description: "Audit coding-agent trajectories with EvalWitness"
+  default_prompt: "Use $evalwitness-audit to validate my EvalWitness setup and audit a trajectory comparison."

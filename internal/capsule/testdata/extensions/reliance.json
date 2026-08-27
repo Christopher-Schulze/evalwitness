@@ -1,0 +1,19 @@
+{
+  "schema_version": "evalwitness.extension.reliance-conformance.v1",
+  "extension_id": "task-065-reliance",
+  "owner_task": "TASK-065",
+  "status": "conformance_fixture",
+  "provider_calls_required": 0,
+  "human_actions_required": 0,
+  "required_fields": [
+    "complete_factor_denominators",
+    "estimator_version",
+    "invalid_cells",
+    "reliance_witness"
+  ],
+  "prohibited_claims": [
+    "agent_step_causality",
+    "model_internal_explanation",
+    "saliency_as_reliance"
+  ]
+}

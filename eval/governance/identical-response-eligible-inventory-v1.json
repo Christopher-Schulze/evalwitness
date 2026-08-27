@@ -1,0 +1,2595 @@
+{
+  "schema_version": "evalwitness.identical-response-eligible-inventory.v1",
+  "source_release_version": "evalwitness-controlled-corruption.v3",
+  "source_release_digest": "9b4999dafe2d37ea04c298b80a7aba0a1769755fdfd650cd01bf3a9cc31a2e42",
+  "minimum_task_groups": 40,
+  "eligible_task_groups": 100,
+  "task_groups_by_role": [
+    {
+      "id": "calibration",
+      "count": 20
+    },
+    {
+      "id": "development",
+      "count": 60
+    },
+    {
+      "id": "test",
+      "count": 20
+    }
+  ],
+  "licenses": [
+    {
+      "id": "Apache-2.0",
+      "count": 60
+    },
+    {
+      "id": "MIT",
+      "count": 40
+    }
+  ],
+  "redistribution_classes": [
+    {
+      "id": "reference_only",
+      "count": 100
+    }
+  ],
+  "exclusion_rules": [],
+  "contamination_boundary": "upstream trajectory bodies are reference_only and never re-published; the prospective study re-runs extracted task prompts and captures fresh provider responses whose redistribution basis is a separate verification",
+  "redistribution_authorized": false,
+  "claim_boundary": {
+    "provider_calls": 0,
+    "agent_launches": 0,
+    "live_response_access": false,
+    "supported_claim": "the governed source corpus contributes 100 unique source task groups (60 development, 20 calibration, 20 test) with pinned Apache-2.0/MIT licenses and reference-only redistribution class, so task prompts can be extracted and re-run but upstream trajectory bodies cannot be republished",
+    "unsupported_claims": [
+      "exact public redistribution of upstream trajectory bodies",
+      "provider response redistribution basis",
+      "confirmatory use of previously accessed benchmark tasks",
+      "live provider response access"
+    ]
+  },
+  "groups": [
+    {
+      "task_group_id": "group-00cbb2a8742afdc1372a7a4a90bdeb4e307632077d27eeca6230475b6f2bf435",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "0457a2722e000df2bf672a7d896e3caaf5febfa4fa3aa42e20c6fc8d80404152",
+        "5aab03309229076547661f9fa49579f73f83cee63486bc9cc0d8db1e1035c156"
+      ],
+      "trajectory_digests": [
+        "dd97b2dc7b127de9f89133421530273f6fb82d2d8b02d454c127ac3dcbcbc792",
+        "fe95365aa6bdab4d31c6a7b155c8f10e022ea120f58d0b3bd34125da15c31070"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "bf8c6f7d274dc0eb9caac9d5d9a06ce79f649d8f0c7d8cf23715a157cdf5bf3c",
+        "d250328b8367804fc0f840124676d52842c6ebb8b6325cbe703369e70f71d45a"
+      ],
+      "near_duplicate_id": "near-009aec113eb7262d711abe8ac0bbf850948f6f29a2dc2482778273a9265171b7",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-03da96720d90e4aaf169a2e7e22103e7228c90f2811ff2956e14e2ac77fa5ad3",
+      "data_role": "calibration",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "74283b1a2b9abcee117425aed4f27154f1db8caff41209e2af18a75e9e5c64ca",
+        "cae3ef002b90b2e8a62854ffcbccbfa3dd2bd56e9c623ed967560372349fabb3"
+      ],
+      "trajectory_digests": [
+        "30658bb102808d96ce5c76d3417e3f2d7714ddfa9df9ecdecfa67a0f35370b64",
+        "4d2ee167b23c42c418187defb4114cbc59bb45dcda97cfc22f0ea625bed4236d"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "07fe89126e50e85968ded1527473179dd401374c734e8eb63b309d22c573e385",
+        "a478c38563910e73d499dddccc3f3bb2249af467230655572fdfd91efa96f8d0"
+      ],
+      "near_duplicate_id": "near-0bbd39f9760b73f2546dca8fcb1a41639795921c539c247ab1b494f77c4caeae",
+      "lineage_cluster_id": "lineage-0c13495bc38afd35bf98a472570d1407360619d61ea4c3acfad7db675a8603ff",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-06290b621ae533dfefd900c525f69286a78e9428bbec7ee7e0504cf2acabde24",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "843d56d1d9b7404bb383213346346c12883a3b708a059170e03e9dd520abdd04",
+        "fd35c6207f27a9ff0943c5fbfd8040bcad2d6f566d4e7e8a3fd16d79f3d76a6f"
+      ],
+      "trajectory_digests": [
+        "04cfdc5b37ccdb751af139d86549e05852eaaacf727283f1fea1ea5a12386b6d",
+        "87a606f672225e0053e5b2cfb0b27854f7ffed7193a1a8f5cb2e6b928aeebd26"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "26d3bb0f2e6af874c7c5fff58146d6f3f198f81493bee61e081c1b1efdecd28e",
+        "a137bd2cb9ab12c7f6f55b56c361e47ad2266816f352feceb09d6cf9dffd1afc"
+      ],
+      "near_duplicate_id": "near-6088278a3d316be7c2b10b919fafe8de14aed6a4beddb4bd134efd33832e106e",
+      "lineage_cluster_id": "lineage-4c9cb5728b69381524524ab3e54da0b713551c169e0f532251e3943cf81c6997",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-0751eb0d0a2502c0707cac32aea545e861e97c6da236a6467734c4a644ef155c",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "25369b9a3739c48f0dab98a504557847bc3b0f6125094aef1d6f6a55d78b9714",
+        "75a263bf499cc226744ed4c1caa2df01e11e608cf5cf8bf1ddf5ae182b970568"
+      ],
+      "trajectory_digests": [
+        "7d5267f034608ab8b3a3fe1ed6a0d61b6fec93e6afb2b01c9ea428e399d29ba6",
+        "87d160d002e6e0af062e902502c73fe3d15bf4bafbc13f5a6caad46c8a7861c4"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "6fe639f15015546a315011a21541359a6b2f2cdb0186cb653b725806b8164a74",
+        "9dcaaa9d1b1e416bc258eb58f26149f1017d668f5767bb2dbbb5ff6fb974ac5d"
+      ],
+      "near_duplicate_id": "near-137e6cd8766078215caf7cdde269986399ad9b18ab6e52e3ea13fc109df89c3c",
+      "lineage_cluster_id": "lineage-946014e0ab7e14343ed3a0fc05237b71a71f474a6e49b404cd13c9cdb6d1315f",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-0793a13a76c53ec9ded3dce32153fa9b658ab4a5b009a991d777bbb90608ef3a",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "273b03b750a175a89271e161054c8657de41205c33e0104e4efcef25744da07d",
+        "85d49602ee981f7aefb07c90b0d49b6a97153b31decff5b39614bb275c1213e5"
+      ],
+      "trajectory_digests": [
+        "8bacf0169d2dacc5d77812d8dc9c6c32d9501c42fd846d06efaff9d7f228576f",
+        "968b84d77f613e65e41f14526335e363e72731836f7d3d56c8013cf310df3b20"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "8731b8528c0a484fd0ce4a6acfc530aa71659fedbf6f1ae0723347b62a597982",
+        "b47aeacfa1b0d38405041ecce2fec7a5160a6238fefd475d4943368d2bb08e7c"
+      ],
+      "near_duplicate_id": "near-ba90bc950d03287ba52bd02a38b4a7ee17ec47f23735cb4c9e979b9d909c4840",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-08d4414928b774f862a373c89311ba4e6a80efb300af2483b73e4cce4be32e7c",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "21eb6f7fa99547cd49c6d3ba12e83ab2c35d9db588179aaed273b39f733b5375",
+        "8db27b9b0e2d77a6d9c0ebc076b0822dd02ca157a4de09b22baca602856065f1"
+      ],
+      "trajectory_digests": [
+        "0bacadd6a4a065b60e855f507c44d59c7a119a103e3d2d438785ad9af18bd0ff",
+        "da76b24701b3d79ad89d952a4bb85e3a389611712efe5dbe1e2cd2b1f78a262b"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "357b2768dc982f26e4216f885de026bcaeab394f964ab8bd0a02af26d93addab",
+        "a4acd04388ad6eeb89c5c383824a1f120537745778d28b904d2ab7d036bee55a"
+      ],
+      "near_duplicate_id": "near-616aa8d041c0338fffc1a0df79cbdabc36c929b6542cb359fbab5f4f6642c8f3",
+      "lineage_cluster_id": "lineage-a3045c7bf22abc7973c2edb65a52dcd924e09388857fcf233cff8edc6590fd76",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-0af0862b5758558e0be116e3bcb2686f906fb56f1c960ddd11036d0fc540000b",
+      "data_role": "calibration",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "b52f0a8aa627000d25343ea1c61431225257a1ff47c7786c1f1143560c690f21",
+        "e991ffa3fe1583cea1288a58e48e46d0590f7ad38e3e559375a9356187c2da85"
+      ],
+      "trajectory_digests": [
+        "201ecc7c7a3751d275d61854d2c781bd560c84c4c354e9342f81d4c5b2f92023",
+        "5e6a0a479cc601927d08e0e5e57b883bac7a8a898eb8a8a060be892a176e0fb2"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "794ae0d09e6ca2737f966e9edadfad0dab64d5abd659ea3010ae599a11972777",
+        "bcdc1c5a54b548d3478c6bd25446451c61930b137a6e1b17596b7dca37f0f895"
+      ],
+      "near_duplicate_id": "near-edb4707af339026f52b099fa38f07794c5c80b24e1d3c5f029a5d8d7dfdbeb85",
+      "lineage_cluster_id": "lineage-a350153c8a3535dd6483e8e9c5eb37128355070331dde3568bcfae196e4cce74",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-0c55524d4e5dac55f165af742d693c0d452dad4b37ce92cac240d51c0b4719c6",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "59be9acbc25c78cca812485965dbdd5288aa91814d2df12de2158d317bcb251c",
+        "fe33cd09b9c19e93862bc0a27dec9797e8b367f5921d82cfd2f553c0613d9175"
+      ],
+      "trajectory_digests": [
+        "93c35780633b93ccc85224188d860d5bf85b6cab9f2df4d0c61b9991d5f86773",
+        "a1bfcb56867ea41b2c1ab7288524cbcc10bdfbbcfde2b9cc55c194a467871663"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "2cda68f6929e433a351e69e89adcb9e8349fecddfe36b902f12d5d87f8c0d701",
+        "5a248589ad5cea94ee830f7612ced58098767d71eef87adeb5f61adbd0de4123"
+      ],
+      "near_duplicate_id": "near-b02db43b04e64c97c029b4db65dcc998366a7548fb2fd8e4ebd1c64719e6bd38",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-0d5002e8b0330faff5405ce998b9308aae9a825dcd9a46f49d3ab4a95a2ec7b3",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "262055c7b6264dfff63b8715eb65b55b5b1a49fd9c5913714d6a66489888efaa",
+        "609d6ab6a755ae4a313219328f017e3078c540104c2820da23286b1c0cdbc56d"
+      ],
+      "trajectory_digests": [
+        "51faf8b7ca7d2fe8db5accb52b147c441bfecbcfe854788d454c2bb293f61c5c",
+        "ff37b63f64d35c09068cbd58dc0022ee62f28fcc92adca215a4c4b3495a36056"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "cc7b646d6b05d33a462068e84afb22cf14403ed17f3a85d116e1bb2051c39880",
+        "e09ac2902c8c9342856dbffcfabb47f59577d241c3018ea10875aa8586c8bf55"
+      ],
+      "near_duplicate_id": "near-9a87c1221dc1b4f9197d5eab7e1ff5e7d158eb41b71ee0df8eb06f2c9b4b7fa0",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-10140b3b764a7696e90b4bee11cfa4c7d24bf3c503605dee7fcaa978f99222ec",
+      "data_role": "test",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "8be533e1814fc5d57793e70d057eb654f4416c4bee7ff540ed4e4e97c6bc0941",
+        "93ed50fe4db6dcc1ccad24ec0b404915f310d182f5d79a28d612ee16d399c92b"
+      ],
+      "trajectory_digests": [
+        "043d17ca4d45ea1695691cdbb883786c4d0f8b6c5448aa30538d3258673c78f9",
+        "7ef11480344533568635c26e310585d825010dc3e10deaaa32fe27b73e9a4519"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "1aa8635fb105caf82bb6d23e9ff1e3efe7156ce06cbaf15906a25f5b6ba60cc3",
+        "1d3560a986a3d90e32693e53e7a67838181ec0a72affe69d4e1a83102dbd8a17"
+      ],
+      "near_duplicate_id": "near-1f5636b1a27a7434fda1b037c951c4d4d25ee380a8147ea955f19d3f938b1061",
+      "lineage_cluster_id": "lineage-d19844c7d223730b4f0f91e773b9e1488d6ffae2f4b4876f1c4e330abd8d196e",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-114bc3bb159c7d5d375d617d163b207ccf611ddc3d358574564cc6c581dc6f24",
+      "data_role": "calibration",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "a7965c7c2edc0186fcd5ad1ab3a8d702f360af2cb5109676215f1b6f50e8005a",
+        "dd86386eeac9a7f81e4f18b0f7ac67855979c611c861e29cb5239a6ae42d06fa"
+      ],
+      "trajectory_digests": [
+        "774e53d024484bb129ab4a65a4bd3f9b3a1787511cb13d8bb8c019fb91eff5fb",
+        "f2212a97d70baa85616b2e08889d0c4754dc127cece5dd583ba0531ddf5bdd82"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "4c57437d02eac2285cfb6e2ec645924af36242df7ca009c91adee88207a094a3",
+        "74d5fa17eccb47a8d99b20079d0f9b1d09bdd2e1dc620dee69d232324c78ddae"
+      ],
+      "near_duplicate_id": "near-78c0975ea4edc740b41c82de0632110711ac94ab3e89a4869b33763455b3c731",
+      "lineage_cluster_id": "lineage-d4bb056f1a9bc41ab2e45c1deccd509be09e39b620d11046df6543af4ea0b0c9",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-131d9348912c56d111c4ec8abed3c46a7ae91b092f3b17fe1709965bec51517e",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "046fd6f01847e9c50107876981fe4c14965dfcdb5efdf16a53922789e686c1ae",
+        "c34ae19268b0f5aa1c1a2270c727bdc7c7af227fd0430582d72fc6ba15ea4744"
+      ],
+      "trajectory_digests": [
+        "abeea83859ea0d181275b7e185aad57559e5402a94ee9df698b2d54f221c3550",
+        "bce123f536f559aa87e2caf787580c6818d4ce5402bb9a14928a358109219fa9"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "3363e202105c5c246179a0bf5185c5af82bedffff64d837b674905696d5af630",
+        "85d465b265e5e269018abefe6f187181882d344077b404085bff64e36f1359a4"
+      ],
+      "near_duplicate_id": "near-bf95a00220444ae68a5cc3a8cabef08243bd5fdb2ccc9fa8e8f7f6d2f2c698f6",
+      "lineage_cluster_id": "lineage-f4727ec5837d90ddd0d6c14b31d4525d87381c486b5124e59d20260c787e2f7e",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-1a7e3f482652ea598cc78ace523aeb6c4bc23f5c7af2df864d45cb0873387472",
+      "data_role": "calibration",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "559263053bd4ea318381ae122ac7e28ebb9dc5c2e11942e512d318b8f83a1823",
+        "6b16f36a746fc61c741e8a4f511ef309135700f23cf7c6443c35fb02789b4cbb"
+      ],
+      "trajectory_digests": [
+        "a24015504dfe7186202ac26ab79f98e8f7ef3647aa02ace028fda78182ade8ea",
+        "f1d7241d880bdb26d447f0fff61b04be4f2df70835bb1ec7bfabd85ac3504993"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "8781d3b46fa037123a2964f5acaabd3b3d14c06f1e877d6768283af40967826d",
+        "f9b858f26c478b19f343b41e863b6cdc49a8d952a11a2ad10c62b72724954332"
+      ],
+      "near_duplicate_id": "near-4df8d169f94a2873c29850922db969fad82d2b39942897367c033e698a2cd0f9",
+      "lineage_cluster_id": "lineage-33673fca50d867f2bb6c114184454d59a2bb150e087c95308340e9899935ee9d",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-1e3ee80ac2f39ec8eb356929fe0050e1f3d913faeb18220621992476cb9b914a",
+      "data_role": "calibration",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "08b28e615d755123e312a280ab2a8ecea925a4f9e06705a8d630b2f5d12c233f",
+        "efc0d43f30a17d7b0320a156a62d202efed31a0c49bf7257063713a96d0912af"
+      ],
+      "trajectory_digests": [
+        "248dffcd8946690efc12ebf41bb8d7d4383a7c08580fde6e24104568d8d45efa",
+        "9de8ae01ae234f6698206fc7a1e889de327cd690e73fbf993b7704e155f3892f"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "8ad230423cc6c01e9eef90d4202bdeca1d66389c583d64d0dcc277a61393234f",
+        "b8a0a5b6a753263071bedbe6797979ee54ade6ab64b6c4c587c92648a33c5acf"
+      ],
+      "near_duplicate_id": "near-99c8421caf3813dfeb1a74224b4027117946cd5dfe4dd99f3d4358f593823ec2",
+      "lineage_cluster_id": "lineage-89a7b988da6136ed937dca0c28116b36ff664f47c416a50dc57b3b6197752a95",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-1e9babee8b717843ab5648f9d36ff19a4b4157df2c4d4506c8879a6caee68f18",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "64b7796379a8d6ff1c9cbaf7cf2f02ef4a4e68dbe2b04eb95ea3c4ecb5d865ca",
+        "d0211fa71f57376758189dc33ebd195f0daaf1b706f855ac8e22ee5110ec8820"
+      ],
+      "trajectory_digests": [
+        "0ecbec9a13bdab44a49abe75451d1c8d9d1c870864127565adba08b5e6b2d4e2",
+        "6b66106609a0db46905ed529f68d976d99f386a722eedd6161db87984a2979ef"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "4365802e2c4531ae419c625a7c669c42bfb11ce2bd33368c97d9e2f42b60f4d3",
+        "65dd13a2671907cfb06b8d84f8076d9e89408c95ee6caffaff0ae66e03b8704b"
+      ],
+      "near_duplicate_id": "near-dc1107c953619984823706340d2c196544caa2eb2b6c127eae8a8f4435c08eab",
+      "lineage_cluster_id": "lineage-645bdf2ad094804985a3f7b109f8934185f63fb770291dcd6fbbffa4a2e05e6a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-23337aaff3a006d7acedaddce99f7160a246e4462798e9e21a3eaf79aa168ea9",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "e881f04cd654d9b4d01dd728c64fac372e8297eb9d4bbcf648ef96e3926a20b4",
+        "f53a9093189b4881410fa075d6675a76869a1f4c86e0124beec63a901e748101"
+      ],
+      "trajectory_digests": [
+        "31d091d3c629a17d012d39162cf5b7a5a8695b1001aa78c7b44dd8b05e84024f",
+        "81bcf3e30d889e1c08b3e6fb987e8014fcd9f8104dd9745e8812564fd3133133"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "60b1fb150774ffefc1cfcc2e6ffd1f48cdc7b9cf17e2d75644738d30c40b0e2c",
+        "657891860fb9592e0845cb01c9588d9581c2403e087e1114b9eebf51aff2e088"
+      ],
+      "near_duplicate_id": "near-9252a8ccabe72ec8ea181c65c046e82a162914518ad394b7ee96b72c6a21e315",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-2339d5e58778bb28f891a312882ccef557dc51fa2394874c8e46dca8db0f7a1c",
+      "data_role": "calibration",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "2faf504b452476e14379f0f4ee9741c24622cc89394d548c4cd657e6e4b71c53",
+        "5b98ae7aaa552f4a6992c5b44ab650063eb957a2e1e458a0dd89950839e7db14"
+      ],
+      "trajectory_digests": [
+        "42f26aa82afa3b56a606637946b1e2524c30690f1cde31d9bdb93316a426e7f9",
+        "ec429b0a4c80f21da0f78cffc4afdd533775ae9b0f656332c6ebe7ee1694d01e"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "608d40e4c70de714231b7cdc2c8eab109bcfb0c4c0120f6b66553388aeec45e7",
+        "cb570ddf02d91f0e9e729e8f99d6e6ecf12056f2fbad34a3c0cce43c76687e8d"
+      ],
+      "near_duplicate_id": "near-f9ad976aa2e6fa1040280f6ded1b087d84b02cf4fcb49b27abc23d1e018365cd",
+      "lineage_cluster_id": "lineage-69737a37d8bb75ecbcf9103f4d117ff7444b1cd87b1e4851584e92d1d0b7b2f3",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-234755a9650e6c015ceea4a0a4fe105948afceb9d18224c31096bdc4d3416bee",
+      "data_role": "calibration",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "3d70ce93e302887e317fdb60cb6b5459112d54acbd147f018194cd25e2e903db",
+        "62e69af20e3a3a94e36ee64960876a02bc636629b308d7591922deb2923a3f8d"
+      ],
+      "trajectory_digests": [
+        "121eac447d14be6424ea9628759168ee605e21261fe3c0ca817556e8589c2235",
+        "823576a7e6553006670fc04624da6805de6395d3b7948a689018849f0122c862"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "81c888553d2ee0e7b7b667afd53698e0f0beaa7da630633e119d92b4873f54fc",
+        "87ce1b053f1e85db4903b9df8afff09e6f0f6abdf5286790ea90b9d3dec39101"
+      ],
+      "near_duplicate_id": "near-56c31c3e0e6e25c0468991e3f3afe2802d611cf9a6c39f9485b277cadbc7e412",
+      "lineage_cluster_id": "lineage-4e65f85aca89284822d8d3dcb86d33b0f379d94a527938f63e96b315937d0848",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-24b49721a807120c9649be9e11ca0105b76eb1690af38e445bd50a302b25c7a9",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "3f70a54cd01782cd34d3573227f3b4cfceb2ecfe3d676c136914dec729ee0cc0",
+        "614a0d9deb21bc28950b5add9a22d2d121ff53c5b070439c239b5f4891575d47"
+      ],
+      "trajectory_digests": [
+        "277d1c031ca71c5d6cab7aeda106a2662cb5504e0f8c7317f372ce9b5f40ac7b",
+        "b4ab1096bb2a1f74da919ea408487701101331ff65741934d032e77b820da25b"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "884dfdcabc4aaa70bc40b42873fe47e54d8efb8daf80ba83ff79b55f04510530",
+        "d64193da881084dd437e707a5399932cc91885d9d8e9d33745f84273545ed6da"
+      ],
+      "near_duplicate_id": "near-24dea2fa9d9d03ad1321d66c8ac7b012f26763b16fd3cc6d234f91ec78f3f887",
+      "lineage_cluster_id": "lineage-d4e7daadf91c73d85981b83e4d989492759868a90d0af8ff884068dabff749a2",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-296dd10f6314e1b957a839b6b08c18a55d04def15ef6e7769db8cbf2286dc3dc",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "09fb6b2a8d0dd268ba7e0ce184cd52e88778a51dc1cb78129c596cf6a977efa0",
+        "6381fc97fb4d25d20b02d607e95de797ab807360f2ae53469a6d7a801c1fd4aa"
+      ],
+      "trajectory_digests": [
+        "81bea202108e6d96283d4346a53aaafca72321aa78b4478df3609fdc00110dad",
+        "dc718b3219f5a1c876cd2a5c812ff25631bd7bc6cd2b7aae47674780033a814e"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "650135342cdcff3254090993826b28a58ad43c97ea5e2437515dda7871380a29",
+        "c2ced0d6d358ee354eae46accb603652a958e911f95d9dd170b3704ecec3e5db"
+      ],
+      "near_duplicate_id": "near-64d23053c409ab878065c1d0c6d71dc366518e05b49a704d4f67ffe348ccfbe9",
+      "lineage_cluster_id": "lineage-b791df49bbb3271ebe04f2c6f992c4d4e667f41d4b22b4bb9d6a0b1d7b692638",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-2c207d4ea59c18912b032e1ed3a493c52268253ae4a380a6d533d9664d991215",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "1f6a0cb8f284fedc346e91347fc5741ec5ba5585da72844471b7ed6e58adf77c",
+        "f399affdc91138e9c8c9b8953db56a74f223ce53f2725fd3d5461644501ca788"
+      ],
+      "trajectory_digests": [
+        "d935b24433b0de109e0ba39841eca67e9de86f9875b0ded034b83698c5fde78a",
+        "f313e13db3e685a5d43b5638259dd732aaabf9a8eabb02cda29b8c6040f26410"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "0ce10d35348b42ea50ea31732c7b7f4a119ba44530b4a77ab6c9425e98c6d98a",
+        "d8a54eb73e0e88809b99ef60da383fbb8e8b2b166fd249a4fd8c57c97489720f"
+      ],
+      "near_duplicate_id": "near-d8d20cf478a38f38f4623ba39ea5ade9da3d49d7713d63574cb7537922dc3462",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-2d1f962ef052d16c75bd20f9893129a4a3b702c0587eeb578610fcb0d650937a",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "218fc4e660870d5c5a7fa98532bf75a965b8d402c757dee3036940691f551a3e",
+        "f77c480d1854b5304e4367749931d254f50615670d464b007b665073c42e590c"
+      ],
+      "trajectory_digests": [
+        "6f8b62855675dc9cf66b05f5f092a2bd797904fe52f8ba164b87cdc44ba708bb",
+        "ed8dfa03a4ea4e97090f6f78a52a5af0f5d79ec05ced7e0e75ee3d04da4c61ed"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "7717cbe8b0a8713b9daca71c87a24abbdb76ea55fea24d49a4ed870c51a732a7",
+        "a1a0b6185d92fe2c5cbbee911b4bb39ec20702ad003e2ebf1ca7ede38a8130f5"
+      ],
+      "near_duplicate_id": "near-16a89cdea910b47f0f7b03d6cecd0c9786824bd6ab32b7a63abaa1476ee29ded",
+      "lineage_cluster_id": "lineage-2a091b224b228103e4e710ed1092a40524115ebe5b7c0acd456587cb1805b440",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-300651ab34c5c335a228a47ca3f71bd752a69a94fc39e3e02dbfcd5d6df7f888",
+      "data_role": "calibration",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "10f0d01771535aabb2c283976661bd1e5186a9f9db04090126530adc1835d03e",
+        "3cb75c8c802fab484fc4bed89a5abe171c51889abff771ee7b91b81bef135611"
+      ],
+      "trajectory_digests": [
+        "15d3134471e5ecf00be8d1ab867e4364330d347f8644e6b31e1bd07a9c21cff8",
+        "80b5df362d55b217c6818fa0639c066733672b3dfd185b3f3caebbcf6d7da130"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "6ce5153fae2268ea583e40c944c64f16d301e8058cf3ac9b758d1d63245b2d05",
+        "916d013f0833dc161b1af2403a10e36d14a33dc1ac0d104d21ccbf0087b95e92"
+      ],
+      "near_duplicate_id": "near-c35f729d3c0a84e38a567aeab14ea8cee51c00ba914795129106089bca24743b",
+      "lineage_cluster_id": "lineage-c3ee2623a538a8efdd431da3492d9789609828e37f8d0db3195a2484302293ec",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-307ed0aaa113b016dd6c06cbc32c941216b101d9f2208d1de26c8a4e8754666d",
+      "data_role": "test",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "0b6776788374722178757697ae8541af11d892d3e92b83cef1b375d041499bee",
+        "3bdce90d5fd6e7da894ecc7ef64e2e77b495c5a74dbff9552dbcb313ae4d6e41"
+      ],
+      "trajectory_digests": [
+        "61cef89a851d3f4588e3643618d0407d482caba55014f68c68ad3844f092a0a9",
+        "8e7450cb6157d3183cc382d3ef1658e9bebbf081e5872553c6bc03bc80f5f802"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "62ae27411c3e95a88570bd75140e13d99c78a9ff2b630bbc71d85a9a5658989a",
+        "d7c89f189468ba5a6b1d75cf1b14ecae4b23505dc57893b84cfc1934a49588fc"
+      ],
+      "near_duplicate_id": "near-a3b43b42909af7ed3277d5def527b203c299b20f106e3b7fee666f3af8f27f8e",
+      "lineage_cluster_id": "lineage-af2222496d166552bd2d973a3c35d51283d7472e41f0abffcdafafb9491fa567",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-37cf67bdbc0fbccf28adaf8f119611f7bd69d3b392be0305db80d96a7f164600",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "4cd7ac548140f929956da11f0d28ac5c23dff97080f0d0a5c507512b3931785d",
+        "dfdafdb11ee8e9c37ee58832adb4b43959098562f5d7e49c7f840f134e9facbf"
+      ],
+      "trajectory_digests": [
+        "3b3acca051900f73e79de4cc81a3b136c52ac325e1e1238d469a85dbbb947132",
+        "de7d98c7a0db7cebaa102a695acad6446660a440c1d9c380cf7fa26185c9f4fc"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "316bc1a988ce5f654002d1e4d0bcc15eccd556ce9f5105d675d3945b741721a2",
+        "f8b44ae334e4ef770aa7123b83092e598363e0d530d5e9e8357cf055e977c14f"
+      ],
+      "near_duplicate_id": "near-2b6d2c80cf87ade4c00e64240d2ec1c790235a7068e4bea559f45e2004be08a6",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-3912301d6c7c78daaf203a8639fd78dbaa8282c9c0150bbebc10525890b6f1b0",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "0870adf9912f67c24d175eff6550120ac5c2d2e54be388a2a56e4e318e3a740e",
+        "bf03b9e4681dbe97e18cecfcc1939be2fcec89672f16fe29d00a4ff950148235"
+      ],
+      "trajectory_digests": [
+        "3e98ebc76d5c9eadb480bbcbb7a97a8f9a5055fca63dd087bd2951ad4b947075",
+        "aea11b076cb082298f0485f52b1886706141c38d4072c3a7eeef086b9692b540"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "4cc02fe4ff57f6f01a2e0e4888c3aface671ea9c0462731989d344ceae718438",
+        "a05a82f92faa47a463f4327cf5f9c36aef48d12a5e9ce8d481a28cd615ace4df"
+      ],
+      "near_duplicate_id": "near-f7fe46b84b11584c221e2c81bb19f2e99e69955d17ecdf719c1dc0dc537e7f59",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-3a61813b5849ab4b8aa7244cf342c20978192c8fe963ac2623e83e139630d9e8",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "da3ecab960cdf7ebb60c46320d2b5d79aafb8ddea87754dffdf318efcfb4a8db",
+        "deca102774fded74c8d292900a80de9f28cb7ecac17b3391584ced7b616c416a"
+      ],
+      "trajectory_digests": [
+        "282790d5e4df438039e3ddf35c56ea8e35fbd40731e18ef0d9ec7de42382d350",
+        "2daef537ad7c2edd788cf81da5ddb131c9ae122cc6c912e073e043cd7261ad12"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "140ad674fca88a138406f23a787d8e287aad9c574ba7642e578c3ab0b1cb5517",
+        "d8c54f0db1c3c062d568c11903e6edfbe9bf6d8064128fda39e248d629f6cae2"
+      ],
+      "near_duplicate_id": "near-043a57f9a1caf3a7a7bec997b99bf439325c38598c39b7be93a803cca26d66b1",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-3f9756605205d8c5f5893a397d413568f604569c62a95178e96dfa9a61cb6787",
+      "data_role": "test",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "835a63aa7e49c6014a5309d6397e1b103714c3afe1fe5b01d9097c5736afefbc",
+        "973976b0059a8d89edbc479806626ed94d548cbb8c40497f9515bffdb0004371"
+      ],
+      "trajectory_digests": [
+        "1e2839d7eba7a647cd8c4ecc2a5ca7d94fcdc1bd395527b11bea5eba85376ab8",
+        "ed8c27c400b6b11ce73df2200ffa8ced80db24b113d20c28795d25cfdd9f71bc"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "24e31984971a120daaf6054ccca71d7e010b694be4072a752956ad35f50c39a4",
+        "84751b65f884c5beaff21fd7270c0b8379c9175a2c7c9e3446852fbc53542645"
+      ],
+      "near_duplicate_id": "near-cc8e49c945d3f229b536ac7353d953bda45de2c0746517a4dfe6a3ce54bed31b",
+      "lineage_cluster_id": "lineage-d19844c7d223730b4f0f91e773b9e1488d6ffae2f4b4876f1c4e330abd8d196e",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-45ca862f859319c90f56d37df85da53ecdf3c745b6b62a55ac4c413b4a1b2939",
+      "data_role": "calibration",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "1804243fde9d863e674e0abfd320c53f7653e91dc3ef06348d3fcdcd786d3a46",
+        "88de8939cba70d56402303181111a34e411bd73801803bfd6595b43e92d1b9ae"
+      ],
+      "trajectory_digests": [
+        "723ee3fe77e794a1ced8db789134c2ef8167765b07b50441089c53365a2801b3",
+        "b2e3caeb198fe5e54b9acd8d14d7f0cd75f694db7b8cb4b48ca51fbf451d15e0"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "a97d7c9bee73ecc1a85a0dccec12db7d0f2ba0e6383b08da1f2689e76daafcef",
+        "c799cc2f5c8b7ed3b77c87ef2684701c63a73680f7938e9362d65ebdc8c81688"
+      ],
+      "near_duplicate_id": "near-ec88436be95e2e356d8ed2f847cb6edd77a984a5833eda9f69405e7e8ea8d77d",
+      "lineage_cluster_id": "lineage-2e450eec5a13c890c6ca8342d8627ef4738de96a6b4128c2de52762ba9f9ff86",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-46cb2fd449caed97ad9aa65bc4bf134174ca453c2c6e8c6d182d06b87d4caa9f",
+      "data_role": "test",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "a542966253fddb0db693bd83397434f30352df011e3650fdd6249bc36150b146",
+        "c4900d4ad5f592dc39f643fe3a20e5e9b2f1af2387f5abd3cf870d9a320d9852"
+      ],
+      "trajectory_digests": [
+        "58831cb3e518a6e4fe1c8d0f0be25fc3d6e912592bba2b04d8c8dc7c1a698e44",
+        "a49e4eb83b1193bc09013e570d11778ffd5931fa872a2afaf4eb9b321ff902c2"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "47b67e6ab93b27b962b4667b03018d6be65d208064e93fad4d7db13a78dedf01",
+        "bb0bb4e01330337113ef56957e6eca39f4cf7d99f113918817d7ce1f40bc1fae"
+      ],
+      "near_duplicate_id": "near-6fb1ce8f033dcd995c77eb9f809f0c2e6c0d5c80ad2c04c234e1f9bad8143572",
+      "lineage_cluster_id": "lineage-5eefe144846971d632a0711557159f331a30d98dd7884ab336a35d5091d2adde",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-4878aee0d83ea25762349d260d20fce1d7f6330abc2165cc7bc0c43adf551a5b",
+      "data_role": "calibration",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "30c6d3d9d69e20957a4f8ad98b905d8141f81bf4db66d4532e7b103766e4753b",
+        "ac48f13ba9ed00f7151e26816a7bd460c68151297325c87623498e6d3ff44ad8"
+      ],
+      "trajectory_digests": [
+        "2a03f043780dee1c133268d9ccfd78ecad0adc8e8457359a58b3f784cff83beb",
+        "bce465a80eaeda7bb2906268a0169ba2145929d7bd00323d8f159ac0edc45308"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "02c17fe04c6d3e9095ba5f4db0df4fbac3511a843a7642e91c1056b2b95bb0a7",
+        "1ab453fb9fd94ff5a0cf00a7f88361c05f2bfae82a62b1b86e657a66b83ded26"
+      ],
+      "near_duplicate_id": "near-a8ae100c9ff39cac310d4bf39ff5a7ec0741253132513fe103f97cf09cd7f871",
+      "lineage_cluster_id": "lineage-e9193dc2037827e2e46437f28d924548e1c3add03d260c5b4b8c25ef231f191f",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-4aa897a5f4886d3cf4408aa98e1930601c93bb6bbb3875729dcce3ce9050c349",
+      "data_role": "test",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "5f01acebe9f47e01719a256cd225dabd9dcab053d3f69bf6bb8c68ac44956d83",
+        "a3bebd671beb05e2892dd195cbc0bcb0856dceaecef3ce2d752ed15df4848e0d"
+      ],
+      "trajectory_digests": [
+        "6f93849ad32d06a9e2f2ebb0651741910e7eb9544c1c30b2807d17c3b275e2cc",
+        "b666a870301e236fc3aee6e8129d3512242833968498245eecce6cba7b2207bc"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "90d64b5f98c0904d0221995afdf3c40815004f4aa16344470fa24e93cbb5fbbf",
+        "fb1ebe6a5af510c303409f1a12211642e662a1d1ee2325bc66c50c5535316310"
+      ],
+      "near_duplicate_id": "near-9747dc38b9a1e65ee9f4f14fee147ff0095aa9e92d9352579bf30f7a7c9a9db2",
+      "lineage_cluster_id": "lineage-2bda5575bd67c1b5b1de7455a6366f5a0d090618b23613b0ad0ba503474211ac",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-4b3682fc56897ce6cb2626e11ad534bffa6bac7f546b0aa173beaa7a925a229d",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "5eea380849907eb57f9ff84e3bb76e78a78a71b36da50ff6c0f9c30207e096bd",
+        "80b51d5af6e47c978e0f5cffc8a08c92e708353a24f692d7df88e609e65a043b"
+      ],
+      "trajectory_digests": [
+        "d683499c3ab6dba62c48b9ac6ebff3319bd9f2c2ee53488935dc2d0b3e2f4cfb",
+        "f30ec6d6cfa47ee4357e5378f43b718b8efadbf82f795b4e489db435e0e48f53"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "27355d1cd2bb5dffe22eb074815b7d5ae0702164ffc3ce598779e9cad68a7f53",
+        "9e0e1a3bad7aaae4241fac992984280d639b8a630ce573e5e127f8d0ffe98408"
+      ],
+      "near_duplicate_id": "near-dcd27df44024f5419c8be3a30bd0eb230ec0328567c1e0702bc9754e9d9d90f9",
+      "lineage_cluster_id": "lineage-3d355dfc25d6a4d1a4c58bcf0d2f5f5f08aa2449046288c10669e008dd816e2f",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-4f746d90ac6d72c76ddd8ee52ec38cfb41caad79dfb77640ee8e6aeea3018b6e",
+      "data_role": "test",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "43f3d837a91744705addbc437c4120e48afd87c40686d157c580a140a4ca01bc",
+        "4baef1327af14c3006f4de4c8389327466a3c5ec7e5851f8b830b893030544b2"
+      ],
+      "trajectory_digests": [
+        "ea58356393d2767ee61b779c1d1efeed1b4dbfbca4d37ea0d4b3afeaf5e517fb",
+        "faa7515d170616c243c980da7b3aa370f480b4094662cd6849f308cabe73ecfe"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "a5b350fd7cc918462607f20d0d3f564521177504e0724eff0891682c8e8a52f7",
+        "ba3c6b55d8a6afb1b67d9f12ffb7ec2f51909f44f4e7eed31c4fecd1cf89c09b"
+      ],
+      "near_duplicate_id": "near-9f91c23d268cadb1fa0cd0bee0f81af8fe15427e2bbd246e521479ea35220baa",
+      "lineage_cluster_id": "lineage-27842951c728fd152f9d8b5d54d39a2195ec40a5cf1a810bde158231235a113d",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-50b4df4cb793600ced8a5a18c7e9765f663900a2a7e9d0492418aeb70c2b1eb0",
+      "data_role": "test",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "3c7a888f53a07b5f300d7b2ab64212382dd2f216d86f0a5240a0ead5fa69af0c",
+        "c6d8470db3c00cd1af9b64e891d9c32875ec291d61ab3e7fe549187ca76fcc17"
+      ],
+      "trajectory_digests": [
+        "cfaabf6f3f155c98dd52acc3ab5fa20ec36cd3fbd501707198a6534d1dbac0d4",
+        "df2d18488c9eb091be4171c93cebc0e07f5e02c4186afa33be9e03de7b9a467b"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "3b52ef353596d494423fb9591b950f23a137cb37a754a65d16851736434dce3a",
+        "cf35ae12ae98791b1b78fd6c1cf69b65ce2262be365b8d6def590f9523a2d273"
+      ],
+      "near_duplicate_id": "near-1c173bbcf085e1f22a62499270d18fa4992665554d2aa770e2d35652a9254c0f",
+      "lineage_cluster_id": "lineage-7369a9b959acfbd6c0709c18715f38e19589024857cc315d8497a66c623d3600",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-50feba81d0006e17d0420c30898cbc62cd434c4edf4f8b82ea73a393392c0699",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "3cb42ce6e1fa585213868c3871b10661a6b8e72861cf955a4a19a3bda6b54f03",
+        "85d1055a176feb9219f190b720e42cce2275a612e77749f960635e71e3fd0efd"
+      ],
+      "trajectory_digests": [
+        "7294f8b4b533d1740a41d454cf39b06842f592cd3ad92cf17e62d1d98132f028",
+        "85fecc0251fabdbdf3ad300bcbf9ba5dec112833450f8e01876f49e6cb74ec63"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "23b9ecfcba7356080f309d76c2d8eda6933a28ae73f5519d20c50fb28c6f8ad0",
+        "b870284e41463c9ff5e790bfe25906e33c4ba04f80d384c5eab03cebd4064c74"
+      ],
+      "near_duplicate_id": "near-222315d1c3d98c444c29931a5372a7f7c506c7b6a838d0f8ece3c3575c0a4470",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-51f585e6dbf2ef8ac310212db2f814abdefa5efa9a1ef54c3ee184c805048d0b",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "c8b8a9a2ac5e2c8f601be8ed072da8dd4b5224a5405b9251217e53cd6df9e382",
+        "d143e3610f1181857dac966a97781495923e99a85bea9d32570b29dc9a4b9a5a"
+      ],
+      "trajectory_digests": [
+        "3dcce5639fda0f8459dfb3d3be42c5b133b6237e7ad453b558e027e8a28ebca0",
+        "bad846e732fe236aafe2f3e8c6ecfd24b0c69615c7d0ced2fbb2b40a2c31e23d"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "017b3d17a8859707c515b66d2bd7e4d246670c10d5ba5be4849fa201685e91e5",
+        "47457b0775e91759cec2d6ffe6ca32ae0d9f7e88729fdb34f84c4304e39e96a9"
+      ],
+      "near_duplicate_id": "near-cf5be8a1f1d9211684e83195cf54bebcf6e1f28effcfde386249d8598d5371c4",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-5639b969219ca435f063764ce8a4e9a7e1a35c195fd393f12b1dfc752202cef0",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "388a8061d605d9d82e87d75ef9a72710ca35ed63ec100bbdd31048b1d2ec7aaf",
+        "c765c53bbeb3dda7f26c8aaa3ea99425c7288bed911720a3873d1ec9c4c75f85"
+      ],
+      "trajectory_digests": [
+        "2121e8caf438fa584209c01d6148f6a7ba8cedb10a3a3c4fe8ab6e42345414b2",
+        "6cb9de592fed1fa61d2eef5f464f045f3d483b68299c2c6d34cd7e3136557bf7"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "43f11d75fd93ac1fde479929447c0d1d8e269f98684424095b26112b60d33828",
+        "718fb6c307b8235345ac0edb8d8f608d836d04a9aa836c9e0794aea0b3b0ea14"
+      ],
+      "near_duplicate_id": "near-a33fa90695ef73a17843ae8185117834687c5f81b5f4eacd06403cad384e4932",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-566f538d6f7ac2e28c57e9a19febb606ee581dcb611bc501e64d92ced2f11691",
+      "data_role": "test",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "2cadc58a1606048962cddeb95645a1f0b376f82242e161081532d42595db44b3",
+        "df813806f61f566b8a566c2687eed5b53c5d85612655a71f988ac74942e2013d"
+      ],
+      "trajectory_digests": [
+        "f3e27b48c5c1ed1932cfdcf893967ce1be49c9e628e32e4f5c506552cf7e2d5b",
+        "fe31b2233bd3c730c652174f81ded0379b192f626d7266e7b37c8a8d690af4cd"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "4a4c6f3d8b63c06a3c848c8dde677af8d5aa664c6bcad89e73eccfc933d59898",
+        "7ccc6835666dc2720f2389e84dd19af68f8a6d25fe194aa6f29d3ee4ccc3fa1f"
+      ],
+      "near_duplicate_id": "near-0b2811ec0b2de5ba00913141fa384fd0f11362147690c1d6711b91290b4d19ea",
+      "lineage_cluster_id": "lineage-20156579a674a5c17d90c9f4551fbb3174c6d2b39b5d462843e4baac0306a9d1",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-57f188f0e61a00125c347e87c0f42a6e4c206454b2ebcc811d37598b31645e05",
+      "data_role": "test",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "717375d2574f8ba828c7d15b3ed5c5dc726c6ab738a965abc8cd80d1b07bbf35",
+        "b664d44863b7922f057da473b55e8440b3afcf167133ab0c6e7347d4d4ceec45"
+      ],
+      "trajectory_digests": [
+        "67d75511e1eac9106d00894c430f661b10d8b6b2a1d94dcffc02ce755cde851b",
+        "ab0fe1c79ca8532d3e06b5e9afc500db7ca811e7f8786f257596cbacc5b03b44"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "11bfcffec05a6adc481774f4e1c2bba6742304ffaff3e21379411f6edae004be",
+        "76751c18562b40b9a2199c325e7345b2dc64573c1f0f483bc851ba9980ae45ec"
+      ],
+      "near_duplicate_id": "near-4f2dfcd650cf8e8e70201cb77f5120acba05e3c77184d3196847dfcf88e2f80a",
+      "lineage_cluster_id": "lineage-9ecc97bc883121e6aaeb00c44ef28962e1ddd6a943512f63ae7ec5429795645b",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-58061a7499f1601229fe462e63504dd2f9a31f4ef0603281ca7fb2893d19d872",
+      "data_role": "test",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "193f2795a032a146f0fb4c7069ac1f3e5d502dbe74de8e25fbff7de048dbc3bb",
+        "a246bcda2e44b82fc10f090b0ed2652906b9104cf445fc1da32bc3626b801847"
+      ],
+      "trajectory_digests": [
+        "1e1a85a80f563a122c6c19f52af687dc0907b7428ad10314d5161b65682077a5",
+        "a22ff0108dc1fea47ccd1948a423aee0cadf5988c40a6b8cf00a4d85d12b9fc2"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "a9db95870b61eeb0b8b16070238c3b2e72fb547836b49395e0b322f10919ec8c",
+        "c799d59176ea62dd1e656abfa190f464e7f6d8280807b16be0aa1068f97b3748"
+      ],
+      "near_duplicate_id": "near-057066063439ccb0b058c54457f6b3a99fe9357a706424259c2bbca2f6529457",
+      "lineage_cluster_id": "lineage-3b6f6870a77574f08061566646076c7560acbe584a89beef9689a303e99e589e",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-5887298465f700747f2e295b9a6cebedb7560b8a01ba1529493d39d6e986f18a",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "1cdf767364ef0ae691ee854f9d75df3c5ff20ffc5857d363d6643237e187fab2",
+        "e5783bb4ad8416189f17d0059887bda6bc939774a551cbaa7edfe516507d439e"
+      ],
+      "trajectory_digests": [
+        "1f1541f71cc9bda9f8a8448cb1fa0204ac1bd1ea8e562a886223dfb1317a7b07",
+        "9dad2cacede4b52620ea6dced3c4c6f7cca4111c8a3c3da428b5609740d3f888"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "27625f0dc811899017f10e89c2e6acf02dfe12bd7ae70b735328684fab0b8b94",
+        "8278a0c4db5b4280de2e1235fb0e0963fdacf3c170b2d47dab2356d189b12690"
+      ],
+      "near_duplicate_id": "near-d4a9c58b71c7bccf1c84f74ccb1ed4bd9a56bd73d4be7ce1a92719ab7267c568",
+      "lineage_cluster_id": "lineage-baede5d8dfcb17fb0b52e1b4cf25237895c81a9301cca837b290dd5762df3434",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-5a848cc2e3b9135716e69f86f0abeef8d087d9410028efe4dec02511cec4e029",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "32f46fa0d5ebc44956a3a9fcafcb874ad33d5a33c29bc328d33bb5c5b83b743e",
+        "d32bb5b54137d8caa69ea1ab9a24961f1591ed6c404bb5f4dd718e76a65802a2"
+      ],
+      "trajectory_digests": [
+        "3bc68b4d1229a78570f44b4ce77134cda2ba3c1fe622212f1b5f3027f3cd2730",
+        "d6c74056df3d46612e9c85b34f9e3bdafd65e2f06d1a5f712d14c74ba8030c34"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "186d299e5be3793e7bcbec5f74568094cff7465bdf42858d7fcd21d05c88fcb7",
+        "63fa051014ec7b7538b7eea6fd122f7e00c64f49e3a8170d22b00ec263bcbf08"
+      ],
+      "near_duplicate_id": "near-44e294361e479271faf630a9341bfaf4e2f00589da463c4319e38ce485f601a3",
+      "lineage_cluster_id": "lineage-a4fbccf9da387c498a7fb10b3993f9cc887cfb1d792fc5afa379e199044256c7",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-5b881cd3d800b2d8ecafaa534c668bdaa71851d9747a41b66b3be5611707d910",
+      "data_role": "test",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "4976b87b90d720b7bbcfb92a5f5b463a6c9f0946841efda6fa40e19fce5a2dde",
+        "9fdc886f3538df12abfee4d68636f775a23beb94f803befab5d52c69787ab6ec"
+      ],
+      "trajectory_digests": [
+        "369f986f509a622faf496c93738b6e45bd39927714d0805c72d4f3d3cf00ca62",
+        "8de82623894940d179062e2ea36e2fa108886d707cd72c046fc465fe32b2f6bd"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "e7b6c842d5e3c3390db12edd26f6d85781d2e61ce8b528beb48e358d5ac009ba",
+        "f4546827ec37f670a84ef41d5d106128e1ae937b8868cd09a210fda5052eaab5"
+      ],
+      "near_duplicate_id": "near-2ba83182322928d0fa8cf76a82ac45baf92b88b2ca3da14a9c38b4972dab071d",
+      "lineage_cluster_id": "lineage-481d231cfee370769aead1c7a397d3db3faa3e0c102b7f1f5c9eacf5af0055e8",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-5fbb6ede67ea52ef2683ebd605947822994c01b87f185320bb65116fb93fe1cc",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "07bceffd29976ba444fd871dd4203a028be16fc666e47d6a935c262ed0f1a401",
+        "3f2a48813fec43dc817e6a1881e8edc13c724d436c2f730cc5a7ebfe1ce3194a"
+      ],
+      "trajectory_digests": [
+        "5469f6e14ec99106a855113ac30cd24b133c6f0429b18b6fb2f070250f1bb55c",
+        "7303962ffa40675dfb932a2da56a18ab2a00d399866fedda9357ba0685262f0b"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "9262e3e65cc8b20cd1a35933a007647122be49ccf4fe0bb6b6878a545c77d16b",
+        "b900c781a328fd3617bf0b820a715d34ecac51f16b52cc7d12c46b7616c9d50e"
+      ],
+      "near_duplicate_id": "near-0b2122b04748b76dbe12c30653d83d75900b72d81ef72967beadb9274c63a4ae",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-617ca05321227e126a196f96f5afd708b91279a98da5499e8e23090352205266",
+      "data_role": "calibration",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "41b7cfda8983ce608c917e49493de0b7f75feeea69e6bd7a491ba8046801259c",
+        "49adb635609cefb5e3fa7203d6f2adfe9d3db32338181f3f687a50d4321ef1c2"
+      ],
+      "trajectory_digests": [
+        "82b973ce6b786435aa95708212ab55c1818d57f1cd23c97f727787ad8ed1be66",
+        "9480fc5277845da7b752617e555447e7a598569990b73feaf8f156fa34836a6f"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "7d14396a87e466a6093be3e93a6c356aa3a6083292a7aadb8b6a813ee03a75b7",
+        "7f6206551f37305c5bdf4f8d37110a8ac49de5a97bfa175a5bb4e8b34e09e33f"
+      ],
+      "near_duplicate_id": "near-a5bc017619054e4337097563a9ab8d2e8ad9561424ef7e5550ae8b3f022d7256",
+      "lineage_cluster_id": "lineage-611da518c176fded17828d7b8b6920bf409a67bfd7b828a7d386ddba306c565e",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-6328254fc0103d6431d4c4f64eff70526d8fee405705601effdecd004e0045b1",
+      "data_role": "test",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "aef4b22d37e06bd66b7f5a5d36d9f2d531e741d46abfbb4305d44f4c8612fb3f",
+        "b213affc683a4e53ceb1bb11443c24e8ae4856570f0e5c0e6055c4f82576789e"
+      ],
+      "trajectory_digests": [
+        "034c3d1019221af45a594393a6ef8b25e27df392e5306211b9dd2a13f529c15e",
+        "350f3b8a8c41c388ea9760f82f10c77413cb329c24170a23b43db328854604b4"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "3b0b19f2f6ebd8769ad680518f9ec61047bff68a626061bf3e7bed08ddc7edc0",
+        "d3b003c75e300da469cd2d8d7ec2f463370c3d721f482696b68b39a82d7b06f7"
+      ],
+      "near_duplicate_id": "near-deb0c63b752786a58eed5498577ab40f75ab787bc63e24b53665947060a30c5c",
+      "lineage_cluster_id": "lineage-225cc6a9c371e3a982176d01ed8068945ec57a0b30aa3c3af85237573b9e872e",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-646f780f42b6309f894260248554ed9a934974474ef473d7e9002cbf43ec41b2",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "281ec131c65bbb3694c90e7f30ef8c5ec8cf1295fc96c1f74ca4939eec024a9a",
+        "ce7ad8c5b5a666c1e2a93e213aa9bec9c7b56090a27ae6a002548ef8e502103b"
+      ],
+      "trajectory_digests": [
+        "601a103c575039087dd1f996bf54b0e4c1b2838477b95e2cbf110ebd039d62fe",
+        "b422ac92af3fae2a1bf9a304db2fa9f426029f195aa3503e737400dfaa7e5d8a"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "5d74b60e9f243b0e532594d3a53e27643c660dc147ba4b83ac2d710bb1caaa63",
+        "ef3ae85afcfb098732b0872b0bd1b2bb6fc630ad64e8c96271f9f2211cb06d2c"
+      ],
+      "near_duplicate_id": "near-4ff0ef50c7fd2eeb87ed8c7805d2da6ad17aed10202e742a68f8aa1c29adcf9f",
+      "lineage_cluster_id": "lineage-3510c8ad10b1931689609d9d2bb72277b5697813335a6fe920e5951ae624ad58",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-701f0da4bba2e7bf33a342d5e4ac1c896e525e6968a7faded23386e939429ea6",
+      "data_role": "test",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "4a42b8c9afb2cb7eb82be7b5d222eb6a75e16794253f2262de751e1d7d78575c",
+        "75cac2f1600f893cb2381f1c7baa01aa27ef269ab051aebcf7d4a12cc48d0e77"
+      ],
+      "trajectory_digests": [
+        "08a7b55be49b076633c48245b8e80bc940c30c54f984776811ff68076f67d8a9",
+        "14439f612a905b6e77e5535656cb99a8d7b8a40e55de533444910ac0510a182f"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "1f408c1dc887acaf66b98870ca1b7f948b5f80adfd21299a9eb955888cfdf487",
+        "83bca5dca458d5152f97d6bc4a3ed7659b5ba6cc2590ca0b687ceddbb11f3b0c"
+      ],
+      "near_duplicate_id": "near-e15d450cbb502e9cc56a8c9fe560ae1c0f04cf7beef8507a615a32599c84e21b",
+      "lineage_cluster_id": "lineage-4d0642478b3ba458070189087545adc80e61593d2dd0ad5a347ea30ad3ce5bbf",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-71caaefd9c95b46a09acabeb02dc4397f341310a566e90f2adc44400f5db7351",
+      "data_role": "calibration",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "6db1ba9b6649e2d2d14e2936b813b6f3a8b38f2f1910a759ca6aebb1c74b01ad",
+        "e517ff786848a7cb876659ba3d9b007a04b0dca0e99c80ad1dc40bc07e37b776"
+      ],
+      "trajectory_digests": [
+        "3fed7f66b3f97156d9480324e5a8adf2ac1ef94d9d64b502c85bf8eef76a9b6e",
+        "f0f7e928e3fc8876117d49f90261932537783f17de108e256cb5226d81679394"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "0632e6821c89293e7f1ff5ba285faf57e7bc0ddc84b04d08d23185d3476ea5b5",
+        "f269f85494bd6ed37344a3be17ed6676771056d7250124a536868a7ed54dfcf1"
+      ],
+      "near_duplicate_id": "near-2bceecd830869e20b0e41e395cd0d1f6b7c76b67091ba8b6dcb3049e5850a8aa",
+      "lineage_cluster_id": "lineage-3f17d11e2f707a7e8dbb9955fa6177a444585122700b75a9e457c07646a8ee2a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-757546cb7967ea1d4cf0c0ac31280acb4a488188b2b3a998fe8c7276fa11c78f",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "8291e5c6961a78a3de3cc78217c7608ea072b987e1f408a1a551a2e72087f250",
+        "c0be6c334f28c04d5a5d312f566088df2cc5bb96d91bf51b5bc8cbaaa8aa674a"
+      ],
+      "trajectory_digests": [
+        "1a0301a9f1f98f80877ddd93f0dfe8f167bb2625542e38a3924065905fab0759",
+        "97787627aa9629d9e5c3692d6bd767f03fb02060f6fc1643932983188c61acc2"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "539705d55cd90492ddede01b4f47e245815dd6ec046ae669439d338934290ddd",
+        "aad8feee97ca1c0ceb449d1d8c38314393939a842af15c7ed9215a16e4ac6a5f"
+      ],
+      "near_duplicate_id": "near-66784cde1615acb2fe06934c9255afd321dee76ef9b92290533e1bf4dacf442e",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-789269000fc6582efc04c3db33c7ec6f711a9b19c2b8b69073114a6696f09e1c",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "0b7751cff59a099ceeac8d3a8889d48703fc90aec472a42bbb23057426f77b6d",
+        "c19f1069675ea7355b9c83f7e2e6bf8acb61a5fb5a37e4c3ae6a1aeebcfd7876"
+      ],
+      "trajectory_digests": [
+        "23b2e8a720151632ff186148951e469864b408c44f16ec6344d9cdec99efacbc",
+        "5316804e0f715d598e820fe93ce55e39cc97b546383b6b55c6599bc865711dd1"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "182d2446bcc6c781758c969d30c658ca0da8e7b9c4c596353c8ac8e65507419a",
+        "f4eae95c3ba224c9295c07612a259ff4add249ce57cd980a9e058d186787fcbd"
+      ],
+      "near_duplicate_id": "near-fd0cb64dafd384336e86329bcb2df7b576d2c0cf22878602a1dc1d9bb231ec0c",
+      "lineage_cluster_id": "lineage-bd2987db4f36de5ff1879c5b08831627faa39246b4406e2acc11f68477aea5c3",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-7ce8368d106bf7661495485277a0cfa4e265ad109af3c9370e4b020d69ca6628",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "3747f5bb71997846715f6916e752b2cab3c61ce00fde89de3ea2a1c7ee9b75fb",
+        "bdc61a51cad073dfdab8978d50b66428bb11a53a159e181c7fba72a67e4d88d6"
+      ],
+      "trajectory_digests": [
+        "69cea56b95e1fc527244f6b2b5a11fe82609ab19e60663dd5a743cef951221c8",
+        "e26cc96b4b67df41a49ebeb0c233717155cf509854cce606431d051edd110fa4"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "570099c4403dc1c497d022b3955d87cd31663e2649cc3a1e034da2c04c0396e6",
+        "d4b2f82255dd5c59bb0dda16a29e778aebb3d26b2f6c51cba3cf6f73715223b8"
+      ],
+      "near_duplicate_id": "near-548e535161dac5df3c829911ba9b3df7bc62c7b74a72973748f2cb9cd9ea45d1",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-80caa647c912eed3bbf18e9f18f2017c02a47e098aa883714d05c24edfddb22f",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "c138070d41606d4b129670b0fecd83f4aba4fd7d57dcc38b9a315122a3d09d53",
+        "ca731de95a0e72274f9bd80dd37f61f4bcdc5613074a301e90f9f69d18397fd5"
+      ],
+      "trajectory_digests": [
+        "baf4fe9a9e37ef2f45c129d0b20b68c01721d7a77f63d1d6c1082f688b552ec0",
+        "f0a8937e8af53b9bf1f3843620dd689ea154d7f443f8d97fd881c5d4d24ef10a"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "6192776f1f9b034a9cb925c4145c76f2cec4513da99a73e44470287c800cf7a2",
+        "85604d81cc42427bc7c7a9b348bd3e18cf49c66a19190e3cd5d757bc961e5ccc"
+      ],
+      "near_duplicate_id": "near-dc6ab86425ddf4d6527a0b0c05960b4362b6bc8e0591189162a33145acd82186",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-848bb6edda314ab1d48d9c532970e012712e5fb092e28fe6e096afc38dd8535e",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "b4ee23bf4d95fb5aa687ebb89faec3793fcddbec6fff7613466857517715d716",
+        "ef6a53bdc78e182517d67402c9a9d80bb2f3090cfc87c6dd7313920842e1a11a"
+      ],
+      "trajectory_digests": [
+        "776f064a0b61cf629f23046afeff665cd184181774385f2f6ddd8edbd9aab800",
+        "d7977ca604a73feae2891cae00c7ef7bea9f2edf56e3b66af9edf6650c06f4c8"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "0c2f7547a63699b3e9ee267977a39a14d416b714fba77ff9b9fcdaa7b2d78e24",
+        "a5b87e15012c41ab35116a06bd6d9220ea525afd3b9b9bdb59d132a8ca0e53c6"
+      ],
+      "near_duplicate_id": "near-8ecfdf130709e52feac77e8defbc4e8a42b8bbf12a66e711d812cfb52e1c1e1a",
+      "lineage_cluster_id": "lineage-2c3b447fda62014ddd35550bc27c1e0c78343d8ff4fe3a8e088513b2fe48afce",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-85acb2324090d015c3b7d19b0b1566ba8ad026db0064eb099142c7b7fb447ec2",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "0fdb763b4c0b308063aa11d36f1c59d50b1ed74e531bb98e61aa102cde4220e5",
+        "7e6c821db09d53a970c14c1e003ff881673ad2c22299d5c9823e34d109f8fa27"
+      ],
+      "trajectory_digests": [
+        "18cc880feb0f41ef1fdb192d3787364c93a464ce35ca9686a6add3bab25657cd",
+        "57726c1deac61df3a1024c3ec871117421952346ab53e9ee581ae8382e881d75"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "8fa2f42d0f228802a8c7577c4c87343309fbaa3d0cb33d178a541ad36302e302",
+        "ec495f77d336fcb09e2a1cb99dbc75c02f423f6cf584eaeeb84d389357e80695"
+      ],
+      "near_duplicate_id": "near-bbb50b8ddfdaad9bf83ecaecd7287cec244bbeae23a25053bec1e76d7af13c78",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-88967bab32dec1335c1f1a656649a1315dd12460cd4cb7fced5092cd51bd4813",
+      "data_role": "calibration",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "03db4c0ad578b79653cb173273939aa031af56e12852bf924b5cbab0f847a858",
+        "338b249ff1134048afd968f844fd969be7698bd5de02f6034706891d26e5868e"
+      ],
+      "trajectory_digests": [
+        "84d7dc815483f676d2ccd5e8bd9ac6bbcb893a33f276c7ed266537fb6d447919",
+        "8fc73aba5d6e68863bde3fc4f58fd6badd038058978b62258143a37fb8de1a4e"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "135acd0ee403c9ec8d57bb058f0e4b80ad7180c5e514a7e806c465ec0acc50c8",
+        "b9ada681e7bc5bd4ac60cc4081270a41f2d02c66959f3c5f58a78f29fd88f1b2"
+      ],
+      "near_duplicate_id": "near-f2ab1ee68f614998061e901f312af577c3bb7e3162e38a97847642bf89ee61df",
+      "lineage_cluster_id": "lineage-1bfedfa94a08c8e4d702518a12d3c6269a9ef27dc8dc4ca49bd379a5e2503139",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-8bebe388e7a7c9428a97b07aed65a5d3d308ec2fb7794949c0cf9ad883e2da35",
+      "data_role": "test",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "688afbcfb6df262bab8462820b5a5798629eae913e61d18d96b660887fd20cba",
+        "9815bc3644b28d63b92c84fb5fd5183c0192f8322c981c149c76eb3c015a6bb0"
+      ],
+      "trajectory_digests": [
+        "5cac56e286dccb347f089599a5dc3d2d8feda24b475a6b1baf31e4068e377bed",
+        "f42513d456cf27ed33f60fcf786f5be502c9bbc1f01f7ed20c1702efa3e7f31a"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "2e8a83f9c84121d690176fb90f22feb136a894a376aa9de1381f206909ffb26c",
+        "c62b1f8b1d915cf477d60db307b591c3598554d1590d51b788e668131c85cab6"
+      ],
+      "near_duplicate_id": "near-d02402e364782118083d267878931ecdc6577df7f772a07ca6e7d5f88b4d26dc",
+      "lineage_cluster_id": "lineage-d19844c7d223730b4f0f91e773b9e1488d6ffae2f4b4876f1c4e330abd8d196e",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-8e2be9dd3afda6b79eed77809df6ce6d46fa5a0a214e942555447cda407644c9",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "36948d47eed15105754c37c4099291f8e113f99ab58692ef92daa05782653c46",
+        "97eff12f2ffe46f7e2251a8f219b999d54ff10e9a4f1dc35609641834223d8de"
+      ],
+      "trajectory_digests": [
+        "4114c018f49dac28a84fe48a06ab169b612a95352a049722552e8a7afad72ff0",
+        "e8bef54c90626de7fd5968c274c74a85e0d3368094329e88358649fd62d740b3"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "c34358d1585c6d806c4c6743567ca2dfd37a1f97bc3f4f948185a28104049418",
+        "d7e036706659bea90c09d997173e423da1a53ff268c73f6f2c60feeab244207b"
+      ],
+      "near_duplicate_id": "near-74d8991decb26a1937a71546c40deb84b91575e961a140563db5bbb0dd480712",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-95cf0417f8c3f3184f472939f9fd9c4c67a96996a358df453c629fe6b686f129",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "442150d587a12dfbce2a927e08727e9bc80d5943fd302d533bc0d2135dc999ba",
+        "caca92f546142011763b7309d42961a9ca2e03b4e0d5bb5795b39a8d1e6bcbdf"
+      ],
+      "trajectory_digests": [
+        "9153541ffaadef0ac8362ab3f9b4705ae1e98678183e5ae837dc141747c74121",
+        "f7ed462659e05d79b6ca4c5794e0d808f07c0508710f307da4c5f122cb359192"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "591c49e547a7c53c139a7213de72ce2f4144b8aefeb4298f05eebfe2379d14b9",
+        "8eeeaf3d03b2823d9f293cbbd5f32f1f43408b3bfdbe4635e21ab40be47cc07a"
+      ],
+      "near_duplicate_id": "near-25fa96cb86111b12166424e32bdb207045ca8bdd65088cca7f13360b133ad798",
+      "lineage_cluster_id": "lineage-c2d810328c47541c88b438db3e1231c283be7e0e7c25acfe0d4790890cc0b84f",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-99f27b7514266d780b04459c8d320fa72c7a32b7a1b9bcb26b2e319ad9433440",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "06c3df58fea742ee48f1313d7092a614c29a6edc108ed5917414418b9f37291d",
+        "92dad5dedb6325fa9c55fc760686d75f6a4e308cb3154f84dcd8ff70b2cc7340"
+      ],
+      "trajectory_digests": [
+        "632a0a6283d2bd20dbb9205b2648090246613fde2f600d45a227bc3fefd8bede",
+        "ede7d0265929873862dda60782f0ecd51029f4939c2946d52e45cfdfd44ac88e"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "2f07792ff8670b276ff7227d0e1d3412708f69e695dee8d2a05c599a628fdbf2",
+        "533e1f241aa4ba9b6e7e4c82eba1bacb7eeb3e35d39685a4629359ae8bcf7a75"
+      ],
+      "near_duplicate_id": "near-c416d18544501bf62209dea98cdf006a4e574172dc703564169f37f79df5ca91",
+      "lineage_cluster_id": "lineage-e1b9a56c4edc178c9bee642e03e172b61598a3fe72bfdf6cbed78dbaeb5367bd",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-9a25193e4b2b919ac49276f252e9bf53481ecfd02b8140a3726d475a3792da73",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "2127e3eeacc75f6215e21c2534903c548b4f5fc0306aebdea31d6bf35eed4348",
+        "c6e4f476a37b87c9841282ef15303ffeb00d3d51056c0ff84da1ad9c278faaf9"
+      ],
+      "trajectory_digests": [
+        "266c5bdc6caf150d548ce198f72c70498cb9955c7e6c62fb36c26eaa81c6e53b",
+        "91eb5e599a86b3a6f95da9c943592ec61e4a483ba6669685f870055a8ab320b2"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "013604c380f1e4c5c11ee260c75bd485465658504a73b939c1430e26cfaf8865",
+        "ad25c7b23de3b3733adfb9f2feba15ddbe8137cfbc371acf114f9c57263ee42d"
+      ],
+      "near_duplicate_id": "near-7eee8b18e90201267d29f81f001ae1715d118ada6654b34dca7e37776a9b4c1e",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-9fb2da18ac757bcd75320d3369a15ab7cac5bc1fd4b158e5334ff1c3bb88323a",
+      "data_role": "test",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "0d0abe198347b1e5fc3c1981aa2a9b0554c34db318ba567c72746a54d1b80eb1",
+        "dde381d3929081643f1be571808a6edfe815b0a2c4d16b986fa88d08db27d199"
+      ],
+      "trajectory_digests": [
+        "300e3667f35f383a65f40212d8da7ee8834a9118aad2ad89b33262b145963d32",
+        "8622f0e7b217d0c9062c6bcd561bacb5f643f86f7393763a21a830d6f9e8e65e"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "83a8e896901671a4dde99c52cdb70b3b815c973d76317558c1a7938d10139e67",
+        "c43126ad2a043d215076bf28525ee03736cc9560d6cfc3512d045b463c93014b"
+      ],
+      "near_duplicate_id": "near-eef754976fb2f43ec7198beb654ba682c432c31f546d31f417911a54e9b008c2",
+      "lineage_cluster_id": "lineage-91f875c2f621385b7f62daeceb6ed175b450edb976853bc8d42be48060b25a40",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-a25b33e34ebbd89844631f003e396381f0b78c2f8f616caa7a45d3cf999f91d3",
+      "data_role": "calibration",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "101ddf63819fb1d06822fe7a83cb9ea5a160c5cafbef178ec9f8aead96583abc",
+        "d25a1c4e94b8da5a83ee476dc4865f689b2998f780c4e90bffc8752e2ea1beb5"
+      ],
+      "trajectory_digests": [
+        "fa471a98ea6a9774954870ab131721ab432eb71c769932874ab441724dc5092e",
+        "fcd1d02842387473bb5505643ead46bc9dd19b07421afeb21208a3ddf1c01b23"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "5e671bc48d501be5d3c22d5732474a62f3baab4ce6dc5162c3d25cb7fab203c0",
+        "d238bf1da733666159356779ed911e8ba1e849bfb7d031819de60dbcc598806f"
+      ],
+      "near_duplicate_id": "near-c61147f591816ab5eaef5465135087fec8b587f99a4b1c59dc73d8e6092e2a2b",
+      "lineage_cluster_id": "lineage-3f17d11e2f707a7e8dbb9955fa6177a444585122700b75a9e457c07646a8ee2a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-a270b28a6bf3cc055828036d55eda74c59609298ecbcc765f029d11c58e9185c",
+      "data_role": "test",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "69cea53d189f828e487b616e64ebc182e16dfcee8b3667dd471b61f0b066c902",
+        "ff364647feb959983065fac8ea74f8dbb83abaf8d1a8c60173b93acf4ff91e6e"
+      ],
+      "trajectory_digests": [
+        "7c115c8308d2040d551ffa94a44714dbea71729170638be1080bfce461373fb2",
+        "b2ad1818aa5b9d9bb3285e3e85216827304e794cc8ff36d0eabd3bceca340e9f"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "1a4cc5bde83f3aa9a57d0a7a649e4f25f7526b08e432c55de4e0cd8dafc67319",
+        "55d8e329dcd85ea27696d95e9539aa7f44413e46a37b7ac7d4595a2fce365d79"
+      ],
+      "near_duplicate_id": "near-c4bfda794c27d60564ea469b3af07e061483483011cffed101c030306de59916",
+      "lineage_cluster_id": "lineage-11cec8bddeccfaea001064b0a932e739f49cea6bfb5a9be104be0960383aae7f",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-a2ce1954b292c4adfa2f66cb6719677a2622246b070cd6cd6172fc578bb34d0e",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "5d38899931afa49fb822e9747dec34ef049947fd5c2d1e8af8cfe86d2b3de612",
+        "81f2da8c9576eba5751dccdcff5234707a7df3a55f4d5f09b36a9bf6cc51a83f"
+      ],
+      "trajectory_digests": [
+        "03e091e074b859b6c0773c9f1b0df7aafb892bf14d0d3d385fa5c4af6d9ec4fb",
+        "4a1f369a9299fe5244710d0c950eb891a6c4cad6d81beead1a3bc6f2a5822422"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "2748ea578225dd9232fdabd13a4e82aa5c5820726c9e1cd68be881e6d9ef260d",
+        "98ca4bf2f4ef70ac7c651eb64cd91f812c0e0194ed4b7bb5740b87d9b7a1bc56"
+      ],
+      "near_duplicate_id": "near-95ad12c40b769f2c62fad1b1dc26c7d9ce02e8e7da26a15c2e2240e1bdacc63f",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-a4a1c9352d2b15686c7bc506a0130838b2d20b3cc0c87ca71423569afdceec00",
+      "data_role": "calibration",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "4b9f67ceca2a711e782e7d47424509d9634d65119e496e42e574ecfc4cbb89b0",
+        "ac95a06238739dcbb7f247fe26fb0689c27130a9f6833866c4e31bd63990bd44"
+      ],
+      "trajectory_digests": [
+        "79aed99c6fac29ba4fcaf6a2daed8811cb86fda8a000be9f42b058f822135520",
+        "f86c57b70de74fb8f9e9393215147c9da244df800736e4e19d9abcb8179f9c4d"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "12098ec07bcf5acb9e6fcbc21c01415a96bfa0138c36da2a4fce714b37c5c7f4",
+        "4ce0095b0bf020437bfef9f245580f6a7ea2167994744d64bb8018147ef08f70"
+      ],
+      "near_duplicate_id": "near-d7b0683e449931a4164a0dca2e461f77403c02fb32b9eb0ab42f82b9289300f9",
+      "lineage_cluster_id": "lineage-daf67c81ec849b1eaf62bc7881121e109d0b10ce54bac693dcd3229136140a2c",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-a522d2e765b6d8990656bf6d1e47b385ae7c0388b9bf0eff47ed7a9ab3851ee1",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "00a677c28d78b00b7592419f3c7b3740abbbec80aae07cf619c3af49934dd549",
+        "5cf081e10d49bdcadac8f0d57787e88267f6ee68f19a5c22d51e8b3a7e448987"
+      ],
+      "trajectory_digests": [
+        "c51b7523ae0622c8cdde5c0bad388e519abb00112c7b2041753a3d92325abc4d",
+        "e578913be0e86e2717808a93c40630df5ed0da92868780c23c29c8935c55a0c6"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "6417ea42b81e2c16f026b92dfdbbaafd2973eb07560f98402b2c72f68e450a35",
+        "c2280d9d6796762c0c4fbbbc6b94bdfa76ee062a2949bc53b65be068d2511e11"
+      ],
+      "near_duplicate_id": "near-7ccb5cb8d8c3ac016f50873c50d27f7466d5185b9bca09f668d6cdd99b10a5a5",
+      "lineage_cluster_id": "lineage-6d85c3352c239977b109f0d56f598bd65a473c0cd52945846b46fb9d5c6ab448",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-ae18f06f545d7594b964742353e0ea28bf3394eed4c83eb7719ac352acb60bef",
+      "data_role": "test",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "4f4dbd77ad6664c0a69916e2a5a512939b1d70b836760dd4273231a1b5de9fb7",
+        "ac812164066ee9d973c924fc2e296e86788f384030e39ed23161b560bd689655"
+      ],
+      "trajectory_digests": [
+        "b4145a0800782664521064236eeff869e7ce6c7d43f4ae5c64a44e379722f06b",
+        "ecb2c88525b997dc2f2af591fddd6dbce6d4ca3c38ef2d14f5418fff517fe5d3"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "9f947be4d7e61ee7b4bbe3260e457c9213f2fac64f8ecddf5df112b0979aee4d",
+        "d671543e471a64a0437c491f7f7af2e4d46feab136ba3c7cbb1ae29796928d68"
+      ],
+      "near_duplicate_id": "near-23c909719333b338b317eee81ebd487bb660d49e4d7c8f5a1174282e084dd516",
+      "lineage_cluster_id": "lineage-b5f40ca0f92cedc23234d4a12346c5c2b776d14b025180334c894fbdf3b1a896",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-b2c8fd6df605fd0f8b109fc8896736aee8ce0f6d66cecbbb39330580384dd1f9",
+      "data_role": "calibration",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "9fa035ae6fec7b49552ed0ba9d86a2446ab3e25283bbaeee4368abc09eda1ef9",
+        "a0e8e741f93b870345d86025fde78d8f74cd259326bca494d5f5c85747c0bcac"
+      ],
+      "trajectory_digests": [
+        "65f3196fae1769b9cdad790f8abf4024492d0a940e3312e21ad802a9fdcf2982",
+        "8093d4b8f10755782433ee759e46cfdeaecf3f03b7fa2c4ccd2f0222f12f0f25"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "373be4fe9657a189a9d1b0e991ebc7bfc646e58248991177daa0cf9646b39799",
+        "7ccaa8c91e8aa04477399c76f8c79b7147770c347bb53df7cda4fa6fc45cab91"
+      ],
+      "near_duplicate_id": "near-abce61d4f2e971bf9a95bf234e0e12ca55555086ed8c4bbff291d8299c611b88",
+      "lineage_cluster_id": "lineage-e753e47313512841ab4b288f069c96f3e7c8dac372ccd7ccff29da81f4b76294",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-b7eb8ad81a4830e3ec3d11fd40a752aebd067f9026d32b2bbbebe55c0a5e35c7",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "07db30b2ac1aaf43d27d1186f34bf4410252c35c773a7c470b57e918e45773d3",
+        "d5b90387e95a94e43bd5920ca0d08652d7bb7a06b49cff98cfb2b80a1ea2c896"
+      ],
+      "trajectory_digests": [
+        "48a91c466223f784e7f70492ea8f2de54337cf04bbecf2af1f814cc5519a2454",
+        "48d0309a14ac376e8732babe59819a2f7313bd4e54d64e63f244e96543acabaf"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "aeec986098029123a0c87103fd86fd5d0ba7bf044a4f49eb933f7b1b054cf625",
+        "bedb8e82b39e66180b184d28e7614b8fb85e5615d7730016276189b3675a587d"
+      ],
+      "near_duplicate_id": "near-1b37c7b88d319fa171ac0472a943b61f3aa7d8f0895f509a75766e703ca14cb5",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-b8f6cc3c6eb2600fca4a29f964ad6970153abfcc3d3ba77453793bf3f83e2f08",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "9afe07881992b88dfaa7329102751ea03ba56d5b12b17f8517212d4547a8afcd",
+        "e824d436e04fc997a3bf6d43fdbdf6a83f7bd2460f97645a81265905ee50f144"
+      ],
+      "trajectory_digests": [
+        "8d019d292c1b9ef59057e6855198ef658362ab710b7ee47bc656f06875d45ce4",
+        "ee56e3fc2840e076cb0405757c78e0908b1520d3f574c751f3be6b233e83936c"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "6308e33d217540bc083d44b6cd06a8931331139116f49986a88697136822e60e",
+        "eb9bcede473d66b917bb9db3f20526900a97784232558195a8ce0c7579ef8c03"
+      ],
+      "near_duplicate_id": "near-9a7a01aaaf8f27322df1ce51a30df4cd75496a911d0409521c0a6349d002d416",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-ba4fa03d2f20fa1b6907eebd8c1641f5be024193ffc85aa7c4d56c2b8d178f6d",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "6f6d9b683ffcebde10bf5fe3c43a5be925cd9dc8bb3e51679477bdb9221c8daa",
+        "7fe85f5e27fb94f446d1718aa9acd45da45bfe91e5fbef218f73db7dc81b936c"
+      ],
+      "trajectory_digests": [
+        "a62b3b7593cc47d071c736e61a78e46dd55daa132ea43375c37bdf2b28ed8d0a",
+        "db61af2b578b8322c30974032355f8aecbd5d5b1797ae3357ba1b57549916253"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "624fe1b3c4fc0e5680d97041f9f947ee7364f46fcef6db604567404a495f3ec1",
+        "98d067c6a52b1f3e4ff265b1a7ae5e05ac9288e4c2cf2df99b77cb7ba4244e58"
+      ],
+      "near_duplicate_id": "near-e1deb22bd3ee4049c8764a2d5e91f16d5828528e83d7492297b51bfff545d11e",
+      "lineage_cluster_id": "lineage-2861f3dc4d986b4d1dda64547286f53decf04ee76c987c6958cb4d3e6eaba2f9",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-bac2cb7dd62c48f6d4e51d46b2b49ba61c1934bdfc722396df04b48be7d8c4ed",
+      "data_role": "calibration",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "2d51c707bfef5d29b6a447904a79dc50b9fb1f010517d83f5f9a4cf5c64cc059",
+        "d1d1e43cec3ae1de024b78fd2eb6fb3b65ae32ca203202b43e545047712e3610"
+      ],
+      "trajectory_digests": [
+        "041203e76d0f337166226111647bd2bbe02275f02c0849e4c4d862344262e3d9",
+        "76010f19d681e370818d7a7285e6e14298286d4cbf7bd1461e8dd7ba5a8d25ec"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "0f9c39bdff33f9c55a167df0d2a8dd2a7d8a886fd8fee6138c8f5eabe168326f",
+        "6ad13d66c29fd4f2a7342332a9c9226b1a52d4d28196ce8c0e42d863aab2bb17"
+      ],
+      "near_duplicate_id": "near-28f7d76aecc9ac66491fbd9d15c3485bea6ec30e3ccf488fcbb10d8760f5df6f",
+      "lineage_cluster_id": "lineage-d4bb056f1a9bc41ab2e45c1deccd509be09e39b620d11046df6543af4ea0b0c9",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-bc7d3feaaa3127f76adf8b67bdece515ccb3405157d198636cca0c17866eede3",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "81e37befaa59489a4ed7ea6ff3f2894181040d570fc2ace70a07c429cbed6490",
+        "f2e65ef3bea5358eced26d8f60fae4023eb9c68d42620ca51c43f7bfb50eb7db"
+      ],
+      "trajectory_digests": [
+        "02d4e02d5d31065ddad708f2d1c36fd5acb09c9d247c39dc92c5c33157b72531",
+        "ee4db481759565b5ae2be553e6c7c39da3032a300c8c8c6cfdf42d12f04a8ed0"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "414e55fc2559deee02b108028bb02da01a26f1fad0cffcbcb319038b236b469d",
+        "8e37a35eeffcb3ec8d2245659fd52a208b16c5d2f97691c937ee9e4e86874a80"
+      ],
+      "near_duplicate_id": "near-c30dd57f7f5b09419e39489e451bec54ffcc3ee5e52e2f037bc8e28b8bb8bab4",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-c52a72ba24daad5ad9d52dad1fe935ca9ce14e94a303c59ce5590493f14737fe",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "4a5a6ee9c918d31e0edf2b290cbb61974da300e46edf14617d0ecbd3a1d849fb",
+        "a4aa32c13f5557435776be8668425111e6268ee1ae4158828bf3e037529cbf11"
+      ],
+      "trajectory_digests": [
+        "01a450139b0446f2e7f12310fda1cc841d3d43672553ef206be23556683cda97",
+        "c6f0d1424712d04117381c583aef49a64ea5f82cc14e490493e8fc56bf1bf937"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "147b130b18f930c057669a54c58b2f7b074ca1ea3e34ceefdf0456ef39d050de",
+        "6425b8ac38162ca6c58c915e4fc493967491500250c0d5293e05bc6d661925c3"
+      ],
+      "near_duplicate_id": "near-2aa997d42140c8b01c204565cca7c3f278b2264d771cc80228a292a4527ccb64",
+      "lineage_cluster_id": "lineage-5833e068de83ef8585946fc6a8c7ee577d3baed1b8b55389d8e9202014100c58",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-c53a1c3d2dcb3788e3675ee20ea53c986057911e2fd23b55f5c34ad1ccf98ec4",
+      "data_role": "calibration",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "24961ffc06c68efa2b567c115b952e030fa4388fb80d001a8f9cbc91e147da94",
+        "2d16a3eefebbd6a0119c83a4993251e38ba502632f1b41027606f9ebc8c4a46c"
+      ],
+      "trajectory_digests": [
+        "0a82265b8fb0550ae5d7d2c82c2a4dc6bcafd3d931ba5a47e97ef08ee8503658",
+        "fbdf8899c6b009f4a8a2f40a08d6949641166872233dd9a30520fa4898a18da3"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "618b8cf11cd4811fed9878e06ddb280f9117275a46721a1105fe68acf4dfb7d0",
+        "dedf492ff8960e241fbb9dcb6fab5659f38c93268c9fca7ccf9514468e0e817a"
+      ],
+      "near_duplicate_id": "near-851e5d6c2bed2810d148b6f7218d9104ed00c2e017ba6e7f9d15f525e8d091fd",
+      "lineage_cluster_id": "lineage-78449eae817b32c4be0bd6622892224b2edc7c6bf3a105391302cbc106fc7744",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-c55669e61e66c8e63ebc90494f1c54c84807e152bc70361a4e295097ee4f1af4",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "6110ee769dc23b62f37e7b173f36e6e25f1e9b052ee3afdb836a3c2dbe6c6c2a",
+        "e1d6c2a0049564ede9a574da0bfc4e84e93d63e09df6055444f5feac63bea56b"
+      ],
+      "trajectory_digests": [
+        "143c85fba767c214db2b67925aa95e7874cf52b5bb8afcecf0ed47dc4de6def0",
+        "7fd3507cab47c196787a1c30e59af022f371c17fac742443d91ad4593b0a4d30"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "82e4a7d6112b1a8d896d24382ba1c012c5b69a5fe6ba17ccae90bd52514c748c",
+        "ffd00bb73f40757728a9a968927ca4dee9818b3d057b19fbaac9b0da1627d485"
+      ],
+      "near_duplicate_id": "near-fa9aff0d5c17fed3d4e7c0f8aaafb78c6830940afd2417cfcb8939f5a08d500a",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-cb81feb06ff0713391c54a75a53ac9b44c67a00b6a05fbf027d23dabaeba2c55",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "a51f70b53846636d2363ce562d7329819d7bb33706da96e1e295fa52fb9b7b47",
+        "eb4ee0b31555827e423c5d19c946a8c0cb2a5149edd4c73e0588001a73e36655"
+      ],
+      "trajectory_digests": [
+        "046afcb867dd67b99985302f78d12f771865b12b46531b1c70a217fe2646f182",
+        "3b1c3f6509707c660a4c6803486ec3447290d01939febdc9bfc007b66dfedf55"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "919e7aa874b3ec229915488372ff6b1645a2dd162007290bc693450ed0620b89",
+        "f7964bd357e99e048b2cf8baf5af4a93a90429dcd01167898f46cf0c9f609fa6"
+      ],
+      "near_duplicate_id": "near-02f0c6daab2a987c45a2005b0bb2614c6e5bb767237b211b7a719f86b2219ce4",
+      "lineage_cluster_id": "lineage-97b82bf367051e368e2adde7085d038e75669cd9f2aebaa187efb122deb42f7f",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-cb9bc78059bdcbfec9cc7c567d418db43b3e035ead1f161262fa9f570edfada2",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "44d4c9f24cb84420aab1fc872f6a3edcb809e4dbb0d8d61a06f2347eb092bad2",
+        "93eae9259ec2264e82a1014be24f6d21917e0c111c4f23706588eb668dc72530"
+      ],
+      "trajectory_digests": [
+        "27e051f2d7b2ba471751d6aff23cab410111df36d1c8cbbeb366a5a14d430c3d",
+        "4c6e5b7c0ae2652b7e5e7073e36797d503ae037d3189376cd56249d9021e2c79"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "062fdc2052d6b41af2247153e25b1b94ff6fbeda4e5b164fe791a8ab61fb3dbf",
+        "b09bdfc3455f2484fafdebc782295bede7efef3d26dbe7b647090afb981006cb"
+      ],
+      "near_duplicate_id": "near-fd7d22c1be533625249e8b98b3060f4283af4adf6bc038190ebec29038524c0d",
+      "lineage_cluster_id": "lineage-ee2bf18f5b3efd412255e72d340f0b19acda09cf6114d60d617d3b36ca4a8ba6",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-cf31c4073c7dcf979f8697eab0f8bf585d6e04a15b903a5a2988fb4ddd544a5b",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "79a5fc7c49bc14419385d07944a73b55587cb061338f36a3bd749790671d9ab4",
+        "a62870d14656714eaaf13f3b3c41b755830c97e5c2929e5a6078b2a5c9d35067"
+      ],
+      "trajectory_digests": [
+        "3eb2b7603bc4bb7071c2d3ecabc6f4e7d28e519f7e7df215e2096322ac1878df",
+        "43faa28201be508c1aeae191dae8e596c382e73100c1c1a7a8196bb32aa3fc13"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "08266f0ac2f59469e8ede47b040da0fa54715154fa8cbbe22b3082fc4d237594",
+        "ee75eac30358fba118b6d88f8f10c0345bca17994c21a05b9fe76760c66caf1a"
+      ],
+      "near_duplicate_id": "near-2b435b08b4dc944606b7b3f541c2407a067eceb491c6db83d89032c46aaa3b9d",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-cf32cee77317d4542ac1b41e7e0a1fbcbd2e0033909f7a2d79370f017d13ddd6",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "bd2969df7d714c5144ad02c928f84202d4d55b99b2f8354d876c08850e71a04b",
+        "f06bc3aa295fca3094983800e27b7775b05d8e06721fc0060928b830c8cb0df8"
+      ],
+      "trajectory_digests": [
+        "a0219bfca8539f10a424a404fd1162b79795d6ef203251f7ef980c743b13b2ed",
+        "f4165f9ee8e95b918ba6ab8143875adfb962a0c8874ce9cd3eb1986c5d0b04fc"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "5392aea5246d551ef89c43c7a3ce5a4864f1ee22d5a24ea2c924c40b6cba7443",
+        "762cf12662baf364704fd03803dd8ae2b8f5cf8c3b7bd00220801209d60f4e2f"
+      ],
+      "near_duplicate_id": "near-83dfadbe26fdb514edd1f7a004d7b17e3d5c9509d44a76f97c003f62aa8aeaf6",
+      "lineage_cluster_id": "lineage-0ac6b1d6f27a4e7a445fc25905e50dd889de2cf0b750ec8fca025536670813ea",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-d0f35ecdb390af9008ef540668d44c08674ee4b0e5373c031785d0b2775e8b12",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "981255b4e74e5a9f2d40ac8ef81c4281ba2cb33b3b96defd9930a1f31fed910b",
+        "dfb77ff65c6b0baac7266a45640a40120d1bf6d23a016351dfb58b3d23c80dc1"
+      ],
+      "trajectory_digests": [
+        "387cd2d1111e15bcfcb76b3bf6853a78bd59c426caa41c4ff3e9c84988a20952",
+        "9eaba06b773e627531e54ed30b534a731bc8a5c4df1e6274ab7a5965f79c7d4a"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "1821589e054a1d47dc79d94bfcb52c0a31f4346fd86fdd998830d937bb9b6c30",
+        "87cd21557cc3c7b0899b03cf4a104a35a84679a8aa758605bb3c50ecfa1093e3"
+      ],
+      "near_duplicate_id": "near-d9b0a5f19e51356cc59d89befc500d461fac2e681eda2105d0ff05bcb757fcf0",
+      "lineage_cluster_id": "lineage-62ba6a262b70eb28ef1592b2817f3746e3f65c51b8271bf11aa4c1358ef01370",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-d19a5c6bef46f92137827eba292d8f5368d1603aa297c3cce0f586091c5420f1",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "4f8db635fa5242a92b8f97e95fb26b1a3a1186d75c0aa9e0442e20c97a39f6d0",
+        "a8e87251575519a7df8d91bcd086baf90961fb364452be6e01ac2963c1808108"
+      ],
+      "trajectory_digests": [
+        "0f11d96e23a90a764203428631fe859dccf2edc7ef8af268fddca904566f2264",
+        "a3c1a8b9b3dd47ec8aadb60347e460942c40e8f2463a1f73623af2f4c5ed1b37"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "1d26e1fb40f1190f6d97301def3a5ce0fb126467721294b46bfddb757ddc6d3b",
+        "c98ca31086db326209a04e09f61695e9cfddbb19164317419cfed2518b22d88d"
+      ],
+      "near_duplicate_id": "near-f8c6c027cd40edb02605e62571de4355a6884e2f69a99006bbc135e4e153ab48",
+      "lineage_cluster_id": "lineage-fd103414d80fa153af6bf89e7a20cc16bfd5abe0cfb47183787ccce7f7ec9688",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-d2e062230d742eb48f3ddaf0b98de89a8f85850516641020eddd03efe298cea1",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "47d6f31096494af011b29716b693d3233a7f50475e0cb5b072b917b792d9b9ce",
+        "49c8c1a377b8b294996ed4666af135d410e0c37858b4b4cc559970168726685c"
+      ],
+      "trajectory_digests": [
+        "448624cf19363937a572dfe489a85716510033c158661a58fabd9ed2fc0892d0",
+        "82c2fe7f5c4b17e4e448f1af242fa1602be6b394c3278d139258f9cc08ac9697"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "1c3d68b558f5cfbeb103f73b541117f79ab1d428f508d2e81a6192fb9203b043",
+        "79e4735311207172e62366ff99c54ca6a100889d1fd2689ec1dd51cfa80614a8"
+      ],
+      "near_duplicate_id": "near-da0e2faa9dec4c1634e96283c9619e5ea38ea02e04711ef5e00bcee6f6608fce",
+      "lineage_cluster_id": "lineage-96d650e230d2a0b4a3a14540cfb4f7ec9d77c7bbdf5a92a4c829e263a22cdafc",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-d38a2d04e2f61c6db014eb951bb5024acbc09f223077e914a9f7c4ba797c8306",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "1d8cb276f753c786e3057f2cf359b868380172a3e3cebfed0fa18e0fe999e986",
+        "f000348c20ea26a991edbd24dd5abce6e9ff97345861ac8f082bc54ee321f6c3"
+      ],
+      "trajectory_digests": [
+        "d0f41a123cf4a7fdccd73a5867322b6e7a45d0ff777641def78112666e94549f",
+        "d5b70065d80991cd8486c45a92445d0eba18afbc82e8d655aa17c94d6cba6586"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "8e6b0dd04c77ba66a686778b42cac107cdeb314f517f1c1039ac4db405fac5b1",
+        "d6adc81970ec88e9e458f5c41411b2a0a065c103087f88e5eba53370f60879a9"
+      ],
+      "near_duplicate_id": "near-2379e6fca3c72141feae7c42252d641a3fa8f2b3a51f5d93b61b6171034f45c7",
+      "lineage_cluster_id": "lineage-7680fe60986379992eb7a36f72716ab54666034780eed29501104cd4edc37994",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-d5953897ad7e3f3e525f21b3ddced1fb824bc8c9260288cf377594dd9a52575f",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "1c0fd7e6b4f1475967ee2f5ebe611d719470b57ae84a2ca6986de637a1e122a4",
+        "e75a279632dd066e3b2f0d0f2b5a8657e82db2b667c2af4a3b358d634c0c441b"
+      ],
+      "trajectory_digests": [
+        "9323ef08a040ffc068266fef8c72670696a03ee4d53b2e8dec68a6ac18fe218d",
+        "bf4d1b568206281bd6aae64ef63a76834793bee53a368e7d2a0b3e0dfa0c9220"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "588c47705fd46de13ad2a571c1d15d97c233f0f35829ba9a0ebedba792a003f8",
+        "ec43291343bcb20ec72b02733000c35cc84d6c2d55ffb95229db3f00ca0e5446"
+      ],
+      "near_duplicate_id": "near-8ef2de5aff2a7f5ff599d6b6b268189022d53b04eae1fd60bdd4783d236d40c0",
+      "lineage_cluster_id": "lineage-0e72398b6369eb4e217ed3a3a709082421231184dc7f679f09054104499e5f43",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-d717facf5599764e84206e1a5fa948cf0a8ac5c11a3b668b99e8db80815cb9ae",
+      "data_role": "test",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "71463815a79a2e59e4ba0a4e18c5eed59e0d89da85d29671db0f9a534b4015ac",
+        "ace184d059350c094ef9ec5c402a8c0a48b4d33b9176b2553bd950ed2f847267"
+      ],
+      "trajectory_digests": [
+        "0e9de9ad7c49e7e75fcace8a0e2493722e22d1d307fb32f5ee542591cdf16967",
+        "490c6168b455290254aabce86a9cf82bd3354fedca1573e5c4cbfce300a9af1e"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "1c1cf4592288ccee367304435d08dbd334a3037e309de7d080225d9ca4c5f326",
+        "9ba750985f025cad48a8f12e7ed222b6ff14fe093958415d95ffa64438915e7b"
+      ],
+      "near_duplicate_id": "near-db18ad74efae6d1f9ac6030ef36fe8890e6cecb9156de2925b415851456c83af",
+      "lineage_cluster_id": "lineage-920b0f35f59e2bb255fbbce34355894650b8151b8eecdd6751d0e7cb1b675520",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-d9c0aa8b1f63a821b547b7b05a74c0e36da1fa656a1a94470935fd73cc1abf76",
+      "data_role": "test",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "0c6b3dfb9acc096d590583fcc65af87843383177394c99408936ea777e7d1143",
+        "6c5d69c132fa73837c73aacecaef702fd45ac7e71019ab87db0d295d20ae4cbf"
+      ],
+      "trajectory_digests": [
+        "856523a7c40378d628a9925e4939f799f0757273c31ebfe638c061aa881fa189",
+        "b696180c75e2a1731f54e4f3c8524dee2d837087d39ffa97c54c6c1352ab418e"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "2e7b2af80fdbec6e241929a3a1945b797253155ed36a0a861f1bbb69243b6c20",
+        "3ef1029af6ab8e394093d88e9944e3ed19a03c7d5159244784309b27925be285"
+      ],
+      "near_duplicate_id": "near-93e0d8aaf02708ecbf95145e15b41e373935ce0fa81f5f258833e57ddee1d8de",
+      "lineage_cluster_id": "lineage-4c6fcf37a09d883039fd6d0e7ff803b9844911d7ef30432249cb75d32cad5d8e",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-d9c6fc66e28a9c24d39cfcbe7f3ad65ca6e46e2664eca62d63f8bb53c7e87395",
+      "data_role": "calibration",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "1137bf876f01737f0ace35dadd2c9e0125e903528085c8c77e46da033e6683fa",
+        "36517b3432291bb84881d9a7628b7363212ac9274333acbbca76eb652e3ec524"
+      ],
+      "trajectory_digests": [
+        "5846de4bc98be37f444b4ecc2f73c715cbcce340b38cb0bdeb8711ed441ece78",
+        "7a0ce3a456faa474f657eb44065b2860db4f0b195b774c3d7e489fe30fe5d5b0"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "027de4bfd8b392e2e28bc6aeb9aed364b392868b60cef310ba897c3c1d0a1d01",
+        "077e23767afb2afbfe49e2d1b6a0a6aec3665cfd56d0eb8b0069ceda52947669"
+      ],
+      "near_duplicate_id": "near-bd20d453aaf8586d95932c07fad8d21b348fa6a911ff72c6780d9861c76c7e5e",
+      "lineage_cluster_id": "lineage-867f4ddfde88c2c61ed35102d45917b113aea427d5129ead798630501b634116",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-db9898c82860f53f851281ae9488f81a3b85c492d102992349cc60b02ad84eec",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "702a0e5f80039fd6e1274c3ae6caa1866ee7529bb63fab95ce881dfdc11ae655",
+        "b3459b990704a3c647f9856b39965ee6e7c3edbd1a42baf0f646db43ee61abbe"
+      ],
+      "trajectory_digests": [
+        "2dffe1d447c0ed7eddb3306df3764f850b52c837568fe9c2046e177a9ef7f07f",
+        "3e4f40c138937f46022ad859cc4f6ac2c831ef47f286dabfe0f804609df13464"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "23ab7a880852d537d5ca3d23ee754e65be5e24111f60f67f78b0816d719594f6",
+        "c1922de542de6431e15b1b2eda103db46d6661c4fc28574a9dbf7b93de2dcf33"
+      ],
+      "near_duplicate_id": "near-81888f47658d28f33ce897d2f01c7a2531116d545846c143c382c81e6cef3c36",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-dcf01052735fa08018fec4431c916b3367f7cb400d6a9413e8425f06d6338e02",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "0f289598eb2270498a833934d10d73351a6dce4f2e3062b55af154d67f3c30f7",
+        "b2308af55e6b44e0ef7466554b56a982b469fbe2f5c2af83ea915eea90d4345b"
+      ],
+      "trajectory_digests": [
+        "86a332fcd5f15f88adc30939a4bdaba6fdb50d07ad7bba31e4fb151334775a9b",
+        "bb06f99c8a5a36190d22b642a29b62157a5e6d832469d1314b0f842856899725"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "1b5d8e895eee3db23b8fe6c5e3d2ffa6afeae49785449d6a8eb005b3a22f67ac",
+        "e716697f79e9fa7cb59d1f73fe297f0e04a9b0fc3d24e80effc3330ac0451f20"
+      ],
+      "near_duplicate_id": "near-8e00cc4ef03082b4e6b27937026c697719551d0b5a5508c1212b4a0924a68fde",
+      "lineage_cluster_id": "lineage-15fc5afe8a911616521f570a65e21e13e9636506effe2b77b0d69fc61d766974",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-dd47ff83fedabf3a22f92ef10978feb96aa8e2dfa6cc8947b17558736edc2f3f",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "91d891e89918df21b851d34891807f8153ab1084ed945e1f37072c1caa82d22c",
+        "d6853282b71b4c8085a4f7ddf2e2ff4d544343159b01d142807511ce304d1784"
+      ],
+      "trajectory_digests": [
+        "28156bdce5b58dffc90acf5933134a8b7b8c0834240524db646bd7b9da816254",
+        "406cf21bd2d8c7bb2fcb5595b72660eee5c0a1925677181db410348c08bfe1e9"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "5f9c8be4b4b49aa4f17472e3b5dd3d0a055b2ac9244eea1617484e1f9b2d03bf",
+        "a996980bcb7a2dd9a2c63550647a1e9d4f317adee3539bd3fd37b2a52e28e3e6"
+      ],
+      "near_duplicate_id": "near-19266c1f99d30a1e63b396e2ad99af683bf45fe045de95515492f2189648735a",
+      "lineage_cluster_id": "lineage-b62f74b2188099b46ae14d6d9b664372182968d53fe42e88ca03460fca39008e",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-deb97cd293987c0d2b227a113cfbe63f1a2d9072c527619e275cf83dae073d56",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "1efbd0cab40cb5786a87130edd5cf1468baa94be9c7f7854296c326a591c6b86",
+        "80967777a3d6ec7f75ac8ef3a88559db4731ab43b68707becf15f9336524e581"
+      ],
+      "trajectory_digests": [
+        "2bb28d61a0b9410fa07c26a8b9a625b4cfce0116ea96b853f6f35c887a3c0c6a",
+        "ca47bd09a8422180b14fa382c6a4ec145cdbd6591290e43867053a4d9b6bea12"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "5234f0827066065e02ec90556ceb69eaec60e5ca126b53b5da433b021311d07d",
+        "bdc991a054443566c14ae6a940b028f4c9bd40d226b1b76d3e51bc99796ce2c5"
+      ],
+      "near_duplicate_id": "near-3540b3e65252d7dab236cc0a481360b2e46f780b0954c33a9a0b3b850b4d451f",
+      "lineage_cluster_id": "lineage-c7a495950f7e502225ab14af32a2462fd75a9ea0545167e55a1e501d5444f283",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-e2b9ee489f0bc5265c55902e3690d771c1c0e79da082d98403e314027915a397",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "137a769f05353bc00ec9710b3e71c204ada7ffe67089ebbcaa13d509a248f0d7",
+        "49fa9b1a6f246c865f536676ffa13ac1f6594fce745b7858b01efe34aa5d5ab2"
+      ],
+      "trajectory_digests": [
+        "d471875e6c4c1617a334b8964306c27009e2bc8b04a34a1b0d2982e2a78886d6",
+        "e6c82d12736e86c6da4310ec91996fc49bd7ff65c65b17ba3d7ed1c1e9e94070"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "9c366ac8c250fc2966fcea4829d66454d009185386f046b5d9d4961ff7d0608e",
+        "d18daa73a4821ed9392253e05881b43e66e22b417e9fcf5774e1ee07e257cedf"
+      ],
+      "near_duplicate_id": "near-d34eca2a58b3d075564aa2017445651a7abc180df814b1d85278444659db3b0e",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-e724a39230a2a0376dbd35820b2ddc7388e97feb670db820b096d455a4c6284a",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "b1c362a43a635c8145abfca5eb58d8f9527eca606e2c7a9b30ccc7a9c765bd46",
+        "c185fd088f5735d2d6a422f2515ba178155f6a7a359f0bc04adc55ecf0ebae78"
+      ],
+      "trajectory_digests": [
+        "4f17ff0e73839968a27f4a3d56d848205101f1d6210ec71d067652f31ee2148f",
+        "d6c9e00bf91c345795e64dca6fb7ace9946f5ac2e937bdfd992a5c546ded4c2d"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "1f82e39f2dc4fa21c974d8679aaf0666e7f6916199413314b3befebb3e5fc90e",
+        "7fc313c0de0d6bc221d47939f89a82e5e678fc99cb6d042f8b560507d74808b5"
+      ],
+      "near_duplicate_id": "near-2705a620e30ea5a5c43119fbfeff2ea56949d682fe982718647a12fc44b54226",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-ef8720cc9b703d5841d0bee1697005c52e6623449d5e746c1195392599b71139",
+      "data_role": "development",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "af871d7a2fd7c3cc33e2874e34b9fef8b3c892db503a62d292cde693839e6e02",
+        "d329dfd49d19ba23dcffb260db736189421635c25316d9a5ecb7377677d055a5"
+      ],
+      "trajectory_digests": [
+        "14fefa96693a797d09e7e34844216b5ec8d46d9f05ce397aa8a02c6d6d1cfacf",
+        "ef88c2219784fc6aa915dac037f8bac1c76860eff30de5e49dc064661299cc21"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "14e1cfb1b8fc21d394b9af9bfe62bc61781a2f5f4e361014dfdb05da96f574cf",
+        "f1584af322c6cc586b66ac189755f534593e2fe8dfb2c14c793050410fa2dded"
+      ],
+      "near_duplicate_id": "near-afb778af42fa6b8cb84e58589f8ba67bc4a025c3ffc9d7c02e73e12cdde89702",
+      "lineage_cluster_id": "lineage-1d58f4855f62bed47ba837e792a558303f34adb0e0be2f5cc60df354f5982c71",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-f5b1f1f80fd668d610fbbc26e2c742e87aef813ec52295baf1e11b74800b511f",
+      "data_role": "calibration",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "0283261745b68d9e6411ac408759532dea610941f748c67cd234beff6d15919c",
+        "ec822e97651f3b68d5e2eaf8eccf1d7ee8638534c65989f01f1a4738a5af9b9a"
+      ],
+      "trajectory_digests": [
+        "3919a913af12875dd797150381a14d9946fa79db91e2ba59007811dc896e405a",
+        "f6fe692479c864ef0203a4c985cefc61935837158c449a05fcf2854dda582fb6"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "0277e3482ad7d006385261f4d94fe43286650fb63bf8407289d3a9c595da8f1b",
+        "cc90c240f427e1261447902df7b4991722e442412f85d2707e2bc6f58407b123"
+      ],
+      "near_duplicate_id": "near-6dc69268fb86215239e26b77ca1190a4d349078ffb13c986f1b149051964139f",
+      "lineage_cluster_id": "lineage-5ad53df8fbfa71aa768806f3727801f46caaa7e25e80c84364b11abe71c41639",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-f5cacc39e7ffd8d7d88d0766bc7b6cb6a9f6ab0fa82629ee522365d01f3b89f4",
+      "data_role": "development",
+      "source_families": [
+        "swe-bench/claude-opus-4-6",
+        "swe-bench/gemini-3-flash"
+      ],
+      "license_spdx": "MIT",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "218e6da2766671df068cf9d8c00f5797621fd1f0e40cdc94fa1c73ba4c2b50dc",
+        "d872a03b34b5af3b5acdbb2d932b08598d808c36e87fc4e85e7fd6f555074cfc"
+      ],
+      "trajectory_digests": [
+        "1e797d5d7a84893c11183065434c3da0c3fd1c298a0e77119bf20084bc696ae2",
+        "7bf5aacfe8e6fc6ab8a30064b4c40ccafc33b88389277545a80a0ec5de45156b"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "90040d0d8b3f2e67078a714ab2cdae2d9389dd64e92a70fa8a4a36490a3b7bb9",
+        "e2b1eda1f250638827619e217fdf4ef149dce59bb434ec940195e1eabf235d27"
+      ],
+      "near_duplicate_id": "near-d980a56ab348756a76e1b384e6c48770fd57a5232afbf1698918012628be934a",
+      "lineage_cluster_id": "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a",
+      "exclusions": []
+    },
+    {
+      "task_group_id": "group-f757f0c37d70e7914d476e9f12f8e08545988099e3edfe58d15c8ae04128a527",
+      "data_role": "test",
+      "source_families": [
+        "terminal-bench-2/forge-gpt54"
+      ],
+      "license_spdx": "Apache-2.0",
+      "redistribution_class": "reference_only",
+      "source_digests": [
+        "29b5c18552bb26fabbb6e1ae309569d910c0b9d8ceef1147f80a90d03d6078b7",
+        "cd871a43aa65ad6c6ca49f7e8acdddafaa531b7a5288471352c85523d82d3440"
+      ],
+      "trajectory_digests": [
+        "4701a5f7eb1941b933cc5c81c513ee6638f394a3642ae4b1ca60fd3b04ae1c61",
+        "fc33aaf736fc9d52487750bd51caf8ca6b122a500859abc223b3c7e198a5a2b7"
+      ],
+      "outcome_available": true,
+      "outcome_witness_digests": [
+        "1d3afe21c6f233a9db7c3e9e5b3ff3079a9cf028050d2af6243a412897394f9e",
+        "2bbf42dc2dd6064b6134dee1928c12c40c3f1f80b4de0360d8968b2805badc90"
+      ],
+      "near_duplicate_id": "near-f2f2b35b7be62c011c89111a66e15d16d4b7c5136d94ea4b5b916185448e026a",
+      "lineage_cluster_id": "lineage-7d54176afce39d0a92ec8efb8bbd0f35f4da0e6a6d768dcbcd1e2a8c5a3b8d3a",
+      "exclusions": []
+    }
+  ],
+  "digest": "eaaeb343bd30db7fb32a77ed2f06ca8a50db1594d779cc6556306efaa5593440"
+}

@@ -1,0 +1,103 @@
+{
+  "version": "evalwitness.verification-lineage-offline-proof.v1",
+  "proof_id": "task_069-offline-proof-v1",
+  "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+  "parser_lock_digest": "b3d5a1cfde6881bca5ff4fcb38adecd3b83a03fb9f0763cf4e97649cfced9631",
+  "capability_matrix_digest": "ea97498518ca540a79fabc9358a34f982e0689d5824bd5cf45cc3e7723a0531c",
+  "source_readiness_digest": "f19faeafad0083cb21ef9504b9650889354e2538f0084744e48bbe5cadad5480",
+  "holdout_readiness_digest": "8eb9bd64c07a059c2bc7a1f2a65fb92d6b5dc7a298cdc1a0ba1b2b5f83702891",
+  "corpus_feasibility_digest": "0d6d2b72f866bd55f1199de49c5b2bddecea779fbfafa4220802001d0342dd14",
+  "positive": {
+    "case_id": "stdout_success",
+    "source_digest": "1045664f1f03d211a26eb6488f5f132859a41f3023402e79e80081730154d65a",
+    "witness_digest": "d41a8c35255b7176a3721f3481e45e6c5da9be198cbca1f6bf31bbf9cad848c9",
+    "pairing_digest": "01d3f2f65691fed822f399f101936f6e46f6f13e6d981752cb4aa567203b1eb6",
+    "candidate_digest": "4be901a26a698894613830f0f009f535a825be4b1bde897d547ad685cf30239d",
+    "assessment_digest": "d74a7bcd38296518993203cfcc4ec6cc36b659e65270d48284926aa858018aff",
+    "audit_digest": "f2a1b543986c7fad5cb665855c958869137ec9e6eae342adef1e09fa236be745",
+    "bom_digest": "c1d15d54d2108d19a3261fe292a72fecd1993409094139d4332c8589c016e4c0",
+    "terminal_state": "direct_verification_invocation",
+    "layer_survival": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "required_fields": [
+      "call_id",
+      "exit_status",
+      "stderr",
+      "stdout"
+    ],
+    "decisive_channels": [
+      "exit_status",
+      "stderr",
+      "stdout"
+    ]
+  },
+  "counterexample": {
+    "case_id": "same_path_comparison_false_target",
+    "vector_id": "codex_rollout_jsonl/same_path_comparison_false_target",
+    "native_input_digest": "4d9e4a7e185380fe154eb38314b0766ebe34ac850a30637af52f8de6c7b1d1cf",
+    "failability": {
+      "resolution": "non_failable",
+      "reason_code": "self_comparison",
+      "executable": "cmp",
+      "argv": [
+        "cmp",
+        "-s",
+        "repository/file",
+        "repository/file"
+      ],
+      "proof_record_ids": [
+        "proof-command",
+        "proof-operands"
+      ],
+      "finding": {
+        "property": "legacy file is unchanged",
+        "operands_digest": "fea940354fe89c2cdc2cb5989f4231dbc95c5d4c3dd52918e730ba396ee0b9b0",
+        "observable": "comparison exit status",
+        "failure_condition": "nonzero exit when compared files differ",
+        "failable": false,
+        "reason": "self_comparison"
+      }
+    },
+    "classification": {
+      "unit_id": "offline-unit-same-path",
+      "task_group_id": "offline-same-path",
+      "format": "codex_rollout_jsonl",
+      "source_session_id": "offline-counterexample-session",
+      "candidate_evidence_events": 1,
+      "direct_invocation_observed": true,
+      "terminal_state": "non_failable_verification",
+      "state_disposition": "terminal_ineligible",
+      "precedence_applied": 7,
+      "proof_record_ids": [
+        "proof-proven-non_failable_verification"
+      ],
+      "layer_survival": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ]
+    }
+  },
+  "claim_boundary": {
+    "evidence_role": "adapter_development",
+    "empirical_audit_run": false,
+    "research_release": false,
+    "provider_calls": 0,
+    "agent_launches": 0,
+    "supported_claim": "one sealed positive traverses the five-layer lineage and one sealed same-path comparison is rejected as non-failable entirely offline",
+    "unsupported_claims": [
+      "empirical lineage survival",
+      "format transfer",
+      "population prevalence",
+      "provider quality"
+    ]
+  },
+  "digest": "37d13927ac10606e9ea90f470d46e046cea9a6059c7e4d2c38e5a5d50f768d13"
+}

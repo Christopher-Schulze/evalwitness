@@ -1,0 +1,29 @@
+{
+  "schema_version": "evalwitness.identical-response-study-protocol.v1",
+  "counterfactual": "distribution_aware_vs_chosen_token",
+  "primary_endpoint": "paired source-task-group disagreement: for each task group, whether the distribution-aware decision differs from the chosen-token decision derived from the same immutable completion",
+  "task_group_unit": "source_task_group",
+  "task_group_aggregation": "one terminal decision per extraction arm per task group; a task group is discordant when the two arms disagree, concordant otherwise; unresolved outcomes are retained separately, never pooled with agreement",
+  "independent_outcome_sensitivity": "any correctness statement is analyzed separately against independent benchmark outcome evidence and reports coverage and abstention separately; descriptive rows are never promoted to confirmatory findings",
+  "missingness_policy": "invalid, missing, abstention, and route-failure task groups remain in the denominator and are never imputed, dropped, or replaced by majority vote",
+  "multiplicity_family": [
+    "paired_task_group_disagreement"
+  ],
+  "stopping_rule": "fixed sample; stop only after every eligible task group reaches a terminal state; no sequential efficacy stopping",
+  "minimum_task_groups": 40,
+  "eligible_task_groups": 100,
+  "uncertainty_procedure": "exact conditional McNemar paired inference at the source-task-group level with the prespecified adjusted alpha and one-sided exact paired confidence bound",
+  "design_spec_digest": "1147f1f30aa0db498d8e5b92f3739860fa7c5ce7eeb4f65dbe4fda58e2376bef",
+  "design_report_digest": "d3a600b1494efea2caec7828d63dd4d37a8a5022d9e1511149d25f6d54da9b3d",
+  "inventory_digest": "eaaeb343bd30db7fb32a77ed2f06ca8a50db1594d779cc6556306efaa5593440",
+  "redistribution_right_digest": "9136cdc7d9e7a3621ae54aba17304aa16ac3314791f5c3b9eb0980adb40ceb67",
+  "supported_claim": "for the frozen development population, how often and by how much the distribution-aware decision differs from the chosen-token decision derived from the same immutable completion",
+  "unsupported_claims": [
+    "correctness or accuracy",
+    "calibration",
+    "model quality",
+    "provider transfer",
+    "population inference beyond the frozen development inventory"
+  ],
+  "digest": "31ccfca889d729367e4b2b51621c90b03e68154efe9f30ffef307d407964e6ba"
+}

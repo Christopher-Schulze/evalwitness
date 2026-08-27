@@ -1,0 +1,7 @@
+{
+  "digest": "f5e2f5a9c0d64bf9edca5731e6cb1f7f28e9b600f9a94ea08db1a57b8baf4b7c",
+  "requirements": {
+    "a": "measured"
+  },
+  "version": "evalwitness.minimal-public-policy.v1"
+}

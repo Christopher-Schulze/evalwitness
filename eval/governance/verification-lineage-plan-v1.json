@@ -1,0 +1,392 @@
+{
+  "schema_version": "evalwitness.verification-lineage-plan.v1",
+  "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+  "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+  "study_governance_policy": "evalwitness.study-governance.v1",
+  "trace_mapping_policy": "evalwitness.trace-mapping.v1",
+  "verification_evidence_contract": "evalwitness.verification-evidence-assessment.v1",
+  "identity": {
+    "plan_id": "task_069-verification-lineage-v1",
+    "task_id": "TASK-069",
+    "title": "Trace-native verification-lineage corpus",
+    "authors": [
+      "Christopher Schulze"
+    ],
+    "created_at": "2026-08-10T10:30:00Z",
+    "locked_at": "2026-08-10T10:58:58Z"
+  },
+  "research_questions": [
+    {
+      "id": "RQ1",
+      "question": "At which layer does verification lineage first become unprovable?",
+      "primary_observable": "earliest typed loss state per task group",
+      "forbidden_interpretation": "missing export text means the agent did not verify"
+    },
+    {
+      "id": "RQ2",
+      "question": "Which trace formats can represent each required lineage field?",
+      "primary_observable": "preregistered format capability vector from specification and golden vectors",
+      "forbidden_interpretation": "one observed trace proves format-wide capability"
+    },
+    {
+      "id": "RQ3",
+      "question": "How much proven verification survives native export, canonicalization, slicing, and request construction?",
+      "primary_observable": "paired task-cluster survival proportions and exact flow counts",
+      "forbidden_interpretation": "survival proves verification quality or task success"
+    },
+    {
+      "id": "RQ4",
+      "question": "Which apparent checks are non-failable, provenance-contaminated, stale, or evidence-preserving no-ops?",
+      "primary_observable": "closed semantic assessment states and counterexamples",
+      "forbidden_interpretation": "text matching establishes executable verification"
+    },
+    {
+      "id": "RQ5",
+      "question": "Does a frozen parser transfer to unseen formats or wrapper patterns?",
+      "primary_observable": "format-holdout and syntax-family-holdout false acceptance, false rejection, and unresolved counts",
+      "forbidden_interpretation": "development-vector performance is generalization evidence"
+    },
+    {
+      "id": "RQ6",
+      "question": "Is a balanced future omitted-evidence panel feasible without weakening the construct?",
+      "primary_observable": "at least 20 calibration and 20 test task groups after all lineage gates",
+      "forbidden_interpretation": "scarcity may be repaired by changing thresholds after observation"
+    }
+  ],
+  "unit": {
+    "primary_unit": "task_clustered_claim_check_attempt",
+    "cluster_unit": "task_group",
+    "nested_units": [
+      "call",
+      "result_chunk",
+      "retry",
+      "wrapper_child"
+    ],
+    "retry_policy": "nest_retries_under_original_task_group",
+    "denominator_policy": "one_terminal_state_per_included_task_group"
+  },
+  "source_classes": [
+    {
+      "id": "checked_in_controls",
+      "basis": "public synthetic golden vectors and frozen historical negative controls",
+      "permitted_roles": [
+        "adapter_development",
+        "adversarial_challenge"
+      ],
+      "source_manifest_required": true,
+      "explicit_consent_required": false,
+      "redistribution_required": true,
+      "live_provider_use_permitted": false,
+      "previously_inspected_use": "development_or_challenge_only"
+    },
+    {
+      "id": "explicitly_authorized_owner_captures",
+      "basis": "local captures with explicit owner authorization and consent",
+      "permitted_roles": [
+        "adapter_development",
+        "capture_calibration",
+        "locked_test"
+      ],
+      "source_manifest_required": true,
+      "explicit_consent_required": true,
+      "redistribution_required": false,
+      "live_provider_use_permitted": false,
+      "previously_inspected_use": "role_assigned_before_content_inspection"
+    },
+    {
+      "id": "public_licensed_native_exports",
+      "basis": "public source with verified license and redistribution terms",
+      "permitted_roles": [
+        "adapter_development",
+        "capture_calibration",
+        "locked_test"
+      ],
+      "source_manifest_required": true,
+      "explicit_consent_required": false,
+      "redistribution_required": true,
+      "live_provider_use_permitted": false,
+      "previously_inspected_use": "role_assigned_before_content_inspection"
+    }
+  ],
+  "clusters": {
+    "dimensions": [
+      "lineage_id",
+      "near_duplicate_id",
+      "repository_id",
+      "source_session_id",
+      "task_id"
+    ],
+    "isolated_roles": [
+      "adapter_development",
+      "adversarial_challenge",
+      "capture_calibration",
+      "locked_test"
+    ],
+    "cross_role_policy": "forbid_any_shared_cluster_dimension",
+    "paired_view_policy": "paired_format_views_share_one_role_and_task_group",
+    "near_duplicate_rule": "normalized_task_and_repository_similarity_declared_before_role_assignment"
+  },
+  "roles": [
+    {
+      "role": "adapter_development",
+      "purpose": "implement adapters, schemas, and diagnostics",
+      "minimum_eligible_task_groups": 0,
+      "parser_changes_permitted": true,
+      "confirmatory_claims": false
+    },
+    {
+      "role": "capture_calibration",
+      "purpose": "calibrate frozen capture alignment and uncertainty without parser changes",
+      "minimum_eligible_task_groups": 20,
+      "parser_changes_permitted": false,
+      "confirmatory_claims": false
+    },
+    {
+      "role": "locked_test",
+      "purpose": "single locked confirmatory evaluation",
+      "minimum_eligible_task_groups": 20,
+      "parser_changes_permitted": false,
+      "confirmatory_claims": true
+    },
+    {
+      "role": "adversarial_challenge",
+      "purpose": "falsify parser, provenance, failability, and claim-boundary assumptions",
+      "minimum_eligible_task_groups": 2,
+      "parser_changes_permitted": false,
+      "confirmatory_claims": false
+    }
+  ],
+  "missingness": {
+    "terminal_states": [
+      {
+        "state": "invalid_capture",
+        "precedence": 1,
+        "disposition": "excluded",
+        "proof_requirement": "capture manifest or completeness invariant failed before analysis"
+      },
+      {
+        "state": "behavior_absent",
+        "precedence": 2,
+        "disposition": "terminal_loss",
+        "proof_requirement": "authoritative execution witness proves the closed capture boundary and no in-scope invocation"
+      },
+      {
+        "state": "export_observability_absent",
+        "precedence": 3,
+        "disposition": "terminal_loss",
+        "proof_requirement": "execution witness proves invocation while complete native export lacks it"
+      },
+      {
+        "state": "adapter_mapping_loss",
+        "precedence": 4,
+        "disposition": "terminal_loss",
+        "proof_requirement": "native field exists and field-accounting proves canonical loss"
+      },
+      {
+        "state": "unsupported_shell",
+        "precedence": 5,
+        "disposition": "terminal_ineligible",
+        "proof_requirement": "execution is present but frozen parser explicitly rejects its syntax"
+      },
+      {
+        "state": "ambiguous_lineage",
+        "precedence": 6,
+        "disposition": "terminal_ineligible",
+        "proof_requirement": "required call, result, state, or task edges are incomplete or conflicting"
+      },
+      {
+        "state": "non_failable_verification",
+        "precedence": 7,
+        "disposition": "terminal_ineligible",
+        "proof_requirement": "bound invocation cannot falsify the claimed property"
+      },
+      {
+        "state": "claim_specific_evidence_not_weakened",
+        "precedence": 8,
+        "disposition": "terminal_ineligible",
+        "proof_requirement": "an equivalent decisive evidence channel survives the transformation"
+      },
+      {
+        "state": "freshness_unresolved",
+        "precedence": 9,
+        "disposition": "terminal_ineligible",
+        "proof_requirement": "observation state or later invalidation boundary cannot be proven"
+      },
+      {
+        "state": "direct_verification_invocation",
+        "precedence": 10,
+        "disposition": "eligible",
+        "proof_requirement": "failable bound invocation survives all five layers with current state lineage"
+      }
+    ],
+    "classification_rule": "assign_first_proven_terminal_state_by_precedence",
+    "conservation_rule": "included_equals_eligible_plus_all_terminal_losses_and_ineligible_states"
+  },
+  "exclusions": [
+    {
+      "id": "compatibility_mode",
+      "stage": "adapter_admission",
+      "rule": "unversioned compatibility recovery cannot enter confirmatory roles",
+      "treatment": "exclude_before_primary_denominator"
+    },
+    {
+      "id": "cross_role_cluster_leakage",
+      "stage": "role_assignment",
+      "rule": "any shared cluster dimension across roles invalidates the assignment",
+      "treatment": "exclude_before_primary_denominator"
+    },
+    {
+      "id": "duplicate_or_near_duplicate",
+      "stage": "role_assignment",
+      "rule": "duplicate and prespecified near-duplicate groups remain in one role",
+      "treatment": "exclude_before_primary_denominator"
+    },
+    {
+      "id": "invalid_capture",
+      "stage": "capture_admission",
+      "rule": "capture completeness or authoritative-boundary invariant failed",
+      "treatment": "exclude_before_primary_denominator"
+    },
+    {
+      "id": "license_or_redistribution_unresolved",
+      "stage": "source_admission",
+      "rule": "source use or public projection lacks verified terms",
+      "treatment": "exclude_before_primary_denominator"
+    },
+    {
+      "id": "post_lock_source_change",
+      "stage": "source_admission",
+      "rule": "source bytes or manifest changed after role lock",
+      "treatment": "exclude_before_primary_denominator"
+    },
+    {
+      "id": "privacy_policy_failure",
+      "stage": "source_admission",
+      "rule": "secret, private reasoning, path, account, or undeclared omission policy failed",
+      "treatment": "exclude_before_primary_denominator"
+    },
+    {
+      "id": "source_not_authorized",
+      "stage": "source_admission",
+      "rule": "source lacks public basis or explicit owner authorization",
+      "treatment": "exclude_before_primary_denominator"
+    }
+  ],
+  "replacement": {
+    "post_outcome_replacement_permitted": false,
+    "permitted_stage": "before_content_or_outcome_inspection",
+    "matching_rule": "same_preregistered_source_class_format_and_role_stratum",
+    "lineage_rule": "new_source_identity_and_recorded_replacement_edge",
+    "shortfall_rule": "retain_shortfall_when_no_prespecified_replacement_exists"
+  },
+  "stopping": {
+    "maximum_admitted_task_groups": 240,
+    "maximum_source_sessions": 120,
+    "maximum_acquisition_days": 30,
+    "outcome_dependent_stopping": false,
+    "stop_rule": "stop_at_first_hard_limit_or_exhausted_preregistered_inventory_never_on_observed_result"
+  },
+  "minimum_support": {
+    "native_trace_formats": 3,
+    "independent_agent_ecosystems": 2,
+    "task_groups_per_inferential_format": 20,
+    "calibration_task_groups": 20,
+    "test_task_groups": 20,
+    "paired_witness_required": true
+  },
+  "uncertainty": {
+    "confidence_level": 0.95,
+    "proportion_interval": "clopper_pearson_exact_task_cluster",
+    "paired_difference_interval": "task_cluster_percentile_bootstrap",
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260810,
+    "multiplicity_policy": "none_descriptive_primary_estimands",
+    "primary_estimands": [
+      "adjacent_layer_survival_proportion_by_format",
+      "terminal_loss_state_proportion_by_format"
+    ],
+    "raw_event_counts_secondary": true
+  },
+  "holdouts": [
+    {
+      "id": "format-holdout-v1",
+      "kind": "format_holdout",
+      "selection_seed": "task_069-format-holdout-20260810-v1",
+      "selection_rule": "rank format IDs by SHA-256(seed NUL format_id) and hold out the greatest digest",
+      "minimum_held_out_units": 1,
+      "frozen_surface": "shared generic lineage extractor and all non-held-out mappings",
+      "post_result_recovery": "forbidden_results_remain_immutable_recovery_requires_protocol_v2"
+    },
+    {
+      "id": "syntax-family-holdout-v1",
+      "kind": "syntax_family_holdout",
+      "selection_seed": "task_069-syntax-holdout-20260810-v1",
+      "selection_rule": "rank syntax family IDs by SHA-256(seed NUL family_id) and hold out the greatest digest",
+      "minimum_held_out_units": 1,
+      "frozen_surface": "invocation parser vocabulary and wrapper semantics",
+      "post_result_recovery": "forbidden_results_remain_immutable_recovery_requires_protocol_v2"
+    }
+  ],
+  "claims": {
+    "allowed": [
+      {
+        "id": "corpus_feasibility",
+        "maximum_scope": "locked TASK-069 source population and 20-calibration/20-test threshold",
+        "required_evidence": "sealed acquisition funnel and role-isolated eligibility audit"
+      },
+      {
+        "id": "held_out_parser_transfer",
+        "maximum_scope": "frozen held-out format or syntax families only",
+        "required_evidence": "immutable holdout predictions and labeled outcomes"
+      },
+      {
+        "id": "observed_capture_fields",
+        "maximum_scope": "admitted observed captures by pinned source format",
+        "required_evidence": "source manifests and exact field-accounting reports"
+      },
+      {
+        "id": "pinned_format_representability",
+        "maximum_scope": "pinned specification commit and normative vectors",
+        "required_evidence": "capability vector and conformance evidence"
+      },
+      {
+        "id": "task_cluster_lineage_survival",
+        "maximum_scope": "admitted task groups by format and frozen parser",
+        "required_evidence": "paired five-layer audit with exact conservation"
+      },
+      {
+        "id": "terminal_loss_distribution",
+        "maximum_scope": "admitted task groups by format and source population",
+        "required_evidence": "exclusive terminal-state audit and uncertainty contract"
+      }
+    ],
+    "forbidden": [
+      "agent_did_not_verify_from_missing_trace",
+      "causal_performance_impact",
+      "format_is_lossless",
+      "hidden_reasoning",
+      "human_validated",
+      "provider_quality",
+      "universal_verification_frequency"
+    ],
+    "composite_score_allowed": false,
+    "provider_ranking_allowed": false
+  },
+  "acquisition": {
+    "state": "not_started",
+    "count_inspection_state": "not_inspected_before_plan_lock",
+    "external_action_status": "not_authorized",
+    "provider_calls_allowed": 0,
+    "laboratory_may_launch_agents": false,
+    "owner_authorization_required": true,
+    "pre_acquisition_requirements": [
+      "adapter_and_parser_freeze",
+      "capability_vectors_sealed",
+      "golden_vectors_sealed",
+      "source_manifests_sealed",
+      "ten_schema_inventory_sealed"
+    ],
+    "live_capture_command_status": "undeclared_until_explicit_owner_authorization"
+  },
+  "digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c"
+}

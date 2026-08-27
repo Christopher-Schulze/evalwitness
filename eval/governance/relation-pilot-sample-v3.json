@@ -1,0 +1,148 @@
+{
+  "schema_version": "evalwitness.relation-pilot-sample.v3",
+  "canonical_policy": "evalwitness.relation-canonical-json.v1",
+  "protocol_version": "evalwitness.controlled-relation-governance.v3",
+  "review_objective": "controlled_relation",
+  "plan_digest": "6eac462cae0a5b626561d5cbea274a5c3a72c78b6cb9d50a8952be6ccbb6fa8c",
+  "primary_sample_digest": "6b721bcf0fb10e47923b46d92f3c14691cbd0dd98949ab0bf1dc016d8e1c1e43",
+  "scarcity_sentinel_digest": "ec720a56394249a47eb4c0f7ef618471ce14c69ff8c2c13e1e851350c23e71fb",
+  "source_corpus_digest": "9b4999dafe2d37ea04c298b80a7aba0a1769755fdfd650cd01bf3a9cc31a2e42",
+  "source_corpus_plan_digest": "5a7f4f55aafabd03ef9c802a9c48cf198a778228b40ade35e8f074df8d060c85",
+  "source_construct_audit_digest": "af0c0fd56fb498586096a8776e0d40794ee93acf5afda67cc000e576bfcef4d2",
+  "source_mutation_program_digest": "f37ec74f8096a23c5fb0e6696d279f2689f98d7e904fcef038464ca51720b3f8",
+  "data_role": "development",
+  "selection_rule": "one lexicographically deterministic development case per inferential-core family with globally unique sources, source task groups, and lineage clusters and zero overlap with the primary sample or exhaustive scarcity sentinel",
+  "selected_cases": 7,
+  "unique_source_ids": 8,
+  "unique_task_groups": 7,
+  "unique_lineage_clusters": 7,
+  "primary_overlap": 0,
+  "scarcity_sentinel_overlap": 0,
+  "required_primary_labels": 14,
+  "maximum_tie_break_labels": 7,
+  "required_post_label_probes": 14,
+  "cases": [
+    {
+      "family": "candidate_order_reversal",
+      "case_id": "mutation-033f6508d6e7d754fda54486549d5929fbd2518ca254cb13924a98baf312fe6a",
+      "data_role": "development",
+      "unit": "candidate_pair_orderings",
+      "task_group_id": "group-757546cb7967ea1d4cf0c0ac31280acb4a488188b2b3a998fe8c7276fa11c78f",
+      "source_ids": [
+        "source-1a0301a9f1f98f80877ddd93f0dfe8f167bb2625542e38a3924065905fab0759",
+        "source-97787627aa9629d9e5c3692d6bd767f03fb02060f6fc1643932983188c61acc2"
+      ],
+      "lineage_cluster_ids": [
+        "lineage-11285279273b0b3cc0eae9cb4cd409c68808603d253bf3b7c60490481c72402a"
+      ],
+      "case_binding_digest": "f77a3656a9f3a85c2fd6397ee797318ca74d759756eaf876f373b0b5c9307cc3",
+      "construct_firewall_digest": "4f5e18b35b87b98d83489e733b812847d4fc5bcb881f213d8f70ea89171ad297"
+    },
+    {
+      "family": "causally_independent_event_reorder",
+      "case_id": "mutation-2fd06ed8d500665b0da53b5c3f3d2ec6ef60f5817f66010d2f05805984dcff6e",
+      "data_role": "development",
+      "unit": "trajectory_pair",
+      "task_group_id": "group-cb9bc78059bdcbfec9cc7c567d418db43b3e035ead1f161262fa9f570edfada2",
+      "source_ids": [
+        "source-4c6e5b7c0ae2652b7e5e7073e36797d503ae037d3189376cd56249d9021e2c79"
+      ],
+      "lineage_cluster_ids": [
+        "lineage-ee2bf18f5b3efd412255e72d340f0b19acda09cf6114d60d617d3b36ca4a8ba6"
+      ],
+      "case_binding_digest": "3fe513476052dff29dc42a4e8a1314dbd9b6c6383538a76e136b373908240267",
+      "construct_firewall_digest": "e6fcf4052b13c837ea195586586a7a84077577d1202a136c1bde66e29c473b79"
+    },
+    {
+      "family": "falsified_test_evidence",
+      "case_id": "mutation-375553ad6740d7a32630ccedcb314fc97e90736babfa477ad7a297fa452bf8d7",
+      "data_role": "development",
+      "unit": "trajectory_pair",
+      "task_group_id": "group-ba4fa03d2f20fa1b6907eebd8c1641f5be024193ffc85aa7c4d56c2b8d178f6d",
+      "source_ids": [
+        "source-db61af2b578b8322c30974032355f8aecbd5d5b1797ae3357ba1b57549916253"
+      ],
+      "lineage_cluster_ids": [
+        "lineage-2861f3dc4d986b4d1dda64547286f53decf04ee76c987c6958cb4d3e6eaba2f9"
+      ],
+      "case_binding_digest": "4050892b3e72e787b06083849a16c20ba5cf805a14f9d9b87fe9aed2289bbd70",
+      "construct_firewall_digest": "393e484b5d58a1c28d41bf06cc64ef5758ec91e8c2a7ab2b01d992420afa8937"
+    },
+    {
+      "family": "incomplete_tool_output",
+      "case_id": "mutation-0206352cd628cb9c904f91d05522050958e73260dbe8b373f9ffc657b66c697e",
+      "data_role": "development",
+      "unit": "trajectory_pair",
+      "task_group_id": "group-dd47ff83fedabf3a22f92ef10978feb96aa8e2dfa6cc8947b17558736edc2f3f",
+      "source_ids": [
+        "source-28156bdce5b58dffc90acf5933134a8b7b8c0834240524db646bd7b9da816254"
+      ],
+      "lineage_cluster_ids": [
+        "lineage-b62f74b2188099b46ae14d6d9b664372182968d53fe42e88ca03460fca39008e"
+      ],
+      "case_binding_digest": "cd95a0a8cddeb7033009ee84f04cabce8de9b16620f5e85b5de5d16e4716d4b7",
+      "construct_firewall_digest": "79855b2b44069327f4becb055dfa056bbb8a0c1c5e8ced3fee0d543388d03ce7"
+    },
+    {
+      "family": "irrelevant_verbosity",
+      "case_id": "mutation-28ee98c888f18ffc0433d40f33641dd40deef344205a2fd8dda71ee718c2d150",
+      "data_role": "development",
+      "unit": "trajectory_pair",
+      "task_group_id": "group-c52a72ba24daad5ad9d52dad1fe935ca9ce14e94a303c59ce5590493f14737fe",
+      "source_ids": [
+        "source-c6f0d1424712d04117381c583aef49a64ea5f82cc14e490493e8fc56bf1bf937"
+      ],
+      "lineage_cluster_ids": [
+        "lineage-5833e068de83ef8585946fc6a8c7ee577d3baed1b8b55389d8e9202014100c58"
+      ],
+      "case_binding_digest": "deea150d42ef3a053878455b4836e27aa414fced74b69b51857bee7118bd772f",
+      "construct_firewall_digest": "2913ca0fb6b77c5339549b72c4f4203c9508937ee632514a52f65c12a33f0ce7"
+    },
+    {
+      "family": "neutral_formatting",
+      "case_id": "mutation-0e3f00e2a7b63f2c8fb90a390e2d0978d427bb9ee6bcd1bb681d672749db9a30",
+      "data_role": "development",
+      "unit": "trajectory_pair",
+      "task_group_id": "group-5887298465f700747f2e295b9a6cebedb7560b8a01ba1529493d39d6e986f18a",
+      "source_ids": [
+        "source-1f1541f71cc9bda9f8a8448cb1fa0204ac1bd1ea8e562a886223dfb1317a7b07"
+      ],
+      "lineage_cluster_ids": [
+        "lineage-baede5d8dfcb17fb0b52e1b4cf25237895c81a9301cca837b290dd5762df3434"
+      ],
+      "case_binding_digest": "2a1e930bd54c5b811768aa112bbaf5640cbd9e70102ae09e7231c62ea39e393d",
+      "construct_firewall_digest": "c7a3a352f60273fd64216d1b32a8b55767f130009c6277f4fc58ebe5c7bd60fa"
+    },
+    {
+      "family": "untrusted_score_tag_injection",
+      "case_id": "mutation-10d8cd6d9fffb75cf63ba9a7cff965de7ca04fbdc447beccee2a9dec68468c63",
+      "data_role": "development",
+      "unit": "trajectory_pair",
+      "task_group_id": "group-dcf01052735fa08018fec4431c916b3367f7cb400d6a9413e8425f06d6338e02",
+      "source_ids": [
+        "source-bb06f99c8a5a36190d22b642a29b62157a5e6d832469d1314b0f842856899725"
+      ],
+      "lineage_cluster_ids": [
+        "lineage-15fc5afe8a911616521f570a65e21e13e9636506effe2b77b0d69fc61d766974"
+      ],
+      "case_binding_digest": "a87dd77676f95af46b7d86e28c4af4f1d4206cba83ff3dc6f176de1acf8c7884",
+      "construct_firewall_digest": "5f34abec146b14b777284b3aa5b3fb1dc4826ccd702cdb9a91e5e1adfbc833c0"
+    }
+  ],
+  "bindings": {
+    "cases": "67c45656115236b98747f8a0b125d1e6ccd8142642aba55befaef6fa4799b6ff",
+    "sources": "14aaa0f988b3ad0b959366513dea2341c7b30fc4ed5ab994e208a2c3eda0cd9a",
+    "programs": "64a4d60632902ab0c48c6cb3c606c79b4d22879c5df0212676fe5c444146ebb5",
+    "manifests": "e26a3e8306cb825f2a3050d037e093da0ccebe447f5c0156432ac3e473290d9f",
+    "witnesses": "93b7099d3dfcf40d9c26c9dbdf34597f843e32a7fee3b9ce8b5524f9084ef7bf",
+    "licenses": "3323997b1493477a4c410b7847697d2f47bdbad412f16696224320761b2604b9",
+    "privacy": "9172a40a1823b1cd68d1f392f46ae243eaa380339d73c506f350a3ddd535c7b4",
+    "lineage": "90a3a9cf31a7bd840a53cc52a3bd0a74292b6cc84a7d59fdd997882b29a13f13",
+    "packets": "c930320a76dc17dac81ce05e995d918b38576d891de269107f58c3241b685a51",
+    "regeneration": "6e6f844b3f42c917381244332087bd452d1f029fb6b99aa832e386e1b3509e53",
+    "construct_firewalls": "55217fc6b65e85554b73eaf1f8bae1136b882caf9c73709f2c3d06df99ed0566"
+  },
+  "empirical_status": "not_run",
+  "external_action_status": "not_authorized",
+  "digest": "3f0a70209575316c78b87f6cb9e7641ff1f4a023eaa86c2fe2598ee14b3c94b4"
+}

@@ -1,0 +1,15 @@
+{
+  "version": "0.1.0",
+  "id": "018f47a2-5b3c-4d4e-8f90-123456789abc",
+  "timestamp": "2026-01-02T03:04:05Z",
+  "vcs": {"type": "git", "revision": "0123456789abcdef0123456789abcdef01234567"},
+  "tool": {"name": "fixture-agent", "version": "1.2.3"},
+  "files": [{
+    "path": "internal/example.go",
+    "conversations": [{
+      "url": "https://example.invalid/conversations/fixture",
+      "contributor": {"type": "ai", "model_id": "fixture-model"},
+      "ranges": [{"start_line": 4, "end_line": 9, "content_hash": "sha256:fixture"}]
+    }]
+  }]
+}

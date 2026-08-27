@@ -1,0 +1,182 @@
+{
+  "header": {
+    "schema_version": "evalwitness.verification-lineage-release.v1",
+    "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+    "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+    "object_id": "task_069-development-release-v1",
+    "task_id": "TASK-069",
+    "task_group_id": "study",
+    "data_role": "adapter_development",
+    "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+    "parents": [
+      {
+        "relation": "plan",
+        "schema_version": "evalwitness.verification-lineage-plan.v1",
+        "object_id": "task_069-verification-lineage-v1",
+        "task_id": "TASK-069",
+        "task_group_id": "study",
+        "digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c"
+      },
+      {
+        "relation": "audit",
+        "schema_version": "evalwitness.verification-lineage-audit.v1",
+        "object_id": "offline-audit-stdout-success",
+        "task_id": "TASK-069",
+        "task_group_id": "study",
+        "digest": "f2a1b543986c7fad5cb665855c958869137ec9e6eae342adef1e09fa236be745"
+      },
+      {
+        "relation": "bom",
+        "schema_version": "evalwitness.verification-evidence-bom.v1",
+        "object_id": "offline-bom-stdout-success",
+        "task_id": "TASK-069",
+        "task_group_id": "synthetic-stdout_success",
+        "digest": "c1d15d54d2108d19a3261fe292a72fecd1993409094139d4332c8589c016e4c0"
+      },
+      {
+        "relation": "dataset_card",
+        "schema_version": "evalwitness.verification-lineage-dataset-card.v1",
+        "object_id": "task_069-development-dataset-card-v1",
+        "task_id": "TASK-069",
+        "task_group_id": "study",
+        "digest": "1a50d635eba0926f2954dee9dbd03bb2221b229669cb14967b7a11766225a1df"
+      }
+    ],
+    "digest": "a63eaf5b7a3d3db966b01df87818044469a837ff4a6b4de0020982fd3d403a5d"
+  },
+  "release_id": "task_069-development-release-v1",
+  "version": "1.0.0-development",
+  "files": [
+    {
+      "path": "eval/governance/synthetic-execution-witness-fixtures-v1.json",
+      "role": "execution_witness_controls",
+      "bytes": 57457,
+      "digest": "f857a668ab46ca440a6e1cba7dcf2a65fb63de062767ee531a6e6f810550a422"
+    },
+    {
+      "path": "eval/governance/trace-source-specifications-v1.json",
+      "role": "source_contract_registry",
+      "bytes": 23191,
+      "digest": "4bf95b9ae576dbb0ee2759ad272bfa23c1cebd30c94de5972c2ba944a9e6c59a"
+    },
+    {
+      "path": "eval/governance/verification-lineage-adapter-conformance-v1.json",
+      "role": "adapter_conformance",
+      "bytes": 156578,
+      "digest": "4cd6e9968466c7be22e8442ac5c360758e87b892b6269d2959b65f2304d481b3"
+    },
+    {
+      "path": "eval/governance/verification-lineage-capability-matrix-v1.json",
+      "role": "capability_matrix",
+      "bytes": 54197,
+      "digest": "637ce1b38d226c5fbd33a48049c44b7d6be7e67475a57f15391189fd53d2a96a"
+    },
+    {
+      "path": "eval/governance/verification-lineage-corpus-feasibility-v1.json",
+      "role": "feasibility_decision",
+      "bytes": 2063,
+      "digest": "d033491fbf9aace7a2b9eb08c4314c1323c7473a315bab450fa5658cca834d3d"
+    },
+    {
+      "path": "eval/governance/verification-lineage-golden-vectors-v1.json",
+      "role": "golden_vectors",
+      "bytes": 123687,
+      "digest": "85f450d4adb927fba91c2f822c535c260643fce3026ef2d5ffc20d4ed3cb3602"
+    },
+    {
+      "path": "eval/governance/verification-lineage-holdout-readiness-audit-v1.json",
+      "role": "holdout_readiness",
+      "bytes": 3153,
+      "digest": "563a8945a5f53d51d764c74bccc0d8c5a12b19c4bb50e808282776fcc97f4b4f"
+    },
+    {
+      "path": "eval/governance/verification-lineage-offline-proof-v1.json",
+      "role": "offline_proof",
+      "bytes": 3820,
+      "digest": "4ec7ff69f9213dfe3e7809106ab5623e5eee14208a010d1b97c5d7ec7f891f11"
+    },
+    {
+      "path": "eval/governance/verification-lineage-parser-lock-v1.json",
+      "role": "parser_lock",
+      "bytes": 6494,
+      "digest": "17d8e84f23945960cb4599580ca4591202778a09f45c296852714ed392de6a19"
+    },
+    {
+      "path": "eval/governance/verification-lineage-plan-v1.json",
+      "role": "research_plan",
+      "bytes": 15140,
+      "digest": "e0765e67a28f96f68cc427df6a373504188c59d16e5f519776fd8cc6213f81cc"
+    },
+    {
+      "path": "eval/governance/verification-lineage-schema-inventory-v1.json",
+      "role": "schema_inventory",
+      "bytes": 9607,
+      "digest": "08613396c861a83c8fa8b30d8533ae275b972f3d0e84898de2120bd1a4db5359"
+    },
+    {
+      "path": "eval/governance/verification-lineage-source-inventory-v1.json",
+      "role": "source_inventory",
+      "bytes": 6449,
+      "digest": "c0eac7c5a2bcf9226c32a61eb8a543be05179426598f017d9885e8b8e717098b"
+    },
+    {
+      "path": "eval/governance/verification-lineage-source-readiness-audit-v1.json",
+      "role": "source_readiness",
+      "bytes": 5305,
+      "digest": "763ebc6488e250af58b5e2be79f82d09900a4bb832cca810cdd21afeca4e075d"
+    },
+    {
+      "path": "eval/results/verification-lineage-development-dataset-card-v1.json",
+      "role": "dataset_card",
+      "bytes": 4747,
+      "digest": "079cb4b0e504f2caf48e92966ba29c1f7bd90750a1868dfb142d157d64fdab22"
+    },
+    {
+      "path": "eval/results/verification-lineage-limitations-v1.json",
+      "role": "limitations",
+      "bytes": 2307,
+      "digest": "51fef433281525ad298fd7f25e807c3ce0b8e2d2a8c339cfc1de8a970464c72d"
+    },
+    {
+      "path": "eval/results/verification-lineage-offline-audit-v1.json",
+      "role": "canonical_offline_audit",
+      "bytes": 4004,
+      "digest": "aa68587b4f90cb05de3d4f5d67a15d720f167ac1a9858c3df625ebcb62b3af46"
+    },
+    {
+      "path": "eval/results/verification-lineage-offline-bom-example-v1.json",
+      "role": "accepted_bom_example",
+      "bytes": 4681,
+      "digest": "2553d32f3f5eb72be492f2431f17cb663e8194d00f45a6f978fb92757b55ad67"
+    },
+    {
+      "path": "eval/results/verification-lineage-offline-graph-v1.json",
+      "role": "canonical_graph",
+      "bytes": 1936,
+      "digest": "a5e9bdb3caa1e67bdf9115e530b85361b5e53fe1ae5ea4511c643918e371c319"
+    },
+    {
+      "path": "eval/results/verification-lineage-offline-graph-v1.svg",
+      "role": "graph_projection",
+      "bytes": 4808,
+      "digest": "9744b8ffb6af12f3332becf67aaa2de9ae8c2ef586aaa01861d59d79b87ec4cd"
+    },
+    {
+      "path": "eval/results/verification-lineage-same-path-loss-certificate-v1.json",
+      "role": "loss_certificate",
+      "bytes": 1592,
+      "digest": "b0e31c68e9c92493231fe401686a051437f3da934ed5f1c8116f9ee421b71045"
+    }
+  ],
+  "schema_inventory_digest": "4ffb32aa9efa9bb9fc8cffaa7d9416a95c558acd3fe6e2feaca22bfb92ccdfc5",
+  "audit_digest": "f2a1b543986c7fad5cb665855c958869137ec9e6eae342adef1e09fa236be745",
+  "dataset_card_digest": "1a50d635eba0926f2954dee9dbd03bb2221b229669cb14967b7a11766225a1df",
+  "limitations_digest": "8dc18157c9c985675ba9886dc397031f2286d975186b2af88f18c01a7b7cabbe",
+  "lineage_graph_json_digest": "a28c7f807ff5071e508f43e843ea4fe094d39b884a5cf428bb0de6c28b53896b",
+  "lineage_graph_svg_digest": "9744b8ffb6af12f3332becf67aaa2de9ae8c2ef586aaa01861d59d79b87ec4cd",
+  "reproduction_command": "scripts/tests/run-claimcheck.sh",
+  "provider_calls_required": 0,
+  "all_files_verified": true,
+  "public_projection": true,
+  "restricted_material_excluded": true
+}

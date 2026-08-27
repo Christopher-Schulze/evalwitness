@@ -1,0 +1,41 @@
+name: Offline audit (pull-request safe)
+
+# This workflow demonstrates the TASK 059 policy-as-code audit action on every
+# pull request. It is deliberately offline: the composite action downloads a
+# pinned, checksum-verified, signature-gated release binary and runs the audit
+# against checked-in policy and profile files. It performs no provider calls,
+# needs no credentials, and cannot reach a live route. Live evaluation is never
+# wired here; it requires the separate locked-study authorization path and must
+# stay out of automated CI entirely.
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-audit:
+    # Before the first signed release exists, both repository variables remain
+    # unset and this job is skipped instead of making every pull request red.
+    # Set both variables to exact published values to activate the gate.
+    if: ${{ vars.EVALWITNESS_RELEASE_VERSION != '' && vars.EVALWITNESS_RELEASE_CHECKSUM != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: run offline audit on the minimal public policy
+        id: audit
+        uses: ./.github/actions/evalwitness-audit
+        with:
+          version: ${{ vars.EVALWITNESS_RELEASE_VERSION }}
+          checksum: ${{ vars.EVALWITNESS_RELEASE_CHECKSUM }}
+          policy: config/policies/minimal-public.json
+          profile: scripts/tests/reference-profile-for-policies.json
+
+      - name: summarize result
+        if: always()
+        run: |
+          echo "audit result:"
+          echo '${{ steps.audit.outputs.result }}'

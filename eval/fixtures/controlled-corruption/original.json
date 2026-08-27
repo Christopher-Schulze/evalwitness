@@ -1,0 +1,7 @@
+{
+  "schema_version": "evalwitness.formal-arithmetic-control.v1",
+  "operator": "add",
+  "left": 2,
+  "right": 2,
+  "expected": 4
+}

@@ -1,0 +1,45 @@
+{
+  "header": {
+    "schema_version": "evalwitness.verification-lineage-source.v1",
+    "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+    "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+    "object_id": "offline-source-stdout-success",
+    "task_id": "TASK-069",
+    "task_group_id": "synthetic-stdout_success",
+    "data_role": "adapter_development",
+    "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+    "parents": [
+      {
+        "relation": "plan",
+        "schema_version": "evalwitness.verification-lineage-plan.v1",
+        "object_id": "task_069-verification-lineage-v1",
+        "task_id": "TASK-069",
+        "task_group_id": "study",
+        "digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c"
+      }
+    ],
+    "digest": "1045664f1f03d211a26eb6488f5f132859a41f3023402e79e80081730154d65a"
+  },
+  "source_class": "checked_in_controls",
+  "agent_ecosystem": "codex_fixture",
+  "runtime_identity_class": "fixed_local_subprocess",
+  "provider_metadata": "none",
+  "export_format": "codex_rollout_jsonl",
+  "export_version": "fixture-v1",
+  "capture_mode": "paired_native_and_witness",
+  "source_session_id": "offline-proof-session",
+  "lineage_id": "offline-proof-lineage",
+  "near_duplicate_id": "offline-proof-near-duplicate",
+  "repository_id": "evalwitness-repository",
+  "repository_alias": "repository",
+  "task_alias": "stdout-success",
+  "license": "MIT",
+  "redistribution_permission": "public_mit",
+  "privacy_class": "synthetic_public",
+  "redaction_policy": "none",
+  "authoritative_surface": false,
+  "raw_record_count": 2,
+  "raw_record_digest": "09203bba9abfdb7b8407bc3745c0247ef07402df6414a3ea09a7d2a7e162f69b",
+  "canonical_trajectory_digest": "5f721df99dc990a37df6ef223c03f2ff3e5e631f57d07869ab2413e868acf92c",
+  "field_accounting_digest": "cce6e742bb022bc9b85f61bd3e8c40f0f8daf6172b9158034b2e4eced492c252"
+}

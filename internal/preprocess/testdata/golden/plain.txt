@@ -1,0 +1,2 @@
+User asked to inspect the fixture repository.
+Assistant ran go test ./... and observed: ok.

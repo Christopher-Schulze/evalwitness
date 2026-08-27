@@ -1,0 +1,39 @@
+{
+  "schema_version": "evalwitness.corruption-corpus-development-plan.v2",
+  "canonical_policy": "evalwitness.mutation-canonical-json.v1",
+  "corpus_version": "evalwitness-controlled-corruption.v2",
+  "seed": "evalwitness-controlled-corruption-v2-frozen-seed",
+  "source_tasks": 100,
+  "terminal_tasks": 60,
+  "swe_tasks": 40,
+  "trajectories_per_task": 2,
+  "cases_per_family": 40,
+  "primary_families": [
+    "candidate_order_reversal",
+    "causally_independent_event_reorder",
+    "falsified_test_evidence",
+    "incomplete_tool_output",
+    "irrelevant_verbosity",
+    "neutral_formatting",
+    "omitted_test_evidence",
+    "untrusted_score_tag_injection"
+  ],
+  "mutation_program_digest": "30e368b56c42e24bb0cbaf30da1ff9d982a45d6499beca7745db95d2a30ac958",
+  "design_evidence_digest": "b2b4b79c8dca59bdf3a8aa314a7a591c3ce390e62961f9059d50538c76596925",
+  "design": {
+    "method": "exact_binomial_upper_tail",
+    "primary_unit": "source_task",
+    "nominal_alpha": 0.05,
+    "family_size": 8,
+    "adjusted_alpha": 0.00625,
+    "null_accuracy": 0.5,
+    "alternative_accuracy": 0.8,
+    "target_power": 0.8,
+    "critical_successes": 29,
+    "actual_null_tail": 0.0032132880478457347,
+    "power_at_alternative": 0.9124947640780025,
+    "unique_task_within_family": true,
+    "cross_family_cluster_unit": "source_task"
+  },
+  "digest": "75ce0c5eb2ab464d48685b1342af5ed64c194e03a671723eaaf772514fa87873"
+}

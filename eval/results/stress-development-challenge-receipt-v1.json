@@ -1,0 +1,83 @@
+{
+  "schema_version": "evalwitness.stress-development-challenge-receipt.v1",
+  "canonical_policy": "evalwitness.stress-canonical-json.v1",
+  "challenge_digest": "c583a2379af4d148a5140682fd04f513af0c16520e02fca567d487a387da2901",
+  "expected_case_digest": "b4a7adb23505a88ee0ab79c73957bce5fbd15539a0e5e687590719d3ec4ee84b",
+  "reproduced_case_digest": "b4a7adb23505a88ee0ab79c73957bce5fbd15539a0e5e687590719d3ec4ee84b",
+  "fixture_set_digest": "410ee59c6b129649cb7a846524e3271b721f296b1a66499e4b81355ebb457890",
+  "fixtures_verified": 4,
+  "original_line_units": 32,
+  "final_line_units": 2,
+  "reduction_attempts": 53,
+  "accepted_reductions": 30,
+  "final_rejection_attempts": 2,
+  "violation_reproduced": true,
+  "one_minimal_reproduced": true,
+  "repository_required": false,
+  "empirical_units": 0,
+  "provider_calls": 0,
+  "network_required": false,
+  "claim_boundary_preserved": true,
+  "guards": [
+    {
+      "guard_id": "portable_reproduction",
+      "category": "positive_control",
+      "mutation": "rebuild the complete case from embedded bytes",
+      "expected_guard": "portable_reproduction_passed",
+      "observed_guard": "portable_reproduction_passed",
+      "passed": true
+    },
+    {
+      "guard_id": "fixture_byte_tamper",
+      "category": "adversarial_guard",
+      "mutation": "change one embedded trajectory byte and reseal the outer digest",
+      "expected_guard": "fixture_digest_mismatch",
+      "observed_guard": "fixture_digest_mismatch",
+      "passed": true
+    },
+    {
+      "guard_id": "expected_case_substitution",
+      "category": "adversarial_guard",
+      "mutation": "replace the expected case digest and reseal the outer digest",
+      "expected_guard": "expected_case_invalid",
+      "observed_guard": "expected_case_invalid",
+      "passed": true
+    },
+    {
+      "guard_id": "fixture_inventory_reorder",
+      "category": "adversarial_guard",
+      "mutation": "swap the two embedded trajectories and reseal the outer digest",
+      "expected_guard": "fixture_inventory_invalid",
+      "observed_guard": "fixture_inventory_invalid",
+      "passed": true
+    },
+    {
+      "guard_id": "unknown_json_property",
+      "category": "adversarial_guard",
+      "mutation": "inject one unknown root property",
+      "expected_guard": "unknown_json_rejected",
+      "observed_guard": "unknown_json_rejected",
+      "passed": true
+    },
+    {
+      "guard_id": "trailing_json_document",
+      "category": "adversarial_guard",
+      "mutation": "append a second JSON document",
+      "expected_guard": "trailing_json_rejected",
+      "observed_guard": "trailing_json_rejected",
+      "passed": true
+    },
+    {
+      "guard_id": "challenge_digest_substitution",
+      "category": "adversarial_guard",
+      "mutation": "replace the challenge digest",
+      "expected_guard": "challenge_digest_invalid",
+      "observed_guard": "challenge_digest_invalid",
+      "passed": true
+    }
+  ],
+  "guard_count": 7,
+  "guards_passed": 7,
+  "valid": true,
+  "digest": "a00077c238ace087ac88b8f9a7133cdafa09f648173aa8680dfb686da263321d"
+}

@@ -1,0 +1,90 @@
+{
+  "schema_version": "evalwitness.stress-held-out-run-readiness-refusal.v1",
+  "canonical_policy": "evalwitness.stress-canonical-json.v1",
+  "receipt_id": "task-056-current-held-out-readiness-refusal",
+  "partition_digest": "330108c06ad51d47b73e93275ab54d11262b679538af0da861a50394ffa3c897",
+  "registry_digest": "8d66aff0dc83cd4074d6b90dd157ace04df412931e41c9cecee4def5eff11269",
+  "release_digest": "9b4999dafe2d37ea04c298b80a7aba0a1769755fdfd650cd01bf3a9cc31a2e42",
+  "arm_plan_digest": "29fca8732908647d9b82b5f3a4bb6cae75b426a869409df512edcb1c5ace2442",
+  "analysis_design_digest": "77c44cc23d9cf144fc2b2bc757921630cbdcd8f56b68e320a576db47a5e2a303",
+  "owner_attestation_digest": "fd2c364fee2d575120ae4fc29e07788fe5f4107c63f2828da5add916dc7e2a84",
+  "owner_package_inventory_digest": "533deaaecd328d972cdf770073afb0f56e560d4aadea59be1e111d0782eafd80",
+  "expected_owner_package_inventory_digest": "533deaaecd328d972cdf770073afb0f56e560d4aadea59be1e111d0782eafd80",
+  "test_cases": 57,
+  "test_cells": 1140,
+  "supported_test_cells": 440,
+  "unsupported_test_cells": 700,
+  "gates": [
+    {
+      "id": "held_out_partition_lock",
+      "required": true,
+      "status": "passed",
+      "evidence_digest": "330108c06ad51d47b73e93275ab54d11262b679538af0da861a50394ffa3c897",
+      "reason": "exact_locked_test_partition_validated"
+    },
+    {
+      "id": "owner_inspection",
+      "required": true,
+      "status": "blocked",
+      "evidence_digest": "fd2c364fee2d575120ae4fc29e07788fe5f4107c63f2828da5add916dc7e2a84",
+      "reason": "owner_inspection_overall_status_revision_required"
+    },
+    {
+      "id": "blinded_human_admission",
+      "required": true,
+      "status": "missing",
+      "reason": "primary_audit_terminal_ledger_unavailable"
+    },
+    {
+      "id": "authorized_study_record",
+      "required": true,
+      "status": "missing",
+      "reason": "controlled_relation_study_record_unavailable"
+    },
+    {
+      "id": "execution_and_budget_binding",
+      "required": true,
+      "status": "missing",
+      "reason": "exact_multi_arm_execution_binding_unavailable"
+    },
+    {
+      "id": "current_route_attestations",
+      "required": true,
+      "status": "missing",
+      "reason": "current_attestation_per_provider_arm_unavailable"
+    },
+    {
+      "id": "live_authorization",
+      "required": true,
+      "status": "missing",
+      "reason": "exact_live_authorization_digest_unavailable"
+    },
+    {
+      "id": "private_capsule_family",
+      "required": true,
+      "status": "missing",
+      "reason": "verified_private_owner_capsule_family_unavailable"
+    }
+  ],
+  "passed_gates": 1,
+  "blocked_gates": 1,
+  "missing_gates": 6,
+  "status": "not_ready",
+  "run_authorized": false,
+  "execution_permit_issued": false,
+  "external_action_status": "not_authorized",
+  "provider_calls": 0,
+  "empirical_units": 0,
+  "network_required": false,
+  "claim_boundary": {
+    "supported_claim": "the exact held-out partition and current owner projection were inspected provider-free, and the real run is not authorized",
+    "unsupported_claims": [
+      "held-out execution",
+      "verifier reliability",
+      "provider quality",
+      "population generalization",
+      "execution authorization"
+    ]
+  },
+  "digest": "46c61709efa76ab4577a89b598a96da046a5ed57d22747446bf253d5d6ab1588"
+}

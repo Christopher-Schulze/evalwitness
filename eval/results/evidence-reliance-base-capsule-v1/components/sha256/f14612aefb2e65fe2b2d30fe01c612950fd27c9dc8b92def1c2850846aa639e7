@@ -1,0 +1,126 @@
+{
+  "header": {
+    "schema_version": "evalwitness.execution-witness.v1",
+    "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+    "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+    "object_id": "offline-witness-stdout-success",
+    "task_id": "TASK-069",
+    "task_group_id": "synthetic-stdout_success",
+    "data_role": "adapter_development",
+    "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+    "parents": [
+      {
+        "relation": "source",
+        "schema_version": "evalwitness.verification-lineage-source.v1",
+        "object_id": "offline-source-stdout-success",
+        "task_id": "TASK-069",
+        "task_group_id": "synthetic-stdout_success",
+        "digest": "1045664f1f03d211a26eb6488f5f132859a41f3023402e79e80081730154d65a"
+      }
+    ],
+    "digest": "d41a8c35255b7176a3721f3481e45e6c5da9be198cbca1f6bf31bbf9cad848c9"
+  },
+  "capture_policy": {
+    "policy_id": "synthetic-process-boundary-v1",
+    "policy_digest": "c902880fd8c3f5edb532678630929d212ba8cc4fbd04ee1b141390483a4abae3",
+    "purpose": "synthetic_fixture_generation",
+    "boundary": "process_spawn_and_wait",
+    "clock_source": "host_monotonic_plus_utc_observation",
+    "clock_origin_id": "deterministic-fixture-clock-v1",
+    "clock_resolution_nanos": 1000000,
+    "working_directory_policy": "repository_relative_alias",
+    "environment_policy": "allowlisted_names_no_values",
+    "output_policy": "separate_stream_digest_before_redaction",
+    "child_process_coverage": "direct_child_only",
+    "authoritative_for_absence": false,
+    "laboratory_executes_commands": true,
+    "provider_calls_allowed": 0
+  },
+  "threats": [
+    {
+      "threat_id": "agent_narration_spoofing",
+      "mitigation": "fixed child process emits all evidence",
+      "residual_state": "mitigated"
+    },
+    {
+      "threat_id": "clock_skew",
+      "mitigation": "fixture coordinates are deterministic and make no duration claim",
+      "residual_state": "unsupported"
+    },
+    {
+      "threat_id": "command_display_spoofing",
+      "mitigation": "fixed case ID selects a sealed argv alias",
+      "residual_state": "mitigated"
+    },
+    {
+      "threat_id": "dropped_child_process",
+      "mitigation": "direct child is captured; wrapper internals are represented by fixed case semantics",
+      "residual_state": "unsupported"
+    },
+    {
+      "threat_id": "environment_mutation",
+      "mitigation": "fixture child receives no captured environment values",
+      "residual_state": "mitigated"
+    },
+    {
+      "threat_id": "output_truncation",
+      "mitigation": "full and retained stream digests are computed separately",
+      "residual_state": "mitigated"
+    },
+    {
+      "threat_id": "shell_wrapper_ambiguity",
+      "mitigation": "no shell is used and wrapper behavior is a closed enum",
+      "residual_state": "mitigated"
+    },
+    {
+      "threat_id": "state_drift",
+      "mitigation": "fixture state is hashed before and after execution",
+      "residual_state": "mitigated"
+    }
+  ],
+  "capture_sequence": 5,
+  "capture_window_start_tick": 5000,
+  "capture_window_end_tick": 5100,
+  "capture_window_started_at": "2026-08-10T15:00:05Z",
+  "capture_window_ended_at": "2026-08-10T15:00:05.1Z",
+  "capture_completeness": "complete",
+  "authoritative_surface": false,
+  "invocation_present": true,
+  "invocation_id": "invocation-stdout_success",
+  "parent_invocation_id": "",
+  "argv": [
+    "@evalwitness",
+    "trace",
+    "lineage",
+    "fixture-child",
+    "stdout_success"
+  ],
+  "unsupported_shell_text": "",
+  "command_operands_digest": "0acd92a29b32590a27cfd6056efd2cb0ab28d3b5f09571392b39f927c7eebafd",
+  "working_directory_alias": "repository",
+  "started_tick": 5010,
+  "ended_tick": 5090,
+  "started_at": "2026-08-10T15:00:05.01Z",
+  "ended_at": "2026-08-10T15:00:05.09Z",
+  "exit_status_observed": true,
+  "exit_status": 0,
+  "stdout": {
+    "state": "captured",
+    "observed_bytes": 20,
+    "retained_bytes": 20,
+    "content_digest": "fbaacd1df6f28aa2ed91cd75533e1fb2844323408cf6057423cae3e0387ea0dc",
+    "prefix_digest": "",
+    "suffix_digest": ""
+  },
+  "stderr": {
+    "state": "absent",
+    "observed_bytes": 0,
+    "retained_bytes": 0,
+    "content_digest": "",
+    "prefix_digest": "",
+    "suffix_digest": ""
+  },
+  "repository_state_observed": true,
+  "repository_state_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+  "echoed_success_marker_trusted": false
+}

@@ -1,0 +1,161 @@
+{
+  "version": "evalwitness.verification-lineage-source-readiness-audit.v1",
+  "audit_id": "task_069-source-readiness-v1",
+  "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+  "source_inventory_digest": "d1d60e91a0301867b72ee821d4146a1e1d05b310a28aad8f30bcbd33362e3b39",
+  "parser_lock_digest": "b3d5a1cfde6881bca5ff4fcb38adecd3b83a03fb9f0763cf4e97649cfced9631",
+  "state": "not_runnable_no_admitted_paired_research_source",
+  "task_group_counts_inspected": false,
+  "empirical_denominators_available": false,
+  "external_action_status": "not_authorized",
+  "summary": {
+    "candidates": 5,
+    "materialized_candidates": 3,
+    "development_usable_candidates": 3,
+    "research_admitted_candidates": 0,
+    "calibration_eligible_candidates": 0,
+    "locked_test_eligible_candidates": 0,
+    "admitted_task_groups": 0
+  },
+  "candidates": [
+    {
+      "candidate_id": "checked_in_agent_trace_synthetic",
+      "materialized": true,
+      "development_usable": true,
+      "research_admitted": false,
+      "calibration_eligible": false,
+      "locked_test_eligible": false,
+      "blocking_reasons": [
+        "not_a_native_agent_execution",
+        "runtime_verification_lineage_is_not_representable"
+      ]
+    },
+    {
+      "candidate_id": "checked_in_otlp_synthetic",
+      "materialized": true,
+      "development_usable": true,
+      "research_admitted": false,
+      "calibration_eligible": false,
+      "locked_test_eligible": false,
+      "blocking_reasons": [
+        "no_independent_execution_witness",
+        "not_a_native_agent_execution"
+      ]
+    },
+    {
+      "candidate_id": "checked_in_vendor_goldens",
+      "materialized": true,
+      "development_usable": true,
+      "research_admitted": false,
+      "calibration_eligible": false,
+      "locked_test_eligible": false,
+      "blocking_reasons": [
+        "authoritative_execution_witness_absent",
+        "license_consent_and_task_lineage_not_sealed",
+        "manifest_proves_conversion_counts_not_research_admissibility"
+      ]
+    },
+    {
+      "candidate_id": "explicitly_authorized_owner_captures",
+      "materialized": false,
+      "development_usable": false,
+      "research_admitted": false,
+      "calibration_eligible": false,
+      "locked_test_eligible": false,
+      "blocking_reasons": [
+        "capture_command_and_spend_boundary_not_sealed",
+        "owner_authorization_not_obtained",
+        "source_bytes_not_materialized"
+      ]
+    },
+    {
+      "candidate_id": "public_licensed_native_exports",
+      "materialized": false,
+      "development_usable": false,
+      "research_admitted": false,
+      "calibration_eligible": false,
+      "locked_test_eligible": false,
+      "blocking_reasons": [
+        "no_candidate_source_selected",
+        "source_bytes_not_materialized",
+        "task_group_counts_not_inspected"
+      ]
+    }
+  ],
+  "formats": [
+    {
+      "format": "agent_trace_json",
+      "candidate_sources": 1,
+      "materialized_sources": 1,
+      "development_sources": 1,
+      "research_sources": 0,
+      "calibration_task_groups": 0,
+      "locked_test_task_groups": 0,
+      "inferential": false
+    },
+    {
+      "format": "claude_code_jsonl",
+      "candidate_sources": 3,
+      "materialized_sources": 1,
+      "development_sources": 1,
+      "research_sources": 0,
+      "calibration_task_groups": 0,
+      "locked_test_task_groups": 0,
+      "inferential": false
+    },
+    {
+      "format": "codex_rollout_jsonl",
+      "candidate_sources": 3,
+      "materialized_sources": 1,
+      "development_sources": 1,
+      "research_sources": 0,
+      "calibration_task_groups": 0,
+      "locked_test_task_groups": 0,
+      "inferential": false
+    },
+    {
+      "format": "opencode_export_json",
+      "candidate_sources": 3,
+      "materialized_sources": 1,
+      "development_sources": 1,
+      "research_sources": 0,
+      "calibration_task_groups": 0,
+      "locked_test_task_groups": 0,
+      "inferential": false
+    },
+    {
+      "format": "otlp_json_genai",
+      "candidate_sources": 1,
+      "materialized_sources": 1,
+      "development_sources": 1,
+      "research_sources": 0,
+      "calibration_task_groups": 0,
+      "locked_test_task_groups": 0,
+      "inferential": false
+    }
+  ],
+  "acquisition_requirements": [
+    "exact_capture_command_and_export_identity",
+    "explicit_owner_authorization_or_verified_publication_basis",
+    "paired_execution_witness_or_authoritative_absence_surface",
+    "pre_capture_privacy_and_redaction_policy",
+    "source_license_and_redistribution_verification",
+    "task_lineage_near_duplicate_and_role_assignment_before_content_inspection"
+  ],
+  "claim_boundary": {
+    "evidence_role": "adapter_development",
+    "empirical_audit_run": false,
+    "population_estimate": false,
+    "provider_calls": 0,
+    "agent_launches": 0,
+    "supported_claim": "the sealed pre-acquisition inventory contains zero admitted calibration or locked-test sources and therefore no empirical TASK-069 denominator",
+    "unsupported_claims": [
+      "agent verification prevalence",
+      "corpus feasibility after acquisition",
+      "format comparison",
+      "population inference",
+      "provider quality"
+    ]
+  },
+  "digest": "f19faeafad0083cb21ef9504b9650889354e2538f0084744e48bbe5cadad5480"
+}

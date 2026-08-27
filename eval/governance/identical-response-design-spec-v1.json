@@ -1,0 +1,13 @@
+{
+  "source_task_groups": 40,
+  "disagreement_rates": [0.05, 0.14, 0.31],
+  "primary_disagreement_rate": 0.14,
+  "alpha": 0.05,
+  "family_size": 1,
+  "target_power": 0.80,
+  "discordant_win_probability": 0.75,
+  "invalid_rate": 0.02,
+  "missing_rate": 0.01,
+  "abstention_rate": 0.02,
+  "route_failure_rate": 0.01
+}

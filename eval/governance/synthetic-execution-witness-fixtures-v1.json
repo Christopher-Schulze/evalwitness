@@ -1,0 +1,1281 @@
+{
+  "schema_version": "evalwitness.synthetic-execution-witness-fixtures.v1",
+  "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+  "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+  "harness": {
+    "harness_id": "evalwitness-fixed-process-fixture-v1",
+    "executable_alias": "@evalwitness",
+    "fixed_case_ids": [
+      "controlled_failure",
+      "mixed_stream_failure",
+      "pipeline_masked_failure",
+      "state_change_success",
+      "stdout_success",
+      "truncated_output_success",
+      "wrapper_failure_propagation"
+    ],
+    "arbitrary_executable_allowed": false,
+    "shell_used": false,
+    "provider_calls_allowed": 0,
+    "agent_launch_allowed": false,
+    "timeout_millis": 5000,
+    "stream_retention_bytes": 128,
+    "clock_projection": "deterministic_fixture_coordinates_not_wall_clock_measurement"
+  },
+  "fixtures": [
+    {
+      "case_id": "controlled_failure",
+      "behavior": "direct",
+      "failure_condition": "nonzero exit and decisive stderr prove controlled failure",
+      "repository_state_before_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+      "repository_state_after_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+      "repository_state_changed": false,
+      "source": {
+        "header": {
+          "schema_version": "evalwitness.verification-lineage-source.v1",
+          "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+          "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+          "object_id": "source-controlled_failure",
+          "task_id": "TASK-069",
+          "task_group_id": "synthetic-controlled_failure",
+          "data_role": "adapter_development",
+          "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+          "parents": [
+            {
+              "relation": "plan",
+              "schema_version": "evalwitness.verification-lineage-plan.v1",
+              "object_id": "task_069-verification-lineage-v1",
+              "task_id": "TASK-069",
+              "task_group_id": "study",
+              "digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c"
+            }
+          ],
+          "digest": "59baf40f3720c375bff260f17dec1699a183ffad7aa1a67c000e8e5725ad081b"
+        },
+        "source_class": "checked_in_controls",
+        "agent_ecosystem": "evalwitness_fixture_harness",
+        "runtime_identity_class": "fixed_local_subprocess",
+        "provider_metadata": "none",
+        "export_format": "evalwitness_synthetic_process_observation",
+        "export_version": "v1",
+        "capture_mode": "paired_native_and_witness",
+        "source_session_id": "fixture-session-controlled_failure",
+        "lineage_id": "fixture-lineage-controlled_failure",
+        "near_duplicate_id": "fixture-near-duplicate-controlled_failure",
+        "repository_id": "evalwitness-repository",
+        "repository_alias": "repository",
+        "task_alias": "controlled_failure",
+        "license": "MIT",
+        "redistribution_permission": "public_mit",
+        "privacy_class": "synthetic_public",
+        "redaction_policy": "none",
+        "authoritative_surface": false,
+        "raw_record_count": 1,
+        "raw_record_digest": "55a96fc8ee699b287081237c2087b7aeab5457293902db79de13d9442d2de48a",
+        "canonical_trajectory_digest": "3f37f55c58d2dd8d2e5c34a909a2ad50edb0353e6f0dbebba84af9f13fb32066",
+        "field_accounting_digest": "1c99a48246c175f4398540bd9ade18f68a33034ce986a3df1351657d3dedc68b"
+      },
+      "witness": {
+        "header": {
+          "schema_version": "evalwitness.execution-witness.v1",
+          "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+          "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+          "object_id": "witness-controlled_failure",
+          "task_id": "TASK-069",
+          "task_group_id": "synthetic-controlled_failure",
+          "data_role": "adapter_development",
+          "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+          "parents": [
+            {
+              "relation": "source",
+              "schema_version": "evalwitness.verification-lineage-source.v1",
+              "object_id": "source-controlled_failure",
+              "task_id": "TASK-069",
+              "task_group_id": "synthetic-controlled_failure",
+              "digest": "59baf40f3720c375bff260f17dec1699a183ffad7aa1a67c000e8e5725ad081b"
+            }
+          ],
+          "digest": "71018a34033b39e89a3990520f05e4107c76cd7466e955d0c32522726b0cfab8"
+        },
+        "capture_policy": {
+          "policy_id": "synthetic-process-boundary-v1",
+          "policy_digest": "c902880fd8c3f5edb532678630929d212ba8cc4fbd04ee1b141390483a4abae3",
+          "purpose": "synthetic_fixture_generation",
+          "boundary": "process_spawn_and_wait",
+          "clock_source": "host_monotonic_plus_utc_observation",
+          "clock_origin_id": "deterministic-fixture-clock-v1",
+          "clock_resolution_nanos": 1000000,
+          "working_directory_policy": "repository_relative_alias",
+          "environment_policy": "allowlisted_names_no_values",
+          "output_policy": "separate_stream_digest_before_redaction",
+          "child_process_coverage": "direct_child_only",
+          "authoritative_for_absence": false,
+          "laboratory_executes_commands": true,
+          "provider_calls_allowed": 0
+        },
+        "threats": [
+          {
+            "threat_id": "agent_narration_spoofing",
+            "mitigation": "fixed child process emits all evidence",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "clock_skew",
+            "mitigation": "fixture coordinates are deterministic and make no duration claim",
+            "residual_state": "unsupported"
+          },
+          {
+            "threat_id": "command_display_spoofing",
+            "mitigation": "fixed case ID selects a sealed argv alias",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "dropped_child_process",
+            "mitigation": "direct child is captured; wrapper internals are represented by fixed case semantics",
+            "residual_state": "unsupported"
+          },
+          {
+            "threat_id": "environment_mutation",
+            "mitigation": "fixture child receives no captured environment values",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "output_truncation",
+            "mitigation": "full and retained stream digests are computed separately",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "shell_wrapper_ambiguity",
+            "mitigation": "no shell is used and wrapper behavior is a closed enum",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "state_drift",
+            "mitigation": "fixture state is hashed before and after execution",
+            "residual_state": "mitigated"
+          }
+        ],
+        "capture_sequence": 1,
+        "capture_window_start_tick": 1000,
+        "capture_window_end_tick": 1100,
+        "capture_window_started_at": "2026-08-10T15:00:01Z",
+        "capture_window_ended_at": "2026-08-10T15:00:01.1Z",
+        "capture_completeness": "complete",
+        "authoritative_surface": false,
+        "invocation_present": true,
+        "invocation_id": "invocation-controlled_failure",
+        "parent_invocation_id": "",
+        "argv": [
+          "@evalwitness",
+          "trace",
+          "lineage",
+          "fixture-child",
+          "controlled_failure"
+        ],
+        "unsupported_shell_text": "",
+        "command_operands_digest": "6d3d4716624c3acef6b469103554408e0b7d25f1e2abd8da4914f1dfc9f4c99c",
+        "working_directory_alias": "repository",
+        "started_tick": 1010,
+        "ended_tick": 1090,
+        "started_at": "2026-08-10T15:00:01.01Z",
+        "ended_at": "2026-08-10T15:00:01.09Z",
+        "exit_status_observed": true,
+        "exit_status": 7,
+        "stdout": {
+          "state": "absent",
+          "observed_bytes": 0,
+          "retained_bytes": 0,
+          "content_digest": "",
+          "prefix_digest": "",
+          "suffix_digest": ""
+        },
+        "stderr": {
+          "state": "captured",
+          "observed_bytes": 20,
+          "retained_bytes": 20,
+          "content_digest": "4c4a22fa927baff0247cb2f578799549ea8e3fb9c963755299e777e8d50fa710",
+          "prefix_digest": "",
+          "suffix_digest": ""
+        },
+        "repository_state_observed": true,
+        "repository_state_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+        "echoed_success_marker_trusted": false
+      }
+    },
+    {
+      "case_id": "mixed_stream_failure",
+      "behavior": "direct",
+      "failure_condition": "nonzero exit remains decisive when stdout and stderr both exist",
+      "repository_state_before_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+      "repository_state_after_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+      "repository_state_changed": false,
+      "source": {
+        "header": {
+          "schema_version": "evalwitness.verification-lineage-source.v1",
+          "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+          "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+          "object_id": "source-mixed_stream_failure",
+          "task_id": "TASK-069",
+          "task_group_id": "synthetic-mixed_stream_failure",
+          "data_role": "adapter_development",
+          "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+          "parents": [
+            {
+              "relation": "plan",
+              "schema_version": "evalwitness.verification-lineage-plan.v1",
+              "object_id": "task_069-verification-lineage-v1",
+              "task_id": "TASK-069",
+              "task_group_id": "study",
+              "digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c"
+            }
+          ],
+          "digest": "38c79f9abc9667dbf050b0b38ea9b2ab8d3f0ca8475e14426f25c1381af2f834"
+        },
+        "source_class": "checked_in_controls",
+        "agent_ecosystem": "evalwitness_fixture_harness",
+        "runtime_identity_class": "fixed_local_subprocess",
+        "provider_metadata": "none",
+        "export_format": "evalwitness_synthetic_process_observation",
+        "export_version": "v1",
+        "capture_mode": "paired_native_and_witness",
+        "source_session_id": "fixture-session-mixed_stream_failure",
+        "lineage_id": "fixture-lineage-mixed_stream_failure",
+        "near_duplicate_id": "fixture-near-duplicate-mixed_stream_failure",
+        "repository_id": "evalwitness-repository",
+        "repository_alias": "repository",
+        "task_alias": "mixed_stream_failure",
+        "license": "MIT",
+        "redistribution_permission": "public_mit",
+        "privacy_class": "synthetic_public",
+        "redaction_policy": "none",
+        "authoritative_surface": false,
+        "raw_record_count": 1,
+        "raw_record_digest": "8bdcc0f8f77bc56eb39557d7de11356a3ba0b10ae10da9532b71653c51f0633c",
+        "canonical_trajectory_digest": "459a17d6af2ffeddf06e85fb7a95de5d6b1afa3a5a34cf2ac53daa4ab588e61d",
+        "field_accounting_digest": "1c99a48246c175f4398540bd9ade18f68a33034ce986a3df1351657d3dedc68b"
+      },
+      "witness": {
+        "header": {
+          "schema_version": "evalwitness.execution-witness.v1",
+          "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+          "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+          "object_id": "witness-mixed_stream_failure",
+          "task_id": "TASK-069",
+          "task_group_id": "synthetic-mixed_stream_failure",
+          "data_role": "adapter_development",
+          "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+          "parents": [
+            {
+              "relation": "source",
+              "schema_version": "evalwitness.verification-lineage-source.v1",
+              "object_id": "source-mixed_stream_failure",
+              "task_id": "TASK-069",
+              "task_group_id": "synthetic-mixed_stream_failure",
+              "digest": "38c79f9abc9667dbf050b0b38ea9b2ab8d3f0ca8475e14426f25c1381af2f834"
+            }
+          ],
+          "digest": "85cc4c3bc0bbd760a6f494da02d7654e972ac34927fdb57238fde581d0dd8d97"
+        },
+        "capture_policy": {
+          "policy_id": "synthetic-process-boundary-v1",
+          "policy_digest": "c902880fd8c3f5edb532678630929d212ba8cc4fbd04ee1b141390483a4abae3",
+          "purpose": "synthetic_fixture_generation",
+          "boundary": "process_spawn_and_wait",
+          "clock_source": "host_monotonic_plus_utc_observation",
+          "clock_origin_id": "deterministic-fixture-clock-v1",
+          "clock_resolution_nanos": 1000000,
+          "working_directory_policy": "repository_relative_alias",
+          "environment_policy": "allowlisted_names_no_values",
+          "output_policy": "separate_stream_digest_before_redaction",
+          "child_process_coverage": "direct_child_only",
+          "authoritative_for_absence": false,
+          "laboratory_executes_commands": true,
+          "provider_calls_allowed": 0
+        },
+        "threats": [
+          {
+            "threat_id": "agent_narration_spoofing",
+            "mitigation": "fixed child process emits all evidence",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "clock_skew",
+            "mitigation": "fixture coordinates are deterministic and make no duration claim",
+            "residual_state": "unsupported"
+          },
+          {
+            "threat_id": "command_display_spoofing",
+            "mitigation": "fixed case ID selects a sealed argv alias",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "dropped_child_process",
+            "mitigation": "direct child is captured; wrapper internals are represented by fixed case semantics",
+            "residual_state": "unsupported"
+          },
+          {
+            "threat_id": "environment_mutation",
+            "mitigation": "fixture child receives no captured environment values",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "output_truncation",
+            "mitigation": "full and retained stream digests are computed separately",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "shell_wrapper_ambiguity",
+            "mitigation": "no shell is used and wrapper behavior is a closed enum",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "state_drift",
+            "mitigation": "fixture state is hashed before and after execution",
+            "residual_state": "mitigated"
+          }
+        ],
+        "capture_sequence": 2,
+        "capture_window_start_tick": 2000,
+        "capture_window_end_tick": 2100,
+        "capture_window_started_at": "2026-08-10T15:00:02Z",
+        "capture_window_ended_at": "2026-08-10T15:00:02.1Z",
+        "capture_completeness": "complete",
+        "authoritative_surface": false,
+        "invocation_present": true,
+        "invocation_id": "invocation-mixed_stream_failure",
+        "parent_invocation_id": "",
+        "argv": [
+          "@evalwitness",
+          "trace",
+          "lineage",
+          "fixture-child",
+          "mixed_stream_failure"
+        ],
+        "unsupported_shell_text": "",
+        "command_operands_digest": "610a24f388a22268a2d91a7777f28387c4531ad1cacdc1233222a3422d861ba5",
+        "working_directory_alias": "repository",
+        "started_tick": 2010,
+        "ended_tick": 2090,
+        "started_at": "2026-08-10T15:00:02.01Z",
+        "ended_at": "2026-08-10T15:00:02.09Z",
+        "exit_status_observed": true,
+        "exit_status": 3,
+        "stdout": {
+          "state": "captured",
+          "observed_bytes": 17,
+          "retained_bytes": 17,
+          "content_digest": "d14ae9ba149c39c272445b5ccfb2dc090bbdf877a481c8943a3093c53f1f9205",
+          "prefix_digest": "",
+          "suffix_digest": ""
+        },
+        "stderr": {
+          "state": "captured",
+          "observed_bytes": 17,
+          "retained_bytes": 17,
+          "content_digest": "0a9f3a457e7864451a240cca3b269ae8e5f072bb735a8f015ea2a213ccbc5ba6",
+          "prefix_digest": "",
+          "suffix_digest": ""
+        },
+        "repository_state_observed": true,
+        "repository_state_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+        "echoed_success_marker_trusted": false
+      }
+    },
+    {
+      "case_id": "pipeline_masked_failure",
+      "behavior": "wrapper_masks_failure",
+      "failure_condition": "inner nonzero exit is masked by a zero-status wrapper",
+      "repository_state_before_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+      "repository_state_after_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+      "repository_state_changed": false,
+      "source": {
+        "header": {
+          "schema_version": "evalwitness.verification-lineage-source.v1",
+          "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+          "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+          "object_id": "source-pipeline_masked_failure",
+          "task_id": "TASK-069",
+          "task_group_id": "synthetic-pipeline_masked_failure",
+          "data_role": "adapter_development",
+          "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+          "parents": [
+            {
+              "relation": "plan",
+              "schema_version": "evalwitness.verification-lineage-plan.v1",
+              "object_id": "task_069-verification-lineage-v1",
+              "task_id": "TASK-069",
+              "task_group_id": "study",
+              "digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c"
+            }
+          ],
+          "digest": "27ce8e1de9202f599f080407c8f12be4d08ce81bd7f13e6c45d0bb3c45ed472b"
+        },
+        "source_class": "checked_in_controls",
+        "agent_ecosystem": "evalwitness_fixture_harness",
+        "runtime_identity_class": "fixed_local_subprocess",
+        "provider_metadata": "none",
+        "export_format": "evalwitness_synthetic_process_observation",
+        "export_version": "v1",
+        "capture_mode": "paired_native_and_witness",
+        "source_session_id": "fixture-session-pipeline_masked_failure",
+        "lineage_id": "fixture-lineage-pipeline_masked_failure",
+        "near_duplicate_id": "fixture-near-duplicate-pipeline_masked_failure",
+        "repository_id": "evalwitness-repository",
+        "repository_alias": "repository",
+        "task_alias": "pipeline_masked_failure",
+        "license": "MIT",
+        "redistribution_permission": "public_mit",
+        "privacy_class": "synthetic_public",
+        "redaction_policy": "none",
+        "authoritative_surface": false,
+        "raw_record_count": 1,
+        "raw_record_digest": "29aa5f7d6d8702f282f2d35cf1f2f063515a8590ac2eba6fc070a01b38d5c584",
+        "canonical_trajectory_digest": "38fbe3e60ec73e573a0a0c06b709fdc2b682dc40c4d3cb1b9bebe3cd570791a4",
+        "field_accounting_digest": "1c99a48246c175f4398540bd9ade18f68a33034ce986a3df1351657d3dedc68b"
+      },
+      "witness": {
+        "header": {
+          "schema_version": "evalwitness.execution-witness.v1",
+          "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+          "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+          "object_id": "witness-pipeline_masked_failure",
+          "task_id": "TASK-069",
+          "task_group_id": "synthetic-pipeline_masked_failure",
+          "data_role": "adapter_development",
+          "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+          "parents": [
+            {
+              "relation": "source",
+              "schema_version": "evalwitness.verification-lineage-source.v1",
+              "object_id": "source-pipeline_masked_failure",
+              "task_id": "TASK-069",
+              "task_group_id": "synthetic-pipeline_masked_failure",
+              "digest": "27ce8e1de9202f599f080407c8f12be4d08ce81bd7f13e6c45d0bb3c45ed472b"
+            }
+          ],
+          "digest": "bdfe4d436d714c9a07e6e9d1c92b047e9f1cfb6d2d25610922857a50c808df77"
+        },
+        "capture_policy": {
+          "policy_id": "synthetic-process-boundary-v1",
+          "policy_digest": "c902880fd8c3f5edb532678630929d212ba8cc4fbd04ee1b141390483a4abae3",
+          "purpose": "synthetic_fixture_generation",
+          "boundary": "process_spawn_and_wait",
+          "clock_source": "host_monotonic_plus_utc_observation",
+          "clock_origin_id": "deterministic-fixture-clock-v1",
+          "clock_resolution_nanos": 1000000,
+          "working_directory_policy": "repository_relative_alias",
+          "environment_policy": "allowlisted_names_no_values",
+          "output_policy": "separate_stream_digest_before_redaction",
+          "child_process_coverage": "direct_child_only",
+          "authoritative_for_absence": false,
+          "laboratory_executes_commands": true,
+          "provider_calls_allowed": 0
+        },
+        "threats": [
+          {
+            "threat_id": "agent_narration_spoofing",
+            "mitigation": "fixed child process emits all evidence",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "clock_skew",
+            "mitigation": "fixture coordinates are deterministic and make no duration claim",
+            "residual_state": "unsupported"
+          },
+          {
+            "threat_id": "command_display_spoofing",
+            "mitigation": "fixed case ID selects a sealed argv alias",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "dropped_child_process",
+            "mitigation": "direct child is captured; wrapper internals are represented by fixed case semantics",
+            "residual_state": "unsupported"
+          },
+          {
+            "threat_id": "environment_mutation",
+            "mitigation": "fixture child receives no captured environment values",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "output_truncation",
+            "mitigation": "full and retained stream digests are computed separately",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "shell_wrapper_ambiguity",
+            "mitigation": "no shell is used and wrapper behavior is a closed enum",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "state_drift",
+            "mitigation": "fixture state is hashed before and after execution",
+            "residual_state": "mitigated"
+          }
+        ],
+        "capture_sequence": 3,
+        "capture_window_start_tick": 3000,
+        "capture_window_end_tick": 3100,
+        "capture_window_started_at": "2026-08-10T15:00:03Z",
+        "capture_window_ended_at": "2026-08-10T15:00:03.1Z",
+        "capture_completeness": "complete",
+        "authoritative_surface": false,
+        "invocation_present": true,
+        "invocation_id": "invocation-pipeline_masked_failure",
+        "parent_invocation_id": "",
+        "argv": [
+          "@evalwitness",
+          "trace",
+          "lineage",
+          "fixture-child",
+          "pipeline_masked_failure"
+        ],
+        "unsupported_shell_text": "",
+        "command_operands_digest": "aab572ad7c96dae981aa6b82820afa3fce3d82a0ce19bca23536d0c8d7cf3971",
+        "working_directory_alias": "repository",
+        "started_tick": 3010,
+        "ended_tick": 3090,
+        "started_at": "2026-08-10T15:00:03.01Z",
+        "ended_at": "2026-08-10T15:00:03.09Z",
+        "exit_status_observed": true,
+        "exit_status": 0,
+        "stdout": {
+          "state": "captured",
+          "observed_bytes": 26,
+          "retained_bytes": 26,
+          "content_digest": "05be5ed51b0684484013d77326ca46ee352de89154f16ab871d1ecfdc592d421",
+          "prefix_digest": "",
+          "suffix_digest": ""
+        },
+        "stderr": {
+          "state": "captured",
+          "observed_bytes": 20,
+          "retained_bytes": 20,
+          "content_digest": "4c4a22fa927baff0247cb2f578799549ea8e3fb9c963755299e777e8d50fa710",
+          "prefix_digest": "",
+          "suffix_digest": ""
+        },
+        "repository_state_observed": true,
+        "repository_state_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+        "echoed_success_marker_trusted": false
+      }
+    },
+    {
+      "case_id": "state_change_success",
+      "behavior": "state_change",
+      "failure_condition": "state digest changes despite successful exit",
+      "repository_state_before_digest": "081a29f0c94f142d6b2c311267d7b8accf3d8c4a0e7f5c5ab6ce223ecf1ac05e",
+      "repository_state_after_digest": "8bf89bfcc7b70160967ae076279315ac6ef2350c2dea5b900e0a922bf1a78385",
+      "repository_state_changed": true,
+      "source": {
+        "header": {
+          "schema_version": "evalwitness.verification-lineage-source.v1",
+          "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+          "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+          "object_id": "source-state_change_success",
+          "task_id": "TASK-069",
+          "task_group_id": "synthetic-state_change_success",
+          "data_role": "adapter_development",
+          "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+          "parents": [
+            {
+              "relation": "plan",
+              "schema_version": "evalwitness.verification-lineage-plan.v1",
+              "object_id": "task_069-verification-lineage-v1",
+              "task_id": "TASK-069",
+              "task_group_id": "study",
+              "digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c"
+            }
+          ],
+          "digest": "24215027ef600e61f4d771dbc367e66766a4fd8ccf87d3b4657bcc80d287cf56"
+        },
+        "source_class": "checked_in_controls",
+        "agent_ecosystem": "evalwitness_fixture_harness",
+        "runtime_identity_class": "fixed_local_subprocess",
+        "provider_metadata": "none",
+        "export_format": "evalwitness_synthetic_process_observation",
+        "export_version": "v1",
+        "capture_mode": "paired_native_and_witness",
+        "source_session_id": "fixture-session-state_change_success",
+        "lineage_id": "fixture-lineage-state_change_success",
+        "near_duplicate_id": "fixture-near-duplicate-state_change_success",
+        "repository_id": "evalwitness-repository",
+        "repository_alias": "repository",
+        "task_alias": "state_change_success",
+        "license": "MIT",
+        "redistribution_permission": "public_mit",
+        "privacy_class": "synthetic_public",
+        "redaction_policy": "none",
+        "authoritative_surface": false,
+        "raw_record_count": 1,
+        "raw_record_digest": "ae0dc126fdf81eb797c8e1f5076785a4cdb679e193b86b43ae1821d2ffe2bb36",
+        "canonical_trajectory_digest": "a51111d2882dab2af574addbbbc68e38948574043f567de11c5f73d55b78480b",
+        "field_accounting_digest": "1c99a48246c175f4398540bd9ade18f68a33034ce986a3df1351657d3dedc68b"
+      },
+      "witness": {
+        "header": {
+          "schema_version": "evalwitness.execution-witness.v1",
+          "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+          "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+          "object_id": "witness-state_change_success",
+          "task_id": "TASK-069",
+          "task_group_id": "synthetic-state_change_success",
+          "data_role": "adapter_development",
+          "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+          "parents": [
+            {
+              "relation": "source",
+              "schema_version": "evalwitness.verification-lineage-source.v1",
+              "object_id": "source-state_change_success",
+              "task_id": "TASK-069",
+              "task_group_id": "synthetic-state_change_success",
+              "digest": "24215027ef600e61f4d771dbc367e66766a4fd8ccf87d3b4657bcc80d287cf56"
+            }
+          ],
+          "digest": "32392989060121dbf915527f7d994eb043aa3fcdce7d246a91fea015c4bb7c9b"
+        },
+        "capture_policy": {
+          "policy_id": "synthetic-process-boundary-v1",
+          "policy_digest": "c902880fd8c3f5edb532678630929d212ba8cc4fbd04ee1b141390483a4abae3",
+          "purpose": "synthetic_fixture_generation",
+          "boundary": "process_spawn_and_wait",
+          "clock_source": "host_monotonic_plus_utc_observation",
+          "clock_origin_id": "deterministic-fixture-clock-v1",
+          "clock_resolution_nanos": 1000000,
+          "working_directory_policy": "repository_relative_alias",
+          "environment_policy": "allowlisted_names_no_values",
+          "output_policy": "separate_stream_digest_before_redaction",
+          "child_process_coverage": "direct_child_only",
+          "authoritative_for_absence": false,
+          "laboratory_executes_commands": true,
+          "provider_calls_allowed": 0
+        },
+        "threats": [
+          {
+            "threat_id": "agent_narration_spoofing",
+            "mitigation": "fixed child process emits all evidence",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "clock_skew",
+            "mitigation": "fixture coordinates are deterministic and make no duration claim",
+            "residual_state": "unsupported"
+          },
+          {
+            "threat_id": "command_display_spoofing",
+            "mitigation": "fixed case ID selects a sealed argv alias",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "dropped_child_process",
+            "mitigation": "direct child is captured; wrapper internals are represented by fixed case semantics",
+            "residual_state": "unsupported"
+          },
+          {
+            "threat_id": "environment_mutation",
+            "mitigation": "fixture child receives no captured environment values",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "output_truncation",
+            "mitigation": "full and retained stream digests are computed separately",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "shell_wrapper_ambiguity",
+            "mitigation": "no shell is used and wrapper behavior is a closed enum",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "state_drift",
+            "mitigation": "fixture state is hashed before and after execution",
+            "residual_state": "mitigated"
+          }
+        ],
+        "capture_sequence": 4,
+        "capture_window_start_tick": 4000,
+        "capture_window_end_tick": 4100,
+        "capture_window_started_at": "2026-08-10T15:00:04Z",
+        "capture_window_ended_at": "2026-08-10T15:00:04.1Z",
+        "capture_completeness": "complete",
+        "authoritative_surface": false,
+        "invocation_present": true,
+        "invocation_id": "invocation-state_change_success",
+        "parent_invocation_id": "",
+        "argv": [
+          "@evalwitness",
+          "trace",
+          "lineage",
+          "fixture-child",
+          "state_change_success"
+        ],
+        "unsupported_shell_text": "",
+        "command_operands_digest": "7804a0b685826fa6abee18d49487c19c95d4aab3987c34f5e6e366ebd181f527",
+        "working_directory_alias": "repository",
+        "started_tick": 4010,
+        "ended_tick": 4090,
+        "started_at": "2026-08-10T15:00:04.01Z",
+        "ended_at": "2026-08-10T15:00:04.09Z",
+        "exit_status_observed": true,
+        "exit_status": 0,
+        "stdout": {
+          "state": "captured",
+          "observed_bytes": 14,
+          "retained_bytes": 14,
+          "content_digest": "76aa5629629b5fda01681c53b84d893389e65d2d879f9d343486156db131d071",
+          "prefix_digest": "",
+          "suffix_digest": ""
+        },
+        "stderr": {
+          "state": "absent",
+          "observed_bytes": 0,
+          "retained_bytes": 0,
+          "content_digest": "",
+          "prefix_digest": "",
+          "suffix_digest": ""
+        },
+        "repository_state_observed": true,
+        "repository_state_digest": "8bf89bfcc7b70160967ae076279315ac6ef2350c2dea5b900e0a922bf1a78385",
+        "echoed_success_marker_trusted": false
+      }
+    },
+    {
+      "case_id": "stdout_success",
+      "behavior": "direct",
+      "failure_condition": "nonzero exit would falsify successful verification",
+      "repository_state_before_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+      "repository_state_after_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+      "repository_state_changed": false,
+      "source": {
+        "header": {
+          "schema_version": "evalwitness.verification-lineage-source.v1",
+          "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+          "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+          "object_id": "source-stdout_success",
+          "task_id": "TASK-069",
+          "task_group_id": "synthetic-stdout_success",
+          "data_role": "adapter_development",
+          "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+          "parents": [
+            {
+              "relation": "plan",
+              "schema_version": "evalwitness.verification-lineage-plan.v1",
+              "object_id": "task_069-verification-lineage-v1",
+              "task_id": "TASK-069",
+              "task_group_id": "study",
+              "digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c"
+            }
+          ],
+          "digest": "846bfedea5cc601bfd03d2a559b8d03130e5dcce5b8fcb2a7b23c181d977fc74"
+        },
+        "source_class": "checked_in_controls",
+        "agent_ecosystem": "evalwitness_fixture_harness",
+        "runtime_identity_class": "fixed_local_subprocess",
+        "provider_metadata": "none",
+        "export_format": "evalwitness_synthetic_process_observation",
+        "export_version": "v1",
+        "capture_mode": "paired_native_and_witness",
+        "source_session_id": "fixture-session-stdout_success",
+        "lineage_id": "fixture-lineage-stdout_success",
+        "near_duplicate_id": "fixture-near-duplicate-stdout_success",
+        "repository_id": "evalwitness-repository",
+        "repository_alias": "repository",
+        "task_alias": "stdout_success",
+        "license": "MIT",
+        "redistribution_permission": "public_mit",
+        "privacy_class": "synthetic_public",
+        "redaction_policy": "none",
+        "authoritative_surface": false,
+        "raw_record_count": 1,
+        "raw_record_digest": "a50f13fec27784e1d2cbf9190a4a91206cf858b963845a4c18e86299e49a5088",
+        "canonical_trajectory_digest": "d01986a99fc3981ab2a32d9acae6b3c60be4bdc009d353a674f12279ef622a8b",
+        "field_accounting_digest": "1c99a48246c175f4398540bd9ade18f68a33034ce986a3df1351657d3dedc68b"
+      },
+      "witness": {
+        "header": {
+          "schema_version": "evalwitness.execution-witness.v1",
+          "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+          "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+          "object_id": "witness-stdout_success",
+          "task_id": "TASK-069",
+          "task_group_id": "synthetic-stdout_success",
+          "data_role": "adapter_development",
+          "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+          "parents": [
+            {
+              "relation": "source",
+              "schema_version": "evalwitness.verification-lineage-source.v1",
+              "object_id": "source-stdout_success",
+              "task_id": "TASK-069",
+              "task_group_id": "synthetic-stdout_success",
+              "digest": "846bfedea5cc601bfd03d2a559b8d03130e5dcce5b8fcb2a7b23c181d977fc74"
+            }
+          ],
+          "digest": "35946c44c7dd87715aec6a877c3725718e5439059997baebfdf3413d03b9bb95"
+        },
+        "capture_policy": {
+          "policy_id": "synthetic-process-boundary-v1",
+          "policy_digest": "c902880fd8c3f5edb532678630929d212ba8cc4fbd04ee1b141390483a4abae3",
+          "purpose": "synthetic_fixture_generation",
+          "boundary": "process_spawn_and_wait",
+          "clock_source": "host_monotonic_plus_utc_observation",
+          "clock_origin_id": "deterministic-fixture-clock-v1",
+          "clock_resolution_nanos": 1000000,
+          "working_directory_policy": "repository_relative_alias",
+          "environment_policy": "allowlisted_names_no_values",
+          "output_policy": "separate_stream_digest_before_redaction",
+          "child_process_coverage": "direct_child_only",
+          "authoritative_for_absence": false,
+          "laboratory_executes_commands": true,
+          "provider_calls_allowed": 0
+        },
+        "threats": [
+          {
+            "threat_id": "agent_narration_spoofing",
+            "mitigation": "fixed child process emits all evidence",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "clock_skew",
+            "mitigation": "fixture coordinates are deterministic and make no duration claim",
+            "residual_state": "unsupported"
+          },
+          {
+            "threat_id": "command_display_spoofing",
+            "mitigation": "fixed case ID selects a sealed argv alias",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "dropped_child_process",
+            "mitigation": "direct child is captured; wrapper internals are represented by fixed case semantics",
+            "residual_state": "unsupported"
+          },
+          {
+            "threat_id": "environment_mutation",
+            "mitigation": "fixture child receives no captured environment values",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "output_truncation",
+            "mitigation": "full and retained stream digests are computed separately",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "shell_wrapper_ambiguity",
+            "mitigation": "no shell is used and wrapper behavior is a closed enum",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "state_drift",
+            "mitigation": "fixture state is hashed before and after execution",
+            "residual_state": "mitigated"
+          }
+        ],
+        "capture_sequence": 5,
+        "capture_window_start_tick": 5000,
+        "capture_window_end_tick": 5100,
+        "capture_window_started_at": "2026-08-10T15:00:05Z",
+        "capture_window_ended_at": "2026-08-10T15:00:05.1Z",
+        "capture_completeness": "complete",
+        "authoritative_surface": false,
+        "invocation_present": true,
+        "invocation_id": "invocation-stdout_success",
+        "parent_invocation_id": "",
+        "argv": [
+          "@evalwitness",
+          "trace",
+          "lineage",
+          "fixture-child",
+          "stdout_success"
+        ],
+        "unsupported_shell_text": "",
+        "command_operands_digest": "0acd92a29b32590a27cfd6056efd2cb0ab28d3b5f09571392b39f927c7eebafd",
+        "working_directory_alias": "repository",
+        "started_tick": 5010,
+        "ended_tick": 5090,
+        "started_at": "2026-08-10T15:00:05.01Z",
+        "ended_at": "2026-08-10T15:00:05.09Z",
+        "exit_status_observed": true,
+        "exit_status": 0,
+        "stdout": {
+          "state": "captured",
+          "observed_bytes": 20,
+          "retained_bytes": 20,
+          "content_digest": "fbaacd1df6f28aa2ed91cd75533e1fb2844323408cf6057423cae3e0387ea0dc",
+          "prefix_digest": "",
+          "suffix_digest": ""
+        },
+        "stderr": {
+          "state": "absent",
+          "observed_bytes": 0,
+          "retained_bytes": 0,
+          "content_digest": "",
+          "prefix_digest": "",
+          "suffix_digest": ""
+        },
+        "repository_state_observed": true,
+        "repository_state_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+        "echoed_success_marker_trusted": false
+      }
+    },
+    {
+      "case_id": "truncated_output_success",
+      "behavior": "direct",
+      "failure_condition": "full output identity must survive bounded retention",
+      "repository_state_before_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+      "repository_state_after_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+      "repository_state_changed": false,
+      "source": {
+        "header": {
+          "schema_version": "evalwitness.verification-lineage-source.v1",
+          "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+          "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+          "object_id": "source-truncated_output_success",
+          "task_id": "TASK-069",
+          "task_group_id": "synthetic-truncated_output_success",
+          "data_role": "adapter_development",
+          "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+          "parents": [
+            {
+              "relation": "plan",
+              "schema_version": "evalwitness.verification-lineage-plan.v1",
+              "object_id": "task_069-verification-lineage-v1",
+              "task_id": "TASK-069",
+              "task_group_id": "study",
+              "digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c"
+            }
+          ],
+          "digest": "e737ed50411c1fe60a29a320bdafd1a4d93d9bd51772dd26e502b24b60996e5b"
+        },
+        "source_class": "checked_in_controls",
+        "agent_ecosystem": "evalwitness_fixture_harness",
+        "runtime_identity_class": "fixed_local_subprocess",
+        "provider_metadata": "none",
+        "export_format": "evalwitness_synthetic_process_observation",
+        "export_version": "v1",
+        "capture_mode": "paired_native_and_witness",
+        "source_session_id": "fixture-session-truncated_output_success",
+        "lineage_id": "fixture-lineage-truncated_output_success",
+        "near_duplicate_id": "fixture-near-duplicate-truncated_output_success",
+        "repository_id": "evalwitness-repository",
+        "repository_alias": "repository",
+        "task_alias": "truncated_output_success",
+        "license": "MIT",
+        "redistribution_permission": "public_mit",
+        "privacy_class": "synthetic_public",
+        "redaction_policy": "none",
+        "authoritative_surface": false,
+        "raw_record_count": 1,
+        "raw_record_digest": "950bcafc5ad607eac6c516de50ac5728e5f38fb82826ad128196987e4dfa5c0d",
+        "canonical_trajectory_digest": "130769acde2f8eaa1767f5fae422364bc5985db9fb1fde0c1cf7e16b888fbade",
+        "field_accounting_digest": "1c99a48246c175f4398540bd9ade18f68a33034ce986a3df1351657d3dedc68b"
+      },
+      "witness": {
+        "header": {
+          "schema_version": "evalwitness.execution-witness.v1",
+          "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+          "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+          "object_id": "witness-truncated_output_success",
+          "task_id": "TASK-069",
+          "task_group_id": "synthetic-truncated_output_success",
+          "data_role": "adapter_development",
+          "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+          "parents": [
+            {
+              "relation": "source",
+              "schema_version": "evalwitness.verification-lineage-source.v1",
+              "object_id": "source-truncated_output_success",
+              "task_id": "TASK-069",
+              "task_group_id": "synthetic-truncated_output_success",
+              "digest": "e737ed50411c1fe60a29a320bdafd1a4d93d9bd51772dd26e502b24b60996e5b"
+            }
+          ],
+          "digest": "d75e15a1e0e43e6ebc006aef1a595f9750a6059e3e2f9f5c9b5a3de0915de264"
+        },
+        "capture_policy": {
+          "policy_id": "synthetic-process-boundary-v1",
+          "policy_digest": "c902880fd8c3f5edb532678630929d212ba8cc4fbd04ee1b141390483a4abae3",
+          "purpose": "synthetic_fixture_generation",
+          "boundary": "process_spawn_and_wait",
+          "clock_source": "host_monotonic_plus_utc_observation",
+          "clock_origin_id": "deterministic-fixture-clock-v1",
+          "clock_resolution_nanos": 1000000,
+          "working_directory_policy": "repository_relative_alias",
+          "environment_policy": "allowlisted_names_no_values",
+          "output_policy": "separate_stream_digest_before_redaction",
+          "child_process_coverage": "direct_child_only",
+          "authoritative_for_absence": false,
+          "laboratory_executes_commands": true,
+          "provider_calls_allowed": 0
+        },
+        "threats": [
+          {
+            "threat_id": "agent_narration_spoofing",
+            "mitigation": "fixed child process emits all evidence",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "clock_skew",
+            "mitigation": "fixture coordinates are deterministic and make no duration claim",
+            "residual_state": "unsupported"
+          },
+          {
+            "threat_id": "command_display_spoofing",
+            "mitigation": "fixed case ID selects a sealed argv alias",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "dropped_child_process",
+            "mitigation": "direct child is captured; wrapper internals are represented by fixed case semantics",
+            "residual_state": "unsupported"
+          },
+          {
+            "threat_id": "environment_mutation",
+            "mitigation": "fixture child receives no captured environment values",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "output_truncation",
+            "mitigation": "full and retained stream digests are computed separately",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "shell_wrapper_ambiguity",
+            "mitigation": "no shell is used and wrapper behavior is a closed enum",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "state_drift",
+            "mitigation": "fixture state is hashed before and after execution",
+            "residual_state": "mitigated"
+          }
+        ],
+        "capture_sequence": 6,
+        "capture_window_start_tick": 6000,
+        "capture_window_end_tick": 6100,
+        "capture_window_started_at": "2026-08-10T15:00:06Z",
+        "capture_window_ended_at": "2026-08-10T15:00:06.1Z",
+        "capture_completeness": "complete",
+        "authoritative_surface": false,
+        "invocation_present": true,
+        "invocation_id": "invocation-truncated_output_success",
+        "parent_invocation_id": "",
+        "argv": [
+          "@evalwitness",
+          "trace",
+          "lineage",
+          "fixture-child",
+          "truncated_output_success"
+        ],
+        "unsupported_shell_text": "",
+        "command_operands_digest": "004d5b32f4655b4c1e9f1b4ea6612372f70a7a11e71aef8a3c8640ba1b4d6d2a",
+        "working_directory_alias": "repository",
+        "started_tick": 6010,
+        "ended_tick": 6090,
+        "started_at": "2026-08-10T15:00:06.01Z",
+        "ended_at": "2026-08-10T15:00:06.09Z",
+        "exit_status_observed": true,
+        "exit_status": 0,
+        "stdout": {
+          "state": "truncated",
+          "observed_bytes": 4096,
+          "retained_bytes": 128,
+          "content_digest": "6896d9ea3f73a4434f5832bc65714e7d066f177373f36f34dc8a6f735daa41b1",
+          "prefix_digest": "d53eda7a637c99cc7fb566d96e9fa109bf15c478410a3f5eb4d4c4e26cd081f6",
+          "suffix_digest": "d53eda7a637c99cc7fb566d96e9fa109bf15c478410a3f5eb4d4c4e26cd081f6"
+        },
+        "stderr": {
+          "state": "absent",
+          "observed_bytes": 0,
+          "retained_bytes": 0,
+          "content_digest": "",
+          "prefix_digest": "",
+          "suffix_digest": ""
+        },
+        "repository_state_observed": true,
+        "repository_state_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+        "echoed_success_marker_trusted": false
+      }
+    },
+    {
+      "case_id": "wrapper_failure_propagation",
+      "behavior": "wrapper_propagates_failure",
+      "failure_condition": "wrapper must preserve the inner nonzero exit",
+      "repository_state_before_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+      "repository_state_after_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+      "repository_state_changed": false,
+      "source": {
+        "header": {
+          "schema_version": "evalwitness.verification-lineage-source.v1",
+          "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+          "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+          "object_id": "source-wrapper_failure_propagation",
+          "task_id": "TASK-069",
+          "task_group_id": "synthetic-wrapper_failure_propagation",
+          "data_role": "adapter_development",
+          "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+          "parents": [
+            {
+              "relation": "plan",
+              "schema_version": "evalwitness.verification-lineage-plan.v1",
+              "object_id": "task_069-verification-lineage-v1",
+              "task_id": "TASK-069",
+              "task_group_id": "study",
+              "digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c"
+            }
+          ],
+          "digest": "3509e4fd460d08d5bfbf666c4130c94de385a4bdef53d2eb3d64acabf5e8cbce"
+        },
+        "source_class": "checked_in_controls",
+        "agent_ecosystem": "evalwitness_fixture_harness",
+        "runtime_identity_class": "fixed_local_subprocess",
+        "provider_metadata": "none",
+        "export_format": "evalwitness_synthetic_process_observation",
+        "export_version": "v1",
+        "capture_mode": "paired_native_and_witness",
+        "source_session_id": "fixture-session-wrapper_failure_propagation",
+        "lineage_id": "fixture-lineage-wrapper_failure_propagation",
+        "near_duplicate_id": "fixture-near-duplicate-wrapper_failure_propagation",
+        "repository_id": "evalwitness-repository",
+        "repository_alias": "repository",
+        "task_alias": "wrapper_failure_propagation",
+        "license": "MIT",
+        "redistribution_permission": "public_mit",
+        "privacy_class": "synthetic_public",
+        "redaction_policy": "none",
+        "authoritative_surface": false,
+        "raw_record_count": 1,
+        "raw_record_digest": "d8b9c3d6c59b7e6187d178477a3eb4df4ee3e8f5c7a78003913153ba2895d664",
+        "canonical_trajectory_digest": "d17adb3386c77bd453d95f18f555a7f38b8a2677086f1a24476c940be26557e3",
+        "field_accounting_digest": "1c99a48246c175f4398540bd9ade18f68a33034ce986a3df1351657d3dedc68b"
+      },
+      "witness": {
+        "header": {
+          "schema_version": "evalwitness.execution-witness.v1",
+          "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+          "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+          "object_id": "witness-wrapper_failure_propagation",
+          "task_id": "TASK-069",
+          "task_group_id": "synthetic-wrapper_failure_propagation",
+          "data_role": "adapter_development",
+          "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+          "parents": [
+            {
+              "relation": "source",
+              "schema_version": "evalwitness.verification-lineage-source.v1",
+              "object_id": "source-wrapper_failure_propagation",
+              "task_id": "TASK-069",
+              "task_group_id": "synthetic-wrapper_failure_propagation",
+              "digest": "3509e4fd460d08d5bfbf666c4130c94de385a4bdef53d2eb3d64acabf5e8cbce"
+            }
+          ],
+          "digest": "27030fc8f8af8ed7e04ef85ad18a8a9932bafe6662b5bdad88f385d72502c059"
+        },
+        "capture_policy": {
+          "policy_id": "synthetic-process-boundary-v1",
+          "policy_digest": "c902880fd8c3f5edb532678630929d212ba8cc4fbd04ee1b141390483a4abae3",
+          "purpose": "synthetic_fixture_generation",
+          "boundary": "process_spawn_and_wait",
+          "clock_source": "host_monotonic_plus_utc_observation",
+          "clock_origin_id": "deterministic-fixture-clock-v1",
+          "clock_resolution_nanos": 1000000,
+          "working_directory_policy": "repository_relative_alias",
+          "environment_policy": "allowlisted_names_no_values",
+          "output_policy": "separate_stream_digest_before_redaction",
+          "child_process_coverage": "direct_child_only",
+          "authoritative_for_absence": false,
+          "laboratory_executes_commands": true,
+          "provider_calls_allowed": 0
+        },
+        "threats": [
+          {
+            "threat_id": "agent_narration_spoofing",
+            "mitigation": "fixed child process emits all evidence",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "clock_skew",
+            "mitigation": "fixture coordinates are deterministic and make no duration claim",
+            "residual_state": "unsupported"
+          },
+          {
+            "threat_id": "command_display_spoofing",
+            "mitigation": "fixed case ID selects a sealed argv alias",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "dropped_child_process",
+            "mitigation": "direct child is captured; wrapper internals are represented by fixed case semantics",
+            "residual_state": "unsupported"
+          },
+          {
+            "threat_id": "environment_mutation",
+            "mitigation": "fixture child receives no captured environment values",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "output_truncation",
+            "mitigation": "full and retained stream digests are computed separately",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "shell_wrapper_ambiguity",
+            "mitigation": "no shell is used and wrapper behavior is a closed enum",
+            "residual_state": "mitigated"
+          },
+          {
+            "threat_id": "state_drift",
+            "mitigation": "fixture state is hashed before and after execution",
+            "residual_state": "mitigated"
+          }
+        ],
+        "capture_sequence": 7,
+        "capture_window_start_tick": 7000,
+        "capture_window_end_tick": 7100,
+        "capture_window_started_at": "2026-08-10T15:00:07Z",
+        "capture_window_ended_at": "2026-08-10T15:00:07.1Z",
+        "capture_completeness": "complete",
+        "authoritative_surface": false,
+        "invocation_present": true,
+        "invocation_id": "invocation-wrapper_failure_propagation",
+        "parent_invocation_id": "",
+        "argv": [
+          "@evalwitness",
+          "trace",
+          "lineage",
+          "fixture-child",
+          "wrapper_failure_propagation"
+        ],
+        "unsupported_shell_text": "",
+        "command_operands_digest": "8b855ddc497339e1bae57a2b50684d799881c1d5c2148e360dc837cada2355ae",
+        "working_directory_alias": "repository",
+        "started_tick": 7010,
+        "ended_tick": 7090,
+        "started_at": "2026-08-10T15:00:07.01Z",
+        "ended_at": "2026-08-10T15:00:07.09Z",
+        "exit_status_observed": true,
+        "exit_status": 7,
+        "stdout": {
+          "state": "absent",
+          "observed_bytes": 0,
+          "retained_bytes": 0,
+          "content_digest": "",
+          "prefix_digest": "",
+          "suffix_digest": ""
+        },
+        "stderr": {
+          "state": "captured",
+          "observed_bytes": 20,
+          "retained_bytes": 20,
+          "content_digest": "4c4a22fa927baff0247cb2f578799549ea8e3fb9c963755299e777e8d50fa710",
+          "prefix_digest": "",
+          "suffix_digest": ""
+        },
+        "repository_state_observed": true,
+        "repository_state_digest": "592a2ffe15f494b4c51d6dde0894babe895d493ce0772cc5c212585aa6c3bbf8",
+        "echoed_success_marker_trusted": false
+      }
+    }
+  ],
+  "digest": "80e5d8e4f235d36486fb0eeba839b4a0b185b91c976b4abeaaac62bb328571c9"
+}

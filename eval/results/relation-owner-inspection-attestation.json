@@ -1,0 +1,240 @@
+{
+  "schema_version": "evalwitness.relation-owner-inspection-public-attestation.v1",
+  "canonical_policy": "evalwitness.relation-canonical-json.v1",
+  "evidence_kind": "owner_authorized_agent_assisted_construct_inspection",
+  "inspection_mode": "private_chain_verified_public_aggregate",
+  "inspection_date": "2026-08-10",
+  "package_inventory_digest": "533deaaecd328d972cdf770073afb0f56e560d4aadea59be1e111d0782eafd80",
+  "assessments": {
+    "required": 66,
+    "journal_events": 66,
+    "corrections": 0,
+    "core": 50,
+    "scarcity_cases": 12,
+    "scarcity_boundary": 4,
+    "completed": 66,
+    "core_cases": 7,
+    "scarcity_case_count": 3,
+    "scarcity_test_cases": 0
+  },
+  "dimensions": [
+    {
+      "scope": "core",
+      "dimension": "task_context",
+      "applicable": 7,
+      "passed": 7,
+      "failed": 0,
+      "indeterminate": 0
+    },
+    {
+      "scope": "core",
+      "dimension": "evidence_alignment",
+      "applicable": 7,
+      "passed": 7,
+      "failed": 0,
+      "indeterminate": 0
+    },
+    {
+      "scope": "core",
+      "dimension": "transformation_isolation",
+      "applicable": 7,
+      "passed": 7,
+      "failed": 0,
+      "indeterminate": 0
+    },
+    {
+      "scope": "core",
+      "dimension": "information_sufficiency",
+      "applicable": 7,
+      "passed": 7,
+      "failed": 0,
+      "indeterminate": 0
+    },
+    {
+      "scope": "core",
+      "dimension": "blinding_integrity",
+      "applicable": 7,
+      "passed": 7,
+      "failed": 0,
+      "indeterminate": 0
+    },
+    {
+      "scope": "core",
+      "dimension": "rubric_applicability",
+      "applicable": 7,
+      "passed": 7,
+      "failed": 0,
+      "indeterminate": 0
+    },
+    {
+      "scope": "core",
+      "dimension": "redistribution_boundary",
+      "applicable": 7,
+      "passed": 7,
+      "failed": 0,
+      "indeterminate": 0
+    },
+    {
+      "scope": "core",
+      "dimension": "candidate_order",
+      "applicable": 1,
+      "passed": 1,
+      "failed": 0,
+      "indeterminate": 0
+    },
+    {
+      "scope": "scarcity_case",
+      "dimension": "scarcity_original_evidence",
+      "applicable": 3,
+      "passed": 3,
+      "failed": 0,
+      "indeterminate": 0
+    },
+    {
+      "scope": "scarcity_case",
+      "dimension": "scarcity_target_omission",
+      "applicable": 3,
+      "passed": 1,
+      "failed": 2,
+      "indeterminate": 0
+    },
+    {
+      "scope": "scarcity_case",
+      "dimension": "scarcity_relation_preservation",
+      "applicable": 3,
+      "passed": 3,
+      "failed": 0,
+      "indeterminate": 0
+    },
+    {
+      "scope": "scarcity_case",
+      "dimension": "scarcity_information_sufficiency",
+      "applicable": 3,
+      "passed": 3,
+      "failed": 0,
+      "indeterminate": 0
+    },
+    {
+      "scope": "scarcity_boundary",
+      "dimension": "scarcity_exhaustive_scope",
+      "applicable": 1,
+      "passed": 1,
+      "failed": 0,
+      "indeterminate": 0
+    },
+    {
+      "scope": "scarcity_boundary",
+      "dimension": "scarcity_role_integrity",
+      "applicable": 1,
+      "passed": 1,
+      "failed": 0,
+      "indeterminate": 0
+    },
+    {
+      "scope": "scarcity_boundary",
+      "dimension": "scarcity_estimand_separation",
+      "applicable": 1,
+      "passed": 1,
+      "failed": 0,
+      "indeterminate": 0
+    },
+    {
+      "scope": "scarcity_boundary",
+      "dimension": "scarcity_non_authorization",
+      "applicable": 1,
+      "passed": 1,
+      "failed": 0,
+      "indeterminate": 0
+    }
+  ],
+  "outcomes": {
+    "core": {
+      "accepted": 7,
+      "revision_required": 0,
+      "unresolved": 0
+    },
+    "scarcity_cases": {
+      "accepted": 1,
+      "revision_required": 2,
+      "unresolved": 0
+    },
+    "scarcity_boundary": "accepted",
+    "core_status": "passed",
+    "scarcity_status": "revision_required",
+    "overall_status": "revision_required"
+  },
+  "human_study_status": "not_run",
+  "external_action_status": "not_authorized",
+  "disclosure": {
+    "private_chain_verified": true,
+    "private_journal_identities_disclosed": false,
+    "restricted_evidence_disclosed": false,
+    "public_validation_scope": "schema_digest_denominators_statuses_and_claim_boundary",
+    "source_reproduction": "requires_withheld_restricted_owner_inputs",
+    "signature_status": "unsigned_content_addressed",
+    "capsule_status": "not_yet_capsule_bound"
+  },
+  "claims": [
+    {
+      "id": "public_document_integrity",
+      "claim": "Public schema, digest, denominators, aggregate statuses, and claim boundary",
+      "status": "supported",
+      "evidence": "schema_digest_denominators_statuses_and_claim_boundary"
+    },
+    {
+      "id": "private_owner_inspection",
+      "claim": "Owner-authorized agent-assisted inspection completed over all 66 required assessments",
+      "status": "owner_attested",
+      "evidence": "private chain verified during projection; 66 journal events and 0 corrections"
+    },
+    {
+      "id": "core_construct_status",
+      "claim": "Seven core pilot constructs",
+      "status": "owner_attested",
+      "evidence": "accepted=7 revision_required=0 unresolved=0 status=passed"
+    },
+    {
+      "id": "scarcity_construct_status",
+      "claim": "Three separately reported scarcity constructs",
+      "status": "owner_attested",
+      "evidence": "accepted=1 revision_required=2 unresolved=0 status=revision_required"
+    },
+    {
+      "id": "formal_human_study",
+      "claim": "Independent formal human study or inter-rater agreement",
+      "status": "not_run",
+      "evidence": "not run"
+    },
+    {
+      "id": "provider_or_verifier_performance",
+      "claim": "Provider or verifier performance",
+      "status": "not_run",
+      "evidence": "not run; no provider evidence enters this attestation"
+    },
+    {
+      "id": "external_action",
+      "claim": "Reviewer contact, packet sharing, recruitment, publication authority, or study launch",
+      "status": "not_authorized",
+      "evidence": "not authorized"
+    },
+    {
+      "id": "population_or_held_out_validity",
+      "claim": "Population generalization or held-out omitted-evidence validity",
+      "status": "unsupported",
+      "evidence": "unsupported; the scarcity surface has zero test-role cases"
+    },
+    {
+      "id": "public_source_reproduction",
+      "claim": "Public reproduction of the private assessment chain",
+      "status": "not_publicly_reproducible",
+      "evidence": "requires_withheld_restricted_owner_inputs"
+    },
+    {
+      "id": "corrected_corpus_feasibility",
+      "claim": "Prospective corrected corpus or v4 feasibility",
+      "status": "unsupported",
+      "evidence": "unsupported; owned by the prospective trace-native source audit"
+    }
+  ],
+  "digest": "fd2c364fee2d575120ae4fc29e07788fe5f4107c63f2828da5add916dc7e2a84"
+}

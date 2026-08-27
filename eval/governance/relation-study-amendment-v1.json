@@ -1,0 +1,64 @@
+{
+  "schema_version": "evalwitness.relation-study-amendment.v1",
+  "canonical_policy": "evalwitness.relation-canonical-json.v1",
+  "protocol_version": "evalwitness.controlled-relation-review.v1",
+  "review_objective": "controlled_relation",
+  "issued_at": "2026-08-09T15:04:34Z",
+  "plan_digest": "76fe626f3e5ba8bfd12158daf72290eff53aab6bb28c3f114db8aed592f61f91",
+  "pilot_sample_digest": "9bf464768d57329a9a223d8a9830980efadeb9da3dd269edb0e7271b68c320b1",
+  "primary_sample_digest": "87626b14513f84194caa92a12353e869630837aa3aafde521dcd02a82e33dd46",
+  "source_corpus_digest": "6f60fc2ceac52fa9efbf4f5b39dc132ae62e849987cb08b5753f09941a8b020a",
+  "pilot": {
+    "cases": 8,
+    "primary_labels": 16,
+    "maximum_tie_break_labels": 8,
+    "post_label_probes": 16,
+    "data_role": "development",
+    "primary_overlap": 0,
+    "purpose": "materialization, comprehension, timing, qualification, ambiguity, and leakage only",
+    "primary_analysis_use": "forbidden"
+  },
+  "primary": {
+    "cases": 31,
+    "effective_task_groups": 28,
+    "primary_labels": 62,
+    "maximum_tie_break_labels": 31,
+    "post_label_probes": 62,
+    "cluster_unit": "source_task_group",
+    "aggregation_rule": "within each source task group, any contradiction yields contradicted; otherwise any unresolved yields unresolved; only complete support yields supported",
+    "replacement_rule": "none; the exact 31-case commitment is immutable and every unavailable case remains visible",
+    "missingness_rule": "missing, late, partial, conflicted, or insufficient judgments resolve unresolved and remain in every case and task-group denominator",
+    "stopping_rule": "fixed sample; stop only after all 31 cases reach committed dual review plus required tie-break or explicit unresolved state; no sequential efficacy stopping"
+  },
+  "inference": {
+    "primary_estimand": "source-task-group prevalence of formal-human contradiction with unresolved groups retained separately",
+    "nominal_alpha": 0.05,
+    "interval_method": "one-sided exact binomial upper confidence bound at the source-task-group level",
+    "multiplicity_method": "one prespecified global primary endpoint; family, class, split, and control rows are descriptive and cannot replace it",
+    "primary_multiplicity_family": [
+      "cluster_contradiction_prevalence"
+    ],
+    "family_analysis_role": "descriptive bounded construct evidence only; no per-family validation or universal error-rate claim",
+    "zero_contradiction_upper_bound": 0.10146573557272465,
+    "detection_scenarios": [
+      {
+        "contradiction_rate": 0.05,
+        "detection_probability": 0.7621731147446675
+      },
+      {
+        "contradiction_rate": 0.1,
+        "detection_probability": 0.9476652366972639
+      },
+      {
+        "contradiction_rate": 0.2,
+        "detection_probability": 0.9980657186886166
+      }
+    ],
+    "unresolved_denominator_rule": "unresolved is never pooled with support, never dropped, and never converted by majority vote",
+    "independence_limitation": "exact binomial resolution assumes independent sampled task groups; the governed corpus is not a probability sample, so the bound is a design diagnostic rather than population generalization"
+  },
+  "claim_boundary": "report blinded reviewers' support, contradiction, and unresolved states only for the named sampled tasks under the frozen material and rubric; do not claim universal construct validity, verifier robustness, or human ground truth",
+  "empirical_status": "not_run",
+  "external_action_status": "not_authorized",
+  "digest": "9f12d06aeac59a6292225781040da0160e75be47c9eb541e94eef91f6f475bf1"
+}

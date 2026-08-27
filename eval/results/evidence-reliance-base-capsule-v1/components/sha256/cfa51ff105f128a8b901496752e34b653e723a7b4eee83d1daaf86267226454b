@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://evalwitness.dev/protocol/1.2/schemas/decision-evidence.schema.json",
+  "title": "EvalWitness DecisionEvidence",
+  "type": "object",
+  "required": ["schema_version", "policy_version", "state", "conditional_scores_decimal", "decision_strength_decimal", "score_evidence_digests", "budget_digest", "provenance_digest"],
+  "properties": {
+    "schema_version": {"const": "evalwitness.protocol.decision-evidence.v1"},
+    "policy_version": {"type": "string", "minLength": 1},
+    "state": {"enum": ["selected", "tied", "abstained", "invalid", "budget_exhausted", "provider_failed"]},
+    "abstention_reason": {"type": "string"},
+    "winner": {"type": "integer", "minimum": 0},
+    "conditional_scores_decimal": {"type": "array", "items": {"$ref": "shared.schema.json#/$defs/decimal"}},
+    "decision_strength_decimal": {"$ref": "shared.schema.json#/$defs/decimal"},
+    "score_evidence_digests": {"type": "array", "minItems": 1, "items": {"$ref": "shared.schema.json#/$defs/digest"}},
+    "budget_digest": {"$ref": "shared.schema.json#/$defs/digest"},
+    "provenance_digest": {"$ref": "shared.schema.json#/$defs/digest"}
+  },
+  "allOf": [
+    {"if": {"properties": {"state": {"const": "selected"}}}, "then": {"required": ["winner"], "not": {"required": ["abstention_reason"]}}, "else": {"properties": {"decision_strength_decimal": {"const": "0"}}, "not": {"required": ["winner"]}}},
+    {"if": {"properties": {"state": {"const": "abstained"}}}, "then": {"required": ["abstention_reason"]}, "else": {"not": {"required": ["abstention_reason"]}}}
+  ],
+  "additionalProperties": false
+}

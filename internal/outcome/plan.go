@@ -1,0 +1,45 @@
+package outcome
+
+func DefaultPlan() (Plan, error) {
+	return SealPlan(Plan{
+		ProtocolVersion:    "evalwitness.outcome-adjudication.v1",
+		SourceCorpusDigest: "6f60fc2ceac52fa9efbf4f5b39dc132ae62e849987cb08b5753f09941a8b020a",
+		MutationSampleSize: 31,
+		NaturalSampleSize:  48,
+		RequiredStrata: []string{
+			"abstention",
+			"baseline_disagreement",
+			"high_confidence_error",
+			"provider_failure",
+			"random_control",
+			"verifier_correct",
+			"verifier_judge_disagreement",
+			"verifier_wrong",
+		},
+		MutationFamilies: []string{
+			"candidate_order_reversal",
+			"causally_independent_event_reorder",
+			"falsified_test_evidence",
+			"incomplete_tool_output",
+			"irrelevant_verbosity",
+			"neutral_formatting",
+			"omitted_test_evidence",
+			"untrusted_score_tag_injection",
+		},
+		SamplingRule:               "six frozen-hash task groups per natural stratum, allocated rarest-stratum-first without task reuse, plus every presampled controlled-corruption packet",
+		ReplacementRule:            "only an ineligible item may be replaced, by the next frozen-hash task group in the same stratum; reason and skipped identity digest remain recorded",
+		PrimaryAdjudicators:        2,
+		TieBreakAdjudicators:       1,
+		BlindingRule:               "HMAC-SHA-256 rekeyed packet identities and independently randomized slots; omit evaluator output, route, condition, mutation family, expected relation, source filename, and hypothesis",
+		RubricVersion:              "evalwitness.outcome-rubric.v1",
+		AgreementMetrics:           []string{"cohen_kappa", "label_prevalence", "raw_agreement"},
+		BootstrapIterations:        10_000,
+		BootstrapSeed:              "evalwitness-outcome-agreement-v1-frozen-seed",
+		ConflictRule:               "two independent primary labels; disagreement receives one independent round-three label, otherwise remains indeterminate",
+		OutcomeResolutionRule:      "retain every source; valid independent executable or formal contradiction can supersede asserted reward; human evidence resolves task intent but never consults evaluator performance",
+		SensitivityAnalysis:        "report all reliability and calibration results against original and revised outcome records with paired denominators and revision digests",
+		PublicPacketPolicy:         "release only licensed or redacted evidence with source digests, omission classes, and reproduction limitations",
+		PrivateMappingPolicy:       "owner-only mapping encrypted or stored mode 0600; public packet and sample lock expose only HMAC-rekeyed identities and mapping digest",
+		RecruitmentRequiresConsent: true,
+	})
+}

@@ -1,0 +1,73 @@
+{
+  "algorithm": "evalwitness.identical-response-paired-design.v1",
+  "counterfactual": "distribution_aware_vs_chosen_token",
+  "source_task_groups": 40,
+  "effective_source_task_groups": 37,
+  "combined_loss_fraction": 0.060000000000000005,
+  "alpha": 0.05,
+  "family_size": 1,
+  "family_adjusted_alpha": 0.05,
+  "target_power": 0.8,
+  "discordant_win_probability": 0.75,
+  "disagreement_sensitivity": [
+    {
+      "disagreement_rate": 0.05,
+      "expected_discordant": 1.85,
+      "power_at_declared_q_nominal": 0.0016044526015232426,
+      "power_at_declared_q_adjusted": 0.0016044526015232426,
+      "power_at_complete_separation_nominal": 0.009541557274616091,
+      "power_at_complete_separation_adjusted": 0.009541557274616091
+    },
+    {
+      "disagreement_rate": 0.14,
+      "expected_discordant": 5.180000000000001,
+      "power_at_declared_q_nominal": 0.07012200531545434,
+      "power_at_declared_q_adjusted": 0.07012200531545434,
+      "power_at_complete_separation_nominal": 0.4177351354745243,
+      "power_at_complete_separation_adjusted": 0.4177351354745243
+    },
+    {
+      "disagreement_rate": 0.31,
+      "expected_discordant": 11.47,
+      "minimum_detectable_paired_effect_nominal": 0.25498336615060024,
+      "minimum_detectable_paired_effect_adjusted": 0.25498336615060024,
+      "power_at_declared_q_nominal": 0.2899067274763598,
+      "power_at_declared_q_adjusted": 0.2899067274763598,
+      "power_at_complete_separation_nominal": 0.9874364007320345,
+      "power_at_complete_separation_adjusted": 0.9874364007320345
+    }
+  ],
+  "failure_sensitivity": [
+    {
+      "scenario": "combined_loss_0.00",
+      "combined_loss_fraction": 0,
+      "disagreement_rate": 0.14,
+      "effective_source_task_groups": 40
+    },
+    {
+      "scenario": "combined_loss_0.05",
+      "combined_loss_fraction": 0.05,
+      "disagreement_rate": 0.14,
+      "effective_source_task_groups": 38
+    },
+    {
+      "scenario": "combined_loss_0.10",
+      "combined_loss_fraction": 0.1,
+      "disagreement_rate": 0.14,
+      "effective_source_task_groups": 36
+    },
+    {
+      "scenario": "combined_loss_0.15",
+      "combined_loss_fraction": 0.15,
+      "disagreement_rate": 0.14,
+      "effective_source_task_groups": 34
+    },
+    {
+      "scenario": "combined_loss_0.20",
+      "combined_loss_fraction": 0.2,
+      "disagreement_rate": 0.14,
+      "effective_source_task_groups": 32
+    }
+  ],
+  "design_digest": "d3a600b1494efea2caec7828d63dd4d37a8a5022d9e1511149d25f6d54da9b3d"
+}

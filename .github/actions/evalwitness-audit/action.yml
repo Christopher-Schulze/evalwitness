@@ -1,0 +1,115 @@
+name: 'EvalWitness offline audit'
+description: >
+  Runs the pinned, checksum-verified EvalWitness release binary in offline audit
+  mode against a checked-in policy and reliability profile. No provider calls,
+  no credentials, no network. Composite shell only: no Node package, container
+  image, service, or database.
+
+inputs:
+  policy:
+    description: 'Path to the canonical offline policy JSON.'
+    required: true
+  profile:
+    description: 'Path to the TASK 058 reliability profile JSON.'
+    required: true
+  version:
+    description: 'Released EvalWitness tag to download (e.g. v0.2.0).'
+    required: true
+  checksum:
+    description: 'Expected sha256 of the release tarball (from SHA256SUMS).'
+    required: true
+  signature-dir:
+    description: 'Path to the release signature-material directory (DSSE envelope, explicit trust root, signature policy). Defaults to the extracted release root.'
+    required: false
+    default: ''
+  repository:
+    description: 'Owner/repository that publishes releases.'
+    required: false
+    default: 'Christopher-Schulze/evalwitness'
+  formats:
+    description: 'Space-separated audit output formats to emit (json junit markdown).'
+    required: false
+    default: 'json'
+
+outputs:
+  result:
+    description: 'Canonical audit result JSON (first format must be json).'
+    value: ${{ steps.audit.outputs.result }}
+
+runs:
+  using: composite
+  steps:
+    - name: resolve pinned binary
+      id: binary
+      shell: bash
+      run: |
+        set -euo pipefail
+        case "${RUNNER_ARCH}" in
+          X64) arch=amd64 ;;
+          ARM64) arch=arm64 ;;
+          *) echo "::error::unsupported runner arch ${RUNNER_ARCH}"; exit 2 ;;
+        esac
+        case "${RUNNER_OS}" in
+          Linux) os=linux ;;
+          macOS) os=darwin ;;
+          *) echo "::error::unsupported runner os ${RUNNER_OS}"; exit 2 ;;
+        esac
+        # Releases publish exactly one tarball named evalwitness-<tag>.tar.gz whose
+        # assets/binary/ holds GOOS/GOARCH-named binaries.
+        archive="evalwitness-${{ inputs.version }}.tar.gz"
+        url="https://github.com/${{ inputs.repository }}/releases/download/${{ inputs.version }}/${archive}"
+        curl --proto '=https' --tlsv1.2 --silent --show-error --location --fail -o "${RUNNER_TEMP}/${archive}" "$url"
+        echo "${{ inputs.checksum }}  ${RUNNER_TEMP}/${archive}" | shasum -a 256 -c -
+        tar -xzf "${RUNNER_TEMP}/${archive}" -C "${RUNNER_TEMP}"
+        extracted="${RUNNER_TEMP}/evalwitness-${{ inputs.version }}/assets/binary/evalwitness-${os}-${arch}"
+        [ -f "${extracted}" ] || { echo "::error::missing ${extracted##*/}"; exit 2; }
+        echo "path=${extracted}" >> "$GITHUB_OUTPUT"
+
+    - name: verify release signature
+      shell: bash
+      env:
+        EVALWITNESS_BIN: ${{ steps.binary.outputs.path }}
+      run: |
+        set -euo pipefail
+        ASSETS="${RUNNER_TEMP}/evalwitness-${{ inputs.version }}"
+        SIGNATURE_DIR="${{ inputs.signature-dir }}"
+        if [ -z "${SIGNATURE_DIR}" ]; then SIGNATURE_DIR="${ASSETS}/signature"; fi
+        [ -d "${SIGNATURE_DIR}" ] || {
+          echo "::error::signature material directory missing: ${SIGNATURE_DIR}"
+          echo "::error::the release was built without a signing key; unsigned releases cannot pass this supply-chain gate"
+          exit 2
+        }
+        # Supply-chain gate: the downloaded tarball is trusted only after
+        # release verify re-checks the exact manifest/SBOM/Statement bytes and
+        # validates the Ed25519 DSSE envelope against the explicit trust root
+        # shipped in the signature-material directory. allow-unsigned-development
+        # stays false: unsigned candidates never pass this gate.
+        "${EVALWITNESS_BIN}" release verify \
+          --assets "${ASSETS}" \
+          --manifest "${ASSETS}/release-manifest.json" \
+          --sbom "${ASSETS}/evalwitness.spdx.json" \
+          --statement "${ASSETS}/release.intoto.json" \
+          --signature "${SIGNATURE_DIR}"
+
+    - name: offline audit
+      id: audit
+      shell: bash
+      env:
+        EVALWITNESS_BIN: ${{ steps.binary.outputs.path }}
+      run: |
+        set -euo pipefail
+        status=0
+        for format in ${{ inputs.formats }}; do
+          "${EVALWITNESS_BIN}" audit \
+            --policy "${{ inputs.policy }}" \
+            --profile "${{ inputs.profile }}" \
+            --format "${format}" > "${RUNNER_TEMP}/audit-${format}" || status=$?
+          if [ "${format}" = "json" ]; then
+            {
+              echo "result<<EVALWITNESS_AUDIT_EOF"
+              cat "${RUNNER_TEMP}/audit-json"
+              echo "EVALWITNESS_AUDIT_EOF"
+            } >> "$GITHUB_OUTPUT"
+          fi
+        done
+        exit "${status}"

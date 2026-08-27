@@ -1,0 +1,15 @@
+{
+  "method": "exact_binomial_upper_tail",
+  "primary_unit": "source_task",
+  "nominal_alpha": 0.05,
+  "family_size": 8,
+  "adjusted_alpha": 0.00625,
+  "null_accuracy": 0.5,
+  "alternative_accuracy": 0.8,
+  "target_power": 0.8,
+  "critical_successes": 29,
+  "actual_null_tail": 0.0032132880478457347,
+  "power_at_alternative": 0.9124947640780025,
+  "unique_task_within_family": true,
+  "cross_family_cluster_unit": "source_task"
+}

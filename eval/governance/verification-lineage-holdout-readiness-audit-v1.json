@@ -1,0 +1,84 @@
+{
+  "version": "evalwitness.verification-lineage-holdout-readiness-audit.v1",
+  "audit_id": "task_069-holdout-readiness-v1",
+  "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+  "parser_lock_digest": "b3d5a1cfde6881bca5ff4fcb38adecd3b83a03fb9f0763cf4e97649cfced9631",
+  "golden_set_digest": "eb36d591993ee332cba89a95f754a75b67ff45baf608e9ce3e7bf212bdee0b92",
+  "findings": [
+    {
+      "holdout_id": "format-holdout-v1",
+      "kind": "format_holdout",
+      "selection_seed": "task_069-format-holdout-20260810-v1",
+      "selection_rule": "rank format IDs by SHA-256(seed NUL format_id) and hold out the greatest digest",
+      "candidate_universe_sealed": true,
+      "candidates": [
+        {
+          "id": "claude_code_jsonl",
+          "rank_digest": "d5e4416f331aa9ea5e4804bdb75a329158722531be4ba4a470646cdb4bac071e",
+          "selected": true
+        },
+        {
+          "id": "codex_rollout_jsonl",
+          "rank_digest": "b2bcf30780101a6ba5b0f0b80ce8676f37a6ddebc3e72955abe9cf5cf92963cf",
+          "selected": false
+        },
+        {
+          "id": "opencode_export_json",
+          "rank_digest": "a7b4aaa7397860b62f79c1572f9731a7ee3b9f9414840f9352c20ac89d63cb49",
+          "selected": false
+        }
+      ],
+      "selected_id": "claude_code_jsonl",
+      "status": "not_runnable_development_contamination",
+      "development_contaminated": true,
+      "held_out_source_units": 0,
+      "predictions": 0,
+      "labeled_outcomes": 0,
+      "false_acceptances": 0,
+      "false_rejections": 0,
+      "unresolved": 0,
+      "unsupported": 0,
+      "blockers": [
+        "all_candidate_format_mappings_used_during_development",
+        "no_held_out_research_source_units"
+      ]
+    },
+    {
+      "holdout_id": "syntax-family-holdout-v1",
+      "kind": "syntax_family_holdout",
+      "selection_seed": "task_069-syntax-holdout-20260810-v1",
+      "selection_rule": "rank syntax family IDs by SHA-256(seed NUL family_id) and hold out the greatest digest",
+      "candidate_universe_sealed": false,
+      "candidates": [],
+      "selected_id": "",
+      "status": "not_runnable_unsealed_candidate_universe",
+      "development_contaminated": true,
+      "held_out_source_units": 0,
+      "predictions": 0,
+      "labeled_outcomes": 0,
+      "false_acceptances": 0,
+      "false_rejections": 0,
+      "unresolved": 0,
+      "unsupported": 0,
+      "blockers": [
+        "no_pre_result_syntax_family_candidate_universe",
+        "no_held_out_research_source_units",
+        "syntax_cases_used_during_development"
+      ]
+    }
+  ],
+  "claim_boundary": {
+    "evidence_role": "adapter_development",
+    "holdout_executed": false,
+    "transfer_claim": false,
+    "provider_calls": 0,
+    "agent_launches": 0,
+    "supported_claim": "the deterministic format selection is reproducible, but neither planned holdout is executable as a valid transfer test under the sealed v1 evidence",
+    "unsupported_claims": [
+      "format transfer",
+      "held-out parser performance",
+      "syntax-family transfer"
+    ]
+  },
+  "digest": "8eb9bd64c07a059c2bc7a1f2a65fb92d6b5dc7a298cdc1a0ba1b2b5f83702891"
+}

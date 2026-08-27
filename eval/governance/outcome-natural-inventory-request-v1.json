@@ -1,0 +1,20 @@
+{
+  "schema_version": "evalwitness.outcome-natural-inventory-request.v1",
+  "canonical_policy": "evalwitness.outcome-canonical-json.v1",
+  "source_class": "development_only",
+  "baseline_rule": "candidate_index_zero",
+  "high_confidence_error_threshold": 0.8,
+  "source_pairs": [
+    {
+      "suite": "swebench",
+      "verifier_path": "eval/results/swebench-verifier.json",
+      "judge_path": "eval/results/swebench-judge.json"
+    },
+    {
+      "suite": "terminal-bench",
+      "verifier_path": "eval/results/terminal-bench-verifier.json",
+      "judge_path": "eval/results/terminal-bench-judge.json"
+    }
+  ],
+  "digest": "07f9801e9e01f89492af39d60f00891e77961e0c49e5077354efb0e677f944fc"
+}

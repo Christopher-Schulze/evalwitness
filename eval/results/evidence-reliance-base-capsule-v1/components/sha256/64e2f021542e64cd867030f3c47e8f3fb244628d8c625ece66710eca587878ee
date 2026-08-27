@@ -1,0 +1,152 @@
+{
+  "header": {
+    "schema_version": "evalwitness.verification-lineage-candidate.v1",
+    "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+    "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+    "object_id": "offline-candidate-stdout-success",
+    "task_id": "TASK-069",
+    "task_group_id": "synthetic-stdout_success",
+    "data_role": "adapter_development",
+    "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+    "parents": [
+      {
+        "relation": "source",
+        "schema_version": "evalwitness.verification-lineage-source.v1",
+        "object_id": "offline-source-stdout-success",
+        "task_id": "TASK-069",
+        "task_group_id": "synthetic-stdout_success",
+        "digest": "1045664f1f03d211a26eb6488f5f132859a41f3023402e79e80081730154d65a"
+      },
+      {
+        "relation": "witness",
+        "schema_version": "evalwitness.execution-witness.v1",
+        "object_id": "offline-witness-stdout-success",
+        "task_id": "TASK-069",
+        "task_group_id": "synthetic-stdout_success",
+        "digest": "d41a8c35255b7176a3721f3481e45e6c5da9be198cbca1f6bf31bbf9cad848c9"
+      }
+    ],
+    "digest": "4be901a26a698894613830f0f009f535a825be4b1bde897d547ad685cf30239d"
+  },
+  "candidate_id": "offline-candidate-stdout-success",
+  "claim_id": "claim-fixed-fixture-exits-zero",
+  "invocation_id": "invocation-stdout_success",
+  "parser_identity_digest": "ea97498518ca540a79fabc9358a34f982e0689d5824bd5cf45cc3e7723a0531c",
+  "request_fingerprint": "174f08345047e3fddcd726dcec8c0726f56af11269926450ab082bcbd13696c9",
+  "canonical_request_lineage_digest": "3a3ddcf570fbf4c68ee9129315a7678e4b89db6287c11603e5246ecc6fde20b6",
+  "alignment": {
+    "call_id_matched": true,
+    "parent_edges_matched": true,
+    "command_operands_digest": "0acd92a29b32590a27cfd6056efd2cb0ab28d3b5f09571392b39f927c7eebafd",
+    "temporal_window_millis": 80,
+    "timestamp_only_causality": false
+  },
+  "layers": [
+    {
+      "layer": "runtime_witness",
+      "object_digest": "d41a8c35255b7176a3721f3481e45e6c5da9be198cbca1f6bf31bbf9cad848c9",
+      "record_ids": [
+        "invocation-stdout_success"
+      ],
+      "required_fields": [
+        "call_id",
+        "exit_status",
+        "stderr",
+        "stdout"
+      ],
+      "decisive_channels": [
+        "exit_status",
+        "stderr",
+        "stdout"
+      ],
+      "structured_presence": true,
+      "semantic_sufficiency": true
+    },
+    {
+      "layer": "native_export",
+      "object_digest": "09203bba9abfdb7b8407bc3745c0247ef07402df6414a3ea09a7d2a7e162f69b",
+      "record_ids": [
+        "evt_0107159bfa2741ef0de779d4",
+        "evt_5188b92b94ea75b08cac6004",
+        "evt_ce9264e6f21a226e31f55f74"
+      ],
+      "required_fields": [
+        "call_id",
+        "exit_status",
+        "stderr",
+        "stdout"
+      ],
+      "decisive_channels": [
+        "exit_status",
+        "stderr",
+        "stdout"
+      ],
+      "structured_presence": true,
+      "semantic_sufficiency": true
+    },
+    {
+      "layer": "canonical_graph",
+      "object_digest": "5f721df99dc990a37df6ef223c03f2ff3e5e631f57d07869ab2413e868acf92c",
+      "record_ids": [
+        "evt_0107159bfa2741ef0de779d4",
+        "evt_5188b92b94ea75b08cac6004",
+        "evt_ce9264e6f21a226e31f55f74"
+      ],
+      "required_fields": [
+        "call_id",
+        "exit_status",
+        "stderr",
+        "stdout"
+      ],
+      "decisive_channels": [
+        "exit_status",
+        "stderr",
+        "stdout"
+      ],
+      "structured_presence": true,
+      "semantic_sufficiency": true
+    },
+    {
+      "layer": "retained_bundle",
+      "object_digest": "e6762c267f263f27bc0faf35ca09ca80373e117baa5097a118d8fe71f5682bc4",
+      "record_ids": [
+        "evt_0107159bfa2741ef0de779d4",
+        "evt_5188b92b94ea75b08cac6004",
+        "evt_ce9264e6f21a226e31f55f74"
+      ],
+      "required_fields": [
+        "call_id",
+        "exit_status",
+        "stderr",
+        "stdout"
+      ],
+      "decisive_channels": [
+        "exit_status",
+        "stderr",
+        "stdout"
+      ],
+      "structured_presence": true,
+      "semantic_sufficiency": true
+    },
+    {
+      "layer": "verifier_request",
+      "object_digest": "174f08345047e3fddcd726dcec8c0726f56af11269926450ab082bcbd13696c9",
+      "record_ids": [
+        "invocation-stdout_success"
+      ],
+      "required_fields": [
+        "call_id",
+        "exit_status",
+        "stderr",
+        "stdout"
+      ],
+      "decisive_channels": [
+        "exit_status",
+        "stderr",
+        "stdout"
+      ],
+      "structured_presence": true,
+      "semantic_sufficiency": true
+    }
+  ]
+}

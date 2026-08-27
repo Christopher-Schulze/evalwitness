@@ -1,0 +1,23 @@
+# path_regex	content_regex	owner	removal_condition
+^\.env\.example$	logprobe	compatibility docs	remove legacy cache example after the signed transition release
+^\.gitignore$	logprobe	local artifact safety	keep while pre-rename local artifacts can exist
+^README\.md$	logprobe	migration guide	remove runtime alias prose after the signed transition release
+^docs/documentation\.md$	logprobe	identity and compatibility SSOT	keep historical collision and schema facts; remove runtime aliases after the signed transition release
+^docs/spec\.md$	logprobe	compatibility blueprint	keep immutable schema name; remove runtime aliases after the signed transition release
+^docs/tasks/done/.*\.md$	logprobe	immutable task history	never rewrite historical task records
+^eval/results/.*	logprobe	immutable result provenance	never rewrite committed historical artifacts
+^eval/governance/identical-response-(determinism-proof-v1|live-result-v1|live-result-v2|live-result-v5|offline-analysis-v1)\.json$	logprobe\.reliability\.v1	immutable nested reliability provenance	never rewrite sealed study artifacts
+^eval/fetch-eval-data\.sh$	logprobe	legacy wrapper environment	remove after the signed transition release
+^eval/scripts/run-swebench\.sh$	logprobe	legacy wrapper environment	remove after the signed transition release
+^eval/scripts/run-terminal-bench\.sh$	logprobe	legacy wrapper environment	remove after the signed transition release
+^scripts/tests/run-claimcheck\.sh$	logprobe	legacy binary override and immutable schema gate	remove binary override after transition; keep schema assertions indefinitely
+^scripts/tests/run-replay-smoke\.sh$	logprobe	legacy binary override	remove after the signed transition release
+^scripts/tests/run-product-conformance\.sh$	logprobe_	deprecated MCP alias conformance	remove with the runtime aliases after the signed transition release
+^scripts/audits/run-calibration-analysis\.sh$	logprobe	immutable reliability schema reader	keep while logprobe.reliability.v1 artifacts remain readable
+^internal/config/(config|environment|file)\.go$	logprobe	configuration compatibility owner	remove runtime fallback after transition; retain explicit history readers only as required
+^internal/config/(environment|load)_test\.go$	logprobe	configuration compatibility proof	remove with the corresponding reader
+^internal/cache/(disk|disk_test)\.go$	logprobe	read-only cache import owner	remove after transition if no released migration requires it
+^internal/provider/(probe|probe_test)\.go$	logprobe	read-only capability import owner	remove after transition if no released migration requires it
+^internal/safety/(cache_root|types)_test\.go$	logprobe	legacy cache-marker rejection proof	remove only when legacy cache markers are no longer accepted as inputs
+^internal/mcp/tools\.go$	logprobe	deprecated MCP aliases	remove after the signed transition release
+^internal/reliability/reliability\.go$	logprobe	immutable reliability schema owner	never rename the v1 schema

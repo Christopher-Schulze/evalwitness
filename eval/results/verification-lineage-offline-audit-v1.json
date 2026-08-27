@@ -1,0 +1,136 @@
+{
+  "header": {
+    "schema_version": "evalwitness.verification-lineage-audit.v1",
+    "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+    "protocol_version": "evalwitness.verification-lineage-protocol.v1",
+    "object_id": "offline-audit-stdout-success",
+    "task_id": "TASK-069",
+    "task_group_id": "study",
+    "data_role": "adapter_development",
+    "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+    "parents": [
+      {
+        "relation": "plan",
+        "schema_version": "evalwitness.verification-lineage-plan.v1",
+        "object_id": "task_069-verification-lineage-v1",
+        "task_id": "TASK-069",
+        "task_group_id": "study",
+        "digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c"
+      },
+      {
+        "relation": "assessment",
+        "schema_version": "evalwitness.verification-lineage-assessment.v1",
+        "object_id": "offline-assessment-stdout-success",
+        "task_id": "TASK-069",
+        "task_group_id": "synthetic-stdout_success",
+        "digest": "d74a7bcd38296518993203cfcc4ec6cc36b659e65270d48284926aa858018aff"
+      },
+      {
+        "relation": "capability",
+        "schema_version": "evalwitness.trace-capability-vector.v1",
+        "object_id": "capability-codex_rollout_jsonl",
+        "task_id": "TASK-069",
+        "task_group_id": "study",
+        "digest": "513ce19684ca845c4300e40ff4a88ef7b0cb995fbd688f698844d085e520de37"
+      }
+    ],
+    "digest": "f2a1b543986c7fad5cb665855c958869137ec9e6eae342adef1e09fa236be745"
+  },
+  "audit_id": "offline-audit-stdout-success",
+  "attempt_ledger_digest": "e090093eec047ed42d453a72d2095ec9b21cf06531b337d1f0f2bbf9f2a72d97",
+  "holdout_results_digest": "8eb9bd64c07a059c2bc7a1f2a65fb92d6b5dc7a298cdc1a0ba1b2b5f83702891",
+  "claim_boundary": [
+    "development_fixture_only"
+  ],
+  "considered_task_groups": 1,
+  "included_task_groups": 1,
+  "excluded_task_groups": 0,
+  "unresolved_task_groups": 0,
+  "formats": [
+    {
+      "format": "codex_rollout_jsonl",
+      "considered_task_groups": 1,
+      "unique_task_groups": 1,
+      "excluded_task_groups": 0,
+      "source_sessions": 1,
+      "candidate_evidence_events": 1,
+      "direct_invocations": 1,
+      "terminal_counts": [
+        {
+          "state": "invalid_capture",
+          "count": 0
+        },
+        {
+          "state": "behavior_absent",
+          "count": 0
+        },
+        {
+          "state": "export_observability_absent",
+          "count": 0
+        },
+        {
+          "state": "adapter_mapping_loss",
+          "count": 0
+        },
+        {
+          "state": "unsupported_shell",
+          "count": 0
+        },
+        {
+          "state": "ambiguous_lineage",
+          "count": 0
+        },
+        {
+          "state": "non_failable_verification",
+          "count": 0
+        },
+        {
+          "state": "claim_specific_evidence_not_weakened",
+          "count": 0
+        },
+        {
+          "state": "freshness_unresolved",
+          "count": 0
+        },
+        {
+          "state": "direct_verification_invocation",
+          "count": 1
+        }
+      ],
+      "flows": [
+        {
+          "from_layer": "runtime_witness",
+          "to_layer": "native_export",
+          "entered": 1,
+          "survived": 1,
+          "lost": 0
+        },
+        {
+          "from_layer": "native_export",
+          "to_layer": "canonical_graph",
+          "entered": 1,
+          "survived": 1,
+          "lost": 0
+        },
+        {
+          "from_layer": "canonical_graph",
+          "to_layer": "retained_bundle",
+          "entered": 1,
+          "survived": 1,
+          "lost": 0
+        },
+        {
+          "from_layer": "retained_bundle",
+          "to_layer": "verifier_request",
+          "entered": 1,
+          "survived": 1,
+          "lost": 0
+        }
+      ],
+      "inferential": false
+    }
+  ],
+  "bootstrap_seed": 20260810,
+  "bootstrap_replicates": 10000,
+  "conservation_passed": true
+}

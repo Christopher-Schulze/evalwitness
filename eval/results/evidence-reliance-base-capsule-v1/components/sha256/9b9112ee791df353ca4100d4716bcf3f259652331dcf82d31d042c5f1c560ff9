@@ -1,0 +1,321 @@
+{
+  "schema_version": "evalwitness.trajectory.v1",
+  "source_format": "codex_rollout_jsonl",
+  "source_digest": "efd5168c1bbd3245604d2113403ac5de464c3642f2cace96317034ef9b01510f",
+  "digest": "abf75f77d420cb9d8619a1ba7d2f37c197c3fe2b52fcf460b9a7c2cf81890e22",
+  "events": [
+    {
+      "id": "evt_ff0d557668ec1d306745430e",
+      "kind": "metadata",
+      "order": 0,
+      "source": {
+        "record": 1,
+        "line": 1,
+        "byte_end": 118
+      },
+      "timestamp": "2026-01-01T00:00:00Z",
+      "sensitivity": "private",
+      "content_bytes": 48,
+      "retained_bytes": 0,
+      "estimated_tokens": 0,
+      "content_digest": "56421509dad9de08906bf25595fa5c86f62abc35aa88773afdc1520010f81200",
+      "metadata": {
+        "name": "codex.session_meta",
+        "value_digest": "73356ea383f2c2b0b3aaac466cf04e3d9e9ae4fec11a684a4879cf825dfc3a7c",
+        "present": true
+      }
+    },
+    {
+      "id": "evt_3796f43976cc08b787afecf4",
+      "kind": "message",
+      "order": 1,
+      "source": {
+        "record": 2,
+        "line": 2,
+        "json_pointer": "/payload",
+        "byte_start": 118,
+        "byte_end": 313
+      },
+      "source_event_id": "message-1",
+      "timestamp": "2026-01-01T00:00:01Z",
+      "sensitivity": "private",
+      "content_bytes": 64,
+      "retained_bytes": 31,
+      "estimated_tokens": 8,
+      "content_digest": "c942ed2e297dc437954d09de845f0d725ce34b4c6f2b56f61d04f83e2687b06d",
+      "message": {
+        "role": "user",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "Inspect the fixture repository."
+          }
+        ]
+      }
+    },
+    {
+      "id": "evt_f19b8326ba4112b26f3e55e3",
+      "kind": "tool_call",
+      "order": 2,
+      "source": {
+        "record": 3,
+        "line": 3,
+        "json_pointer": "/payload",
+        "byte_start": 313,
+        "byte_end": 528
+      },
+      "source_event_id": "call-item-1",
+      "timestamp": "2026-01-01T00:00:02Z",
+      "sensitivity": "private",
+      "content_bytes": 32,
+      "retained_bytes": 32,
+      "estimated_tokens": 8,
+      "content_digest": "34f45afb07d629bba29bc219742629cc41a062547315b88c4d64ccaa16e91fec",
+      "tool_call": {
+        "call_id": "call-1",
+        "tool_name": "shell",
+        "arguments": "{\"command\":\"go test ./...\"}",
+        "arguments_digest": "d7e5989af12b7e6bbe4472506ac9626e0f9e63fd4449d65b80dd012652e6610c",
+        "status": "completed"
+      }
+    },
+    {
+      "id": "evt_5ba2bf35747150b470c4738f",
+      "kind": "command",
+      "order": 3,
+      "source": {
+        "record": 3,
+        "line": 3,
+        "part": 1,
+        "json_pointer": "/payload/arguments/command"
+      },
+      "timestamp": "2026-01-01T00:00:02Z",
+      "sensitivity": "private",
+      "content_bytes": 13,
+      "retained_bytes": 13,
+      "estimated_tokens": 4,
+      "content_digest": "eeecf785554aeb60bd2079798aa6e4f61356d49a260ef3f38a20c269c68bbcf7",
+      "command": {
+        "display": "go test ./...",
+        "unsupported_shell_text": "go test ./...",
+        "operands_digest": "21b87d8ba3905b722972b015062532e5ebc43088fd2eae02242ce8034fd32350"
+      }
+    },
+    {
+      "id": "evt_baaad181519543bac73fd2b1",
+      "kind": "tool_result",
+      "order": 4,
+      "source": {
+        "record": 4,
+        "line": 4,
+        "json_pointer": "/payload",
+        "byte_start": 528,
+        "byte_end": 705
+      },
+      "source_event_id": "result-item-1",
+      "timestamp": "2026-01-01T00:00:03Z",
+      "sensitivity": "private",
+      "content_bytes": 4,
+      "retained_bytes": 2,
+      "estimated_tokens": 1,
+      "content_digest": "e57b9e542dc8f0344fb6e9b119f3ff1b589c7a2306cecfedc2a457f72d9b60d1",
+      "tool_result": {
+        "call_id": "call-1",
+        "status": "completed",
+        "error": false,
+        "output": [
+          {
+            "kind": "text",
+            "text": "ok"
+          }
+        ]
+      }
+    },
+    {
+      "id": "evt_b82cb73222119ccb221e06e2",
+      "kind": "metadata",
+      "order": 5,
+      "source": {
+        "record": 5,
+        "line": 5,
+        "json_pointer": "/payload",
+        "byte_start": 705,
+        "byte_end": 1147
+      },
+      "timestamp": "2026-01-01T00:00:04Z",
+      "sensitivity": "private",
+      "content_bytes": 376,
+      "retained_bytes": 0,
+      "estimated_tokens": 0,
+      "content_digest": "5a19e8ea23d711b8269230cb213ebc17f521c646ff4891d68922c66b005f6d07",
+      "metadata": {
+        "name": "codex.event.token_count",
+        "value_digest": "dff92f01bf4e77e7fd6e661fbabc1b78bad4a761d975c9e357a4c4cb29589498",
+        "present": true
+      }
+    }
+  ],
+  "links": [
+    {
+      "kind": "parent",
+      "from_id": "evt_f19b8326ba4112b26f3e55e3",
+      "to_id": "evt_5ba2bf35747150b470c4738f"
+    },
+    {
+      "kind": "call_result",
+      "from_id": "evt_f19b8326ba4112b26f3e55e3",
+      "to_id": "evt_baaad181519543bac73fd2b1"
+    }
+  ],
+  "report": {
+    "schema_version": "evalwitness.ingestion-report.v1",
+    "source_records": 5,
+    "accounted_records": 5,
+    "canonical_events": 6,
+    "unsupported_records": 0,
+    "parse_errors": 0,
+    "unpaired_tool_calls": 0,
+    "unpaired_tool_results": 0,
+    "original_bytes": 1147,
+    "retained_bytes": 78,
+    "redacted_fields": 0,
+    "redaction_hits": 0,
+    "redacted_bytes": 0,
+    "records": [
+      {
+        "source": {
+          "record": 1,
+          "line": 1,
+          "byte_end": 118
+        },
+        "source_type": "session_meta",
+        "disposition": "represented",
+        "original_bytes": 117,
+        "retained_bytes": 0,
+        "event_ids": [
+          "evt_ff0d557668ec1d306745430e"
+        ]
+      },
+      {
+        "source": {
+          "record": 2,
+          "line": 2,
+          "byte_start": 118,
+          "byte_end": 313
+        },
+        "source_type": "response_item",
+        "disposition": "represented",
+        "original_bytes": 194,
+        "retained_bytes": 31,
+        "event_ids": [
+          "evt_3796f43976cc08b787afecf4"
+        ]
+      },
+      {
+        "source": {
+          "record": 3,
+          "line": 3,
+          "byte_start": 313,
+          "byte_end": 528
+        },
+        "source_type": "response_item",
+        "disposition": "represented",
+        "original_bytes": 214,
+        "retained_bytes": 45,
+        "event_ids": [
+          "evt_f19b8326ba4112b26f3e55e3",
+          "evt_5ba2bf35747150b470c4738f"
+        ]
+      },
+      {
+        "source": {
+          "record": 4,
+          "line": 4,
+          "byte_start": 528,
+          "byte_end": 705
+        },
+        "source_type": "response_item",
+        "disposition": "represented",
+        "original_bytes": 176,
+        "retained_bytes": 2,
+        "event_ids": [
+          "evt_baaad181519543bac73fd2b1"
+        ]
+      },
+      {
+        "source": {
+          "record": 5,
+          "line": 5,
+          "byte_start": 705,
+          "byte_end": 1147
+        },
+        "source_type": "event_msg",
+        "disposition": "represented",
+        "original_bytes": 442,
+        "retained_bytes": 0,
+        "event_ids": [
+          "evt_b82cb73222119ccb221e06e2"
+        ]
+      }
+    ],
+    "categories": [
+      {
+        "kind": "command",
+        "original_events": 1,
+        "retained_events": 1,
+        "original_bytes": 13,
+        "retained_bytes": 13
+      },
+      {
+        "kind": "message",
+        "original_events": 1,
+        "retained_events": 1,
+        "original_bytes": 64,
+        "retained_bytes": 31
+      },
+      {
+        "kind": "metadata",
+        "original_events": 2,
+        "retained_events": 0,
+        "original_bytes": 424,
+        "retained_bytes": 0
+      },
+      {
+        "kind": "tool_call",
+        "original_events": 1,
+        "retained_events": 1,
+        "original_bytes": 32,
+        "retained_bytes": 32
+      },
+      {
+        "kind": "tool_result",
+        "original_events": 1,
+        "retained_events": 1,
+        "original_bytes": 4,
+        "retained_bytes": 2
+      }
+    ],
+    "truncation": {
+      "applied": false
+    },
+    "provider_usage": [
+      {
+        "provider": "openai",
+        "scope": "turn",
+        "source": {
+          "record": 5,
+          "line": 5,
+          "json_pointer": "/payload",
+          "byte_start": 705,
+          "byte_end": 1147
+        },
+        "input_tokens": 30,
+        "output_tokens": 5,
+        "reasoning_tokens": 1,
+        "cached_input_tokens": 10,
+        "cache_creation_input_tokens": 0,
+        "total_tokens": 35
+      }
+    ]
+  }
+}

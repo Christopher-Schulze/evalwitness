@@ -1,0 +1,19 @@
+{
+  "schema_version": "evalwitness.extension.calibration-conformance.v1",
+  "extension_id": "task-048-calibration",
+  "owner_task": "TASK-048",
+  "status": "conformance_fixture",
+  "provider_calls_required": 0,
+  "human_actions_required": 0,
+  "required_fields": [
+    "abstention_policy",
+    "calibration_split",
+    "held_out_split",
+    "risk_coverage"
+  ],
+  "prohibited_claims": [
+    "cross_provider_transfer",
+    "production_calibration",
+    "universal_threshold"
+  ]
+}

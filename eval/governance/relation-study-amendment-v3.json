@@ -1,0 +1,86 @@
+{
+  "schema_version": "evalwitness.relation-study-amendment.v3",
+  "canonical_policy": "evalwitness.relation-canonical-json.v1",
+  "protocol_version": "evalwitness.controlled-relation-governance.v3",
+  "review_objective": "controlled_relation",
+  "issued_at": "2026-08-10T02:50:40Z",
+  "plan_digest": "6eac462cae0a5b626561d5cbea274a5c3a72c78b6cb9d50a8952be6ccbb6fa8c",
+  "pilot_sample_digest": "3f0a70209575316c78b87f6cb9e7641ff1f4a023eaa86c2fe2598ee14b3c94b4",
+  "primary_sample_digest": "6b721bcf0fb10e47923b46d92f3c14691cbd0dd98949ab0bf1dc016d8e1c1e43",
+  "scarcity_sentinel_digest": "ec720a56394249a47eb4c0f7ef618471ce14c69ff8c2c13e1e851350c23e71fb",
+  "source_corpus_digest": "9b4999dafe2d37ea04c298b80a7aba0a1769755fdfd650cd01bf3a9cc31a2e42",
+  "source_corpus_plan_digest": "5a7f4f55aafabd03ef9c802a9c48cf198a778228b40ade35e8f074df8d060c85",
+  "source_construct_audit_digest": "af0c0fd56fb498586096a8776e0d40794ee93acf5afda67cc000e576bfcef4d2",
+  "source_mutation_program_digest": "f37ec74f8096a23c5fb0e6696d279f2689f98d7e904fcef038464ca51720b3f8",
+  "pilot": {
+    "cases": 7,
+    "primary_labels": 14,
+    "maximum_tie_break_labels": 7,
+    "post_label_probes": 14,
+    "data_role": "development",
+    "primary_overlap": 0,
+    "purpose": "materialization, comprehension, timing, qualification, ambiguity, and leakage only",
+    "primary_analysis_use": "forbidden"
+  },
+  "primary": {
+    "cases": 28,
+    "effective_task_groups": 28,
+    "primary_labels": 56,
+    "maximum_tie_break_labels": 28,
+    "post_label_probes": 56,
+    "cluster_unit": "source_task_group",
+    "aggregation_rule": "within each source task group, any contradiction yields contradicted; otherwise any unresolved yields unresolved; only complete support yields supported",
+    "replacement_rule": "none; the exact balanced 28-case inferential-core commitment is immutable and every unavailable case remains visible",
+    "missingness_rule": "missing, late, partial, conflicted, or insufficient judgments resolve unresolved and remain in every case and task-group denominator",
+    "stopping_rule": "fixed sample; stop only after all 28 inferential-core cases reach committed dual review plus required tie-break or explicit unresolved state; no sequential efficacy stopping"
+  },
+  "scarcity_sentinel": {
+    "cases": 3,
+    "split_counts": [
+      {
+        "id": "calibration",
+        "count": 1
+      },
+      {
+        "id": "development",
+        "count": 2
+      }
+    ],
+    "test_cases": 0,
+    "primary_overlap": 0,
+    "exhaustive": true,
+    "primary_analysis_use": "forbidden",
+    "held_out_claim_available": false
+  },
+  "inference": {
+    "primary_estimand": "source-task-group prevalence of formal-human contradiction with unresolved groups retained separately",
+    "nominal_alpha": 0.05,
+    "interval_method": "one-sided exact binomial upper confidence bound at the source-task-group level",
+    "multiplicity_method": "one prespecified global primary endpoint; family, class, split, and control rows are descriptive and cannot replace it",
+    "primary_multiplicity_family": [
+      "cluster_contradiction_prevalence"
+    ],
+    "family_analysis_role": "descriptive bounded construct evidence only; no per-family validation or universal error-rate claim",
+    "zero_contradiction_upper_bound": 0.10146573557272465,
+    "detection_scenarios": [
+      {
+        "contradiction_rate": 0.05,
+        "detection_probability": 0.7621731147446675
+      },
+      {
+        "contradiction_rate": 0.1,
+        "detection_probability": 0.9476652366972639
+      },
+      {
+        "contradiction_rate": 0.2,
+        "detection_probability": 0.9980657186886166
+      }
+    ],
+    "unresolved_denominator_rule": "unresolved is never pooled with support, never dropped, and never converted by majority vote",
+    "independence_limitation": "exact binomial resolution assumes independent sampled task groups; the governed corpus is not a probability sample, but the 28 committed core cases occupy 28 distinct source task groups and 28 distinct lineage clusters, so the bound remains a corpus-specific design diagnostic rather than a population guarantee"
+  },
+  "claim_boundary": "report blinded reviewers' support, contradiction, and unresolved states for the frozen 28-case seven-family inferential core; report the exhaustive three-case omitted-evidence sentinel separately as corpus-specific scarcity; do not claim held-out sentinel validity, per-family prevalence, universal construct validity, verifier robustness, or human ground truth",
+  "empirical_status": "not_run",
+  "external_action_status": "not_authorized",
+  "digest": "a9924c62cdb6cea4aa4b9310af9a31ca5ee3cb193645cb30fd2b1135aab0ed94"
+}

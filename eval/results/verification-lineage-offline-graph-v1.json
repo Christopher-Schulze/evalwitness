@@ -1,0 +1,68 @@
+{
+  "version": "evalwitness.verification-lineage-graph.v1",
+  "graph_id": "task_069-offline-lineage-graph-v1",
+  "offline_proof_digest": "37d13927ac10606e9ea90f470d46e046cea9a6059c7e4d2c38e5a5d50f768d13",
+  "loss_certificate_digest": "ae3db349798c7fe9dfc716a8003b35e42fd129e993721c4dfcccf3c571d9db8c",
+  "paths": [
+    {
+      "path_id": "accepted-positive",
+      "label": "Accepted five-layer fixture",
+      "terminal_state": "direct_verification_invocation",
+      "layers": [
+        {
+          "layer": "runtime_witness",
+          "status": "survived"
+        },
+        {
+          "layer": "native_export",
+          "status": "survived"
+        },
+        {
+          "layer": "canonical_graph",
+          "status": "survived"
+        },
+        {
+          "layer": "retained_bundle",
+          "status": "survived"
+        },
+        {
+          "layer": "verifier_request",
+          "status": "survived"
+        }
+      ],
+      "evidence_digest": "c1d15d54d2108d19a3261fe292a72fecd1993409094139d4332c8589c016e4c0"
+    },
+    {
+      "path_id": "non-failable-counterexample",
+      "label": "Rejected same-path comparison",
+      "terminal_state": "non_failable_verification",
+      "layers": [
+        {
+          "layer": "runtime_witness",
+          "status": "survived"
+        },
+        {
+          "layer": "native_export",
+          "status": "survived"
+        },
+        {
+          "layer": "canonical_graph",
+          "status": "survived"
+        },
+        {
+          "layer": "retained_bundle",
+          "status": "first_loss"
+        },
+        {
+          "layer": "verifier_request",
+          "status": "not_reached"
+        }
+      ],
+      "evidence_digest": "ae3db349798c7fe9dfc716a8003b35e42fd129e993721c4dfcccf3c571d9db8c"
+    }
+  ],
+  "development_fixtures": 2,
+  "empirical": false,
+  "provider_ranking": false,
+  "digest": "a28c7f807ff5071e508f43e843ea4fe094d39b884a5cf428bb0de6c28b53896b"
+}

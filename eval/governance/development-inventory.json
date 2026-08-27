@@ -1,0 +1,37 @@
+{
+  "schema_version": "evalwitness.development-data-inventory.v1",
+  "policy": "Every task present in any published historical result is development-only and prohibited from confirmatory use; descendants inherit this role.",
+  "datasets": [
+    {
+      "id": "terminal-bench-2-historical",
+      "task_count": 89,
+      "task_ids_digest": "3778b86071c74c8a342222cfff41089916adb5c7338d1afa69f42c9cae21fe3e",
+      "artifact_set_digest": "0e4c227a2f3123f03cb650174ded24aa5defbdb0d82c81f73f67d5896903c573",
+      "role": "development",
+      "confirmation_permitted": false,
+      "artifacts": [
+        {"path": "eval/results/terminal-bench-absolute.json", "digest": "7ba8715a876e2fcc894f43bdc351cd8117ceddd25e171b65ccb30392d12b31af"},
+        {"path": "eval/results/terminal-bench-all-pairs.json", "digest": "35f8c6b1d89a11d7ac79b5d6bce1facb3acde56b6d2e429aa8bf3d694d574cf7"},
+        {"path": "eval/results/terminal-bench-evidence-16k.json", "digest": "66cf4882c97eac0573da2fb06e25fe2170a90a898ec777aefe476cfc9140dfa5"},
+        {"path": "eval/results/terminal-bench-judge.json", "digest": "e925e5d5b25920feb3615054504663d82550214259dba32793af4344b570df9e"},
+        {"path": "eval/results/terminal-bench-paper-parity.json", "digest": "c3e3ff8fbae3c69799b4664cfdb9215274235800f7aaeaca2513f17033907744"},
+        {"path": "eval/results/terminal-bench-verifier.json", "digest": "5e94093c81973ce55654af31870c82edf8da71e4ab4374620d773421196fe523"}
+      ]
+    },
+    {
+      "id": "swe-bench-verified-historical",
+      "task_count": 500,
+      "task_ids_digest": "a6b0fd7c8c2969a0eef892e032250adcfa6d32362d395c246930e61b575ac9b9",
+      "artifact_set_digest": "2c995b2f097b8759f5c2f8bc6721544ffda347e6ffc5329bb7058b1714bb94ac",
+      "role": "development",
+      "confirmation_permitted": false,
+      "artifacts": [
+        {"path": "eval/results/swebench-all-pairs.json", "digest": "6e270e5a61cc8c28e810f4fa853452adc3397fb407f76f9d592d3f30e726e86e"},
+        {"path": "eval/results/swebench-judge.json", "digest": "c114d8a0ae462c2c71476db4080b3224b10baf3c54be5bdc22a71569bc0852c8"},
+        {"path": "eval/results/swebench-paper-parity.json", "digest": "1bbd0cf4c6ed3151cd093ddaab8da711923bc0e76067fb8c9cec3e81587b6618"},
+        {"path": "eval/results/swebench-size-agnostic.json", "digest": "bd9d2987b546cb75704b82619ec101c8a405c9f579bfe4dfe31933f1e0d75fe1"},
+        {"path": "eval/results/swebench-verifier.json", "digest": "d503f69c54490b284369612fbf2300c5d61d4154d91d206319bb234f27b29a62"}
+      ]
+    }
+  ]
+}

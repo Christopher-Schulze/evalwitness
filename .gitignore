@@ -1,0 +1,114 @@
+# Secrets. Never commit a real key; .env.example carries the template.
+.env
+.env.*
+!.env.example
+
+# Local working notes. Task tracking, agent instructions and scratch documents
+# are how this repository is developed, not what it publishes. The findings they
+# produced live in docs/findings.md and the committed artifacts.
+/docs/tasks/
+/docs/tasks.md
+/AGENTS.md
+/CLAUDE.md
+/.claude/
+/handover.md
+/notes/
+/scratch/
+/OWNER-NEXT-ACTIONS.md
+
+# Build output
+/evalwitness
+/evalwitness-*
+# Transitional local binaries from the pre-EvalWitness identity remain ignored.
+/logprobe
+/logprobe-*
+*.exe
+/dist/
+/build/
+/web/explorer/dist/
+/web/explorer/node_modules/
+*.tsbuildinfo
+
+# Response cache and local run state
+/.evalwitness-cache/
+/.logprobe-cache/
+/cache/
+__pycache__/
+*.pyc
+
+# Benchmark trajectory data: 226 MB, distributed as release assets and fetched
+# by eval/fetch-eval-data.sh rather than carried in git history.
+/eval/trajectories/
+/dist-eval-data/
+
+# Test and coverage output
+*.test
+*.out
+coverage.txt
+/web/explorer/playwright-report/
+/web/explorer/test-results/
+
+# Atomic-publish temporaries
+/eval/results/.*
+
+# Local agent workspace
+/.opencode/
+/.codex/
+/.cursor/
+/.continue/
+
+# Local session exports and operational logs
+/transcripts/
+/conversations/
+/chat-exports/
+/sessions/
+/session-exports/
+/.history/
+*.history
+*.log
+
+# Local authentication material
+/.auth/
+/credentials/
+/secrets/
+/oauth/
+/tokens/
+/auth.json
+/credentials.json
+/cookies.json
+/oauth.json
+/token.json
+/session.json
+.git-credentials
+.netrc
+.npmrc
+.pypirc
+/.aws/
+/.gcloud/
+/.kube/
+/.ssh/
+/.docker/
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+*.jks
+*.keystore
+*.age
+*.db
+*.sqlite
+*.sqlite3
+
+# Owner-only study keys, custody roots, and prepared reviewer material.
+/private/
+/graphify-out/
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

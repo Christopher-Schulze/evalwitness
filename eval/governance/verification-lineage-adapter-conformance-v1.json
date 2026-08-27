@@ -1,0 +1,3878 @@
+{
+  "schema_version": "evalwitness.verification-lineage-adapter-conformance.v1",
+  "canonical_policy": "evalwitness.verification-lineage-canonical-json.v1",
+  "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+  "golden_set_digest": "eb36d591993ee332cba89a95f754a75b67ff45baf608e9ce3e7bf212bdee0b92",
+  "cases": [
+    {
+      "vector_id": "claude_code_jsonl/direct_test_invocation",
+      "format": "claude_code_jsonl",
+      "status": "conformant",
+      "source_digest": "98643d4b780a68c35348248533ed2333d220422161a410033c6af0b282d7b4d2",
+      "trajectory_digest": "f6a1f92169db8ac8a7a3a39951c593cf3a5245d306889054e74d812f3bd112b8",
+      "envelope_digest": "16a86a6a1fc7db84f7cf43971ec6f7f3a5bd1fbea2d4824300b5661d9a2083b2",
+      "mapping_digest": "dfdc7cb5b5f9cc99a541f1f91e10db58a87bda56a5d792b9fc3cce2ea60c1251",
+      "canonical_encoding_digest": "519e0e365f4f4db6f8648aaaf90e65bbb7fa57ba84c2c5b3658f67d3cd83cbbf",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=f6a1f92169db8ac8a7a3a39951c593cf3a5245d306889054e74d812f3bd112b8 envelope=16a86a6a1fc7db84f7cf43971ec6f7f3a5bd1fbea2d4824300b5661d9a2083b2 mapping=dfdc7cb5b5f9cc99a541f1f91e10db58a87bda56a5d792b9fc3cce2ea60c1251",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "f6a1f92169db8ac8a7a3a39951c593cf3a5245d306889054e74d812f3bd112b8",
+          "observed": "f6a1f92169db8ac8a7a3a39951c593cf3a5245d306889054e74d812f3bd112b8",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "go test ./...",
+          "observed": "[go test ./...]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=f6a1f92169db8ac8a7a3a39951c593cf3a5245d306889054e74d812f3bd112b8 retained=f6a1f92169db8ac8a7a3a39951c593cf3a5245d306889054e74d812f3bd112b8",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/direct_check_invocation",
+      "format": "claude_code_jsonl",
+      "status": "conformant",
+      "source_digest": "6bc360949b9f75254e09b4db14f9a7b793bd8725a82ee6fcf6139551e3e4819a",
+      "trajectory_digest": "8d0f26828929f403c02bbafb0537ffadb8be1d6664cf5e7359993e45d3ca4303",
+      "envelope_digest": "ed936badbde79f1f0a7737b59f011573e79444f8b9c3cb12f7309942203026e6",
+      "mapping_digest": "5533f53880b4ec49ea6d547d58381d29efec5bdcc370d839205e55e0844f429c",
+      "canonical_encoding_digest": "ce49374627afdbc7851f4d782719f979c702c651a1b7104234c9e6e0f3d4a05b",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=8d0f26828929f403c02bbafb0537ffadb8be1d6664cf5e7359993e45d3ca4303 envelope=ed936badbde79f1f0a7737b59f011573e79444f8b9c3cb12f7309942203026e6 mapping=5533f53880b4ec49ea6d547d58381d29efec5bdcc370d839205e55e0844f429c",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "8d0f26828929f403c02bbafb0537ffadb8be1d6664cf5e7359993e45d3ca4303",
+          "observed": "8d0f26828929f403c02bbafb0537ffadb8be1d6664cf5e7359993e45d3ca4303",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "cargo check --workspace",
+          "observed": "[cargo check --workspace]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=8d0f26828929f403c02bbafb0537ffadb8be1d6664cf5e7359993e45d3ca4303 retained=8d0f26828929f403c02bbafb0537ffadb8be1d6664cf5e7359993e45d3ca4303",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/direct_build_invocation",
+      "format": "claude_code_jsonl",
+      "status": "conformant",
+      "source_digest": "2cab101d3a1e5ec490fc3267f1b8f2dee314661cf3dcdfad6ab2bda902c7e0ea",
+      "trajectory_digest": "5f8c1f4a22744c305c419d34f843de378e3c5913d9728282514751ead9842792",
+      "envelope_digest": "d5e6d3eacb4581f3e65f58e3b0b29dc1d313de90e50f59dde7a1a965c927e7cd",
+      "mapping_digest": "99ca9f3c4d0f5a328afdb4b70fe0cc7db50121223c00cadae54d953326ba667e",
+      "canonical_encoding_digest": "7993567e6b3e315003696d16686e23d2901454e646573c826e1c9e8a3ecc4350",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=5f8c1f4a22744c305c419d34f843de378e3c5913d9728282514751ead9842792 envelope=d5e6d3eacb4581f3e65f58e3b0b29dc1d313de90e50f59dde7a1a965c927e7cd mapping=99ca9f3c4d0f5a328afdb4b70fe0cc7db50121223c00cadae54d953326ba667e",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "5f8c1f4a22744c305c419d34f843de378e3c5913d9728282514751ead9842792",
+          "observed": "5f8c1f4a22744c305c419d34f843de378e3c5913d9728282514751ead9842792",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "go build ./cmd/evalwitness",
+          "observed": "[go build ./cmd/evalwitness]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=5f8c1f4a22744c305c419d34f843de378e3c5913d9728282514751ead9842792 retained=5f8c1f4a22744c305c419d34f843de378e3c5913d9728282514751ead9842792",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/direct_outcome_probe",
+      "format": "claude_code_jsonl",
+      "status": "conformant",
+      "source_digest": "1fe647fd4faba9b795491c6aab6dc6916ce87e3d61eeeb8ef3bdedaf24799b52",
+      "trajectory_digest": "a331e8379e7e5679bb71b2b9db1b49b6b14da3d05418f2ea4cfdc452e801a2ab",
+      "envelope_digest": "56118f25d0b3842bfac5bf26911dc3c10bc512086a455bf76b3f28c27ebd81aa",
+      "mapping_digest": "204e22ac73a67502ff8695a8a32a4e174a4ac69c22bf29916166f57d312c38da",
+      "canonical_encoding_digest": "c45946842dc5001547d0f14a95da81899afe64e40cf4f88cebf3191d18afe52a",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=a331e8379e7e5679bb71b2b9db1b49b6b14da3d05418f2ea4cfdc452e801a2ab envelope=56118f25d0b3842bfac5bf26911dc3c10bc512086a455bf76b3f28c27ebd81aa mapping=204e22ac73a67502ff8695a8a32a4e174a4ac69c22bf29916166f57d312c38da",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "a331e8379e7e5679bb71b2b9db1b49b6b14da3d05418f2ea4cfdc452e801a2ab",
+          "observed": "a331e8379e7e5679bb71b2b9db1b49b6b14da3d05418f2ea4cfdc452e801a2ab",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "test -s report.json",
+          "observed": "[test -s report.json]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=a331e8379e7e5679bb71b2b9db1b49b6b14da3d05418f2ea4cfdc452e801a2ab retained=a331e8379e7e5679bb71b2b9db1b49b6b14da3d05418f2ea4cfdc452e801a2ab",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/printed_verification_name",
+      "format": "claude_code_jsonl",
+      "status": "conformant",
+      "source_digest": "184cf0ca907d7548c1e124f4585aa902930480f55660e6cef203413f6ca4bcd9",
+      "trajectory_digest": "a31d66280657d18ffc0f73e61bdddf7c43f8f346cdca7f5cb6665811a8de1565",
+      "envelope_digest": "0aac5a7d2747c288684bfb712281f7ab4eb2ffbb821dea7420b1ecb398819f9a",
+      "mapping_digest": "fedf6fdeddde901cf93646df26b54a3337a74743845538bd2c54be1f8970806a",
+      "canonical_encoding_digest": "971ea8ab22cefb97579f107b2b2f286f15321c000467e3cde4151356583c106c",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=a31d66280657d18ffc0f73e61bdddf7c43f8f346cdca7f5cb6665811a8de1565 envelope=0aac5a7d2747c288684bfb712281f7ab4eb2ffbb821dea7420b1ecb398819f9a mapping=fedf6fdeddde901cf93646df26b54a3337a74743845538bd2c54be1f8970806a",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "a31d66280657d18ffc0f73e61bdddf7c43f8f346cdca7f5cb6665811a8de1565",
+          "observed": "a31d66280657d18ffc0f73e61bdddf7c43f8f346cdca7f5cb6665811a8de1565",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "printf 'go test ./...\\n'",
+          "observed": "[printf 'go test ./...\\n']",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=a31d66280657d18ffc0f73e61bdddf7c43f8f346cdca7f5cb6665811a8de1565 retained=a31d66280657d18ffc0f73e61bdddf7c43f8f346cdca7f5cb6665811a8de1565",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/searched_verification_name",
+      "format": "claude_code_jsonl",
+      "status": "conformant",
+      "source_digest": "12fc65c8a3ab6f5ba66e876bde1ac47a2a8720eb4c2ccabe7eb55ad7fd27e424",
+      "trajectory_digest": "35b01bb228c30be75a44ad4c93cf143efa092be9b0ec269a5c231650b366df8b",
+      "envelope_digest": "540c0d4e7aa5ad01027316e6b66c9b69dd0fdc198468a346b0c7bf93f7fb218b",
+      "mapping_digest": "0d62abe81bf13995b721e4985589df27e694faac3794d68613626b5cedb4b15a",
+      "canonical_encoding_digest": "32932650407aecd718e6277b3aa51cc32ac5f28ee045feffd8685a4e6193d3ff",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=35b01bb228c30be75a44ad4c93cf143efa092be9b0ec269a5c231650b366df8b envelope=540c0d4e7aa5ad01027316e6b66c9b69dd0fdc198468a346b0c7bf93f7fb218b mapping=0d62abe81bf13995b721e4985589df27e694faac3794d68613626b5cedb4b15a",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "35b01bb228c30be75a44ad4c93cf143efa092be9b0ec269a5c231650b366df8b",
+          "observed": "35b01bb228c30be75a44ad4c93cf143efa092be9b0ec269a5c231650b366df8b",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "rg 'cargo test' docs",
+          "observed": "[rg 'cargo test' docs]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=35b01bb228c30be75a44ad4c93cf143efa092be9b0ec269a5c231650b366df8b retained=35b01bb228c30be75a44ad4c93cf143efa092be9b0ec269a5c231650b366df8b",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/wrapper_chain",
+      "format": "claude_code_jsonl",
+      "status": "conformant",
+      "source_digest": "981f4c9c3d84b61039d4c890537b7a46c2b18a2c8642071d40854432512af6fd",
+      "trajectory_digest": "1bb369e675bbb085881bdffc30417967a15528d11d501b4155d079fad973edd3",
+      "envelope_digest": "631298ff34808bd991a5f81802b4eb7e8bcf3096dc566927e5034adc54953353",
+      "mapping_digest": "4f760871661fd4824763a0b09ec40a23ac873367219a4d8a2b6fa30f384bc446",
+      "canonical_encoding_digest": "2e08b2875a838792e7e12eed3cf3a05aad79b319673e922a41e927c8f4dc6158",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=1bb369e675bbb085881bdffc30417967a15528d11d501b4155d079fad973edd3 envelope=631298ff34808bd991a5f81802b4eb7e8bcf3096dc566927e5034adc54953353 mapping=4f760871661fd4824763a0b09ec40a23ac873367219a4d8a2b6fa30f384bc446",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "1bb369e675bbb085881bdffc30417967a15528d11d501b4155d079fad973edd3",
+          "observed": "1bb369e675bbb085881bdffc30417967a15528d11d501b4155d079fad973edd3",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "env CI=1 sh -c 'go test ./...'",
+          "observed": "[env CI=1 sh -c 'go test ./...']",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=1bb369e675bbb085881bdffc30417967a15528d11d501b4155d079fad973edd3 retained=1bb369e675bbb085881bdffc30417967a15528d11d501b4155d079fad973edd3",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/compound_command",
+      "format": "claude_code_jsonl",
+      "status": "conformant",
+      "source_digest": "db72105e3c2135cab98c107238a7af552890a2b7e847edf1b42922882bcffedd",
+      "trajectory_digest": "49296748782ddb83451705ffddb1d7509edd60c264c6c1f960648d576ac0b646",
+      "envelope_digest": "cc1c99e0226148888669594fd0e62d33e71efccf90ebf796ff5f2672e13ffb0f",
+      "mapping_digest": "dd17ea0cb8daa7cf84571d18bd599ed5e0df247fd1f37658777a8c37f4365747",
+      "canonical_encoding_digest": "02ac095b25a189ae0d8f6881c5bda3d6dddc9b0b6062a8114cb34caa4fb89cdf",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=49296748782ddb83451705ffddb1d7509edd60c264c6c1f960648d576ac0b646 envelope=cc1c99e0226148888669594fd0e62d33e71efccf90ebf796ff5f2672e13ffb0f mapping=dd17ea0cb8daa7cf84571d18bd599ed5e0df247fd1f37658777a8c37f4365747",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "49296748782ddb83451705ffddb1d7509edd60c264c6c1f960648d576ac0b646",
+          "observed": "49296748782ddb83451705ffddb1d7509edd60c264c6c1f960648d576ac0b646",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "go test ./... \u0026\u0026 go vet ./...",
+          "observed": "[go test ./... \u0026\u0026 go vet ./...]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=49296748782ddb83451705ffddb1d7509edd60c264c6c1f960648d576ac0b646 retained=49296748782ddb83451705ffddb1d7509edd60c264c6c1f960648d576ac0b646",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/missing_command_display",
+      "format": "claude_code_jsonl",
+      "status": "conformant",
+      "source_digest": "362a949a4e6a90e6fcc3c23b50fddc3b9305c00201aa9a17efbbdae97bdd6ae2",
+      "trajectory_digest": "e31c77c4cde4da238c09c0e0ba54c56a134ac87285a3554ef1a7806f732deab3",
+      "envelope_digest": "3e9cf6dc8cb2d19290ab0150aa68d7fddd27b6b09e7fee6710e74bd8f63ea7a8",
+      "mapping_digest": "df8be6746fbba57548cb03c346cbffd29b90df0b056f8d3cc4cc2aa9e7c5a080",
+      "canonical_encoding_digest": "54414aa594b423d9e576857c3ab13d1c18cf7d7d28095312591f76f7b8356e76",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=e31c77c4cde4da238c09c0e0ba54c56a134ac87285a3554ef1a7806f732deab3 envelope=3e9cf6dc8cb2d19290ab0150aa68d7fddd27b6b09e7fee6710e74bd8f63ea7a8 mapping=df8be6746fbba57548cb03c346cbffd29b90df0b056f8d3cc4cc2aa9e7c5a080",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "e31c77c4cde4da238c09c0e0ba54c56a134ac87285a3554ef1a7806f732deab3",
+          "observed": "e31c77c4cde4da238c09c0e0ba54c56a134ac87285a3554ef1a7806f732deab3",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "",
+          "observed": "[]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=e31c77c4cde4da238c09c0e0ba54c56a134ac87285a3554ef1a7806f732deab3 retained=e31c77c4cde4da238c09c0e0ba54c56a134ac87285a3554ef1a7806f732deab3",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/missing_call_id",
+      "format": "claude_code_jsonl",
+      "status": "expected_rejection",
+      "source_digest": "e270cb5435e6049e65b546df0548c371e717b82b02e6da703372f01cbb43b28e",
+      "trajectory_digest": "",
+      "envelope_digest": "",
+      "mapping_digest": "",
+      "canonical_encoding_digest": "",
+      "checks": [
+        {
+          "name": "strict_unsupported_rejection",
+          "expected": "rejected",
+          "observed": "rejected",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/duplicate_call_id",
+      "format": "claude_code_jsonl",
+      "status": "expected_rejection",
+      "source_digest": "3b0a972a245705cb2bf7f9edbb43109c3ab26affe630934ff4a4dc95d1382b23",
+      "trajectory_digest": "",
+      "envelope_digest": "",
+      "mapping_digest": "",
+      "canonical_encoding_digest": "",
+      "checks": [
+        {
+          "name": "strict_unsupported_rejection",
+          "expected": "rejected",
+          "observed": "rejected",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/out_of_order_result",
+      "format": "claude_code_jsonl",
+      "status": "expected_rejection",
+      "source_digest": "e2439c05075494522af5b3ecaa0d1f2ebd4a213b56a100b6e53bc720829fec56",
+      "trajectory_digest": "",
+      "envelope_digest": "",
+      "mapping_digest": "",
+      "canonical_encoding_digest": "",
+      "checks": [
+        {
+          "name": "strict_unsupported_rejection",
+          "expected": "rejected",
+          "observed": "rejected",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/bounded_truncation",
+      "format": "claude_code_jsonl",
+      "status": "conformant",
+      "source_digest": "f0d5e8b81ccda84f2524b4e547f5c5d0a90ab3bea90859b129ef20b1caedacb3",
+      "trajectory_digest": "ca962d51fae0328d3c235ae149ddd4288bf3107bf8d1170de0249d192f71eb43",
+      "envelope_digest": "fba319d9af120324f7af368cebe6d4df5549ee618bd47fd3b75dac4c3ccb1d11",
+      "mapping_digest": "5a73f4d04e5cea23d29c837cd7f59044cf560ba560947e59582ef1fde11c5812",
+      "canonical_encoding_digest": "471f52d883fdd3b84b28f0758bec136b56e3935ca21d3648fdc2b6e0336b1eed",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=ca962d51fae0328d3c235ae149ddd4288bf3107bf8d1170de0249d192f71eb43 envelope=fba319d9af120324f7af368cebe6d4df5549ee618bd47fd3b75dac4c3ccb1d11 mapping=5a73f4d04e5cea23d29c837cd7f59044cf560ba560947e59582ef1fde11c5812",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "ca962d51fae0328d3c235ae149ddd4288bf3107bf8d1170de0249d192f71eb43",
+          "observed": "ca962d51fae0328d3c235ae149ddd4288bf3107bf8d1170de0249d192f71eb43",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "go test ./...",
+          "observed": "[go test ./...]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=true",
+          "observed": "truncation=true canonical=ca962d51fae0328d3c235ae149ddd4288bf3107bf8d1170de0249d192f71eb43 retained=998f2e50095265f610f7549704467018b1d150971376407e01ea80b62b77fb15",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/secret_redaction",
+      "format": "claude_code_jsonl",
+      "status": "conformant",
+      "source_digest": "890de67769247d3ee088182039bcca3b4fce4678e713986406f37b083db46657",
+      "trajectory_digest": "711916fc42a0043655f7fd15494acc449985122146fad5c403a79215ca640db0",
+      "envelope_digest": "0173e7edde75a4ff808ea689233fc43eb72714bbfd2c423f83e8f1311255c242",
+      "mapping_digest": "c8af2958c5a07a14778f1c171fbeeabb864cda0cb820827583ce4e955bad78e7",
+      "canonical_encoding_digest": "cd8d10f6ebcc9422853fe3d589d40b5fe8f1aea517f8dc13265e4fdceb8ed589",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=3 entries=3 totals=3",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=711916fc42a0043655f7fd15494acc449985122146fad5c403a79215ca640db0 envelope=0173e7edde75a4ff808ea689233fc43eb72714bbfd2c423f83e8f1311255c242 mapping=c8af2958c5a07a14778f1c171fbeeabb864cda0cb820827583ce4e955bad78e7",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "711916fc42a0043655f7fd15494acc449985122146fad5c403a79215ca640db0",
+          "observed": "711916fc42a0043655f7fd15494acc449985122146fad5c403a79215ca640db0",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "go test ./...",
+          "observed": "[go test ./...]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=1",
+          "observed": "hits=1",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=711916fc42a0043655f7fd15494acc449985122146fad5c403a79215ca640db0 retained=711916fc42a0043655f7fd15494acc449985122146fad5c403a79215ca640db0",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/unsupported_native_syntax",
+      "format": "claude_code_jsonl",
+      "status": "expected_rejection",
+      "source_digest": "ff95b6b536ba2a9187f0c0705ded6dded223f675779f0ec10ebc995dc847f5a2",
+      "trajectory_digest": "",
+      "envelope_digest": "",
+      "mapping_digest": "",
+      "canonical_encoding_digest": "",
+      "checks": [
+        {
+          "name": "strict_unsupported_rejection",
+          "expected": "rejected",
+          "observed": "rejected",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/agent_prose_attached_to_result",
+      "format": "claude_code_jsonl",
+      "status": "conformant",
+      "source_digest": "d8dbec0525cb5bf0761a51afaaace15a3c9920c74d20788f8266c6b082db3487",
+      "trajectory_digest": "5d19098c227a41492024fb56ce46ebe023bbb63ea453b44a162eeeca2f8716fa",
+      "envelope_digest": "168ca504fca591770ad3eb57ce48997d9f932b9e8462ed8c33c185f441e10e94",
+      "mapping_digest": "167d7b598a4f6ded7a6ce7eafc0e1896a3c9145a89ff8b479b81d24b4a403d90",
+      "canonical_encoding_digest": "d6a2eac450f1fdd85ea269f0877eb4337fd4e8ec63d5ff50fbb42bcdbe5de855",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=5d19098c227a41492024fb56ce46ebe023bbb63ea453b44a162eeeca2f8716fa envelope=168ca504fca591770ad3eb57ce48997d9f932b9e8462ed8c33c185f441e10e94 mapping=167d7b598a4f6ded7a6ce7eafc0e1896a3c9145a89ff8b479b81d24b4a403d90",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "5d19098c227a41492024fb56ce46ebe023bbb63ea453b44a162eeeca2f8716fa",
+          "observed": "5d19098c227a41492024fb56ce46ebe023bbb63ea453b44a162eeeca2f8716fa",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "cmp -s /tmp/before /tmp/after",
+          "observed": "[cmp -s /tmp/before /tmp/after]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=5d19098c227a41492024fb56ce46ebe023bbb63ea453b44a162eeeca2f8716fa retained=5d19098c227a41492024fb56ce46ebe023bbb63ea453b44a162eeeca2f8716fa",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/same_path_comparison_false_target",
+      "format": "claude_code_jsonl",
+      "status": "conformant",
+      "source_digest": "378ed63f7327712e179d9c1dc3503009e67707a4ffc1745917c612f86466500b",
+      "trajectory_digest": "feaa1bc83a59cac1bc0e3acb61ad1bff06cab79f54e725239dc795eb0fb9b550",
+      "envelope_digest": "603a493e313f0677a1be854367c20b82375e36deb774102d656a579c5071924d",
+      "mapping_digest": "b7514754b54fecafd66ce0af66b1034057f9e4e5197d58fcd739811daf2bcda4",
+      "canonical_encoding_digest": "474431cd0d0da60ef14a35287617b649b4c19e84056bfc00c325ce403d401246",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=feaa1bc83a59cac1bc0e3acb61ad1bff06cab79f54e725239dc795eb0fb9b550 envelope=603a493e313f0677a1be854367c20b82375e36deb774102d656a579c5071924d mapping=b7514754b54fecafd66ce0af66b1034057f9e4e5197d58fcd739811daf2bcda4",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "feaa1bc83a59cac1bc0e3acb61ad1bff06cab79f54e725239dc795eb0fb9b550",
+          "observed": "feaa1bc83a59cac1bc0e3acb61ad1bff06cab79f54e725239dc795eb0fb9b550",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "cmp -s /repo/file /repo/file \u0026\u0026 printf 'legacy_unchanged\\n'",
+          "observed": "[cmp -s /repo/file /repo/file \u0026\u0026 printf 'legacy_unchanged\\n']",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=feaa1bc83a59cac1bc0e3acb61ad1bff06cab79f54e725239dc795eb0fb9b550 retained=feaa1bc83a59cac1bc0e3acb61ad1bff06cab79f54e725239dc795eb0fb9b550",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/structured_success_after_text_omission",
+      "format": "claude_code_jsonl",
+      "status": "conformant",
+      "source_digest": "fd559610aa1970091b705531788ea9214f0b59f5c3af87f9b54b96e92408cc57",
+      "trajectory_digest": "64f312ebe0baee7c3050a1e0e80fedb257b6c9d674ddbc60e834572b6d4ffbcc",
+      "envelope_digest": "bbb7a9e9416a37acbbf52a62ff808a10cc7e25a2e2caca5a48049056a1e4d95c",
+      "mapping_digest": "e806f9de1535d9fb8669074245770370f42807882549c88ab31eb18038b1cb88",
+      "canonical_encoding_digest": "6e0581cb1ab31cb8596555067a0cee1ffd28615b0c3ece6e3637af6e1f575f66",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=64f312ebe0baee7c3050a1e0e80fedb257b6c9d674ddbc60e834572b6d4ffbcc envelope=bbb7a9e9416a37acbbf52a62ff808a10cc7e25a2e2caca5a48049056a1e4d95c mapping=e806f9de1535d9fb8669074245770370f42807882549c88ab31eb18038b1cb88",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "64f312ebe0baee7c3050a1e0e80fedb257b6c9d674ddbc60e834572b6d4ffbcc",
+          "observed": "64f312ebe0baee7c3050a1e0e80fedb257b6c9d674ddbc60e834572b6d4ffbcc",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "go test ./...",
+          "observed": "[go test ./...]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=64f312ebe0baee7c3050a1e0e80fedb257b6c9d674ddbc60e834572b6d4ffbcc retained=64f312ebe0baee7c3050a1e0e80fedb257b6c9d674ddbc60e834572b6d4ffbcc",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/distinct_operand_comparison",
+      "format": "claude_code_jsonl",
+      "status": "conformant",
+      "source_digest": "1e8375867d4df9a673bc0e00fbff28b4b498dc754505b66a1f4e088306a68668",
+      "trajectory_digest": "2683c8c7230581d3b7b175d06b0bad70331f3db213b7f9bbf22d591255ff04bc",
+      "envelope_digest": "f28dbc3853fde4fadd0ad0bb1f6ceeeccd458b1b5017b4ffd1e70e3f07eafbf9",
+      "mapping_digest": "35b9598b1a5758d26bfb4ab1d117614ca71e65959b25ca3ad8dcab191ca646fa",
+      "canonical_encoding_digest": "70b789a63fa6472bc10f31e19d49cd92a017b0741eddcde76ba29a490aaeeadc",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=2683c8c7230581d3b7b175d06b0bad70331f3db213b7f9bbf22d591255ff04bc envelope=f28dbc3853fde4fadd0ad0bb1f6ceeeccd458b1b5017b4ffd1e70e3f07eafbf9 mapping=35b9598b1a5758d26bfb4ab1d117614ca71e65959b25ca3ad8dcab191ca646fa",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "2683c8c7230581d3b7b175d06b0bad70331f3db213b7f9bbf22d591255ff04bc",
+          "observed": "2683c8c7230581d3b7b175d06b0bad70331f3db213b7f9bbf22d591255ff04bc",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "cmp -s /tmp/before /tmp/after \u0026\u0026 printf 'files_equal\\n'",
+          "observed": "[cmp -s /tmp/before /tmp/after \u0026\u0026 printf 'files_equal\\n']",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=2683c8c7230581d3b7b175d06b0bad70331f3db213b7f9bbf22d591255ff04bc retained=2683c8c7230581d3b7b175d06b0bad70331f3db213b7f9bbf22d591255ff04bc",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/planning_prose_false_target",
+      "format": "claude_code_jsonl",
+      "status": "conformant",
+      "source_digest": "4a206de3415833cf85ed48ced0f57a66cbb096cd8cd6e536d84d1b5e2b9c93ac",
+      "trajectory_digest": "c1ba6a0f7a8618a9d119ccf70ea60517834c75a8cefd683003c0cd222dbce4d4",
+      "envelope_digest": "89964351cc7e9e0dc51ef989accaa90c714734acc37e19d4d4c2d1a5b0a749da",
+      "mapping_digest": "05547e9906047699256a486dcc32bfcbf6aaae647ec6c3597a25453a26bee682",
+      "canonical_encoding_digest": "bfabff2de2e9c62cf540c4ad25d358cf502af810606f0c8407f28e5e4619b6e7",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=c1ba6a0f7a8618a9d119ccf70ea60517834c75a8cefd683003c0cd222dbce4d4 envelope=89964351cc7e9e0dc51ef989accaa90c714734acc37e19d4d4c2d1a5b0a749da mapping=05547e9906047699256a486dcc32bfcbf6aaae647ec6c3597a25453a26bee682",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "c1ba6a0f7a8618a9d119ccf70ea60517834c75a8cefd683003c0cd222dbce4d4",
+          "observed": "c1ba6a0f7a8618a9d119ccf70ea60517834c75a8cefd683003c0cd222dbce4d4",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "diff -u /tmp/before.err /tmp/after.err",
+          "observed": "[diff -u /tmp/before.err /tmp/after.err]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=c1ba6a0f7a8618a9d119ccf70ea60517834c75a8cefd683003c0cd222dbce4d4 retained=c1ba6a0f7a8618a9d119ccf70ea60517834c75a8cefd683003c0cd222dbce4d4",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "claude_code_jsonl/native_exit_status",
+      "format": "claude_code_jsonl",
+      "status": "not_applicable",
+      "source_digest": "",
+      "trajectory_digest": "",
+      "envelope_digest": "",
+      "mapping_digest": "",
+      "canonical_encoding_digest": "",
+      "checks": [
+        {
+          "name": "representability_boundary",
+          "expected": "unspecified",
+          "observed": "not_applicable",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/direct_test_invocation",
+      "format": "codex_rollout_jsonl",
+      "status": "conformant",
+      "source_digest": "3f267ae0e1306586dae16c78eca1842e8b4712d3fccd031cb72f687a6517e24e",
+      "trajectory_digest": "9aaba25f62482c81892dc2ca04236c82e9a3293f342ea5ac226c6164b6f2d794",
+      "envelope_digest": "d63252625a94075aa9ee2d8c6a15b94b27d3183977c9842db117fa40c77dba69",
+      "mapping_digest": "d682d2e7faf790ff3a40e484aa8da79c56b5699374820c3a400551fe502925f1",
+      "canonical_encoding_digest": "0ebbf7a686de8888c5ecbc7b5493551c509353f460c0736d611ebf11ef623187",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=9aaba25f62482c81892dc2ca04236c82e9a3293f342ea5ac226c6164b6f2d794 envelope=d63252625a94075aa9ee2d8c6a15b94b27d3183977c9842db117fa40c77dba69 mapping=d682d2e7faf790ff3a40e484aa8da79c56b5699374820c3a400551fe502925f1",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "9aaba25f62482c81892dc2ca04236c82e9a3293f342ea5ac226c6164b6f2d794",
+          "observed": "9aaba25f62482c81892dc2ca04236c82e9a3293f342ea5ac226c6164b6f2d794",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "go test ./...",
+          "observed": "[go test ./...]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=9aaba25f62482c81892dc2ca04236c82e9a3293f342ea5ac226c6164b6f2d794 retained=9aaba25f62482c81892dc2ca04236c82e9a3293f342ea5ac226c6164b6f2d794",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/direct_check_invocation",
+      "format": "codex_rollout_jsonl",
+      "status": "conformant",
+      "source_digest": "aa3083daf881aa5f2829b6206dace7edc6b8709d1c4982a681dac16ba2ebdbc8",
+      "trajectory_digest": "f0a6e649af52aed407e1824591076ebda2105ee3df8a54c31eb4aacc7e23e247",
+      "envelope_digest": "303f411be18dc71550dac144535b14ac963fb3a0ef74ce0cb2a02ac5b9c355a4",
+      "mapping_digest": "848f4ef6a3b20a812eec1dbc1c50bd6f50c10dd114359c1ccc155ba5654c6546",
+      "canonical_encoding_digest": "21cf0aa584d98b1b1769d9a0f9685fd8866f4fe06b408967c6e8f67b8d947230",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=f0a6e649af52aed407e1824591076ebda2105ee3df8a54c31eb4aacc7e23e247 envelope=303f411be18dc71550dac144535b14ac963fb3a0ef74ce0cb2a02ac5b9c355a4 mapping=848f4ef6a3b20a812eec1dbc1c50bd6f50c10dd114359c1ccc155ba5654c6546",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "f0a6e649af52aed407e1824591076ebda2105ee3df8a54c31eb4aacc7e23e247",
+          "observed": "f0a6e649af52aed407e1824591076ebda2105ee3df8a54c31eb4aacc7e23e247",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "cargo check --workspace",
+          "observed": "[cargo check --workspace]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=f0a6e649af52aed407e1824591076ebda2105ee3df8a54c31eb4aacc7e23e247 retained=f0a6e649af52aed407e1824591076ebda2105ee3df8a54c31eb4aacc7e23e247",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/direct_build_invocation",
+      "format": "codex_rollout_jsonl",
+      "status": "conformant",
+      "source_digest": "c0f9d157a2246aa710cded12ea843ee09ab3be4961dde1b9181ee9fe98278705",
+      "trajectory_digest": "2e9fb3233eafb17a581299e8e0e7f3b3911e7d86e085fe45af72b53fb1909c87",
+      "envelope_digest": "b7f813a06ba510b2b5725d2c42c063ce90d68523096efb093cc2d03c17b2697b",
+      "mapping_digest": "e6e1c810ab65b100fd823b29c665228e9671f3a9b0bb0ff4f00fc8b4b595e18e",
+      "canonical_encoding_digest": "420424579d0afb948083e94ec45da0b52a75da2be344c266fd670ccb8a07cbfe",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=2e9fb3233eafb17a581299e8e0e7f3b3911e7d86e085fe45af72b53fb1909c87 envelope=b7f813a06ba510b2b5725d2c42c063ce90d68523096efb093cc2d03c17b2697b mapping=e6e1c810ab65b100fd823b29c665228e9671f3a9b0bb0ff4f00fc8b4b595e18e",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "2e9fb3233eafb17a581299e8e0e7f3b3911e7d86e085fe45af72b53fb1909c87",
+          "observed": "2e9fb3233eafb17a581299e8e0e7f3b3911e7d86e085fe45af72b53fb1909c87",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "go build ./cmd/evalwitness",
+          "observed": "[go build ./cmd/evalwitness]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=2e9fb3233eafb17a581299e8e0e7f3b3911e7d86e085fe45af72b53fb1909c87 retained=2e9fb3233eafb17a581299e8e0e7f3b3911e7d86e085fe45af72b53fb1909c87",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/direct_outcome_probe",
+      "format": "codex_rollout_jsonl",
+      "status": "conformant",
+      "source_digest": "56f205e722a9b56ca3f2c4ee90ba47a15f2f8bf465c4e98f568a3d9c86fc3292",
+      "trajectory_digest": "0da6545ae6c3712d53d34a9ebcc8d89ee7c3dbb338cb2428bda24368e9c3805d",
+      "envelope_digest": "def272e49b930739b648739cff794975635a9a94aaaf19c844a4d6cc7b72db72",
+      "mapping_digest": "fb7c039271e6b1c47e8a7a3fd92932544533d84c9fa9999e5f706655645780a2",
+      "canonical_encoding_digest": "1929e56310f1522f45888ba61c0a6c874f8004b1b3aeaa02a191f0db13a532eb",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=0da6545ae6c3712d53d34a9ebcc8d89ee7c3dbb338cb2428bda24368e9c3805d envelope=def272e49b930739b648739cff794975635a9a94aaaf19c844a4d6cc7b72db72 mapping=fb7c039271e6b1c47e8a7a3fd92932544533d84c9fa9999e5f706655645780a2",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "0da6545ae6c3712d53d34a9ebcc8d89ee7c3dbb338cb2428bda24368e9c3805d",
+          "observed": "0da6545ae6c3712d53d34a9ebcc8d89ee7c3dbb338cb2428bda24368e9c3805d",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "test -s report.json",
+          "observed": "[test -s report.json]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=0da6545ae6c3712d53d34a9ebcc8d89ee7c3dbb338cb2428bda24368e9c3805d retained=0da6545ae6c3712d53d34a9ebcc8d89ee7c3dbb338cb2428bda24368e9c3805d",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/printed_verification_name",
+      "format": "codex_rollout_jsonl",
+      "status": "conformant",
+      "source_digest": "b6971786fc30d3049292da0d8fbb3ad61f371f9641477df5ab165d46281b6b7b",
+      "trajectory_digest": "51a6b73cadb5d8c717a64833cae5a9d5491298c784f444a0f36a02e4c9048b30",
+      "envelope_digest": "5cb5106b38779dbcf1aa897a75f0af658531505a6aef29e6d1644c9e3109733a",
+      "mapping_digest": "43b7306d3c7b26a1e425b636fffa31ae8034fd059bd5f8d27a700749c7c1bb9a",
+      "canonical_encoding_digest": "10cb78e477febfadfad10278e79abc45c52b423a91996fd52cd9c6aa5ad57bd6",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=51a6b73cadb5d8c717a64833cae5a9d5491298c784f444a0f36a02e4c9048b30 envelope=5cb5106b38779dbcf1aa897a75f0af658531505a6aef29e6d1644c9e3109733a mapping=43b7306d3c7b26a1e425b636fffa31ae8034fd059bd5f8d27a700749c7c1bb9a",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "51a6b73cadb5d8c717a64833cae5a9d5491298c784f444a0f36a02e4c9048b30",
+          "observed": "51a6b73cadb5d8c717a64833cae5a9d5491298c784f444a0f36a02e4c9048b30",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "printf 'go test ./...\\n'",
+          "observed": "[printf 'go test ./...\\n']",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=51a6b73cadb5d8c717a64833cae5a9d5491298c784f444a0f36a02e4c9048b30 retained=51a6b73cadb5d8c717a64833cae5a9d5491298c784f444a0f36a02e4c9048b30",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/searched_verification_name",
+      "format": "codex_rollout_jsonl",
+      "status": "conformant",
+      "source_digest": "c9255c8e1ad276588323da351ab16fe53a2ad41a55517e9349f67bea042f62fe",
+      "trajectory_digest": "db82d55a27bd354baad9ba5fe6bc23481661b6d81963eb2bda84ac24e55d982e",
+      "envelope_digest": "d373290496faac7885ae5b79164d09567f17d2558f5f8dea6fe205a05ba3c6d3",
+      "mapping_digest": "041ae61effdda57841393caaeca30e2e60f7b6e47e65000ee073757572cce12b",
+      "canonical_encoding_digest": "86eca9ceaaed9d9024bb731b0c2b96e39844cd519032e7912fef7939281528ea",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=db82d55a27bd354baad9ba5fe6bc23481661b6d81963eb2bda84ac24e55d982e envelope=d373290496faac7885ae5b79164d09567f17d2558f5f8dea6fe205a05ba3c6d3 mapping=041ae61effdda57841393caaeca30e2e60f7b6e47e65000ee073757572cce12b",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "db82d55a27bd354baad9ba5fe6bc23481661b6d81963eb2bda84ac24e55d982e",
+          "observed": "db82d55a27bd354baad9ba5fe6bc23481661b6d81963eb2bda84ac24e55d982e",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "rg 'cargo test' docs",
+          "observed": "[rg 'cargo test' docs]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=db82d55a27bd354baad9ba5fe6bc23481661b6d81963eb2bda84ac24e55d982e retained=db82d55a27bd354baad9ba5fe6bc23481661b6d81963eb2bda84ac24e55d982e",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/wrapper_chain",
+      "format": "codex_rollout_jsonl",
+      "status": "conformant",
+      "source_digest": "ab72f147e8d5e3a7206689ba7ea4e989c1ef144620d16cf552bc1b5fd5aed776",
+      "trajectory_digest": "1ad82a5d3365e63d4b44ba96d8d7f4185fc439ba2a3acc15a264f207f8ce7bb7",
+      "envelope_digest": "e331a9f2e5d8d16aef2ab021587bc01aa6e490a27533e21a4ebf70b304f95465",
+      "mapping_digest": "0c394040c47faa70ae843bdbfb4eea5403215c44cd5d36ddb0022596024868a8",
+      "canonical_encoding_digest": "cf31b15e1ac959c54ffbf7b4687b791ee6753f7837c16830eeba028eb13e06b2",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=1ad82a5d3365e63d4b44ba96d8d7f4185fc439ba2a3acc15a264f207f8ce7bb7 envelope=e331a9f2e5d8d16aef2ab021587bc01aa6e490a27533e21a4ebf70b304f95465 mapping=0c394040c47faa70ae843bdbfb4eea5403215c44cd5d36ddb0022596024868a8",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "1ad82a5d3365e63d4b44ba96d8d7f4185fc439ba2a3acc15a264f207f8ce7bb7",
+          "observed": "1ad82a5d3365e63d4b44ba96d8d7f4185fc439ba2a3acc15a264f207f8ce7bb7",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "env CI=1 sh -c 'go test ./...'",
+          "observed": "[env CI=1 sh -c 'go test ./...']",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=1ad82a5d3365e63d4b44ba96d8d7f4185fc439ba2a3acc15a264f207f8ce7bb7 retained=1ad82a5d3365e63d4b44ba96d8d7f4185fc439ba2a3acc15a264f207f8ce7bb7",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/compound_command",
+      "format": "codex_rollout_jsonl",
+      "status": "conformant",
+      "source_digest": "d9da87dd6efee186c8d3dc6f66fa6306de921fb285499809bfcb363cd2d30f47",
+      "trajectory_digest": "61d3ae0c87b2156d111f907d3a5942fc9262308eecf6b6e2d1f036a888c1d828",
+      "envelope_digest": "c501d48007aefa58bb045bb6f843118e5ec7e28e30833e9d14b3c58e5a71cb1c",
+      "mapping_digest": "c976ee4817624d7acd40a1541b0dcba2b1715bc456444d684741c7f3c412fa91",
+      "canonical_encoding_digest": "0370ed61eee8eb18c285269c407568ce61b157ae5ea482ad90e40a5164cbce6f",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=61d3ae0c87b2156d111f907d3a5942fc9262308eecf6b6e2d1f036a888c1d828 envelope=c501d48007aefa58bb045bb6f843118e5ec7e28e30833e9d14b3c58e5a71cb1c mapping=c976ee4817624d7acd40a1541b0dcba2b1715bc456444d684741c7f3c412fa91",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "61d3ae0c87b2156d111f907d3a5942fc9262308eecf6b6e2d1f036a888c1d828",
+          "observed": "61d3ae0c87b2156d111f907d3a5942fc9262308eecf6b6e2d1f036a888c1d828",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "go test ./... \u0026\u0026 go vet ./...",
+          "observed": "[go test ./... \u0026\u0026 go vet ./...]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=61d3ae0c87b2156d111f907d3a5942fc9262308eecf6b6e2d1f036a888c1d828 retained=61d3ae0c87b2156d111f907d3a5942fc9262308eecf6b6e2d1f036a888c1d828",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/missing_command_display",
+      "format": "codex_rollout_jsonl",
+      "status": "conformant",
+      "source_digest": "18bf8c7110b20e2121f69fe243732364fffbad336ed172afcd472567541ba9ae",
+      "trajectory_digest": "3c499f3cc28f0c4390951ba7c776d83c3789c7e38305dcc1fa8c2e6e580a0719",
+      "envelope_digest": "e02a604d8a5cfc03225b2047a111242b88f89d42b7f6aa52e38e9b55ab6a42c7",
+      "mapping_digest": "90c97ea00c8023e2235eb4a66d89bdb10bde798d75526a02b2fbdef8ac998ad2",
+      "canonical_encoding_digest": "a29f90c1ba01cc973996698748c0017b22f817a1d42551989f2fe42277b41c88",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=3c499f3cc28f0c4390951ba7c776d83c3789c7e38305dcc1fa8c2e6e580a0719 envelope=e02a604d8a5cfc03225b2047a111242b88f89d42b7f6aa52e38e9b55ab6a42c7 mapping=90c97ea00c8023e2235eb4a66d89bdb10bde798d75526a02b2fbdef8ac998ad2",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "3c499f3cc28f0c4390951ba7c776d83c3789c7e38305dcc1fa8c2e6e580a0719",
+          "observed": "3c499f3cc28f0c4390951ba7c776d83c3789c7e38305dcc1fa8c2e6e580a0719",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "",
+          "observed": "[]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=3c499f3cc28f0c4390951ba7c776d83c3789c7e38305dcc1fa8c2e6e580a0719 retained=3c499f3cc28f0c4390951ba7c776d83c3789c7e38305dcc1fa8c2e6e580a0719",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/missing_call_id",
+      "format": "codex_rollout_jsonl",
+      "status": "expected_rejection",
+      "source_digest": "55a729c1e4609851b2c4abd62b3587c551a8590a624fe144039bc1d1aaa80e34",
+      "trajectory_digest": "",
+      "envelope_digest": "",
+      "mapping_digest": "",
+      "canonical_encoding_digest": "",
+      "checks": [
+        {
+          "name": "strict_unsupported_rejection",
+          "expected": "rejected",
+          "observed": "rejected",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/duplicate_call_id",
+      "format": "codex_rollout_jsonl",
+      "status": "expected_rejection",
+      "source_digest": "dc5a0efcc1000438587d9c5a4e0d67f462aa7b4738aa3833e9c20e4673380cbb",
+      "trajectory_digest": "",
+      "envelope_digest": "",
+      "mapping_digest": "",
+      "canonical_encoding_digest": "",
+      "checks": [
+        {
+          "name": "strict_unsupported_rejection",
+          "expected": "rejected",
+          "observed": "rejected",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/out_of_order_result",
+      "format": "codex_rollout_jsonl",
+      "status": "expected_rejection",
+      "source_digest": "2296dca7249db866299016c29a2e158bb87af2f29751e4b1fdeb6d575a5eef13",
+      "trajectory_digest": "",
+      "envelope_digest": "",
+      "mapping_digest": "",
+      "canonical_encoding_digest": "",
+      "checks": [
+        {
+          "name": "strict_unsupported_rejection",
+          "expected": "rejected",
+          "observed": "rejected",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/bounded_truncation",
+      "format": "codex_rollout_jsonl",
+      "status": "conformant",
+      "source_digest": "9909315c11c338350bb491e2be92fe148834175a419c825d5ca1484e55e5ce58",
+      "trajectory_digest": "ab33c1e889610e16fe1952afde77ce6fa6bd16217b82945ea71b9bb022dab5cf",
+      "envelope_digest": "986666cd43ea60045ccbe73069fb5cfcb89ab4a5331bcf11ab10d6c767d9bd53",
+      "mapping_digest": "d5f684cfc6606a836710570687a3c002c2735ca66bb809ce5d3427d1109bde10",
+      "canonical_encoding_digest": "9025f237f5d754288ef1367aa83ea6e90779dd418ad38ed36b2ef7333b788e18",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=ab33c1e889610e16fe1952afde77ce6fa6bd16217b82945ea71b9bb022dab5cf envelope=986666cd43ea60045ccbe73069fb5cfcb89ab4a5331bcf11ab10d6c767d9bd53 mapping=d5f684cfc6606a836710570687a3c002c2735ca66bb809ce5d3427d1109bde10",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "ab33c1e889610e16fe1952afde77ce6fa6bd16217b82945ea71b9bb022dab5cf",
+          "observed": "ab33c1e889610e16fe1952afde77ce6fa6bd16217b82945ea71b9bb022dab5cf",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "go test ./...",
+          "observed": "[go test ./...]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=true",
+          "observed": "truncation=true canonical=ab33c1e889610e16fe1952afde77ce6fa6bd16217b82945ea71b9bb022dab5cf retained=e0e98007a99c19488a70c6d0c0f8141eabe179f2a9a983e4ca32bec11a919ea3",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/secret_redaction",
+      "format": "codex_rollout_jsonl",
+      "status": "conformant",
+      "source_digest": "a1003767be8b6ebd15fb73266b6088c895e285341b8f376c1f03d1d30f64cc4d",
+      "trajectory_digest": "7b21fe2be537163cff4500bb0d555b15bc7fda9b88e6bf0ea997475d809f467b",
+      "envelope_digest": "6029a9f10022e01a3f2fffa77f675f116d029f0b8c6fb0bffb3650fae33bcbac",
+      "mapping_digest": "0abe78897fb90bc9a541c213f20bd8525817abef71203f782761db91e09c8fb9",
+      "canonical_encoding_digest": "f051d0bbeec76b46c3f4ec68f71bcf8e4a0a9c8a7a12579402ad5a31058a191c",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=7b21fe2be537163cff4500bb0d555b15bc7fda9b88e6bf0ea997475d809f467b envelope=6029a9f10022e01a3f2fffa77f675f116d029f0b8c6fb0bffb3650fae33bcbac mapping=0abe78897fb90bc9a541c213f20bd8525817abef71203f782761db91e09c8fb9",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "7b21fe2be537163cff4500bb0d555b15bc7fda9b88e6bf0ea997475d809f467b",
+          "observed": "7b21fe2be537163cff4500bb0d555b15bc7fda9b88e6bf0ea997475d809f467b",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "go test ./...",
+          "observed": "[go test ./...]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=1",
+          "observed": "hits=1",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=7b21fe2be537163cff4500bb0d555b15bc7fda9b88e6bf0ea997475d809f467b retained=7b21fe2be537163cff4500bb0d555b15bc7fda9b88e6bf0ea997475d809f467b",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/unsupported_native_syntax",
+      "format": "codex_rollout_jsonl",
+      "status": "expected_rejection",
+      "source_digest": "08fe369de42f1de0fc8fe801bd7d0a7adb4a5863762db0c7a252a479e7f373cb",
+      "trajectory_digest": "",
+      "envelope_digest": "",
+      "mapping_digest": "",
+      "canonical_encoding_digest": "",
+      "checks": [
+        {
+          "name": "strict_unsupported_rejection",
+          "expected": "rejected",
+          "observed": "rejected",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/agent_prose_attached_to_result",
+      "format": "codex_rollout_jsonl",
+      "status": "conformant",
+      "source_digest": "dc468a221175f01a3cbbfcb5df122b8d350937d5d11efc66e9c25f70c6d25686",
+      "trajectory_digest": "8f69151e2e4e74f2bb29deab58e4593ab754d7cef280642962bb9f082b14d4c3",
+      "envelope_digest": "7fa5ee7d594fa1adb9fd4e1b4ea276fb285d5c88929abcaed246a4bc94302b72",
+      "mapping_digest": "a3513a81db7952f5553f1e699c5ac93aa853742a144c901223b3004b6088b8f1",
+      "canonical_encoding_digest": "54fb212c1eff456a74552af0ee58d16e1e6175c405d0d18c2e72f4af948c03d4",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=8f69151e2e4e74f2bb29deab58e4593ab754d7cef280642962bb9f082b14d4c3 envelope=7fa5ee7d594fa1adb9fd4e1b4ea276fb285d5c88929abcaed246a4bc94302b72 mapping=a3513a81db7952f5553f1e699c5ac93aa853742a144c901223b3004b6088b8f1",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "8f69151e2e4e74f2bb29deab58e4593ab754d7cef280642962bb9f082b14d4c3",
+          "observed": "8f69151e2e4e74f2bb29deab58e4593ab754d7cef280642962bb9f082b14d4c3",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "cmp -s /tmp/before /tmp/after",
+          "observed": "[cmp -s /tmp/before /tmp/after]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=8f69151e2e4e74f2bb29deab58e4593ab754d7cef280642962bb9f082b14d4c3 retained=8f69151e2e4e74f2bb29deab58e4593ab754d7cef280642962bb9f082b14d4c3",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/same_path_comparison_false_target",
+      "format": "codex_rollout_jsonl",
+      "status": "conformant",
+      "source_digest": "4d9e4a7e185380fe154eb38314b0766ebe34ac850a30637af52f8de6c7b1d1cf",
+      "trajectory_digest": "f62e0418a28403d1af5ff295bdd52b4459622313139d78a0b5605454d1a96728",
+      "envelope_digest": "c46e2c05a02dba114a15ddbed5608ccddea7056d0971c852812d76620988582e",
+      "mapping_digest": "c1b10e00ab7229ec8dc5b9c9ab74386a565dcaca28d2ff8ff45b4894f7f024c4",
+      "canonical_encoding_digest": "33d1062dab8e470a15ca05ebac6413981b3e364e3c0bff37af1c661b614aba35",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=f62e0418a28403d1af5ff295bdd52b4459622313139d78a0b5605454d1a96728 envelope=c46e2c05a02dba114a15ddbed5608ccddea7056d0971c852812d76620988582e mapping=c1b10e00ab7229ec8dc5b9c9ab74386a565dcaca28d2ff8ff45b4894f7f024c4",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "f62e0418a28403d1af5ff295bdd52b4459622313139d78a0b5605454d1a96728",
+          "observed": "f62e0418a28403d1af5ff295bdd52b4459622313139d78a0b5605454d1a96728",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "cmp -s /repo/file /repo/file \u0026\u0026 printf 'legacy_unchanged\\n'",
+          "observed": "[cmp -s /repo/file /repo/file \u0026\u0026 printf 'legacy_unchanged\\n']",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=f62e0418a28403d1af5ff295bdd52b4459622313139d78a0b5605454d1a96728 retained=f62e0418a28403d1af5ff295bdd52b4459622313139d78a0b5605454d1a96728",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/structured_success_after_text_omission",
+      "format": "codex_rollout_jsonl",
+      "status": "conformant",
+      "source_digest": "3f4757322692d001be1d03aabbb162192fc86667ab359dc7cf364783b72ccd51",
+      "trajectory_digest": "7173cd536bba995923f62aee3235ec68dd124221ada0cacb236f1ef056f66f22",
+      "envelope_digest": "45ced67aa46594acf4a1e79952aae227ed6ad64023d2e2c98f522b47ab72a5be",
+      "mapping_digest": "7cbd86ffaa7a5fa06cb22b0f72907b571b5c32e1c2455d3fa945367c95b19f32",
+      "canonical_encoding_digest": "72e019ab5967d56ce0817df03176d075a9e4bb2c1d6eb75dbab03c8be30c4f38",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=7173cd536bba995923f62aee3235ec68dd124221ada0cacb236f1ef056f66f22 envelope=45ced67aa46594acf4a1e79952aae227ed6ad64023d2e2c98f522b47ab72a5be mapping=7cbd86ffaa7a5fa06cb22b0f72907b571b5c32e1c2455d3fa945367c95b19f32",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "7173cd536bba995923f62aee3235ec68dd124221ada0cacb236f1ef056f66f22",
+          "observed": "7173cd536bba995923f62aee3235ec68dd124221ada0cacb236f1ef056f66f22",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "go test ./...",
+          "observed": "[go test ./...]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=7173cd536bba995923f62aee3235ec68dd124221ada0cacb236f1ef056f66f22 retained=7173cd536bba995923f62aee3235ec68dd124221ada0cacb236f1ef056f66f22",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/distinct_operand_comparison",
+      "format": "codex_rollout_jsonl",
+      "status": "conformant",
+      "source_digest": "0bfce42fe00c0b8654897d61ea31be8f06ab33a5445eb758ecbb8ba7249fb2dc",
+      "trajectory_digest": "47c2de516d3d6dd89bd3b4bac8d1eb0c14de3144eca981c99005818e4c918f65",
+      "envelope_digest": "3d278430ae67ce86601e6cc3d7e786044fb6ec191aeb6651cbc379c317f531fa",
+      "mapping_digest": "222d09c4e86c1aa1b017b2b62634ff9c71d51cdd7534dd5a3d376b7e4dd002df",
+      "canonical_encoding_digest": "8c718067944d5e73aa6f5d94bf4c42d369d85ed08287e2881d0c1f24455560cd",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=47c2de516d3d6dd89bd3b4bac8d1eb0c14de3144eca981c99005818e4c918f65 envelope=3d278430ae67ce86601e6cc3d7e786044fb6ec191aeb6651cbc379c317f531fa mapping=222d09c4e86c1aa1b017b2b62634ff9c71d51cdd7534dd5a3d376b7e4dd002df",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "47c2de516d3d6dd89bd3b4bac8d1eb0c14de3144eca981c99005818e4c918f65",
+          "observed": "47c2de516d3d6dd89bd3b4bac8d1eb0c14de3144eca981c99005818e4c918f65",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "cmp -s /tmp/before /tmp/after \u0026\u0026 printf 'files_equal\\n'",
+          "observed": "[cmp -s /tmp/before /tmp/after \u0026\u0026 printf 'files_equal\\n']",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=47c2de516d3d6dd89bd3b4bac8d1eb0c14de3144eca981c99005818e4c918f65 retained=47c2de516d3d6dd89bd3b4bac8d1eb0c14de3144eca981c99005818e4c918f65",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/planning_prose_false_target",
+      "format": "codex_rollout_jsonl",
+      "status": "conformant",
+      "source_digest": "a054aa24b6f9d7c2c02ae5766e359308ef57bc1f801a0f61e180b0afcdb13d2a",
+      "trajectory_digest": "568e1ed15eefcb23d454e25d28789659be794935e9906d922b5391199cf2ffc2",
+      "envelope_digest": "ccd048bdc9093bd20c7dd4b52319d02ffb400a3ce1ebb25db6e3ec570fac0139",
+      "mapping_digest": "d24cbd73b3721cfb77e0382f7bd15b481fed8d2a588d8457a3b9c0d3c0951c72",
+      "canonical_encoding_digest": "32c77768e66d6d23e9d8a74e920af6e490becaedcff396ff9581a3a522309950",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=568e1ed15eefcb23d454e25d28789659be794935e9906d922b5391199cf2ffc2 envelope=ccd048bdc9093bd20c7dd4b52319d02ffb400a3ce1ebb25db6e3ec570fac0139 mapping=d24cbd73b3721cfb77e0382f7bd15b481fed8d2a588d8457a3b9c0d3c0951c72",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "568e1ed15eefcb23d454e25d28789659be794935e9906d922b5391199cf2ffc2",
+          "observed": "568e1ed15eefcb23d454e25d28789659be794935e9906d922b5391199cf2ffc2",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "diff -u /tmp/before.err /tmp/after.err",
+          "observed": "[diff -u /tmp/before.err /tmp/after.err]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=568e1ed15eefcb23d454e25d28789659be794935e9906d922b5391199cf2ffc2 retained=568e1ed15eefcb23d454e25d28789659be794935e9906d922b5391199cf2ffc2",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "codex_rollout_jsonl/native_exit_status",
+      "format": "codex_rollout_jsonl",
+      "status": "conformant",
+      "source_digest": "aef5deba3a7bd7d34b639cdc8269f4caf18f236d67865276aeaab47bb43a20ac",
+      "trajectory_digest": "0c1c3c938e82e7a4274595d33d555205da06289d5ebfd03772dfad9b070c69b8",
+      "envelope_digest": "1fb6881cf615bc597a32786e4e1fb8029ed4b088aea548f86c75f241e6ad8b2d",
+      "mapping_digest": "97206c9281aea9fb967d33dc15fff723b13c92d3cc2f3fa6eb7dbfc817627d34",
+      "canonical_encoding_digest": "3a6282802e346a51fe7682598abeb6f80f9c7187f8fe01ee39a1fda88f676927",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=0c1c3c938e82e7a4274595d33d555205da06289d5ebfd03772dfad9b070c69b8 envelope=1fb6881cf615bc597a32786e4e1fb8029ed4b088aea548f86c75f241e6ad8b2d mapping=97206c9281aea9fb967d33dc15fff723b13c92d3cc2f3fa6eb7dbfc817627d34",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "0c1c3c938e82e7a4274595d33d555205da06289d5ebfd03772dfad9b070c69b8",
+          "observed": "0c1c3c938e82e7a4274595d33d555205da06289d5ebfd03772dfad9b070c69b8",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "go test ./...",
+          "observed": "[go test ./...]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=0c1c3c938e82e7a4274595d33d555205da06289d5ebfd03772dfad9b070c69b8 retained=0c1c3c938e82e7a4274595d33d555205da06289d5ebfd03772dfad9b070c69b8",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=true",
+          "observed": "observations=1",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/direct_test_invocation",
+      "format": "opencode_export_json",
+      "status": "conformant",
+      "source_digest": "4209742d999702388d71f43c11386427dd63f40892ae5b118e696b98dbc604bd",
+      "trajectory_digest": "fc7dd2cbf30bd292bdd8de4c25cf77ccfc26b4a21890d1be115fa3fd0b5efe4d",
+      "envelope_digest": "267763995803f072b973930c944267d74e27fce5ee44a9142a70c531de2b840c",
+      "mapping_digest": "ad0e794409d7f262351ee3a42e5c783efe8d1fc5352d58fdb9467ab6e1497df9",
+      "canonical_encoding_digest": "e2fe9dfd389a21becb1d0a269898685839c863dc42d4163a6defb7e5f357bc86",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=fc7dd2cbf30bd292bdd8de4c25cf77ccfc26b4a21890d1be115fa3fd0b5efe4d envelope=267763995803f072b973930c944267d74e27fce5ee44a9142a70c531de2b840c mapping=ad0e794409d7f262351ee3a42e5c783efe8d1fc5352d58fdb9467ab6e1497df9",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "fc7dd2cbf30bd292bdd8de4c25cf77ccfc26b4a21890d1be115fa3fd0b5efe4d",
+          "observed": "fc7dd2cbf30bd292bdd8de4c25cf77ccfc26b4a21890d1be115fa3fd0b5efe4d",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "go test ./...",
+          "observed": "[go test ./...]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=fc7dd2cbf30bd292bdd8de4c25cf77ccfc26b4a21890d1be115fa3fd0b5efe4d retained=fc7dd2cbf30bd292bdd8de4c25cf77ccfc26b4a21890d1be115fa3fd0b5efe4d",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/direct_check_invocation",
+      "format": "opencode_export_json",
+      "status": "conformant",
+      "source_digest": "d61d26bdd72be1a60feacfafd5ec70999418e968b1f946a508583924d4397074",
+      "trajectory_digest": "d1be5588f4ed8a407b3a46d891b05c73bf42ed7a39e88c19934836a47e1cf104",
+      "envelope_digest": "41a2f1e9c6e7471dfa67acccdd6c682e3c7a9d3381ff37328e57c93a84a3ad5d",
+      "mapping_digest": "74360657bd75a9e37c2c669ca47a086773aca92ac98719e02a775fd2bb061973",
+      "canonical_encoding_digest": "10ad67f1b429f573d6279db9ce17ca7c5a31075445fc650b436a7ed682f6ec96",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=d1be5588f4ed8a407b3a46d891b05c73bf42ed7a39e88c19934836a47e1cf104 envelope=41a2f1e9c6e7471dfa67acccdd6c682e3c7a9d3381ff37328e57c93a84a3ad5d mapping=74360657bd75a9e37c2c669ca47a086773aca92ac98719e02a775fd2bb061973",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "d1be5588f4ed8a407b3a46d891b05c73bf42ed7a39e88c19934836a47e1cf104",
+          "observed": "d1be5588f4ed8a407b3a46d891b05c73bf42ed7a39e88c19934836a47e1cf104",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "cargo check --workspace",
+          "observed": "[cargo check --workspace]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=d1be5588f4ed8a407b3a46d891b05c73bf42ed7a39e88c19934836a47e1cf104 retained=d1be5588f4ed8a407b3a46d891b05c73bf42ed7a39e88c19934836a47e1cf104",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/direct_build_invocation",
+      "format": "opencode_export_json",
+      "status": "conformant",
+      "source_digest": "dba12eedaaa23debb39f5da75deec4c0100cbd93f849f62b9664a5a00d3915f3",
+      "trajectory_digest": "1aa6893f25b2e13ec2dfd272bd36388d70d491179f4c03c4bea086971236a949",
+      "envelope_digest": "6be29b1b52ca09d4636014a2c04cbbb4408ce9f4203ba7f77f1a28806b1400cc",
+      "mapping_digest": "b8c36f7616932f7b17cd6b929991ad204e46357a47e719d08f3b43ee0bd6fb14",
+      "canonical_encoding_digest": "1c851fe5617f242e58d8301373ac6c8b639efa85fad79908febe82ae1c65c595",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=1aa6893f25b2e13ec2dfd272bd36388d70d491179f4c03c4bea086971236a949 envelope=6be29b1b52ca09d4636014a2c04cbbb4408ce9f4203ba7f77f1a28806b1400cc mapping=b8c36f7616932f7b17cd6b929991ad204e46357a47e719d08f3b43ee0bd6fb14",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "1aa6893f25b2e13ec2dfd272bd36388d70d491179f4c03c4bea086971236a949",
+          "observed": "1aa6893f25b2e13ec2dfd272bd36388d70d491179f4c03c4bea086971236a949",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "go build ./cmd/evalwitness",
+          "observed": "[go build ./cmd/evalwitness]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=1aa6893f25b2e13ec2dfd272bd36388d70d491179f4c03c4bea086971236a949 retained=1aa6893f25b2e13ec2dfd272bd36388d70d491179f4c03c4bea086971236a949",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/direct_outcome_probe",
+      "format": "opencode_export_json",
+      "status": "conformant",
+      "source_digest": "08a1730962f86d775376f6ecfb2c95b929d783c71ac70833276c54601f2217da",
+      "trajectory_digest": "da575e86f4a0917fe6916b394af60001efe8a5ae0d4927cd7860f99090083822",
+      "envelope_digest": "1c307d54800ad4d8020b0c41edc33e4a7c151b190ab0636bbee43a701c19bd39",
+      "mapping_digest": "3237f21e6a2be3c9b005d74dc2d3d2ddc8dfdd6d137d6113b8fa3c7365624cfe",
+      "canonical_encoding_digest": "d41df2496c999416768cc555687088d1136f8cc41e6187fe15d8a638e3ba9b4b",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=da575e86f4a0917fe6916b394af60001efe8a5ae0d4927cd7860f99090083822 envelope=1c307d54800ad4d8020b0c41edc33e4a7c151b190ab0636bbee43a701c19bd39 mapping=3237f21e6a2be3c9b005d74dc2d3d2ddc8dfdd6d137d6113b8fa3c7365624cfe",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "da575e86f4a0917fe6916b394af60001efe8a5ae0d4927cd7860f99090083822",
+          "observed": "da575e86f4a0917fe6916b394af60001efe8a5ae0d4927cd7860f99090083822",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "test -s report.json",
+          "observed": "[test -s report.json]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=da575e86f4a0917fe6916b394af60001efe8a5ae0d4927cd7860f99090083822 retained=da575e86f4a0917fe6916b394af60001efe8a5ae0d4927cd7860f99090083822",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/printed_verification_name",
+      "format": "opencode_export_json",
+      "status": "conformant",
+      "source_digest": "19afe46d214e7dd95e6153e18aa2d6c1815ee4453f604df6b8a54b60c46a131b",
+      "trajectory_digest": "07d67e78b20d1da04174ee383139d479e3ec35b275c73d3d505389b491eb259c",
+      "envelope_digest": "1aba513a1a43fd219372066af9906cf6b0f1da907f2cd2d5f3111bea7c9f846f",
+      "mapping_digest": "67c1c284149563df95e8c24e5c814ec1997d19829a57ae03061e8458ede33cc3",
+      "canonical_encoding_digest": "3298d93c49a24cb811502dca1fe6e48b6841e3ec622ae0929f2b4e21848b3fee",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=07d67e78b20d1da04174ee383139d479e3ec35b275c73d3d505389b491eb259c envelope=1aba513a1a43fd219372066af9906cf6b0f1da907f2cd2d5f3111bea7c9f846f mapping=67c1c284149563df95e8c24e5c814ec1997d19829a57ae03061e8458ede33cc3",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "07d67e78b20d1da04174ee383139d479e3ec35b275c73d3d505389b491eb259c",
+          "observed": "07d67e78b20d1da04174ee383139d479e3ec35b275c73d3d505389b491eb259c",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "printf 'go test ./...\\n'",
+          "observed": "[printf 'go test ./...\\n']",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=07d67e78b20d1da04174ee383139d479e3ec35b275c73d3d505389b491eb259c retained=07d67e78b20d1da04174ee383139d479e3ec35b275c73d3d505389b491eb259c",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/searched_verification_name",
+      "format": "opencode_export_json",
+      "status": "conformant",
+      "source_digest": "7d6bbced73e426881ccf249ec8e8e297414d4f55e5f87de1a9dba7be41d5ae91",
+      "trajectory_digest": "cdfd5f7700aaa9cd03605f05bf7838dbfe01cc62f42716d65a3f6f05b1de1fca",
+      "envelope_digest": "a6a518693528ab32df499b473ed0bd19feaa757f9b4958ea835b82118e6edf03",
+      "mapping_digest": "e9c9de4092e5913b0f3b483c443cdb13bdce69958a3920097526650bad1b540d",
+      "canonical_encoding_digest": "bef41f52de658fdb4416f3c77bade6e81d31549f6031fcb2c9d6edfc2742eb07",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=cdfd5f7700aaa9cd03605f05bf7838dbfe01cc62f42716d65a3f6f05b1de1fca envelope=a6a518693528ab32df499b473ed0bd19feaa757f9b4958ea835b82118e6edf03 mapping=e9c9de4092e5913b0f3b483c443cdb13bdce69958a3920097526650bad1b540d",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "cdfd5f7700aaa9cd03605f05bf7838dbfe01cc62f42716d65a3f6f05b1de1fca",
+          "observed": "cdfd5f7700aaa9cd03605f05bf7838dbfe01cc62f42716d65a3f6f05b1de1fca",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "rg 'cargo test' docs",
+          "observed": "[rg 'cargo test' docs]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=cdfd5f7700aaa9cd03605f05bf7838dbfe01cc62f42716d65a3f6f05b1de1fca retained=cdfd5f7700aaa9cd03605f05bf7838dbfe01cc62f42716d65a3f6f05b1de1fca",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/wrapper_chain",
+      "format": "opencode_export_json",
+      "status": "conformant",
+      "source_digest": "69b2344fe9d08b633407944642c0604f8d3e285dc2f332d1dc6b0062b5dde894",
+      "trajectory_digest": "d6816dcfb059a003e4676002e83fd6c821bea0be16655ec8f9ea41f2d4f5e387",
+      "envelope_digest": "54d5e69e2b30b240051111de1ba7f537862ac4553a063e9e553cb3f552ec833b",
+      "mapping_digest": "4798b76ae6e0d0dff29627b2673280d0130d9ee1f62bcdb2eefac22bc6e6b3d1",
+      "canonical_encoding_digest": "c7d2ae7b0b1499138f3ac42df42778d2b78b80afd59193d1ca81483a36ae6589",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=d6816dcfb059a003e4676002e83fd6c821bea0be16655ec8f9ea41f2d4f5e387 envelope=54d5e69e2b30b240051111de1ba7f537862ac4553a063e9e553cb3f552ec833b mapping=4798b76ae6e0d0dff29627b2673280d0130d9ee1f62bcdb2eefac22bc6e6b3d1",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "d6816dcfb059a003e4676002e83fd6c821bea0be16655ec8f9ea41f2d4f5e387",
+          "observed": "d6816dcfb059a003e4676002e83fd6c821bea0be16655ec8f9ea41f2d4f5e387",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "env CI=1 sh -c 'go test ./...'",
+          "observed": "[env CI=1 sh -c 'go test ./...']",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=d6816dcfb059a003e4676002e83fd6c821bea0be16655ec8f9ea41f2d4f5e387 retained=d6816dcfb059a003e4676002e83fd6c821bea0be16655ec8f9ea41f2d4f5e387",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/compound_command",
+      "format": "opencode_export_json",
+      "status": "conformant",
+      "source_digest": "a3661f29d8536eee8c33197699d7faff501855000bf21aa79545c0aa21ed81ff",
+      "trajectory_digest": "20dedf124ba152ed5594a9878bd22a5a648ca855aa2015ecdfdbc5ee82ffc405",
+      "envelope_digest": "422a7bc4e98697297932652fcf7724d04e84bcd7392c2040b97a2054bf27f7dc",
+      "mapping_digest": "fb5d43537341eba718ea3b5b249ad1eff7851ce82e49178ce3d7226beb3cfde5",
+      "canonical_encoding_digest": "9f241dc4dd1e6b921dc95513343b988053d9a6b26d8b382efb688a57bd97f182",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=20dedf124ba152ed5594a9878bd22a5a648ca855aa2015ecdfdbc5ee82ffc405 envelope=422a7bc4e98697297932652fcf7724d04e84bcd7392c2040b97a2054bf27f7dc mapping=fb5d43537341eba718ea3b5b249ad1eff7851ce82e49178ce3d7226beb3cfde5",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "20dedf124ba152ed5594a9878bd22a5a648ca855aa2015ecdfdbc5ee82ffc405",
+          "observed": "20dedf124ba152ed5594a9878bd22a5a648ca855aa2015ecdfdbc5ee82ffc405",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "go test ./... \u0026\u0026 go vet ./...",
+          "observed": "[go test ./... \u0026\u0026 go vet ./...]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=20dedf124ba152ed5594a9878bd22a5a648ca855aa2015ecdfdbc5ee82ffc405 retained=20dedf124ba152ed5594a9878bd22a5a648ca855aa2015ecdfdbc5ee82ffc405",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/missing_command_display",
+      "format": "opencode_export_json",
+      "status": "conformant",
+      "source_digest": "4c55a64137fefa4400cb30a3b6fcc67601e3049454071ed065a27f4200523b3a",
+      "trajectory_digest": "c11ce88ed62428857d4e975afaa8e3f3d4c45227a89105ec2a4a2c59dd776111",
+      "envelope_digest": "0b2611c3bdaef052092957b6b33ff1472f81c36c96142bfd5135eb8c6bf0edd3",
+      "mapping_digest": "67a3e6b24e8a8d2d3a4cb7c6381de105662abef7ea8ea2b42f7e10f1659d72c7",
+      "canonical_encoding_digest": "ce04517cbe8429c1894af2c4e9fa917c56c1f8416f08aaa839cf90c343ab12c7",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=c11ce88ed62428857d4e975afaa8e3f3d4c45227a89105ec2a4a2c59dd776111 envelope=0b2611c3bdaef052092957b6b33ff1472f81c36c96142bfd5135eb8c6bf0edd3 mapping=67a3e6b24e8a8d2d3a4cb7c6381de105662abef7ea8ea2b42f7e10f1659d72c7",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "c11ce88ed62428857d4e975afaa8e3f3d4c45227a89105ec2a4a2c59dd776111",
+          "observed": "c11ce88ed62428857d4e975afaa8e3f3d4c45227a89105ec2a4a2c59dd776111",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "",
+          "observed": "[]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=c11ce88ed62428857d4e975afaa8e3f3d4c45227a89105ec2a4a2c59dd776111 retained=c11ce88ed62428857d4e975afaa8e3f3d4c45227a89105ec2a4a2c59dd776111",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/missing_call_id",
+      "format": "opencode_export_json",
+      "status": "expected_rejection",
+      "source_digest": "44ffe33dc05197b35586a4ef8be93284db718652daadde55f7a69d9cd99ca7cd",
+      "trajectory_digest": "",
+      "envelope_digest": "",
+      "mapping_digest": "",
+      "canonical_encoding_digest": "",
+      "checks": [
+        {
+          "name": "strict_unsupported_rejection",
+          "expected": "rejected",
+          "observed": "rejected",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/duplicate_call_id",
+      "format": "opencode_export_json",
+      "status": "expected_rejection",
+      "source_digest": "c5c908d2dd45904fbf728a80428bf5722b1246bdaef7194119844fa424202f9c",
+      "trajectory_digest": "",
+      "envelope_digest": "",
+      "mapping_digest": "",
+      "canonical_encoding_digest": "",
+      "checks": [
+        {
+          "name": "strict_unsupported_rejection",
+          "expected": "rejected",
+          "observed": "rejected",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/out_of_order_result",
+      "format": "opencode_export_json",
+      "status": "not_applicable",
+      "source_digest": "",
+      "trajectory_digest": "",
+      "envelope_digest": "",
+      "mapping_digest": "",
+      "canonical_encoding_digest": "",
+      "checks": [
+        {
+          "name": "representability_boundary",
+          "expected": "unsupported",
+          "observed": "not_applicable",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/bounded_truncation",
+      "format": "opencode_export_json",
+      "status": "conformant",
+      "source_digest": "c5fb004365ca4eaa1297c257b8ea743ddc2f39e181b13957dafd9fc141caf530",
+      "trajectory_digest": "979d9e0b8e43943d074edd7bb1167f6c6ba3e8cfd335efc22a6a37a3a31a9cef",
+      "envelope_digest": "0dab5ee1b685db15ad274df5588b87efcda5123ba3068bacfbb8edc25f37f447",
+      "mapping_digest": "558f5d69f8fbe5d26e5d1a76a85d38011561867633fb697c28354d794ab1cc22",
+      "canonical_encoding_digest": "a35f0b52dd1da37f82002161afbbdd108a29f6d3f1290d2bfaca0aeb86a4b382",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=979d9e0b8e43943d074edd7bb1167f6c6ba3e8cfd335efc22a6a37a3a31a9cef envelope=0dab5ee1b685db15ad274df5588b87efcda5123ba3068bacfbb8edc25f37f447 mapping=558f5d69f8fbe5d26e5d1a76a85d38011561867633fb697c28354d794ab1cc22",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "979d9e0b8e43943d074edd7bb1167f6c6ba3e8cfd335efc22a6a37a3a31a9cef",
+          "observed": "979d9e0b8e43943d074edd7bb1167f6c6ba3e8cfd335efc22a6a37a3a31a9cef",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "go test ./...",
+          "observed": "[go test ./...]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=true",
+          "observed": "truncation=true canonical=979d9e0b8e43943d074edd7bb1167f6c6ba3e8cfd335efc22a6a37a3a31a9cef retained=bb69be413da45effd37e61dc75221c612ff8c5183bface4a62a4672b088481d3",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/secret_redaction",
+      "format": "opencode_export_json",
+      "status": "conformant",
+      "source_digest": "14ec08d1b5e736e979f80c2da88f712f3d8a998dd7a0fad7645eddee247d4f27",
+      "trajectory_digest": "7170f544f5f997b1e039bae5b1e053614f9b7b701be70f6a8c2e766910132ec3",
+      "envelope_digest": "684950892925984a8cb56171450c534c392bed8120bfd989fc0e0a96af90623c",
+      "mapping_digest": "710b8533baf4621c9f825b246ccb358a7f175ca7e9a54e3c825d732a4dc61077",
+      "canonical_encoding_digest": "2bee7f31273b4268d1417dc55851b5defa8f82d391a6d7db55d05ba5408b1809",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=7170f544f5f997b1e039bae5b1e053614f9b7b701be70f6a8c2e766910132ec3 envelope=684950892925984a8cb56171450c534c392bed8120bfd989fc0e0a96af90623c mapping=710b8533baf4621c9f825b246ccb358a7f175ca7e9a54e3c825d732a4dc61077",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "7170f544f5f997b1e039bae5b1e053614f9b7b701be70f6a8c2e766910132ec3",
+          "observed": "7170f544f5f997b1e039bae5b1e053614f9b7b701be70f6a8c2e766910132ec3",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "go test ./...",
+          "observed": "[go test ./...]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=1",
+          "observed": "hits=1",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=7170f544f5f997b1e039bae5b1e053614f9b7b701be70f6a8c2e766910132ec3 retained=7170f544f5f997b1e039bae5b1e053614f9b7b701be70f6a8c2e766910132ec3",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/unsupported_native_syntax",
+      "format": "opencode_export_json",
+      "status": "expected_rejection",
+      "source_digest": "7e962207da70072f3422ea295b5fa65c323f18cb94a98bffd11b856177e29b19",
+      "trajectory_digest": "",
+      "envelope_digest": "",
+      "mapping_digest": "",
+      "canonical_encoding_digest": "",
+      "checks": [
+        {
+          "name": "strict_unsupported_rejection",
+          "expected": "rejected",
+          "observed": "rejected",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/agent_prose_attached_to_result",
+      "format": "opencode_export_json",
+      "status": "conformant",
+      "source_digest": "a3f3b37ced175ee0ce9ea30e81fbb0becb4785f718ba42294cddc2e41fe681e4",
+      "trajectory_digest": "eb3ceb846686ba52127b742ca7a05c65262ffb9e82b5aae56b4354f7d92f018e",
+      "envelope_digest": "30a400e8904ad2afda1974e785982b585b3c16050040a04501ed478420caa611",
+      "mapping_digest": "dbbee299b9a011711c56f83221d283937a8c68c622b457195a8dc990310b2d2e",
+      "canonical_encoding_digest": "e14c369a645c90789ff779ced5d70506aac6162880af760bb5ed43586e964764",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=eb3ceb846686ba52127b742ca7a05c65262ffb9e82b5aae56b4354f7d92f018e envelope=30a400e8904ad2afda1974e785982b585b3c16050040a04501ed478420caa611 mapping=dbbee299b9a011711c56f83221d283937a8c68c622b457195a8dc990310b2d2e",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "eb3ceb846686ba52127b742ca7a05c65262ffb9e82b5aae56b4354f7d92f018e",
+          "observed": "eb3ceb846686ba52127b742ca7a05c65262ffb9e82b5aae56b4354f7d92f018e",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "cmp -s /tmp/before /tmp/after",
+          "observed": "[cmp -s /tmp/before /tmp/after]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=eb3ceb846686ba52127b742ca7a05c65262ffb9e82b5aae56b4354f7d92f018e retained=eb3ceb846686ba52127b742ca7a05c65262ffb9e82b5aae56b4354f7d92f018e",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/same_path_comparison_false_target",
+      "format": "opencode_export_json",
+      "status": "conformant",
+      "source_digest": "86d4bd38818195d4bce81f334fd6aa517b0121dbcf4a9b632d25e8d875a4d637",
+      "trajectory_digest": "4028b8bfd85b1a6985d7df66b14de6edbd8a1956290b2a10fe9dfffdf00a2437",
+      "envelope_digest": "63fdf29a7398a5c49be557483d2588d49754bfb0da87e489d184d7750dc8c541",
+      "mapping_digest": "34f25e86193700e1511fe92bc38221316913d3860207e8e46feb6fdc905fe877",
+      "canonical_encoding_digest": "5a7529d128918e3cac61ae55f9e8fce3076484617d703faca4258a4eaec27d16",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=4028b8bfd85b1a6985d7df66b14de6edbd8a1956290b2a10fe9dfffdf00a2437 envelope=63fdf29a7398a5c49be557483d2588d49754bfb0da87e489d184d7750dc8c541 mapping=34f25e86193700e1511fe92bc38221316913d3860207e8e46feb6fdc905fe877",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "4028b8bfd85b1a6985d7df66b14de6edbd8a1956290b2a10fe9dfffdf00a2437",
+          "observed": "4028b8bfd85b1a6985d7df66b14de6edbd8a1956290b2a10fe9dfffdf00a2437",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "cmp -s /repo/file /repo/file \u0026\u0026 printf 'legacy_unchanged\\n'",
+          "observed": "[cmp -s /repo/file /repo/file \u0026\u0026 printf 'legacy_unchanged\\n']",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=4028b8bfd85b1a6985d7df66b14de6edbd8a1956290b2a10fe9dfffdf00a2437 retained=4028b8bfd85b1a6985d7df66b14de6edbd8a1956290b2a10fe9dfffdf00a2437",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/structured_success_after_text_omission",
+      "format": "opencode_export_json",
+      "status": "conformant",
+      "source_digest": "8444644a9ea81fe76e6de104b94e617ffe03e2a2de7aa7695aaadba8f7cd88df",
+      "trajectory_digest": "bf55c100e008a9aca8300dc82843ae6b7cf2813ac18a117e829a1f411d52029a",
+      "envelope_digest": "101027916653b41c0ee837c6fcba509d8206b0852b344254770a1109eb0d7e41",
+      "mapping_digest": "bc2e8eb3588646efd5cf4fe6313a2f7823e733611cec032d229edf0d583f7f0d",
+      "canonical_encoding_digest": "bb275902553eb5e59f32c729a8dc1673a68549b64228ed845014f93d548adb25",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=bf55c100e008a9aca8300dc82843ae6b7cf2813ac18a117e829a1f411d52029a envelope=101027916653b41c0ee837c6fcba509d8206b0852b344254770a1109eb0d7e41 mapping=bc2e8eb3588646efd5cf4fe6313a2f7823e733611cec032d229edf0d583f7f0d",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "bf55c100e008a9aca8300dc82843ae6b7cf2813ac18a117e829a1f411d52029a",
+          "observed": "bf55c100e008a9aca8300dc82843ae6b7cf2813ac18a117e829a1f411d52029a",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "go test ./...",
+          "observed": "[go test ./...]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=bf55c100e008a9aca8300dc82843ae6b7cf2813ac18a117e829a1f411d52029a retained=bf55c100e008a9aca8300dc82843ae6b7cf2813ac18a117e829a1f411d52029a",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/distinct_operand_comparison",
+      "format": "opencode_export_json",
+      "status": "conformant",
+      "source_digest": "a96afcbc10e14cb4546919e3d2376c001db80ddef0c1d1745b6c97595eb082b5",
+      "trajectory_digest": "e1dfb3c74008b92d88ec5ce6ea0b8271e7bdc7d1f5da73a2f348133ffe6fb877",
+      "envelope_digest": "11ac3a5a5cd691ba4b709b557ffe04a82a57d82805f8d26d0e866adf663efb12",
+      "mapping_digest": "ab340e8c77d2299e1fed5e187ed411c4af542a5916c7f2b985cb04cafface0c9",
+      "canonical_encoding_digest": "637fbd502fdef872899a57750381848d2dba06cd1a5e4edfc9525549b6a4716e",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=e1dfb3c74008b92d88ec5ce6ea0b8271e7bdc7d1f5da73a2f348133ffe6fb877 envelope=11ac3a5a5cd691ba4b709b557ffe04a82a57d82805f8d26d0e866adf663efb12 mapping=ab340e8c77d2299e1fed5e187ed411c4af542a5916c7f2b985cb04cafface0c9",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "e1dfb3c74008b92d88ec5ce6ea0b8271e7bdc7d1f5da73a2f348133ffe6fb877",
+          "observed": "e1dfb3c74008b92d88ec5ce6ea0b8271e7bdc7d1f5da73a2f348133ffe6fb877",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "cmp -s /tmp/before /tmp/after \u0026\u0026 printf 'files_equal\\n'",
+          "observed": "[cmp -s /tmp/before /tmp/after \u0026\u0026 printf 'files_equal\\n']",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=e1dfb3c74008b92d88ec5ce6ea0b8271e7bdc7d1f5da73a2f348133ffe6fb877 retained=e1dfb3c74008b92d88ec5ce6ea0b8271e7bdc7d1f5da73a2f348133ffe6fb877",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/planning_prose_false_target",
+      "format": "opencode_export_json",
+      "status": "conformant",
+      "source_digest": "aa02f55ba0b0d909133bbdad9a1c212af438a86fe1a0037b92e7bd1bc9445cef",
+      "trajectory_digest": "f3c056f83a5a21ffa0aef2ccd37429f174cd2d0430ba83e26623c90c37509aa4",
+      "envelope_digest": "881884bc3af2b37dedbe08ef1572360a0a46114eed32e745d34709a450abd350",
+      "mapping_digest": "dce951f33d208b143f5917b1005f246e7781c0b5217571cdb92dd424fff20ddb",
+      "canonical_encoding_digest": "73d2acdaf3901a1e45aba049e5243ecb053902e7837bee2533142c309b4385b2",
+      "checks": [
+        {
+          "name": "raw_record_accounting",
+          "expected": "2 records",
+          "observed": "records=2 accounting=2 mapping=2",
+          "passed": true
+        },
+        {
+          "name": "field_accounting",
+          "expected": "mapping fields equal entries and disposition totals",
+          "observed": "fields=2 entries=2 totals=2",
+          "passed": true
+        },
+        {
+          "name": "stable_import_identity",
+          "expected": "byte-identical import result",
+          "observed": "trajectory=f3c056f83a5a21ffa0aef2ccd37429f174cd2d0430ba83e26623c90c37509aa4 envelope=881884bc3af2b37dedbe08ef1572360a0a46114eed32e745d34709a450abd350 mapping=dce951f33d208b143f5917b1005f246e7781c0b5217571cdb92dd424fff20ddb",
+          "passed": true
+        },
+        {
+          "name": "canonical_json_roundtrip",
+          "expected": "f3c056f83a5a21ffa0aef2ccd37429f174cd2d0430ba83e26623c90c37509aa4",
+          "observed": "f3c056f83a5a21ffa0aef2ccd37429f174cd2d0430ba83e26623c90c37509aa4",
+          "passed": true
+        },
+        {
+          "name": "native_call_result_linkage",
+          "expected": "calls\u003e=1 results\u003e=1 links\u003e=1",
+          "observed": "calls=1 results=1 links=1",
+          "passed": true
+        },
+        {
+          "name": "command_display_preservation",
+          "expected": "diff -u /tmp/before.err /tmp/after.err",
+          "observed": "[diff -u /tmp/before.err /tmp/after.err]",
+          "passed": true
+        },
+        {
+          "name": "redaction_accounting",
+          "expected": "hits=0",
+          "observed": "hits=0",
+          "passed": true
+        },
+        {
+          "name": "retention_boundary",
+          "expected": "truncation=false",
+          "observed": "truncation=false canonical=f3c056f83a5a21ffa0aef2ccd37429f174cd2d0430ba83e26623c90c37509aa4 retained=f3c056f83a5a21ffa0aef2ccd37429f174cd2d0430ba83e26623c90c37509aa4",
+          "passed": true
+        },
+        {
+          "name": "exit_status_preservation",
+          "expected": "required=false",
+          "observed": "observations=0",
+          "passed": true
+        },
+        {
+          "name": "native_identity_integrity",
+          "expected": "unique native call identity with causal order",
+          "observed": "unique_and_ordered",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    },
+    {
+      "vector_id": "opencode_export_json/native_exit_status",
+      "format": "opencode_export_json",
+      "status": "not_applicable",
+      "source_digest": "",
+      "trajectory_digest": "",
+      "envelope_digest": "",
+      "mapping_digest": "",
+      "canonical_encoding_digest": "",
+      "checks": [
+        {
+          "name": "representability_boundary",
+          "expected": "unspecified",
+          "observed": "not_applicable",
+          "passed": true
+        }
+      ],
+      "known_mapping_gap": ""
+    }
+  ],
+  "summary": {
+    "vectors": 63,
+    "conformant": 49,
+    "known_mapping_gaps": 0,
+    "expected_rejections": 11,
+    "not_applicable": 3,
+    "checks": 504,
+    "passed_checks": 504,
+    "failed_checks": 0
+  },
+  "claim_boundary": {
+    "evidence_role": "adapter_development",
+    "provider_calls": 0,
+    "agent_launch": false,
+    "research_outcome": false,
+    "format_wide_claim": false,
+    "supported_claim": "the sealed synthetic native vectors reproduce exact adapter mappings and fail-closed identity boundaries",
+    "unsupported_claims": [
+      "agent_behavior_frequency",
+      "empirical_corpus_outcome",
+      "format_is_lossless",
+      "human_validated",
+      "provider_quality",
+      "universal_format_capability"
+    ]
+  },
+  "digest": "7f93360c022843aeb351afa57c52b96077a0a0c7260f3f1ce62b9c58949f58eb"
+}

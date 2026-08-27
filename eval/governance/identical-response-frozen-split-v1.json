@@ -1,0 +1,3692 @@
+{
+  "schema_version": "evalwitness.identical-response-frozen-split.v1",
+  "algorithm": "evalwitness.frozen-controlled-corruption-v3-assignment.v1",
+  "seed": "frozen:controlled-corruption-v3-release",
+  "stratification_variables": [
+    "license",
+    "source_family_pair"
+  ],
+  "assignments": [
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-00cbb2a8742afdc1372a7a4a90bdeb4e307632077d27eeca6230475b6f2bf435",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-17087"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-009aec113eb7262d711abe8ac0bbf850948f6f29a2dc2482778273a9265171b7"
+      ],
+      "trajectory_digests": [
+        "dd97b2dc7b127de9f89133421530273f6fb82d2d8b02d454c127ac3dcbcbc792",
+        "fe95365aa6bdab4d31c6a7b155c8f10e022ea120f58d0b3bd34125da15c31070"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-00cbb2a8742afdc1372a7a4a90bdeb4e307632077d27eeca6230475b6f2bf435"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-03da96720d90e4aaf169a2e7e22103e7228c90f2811ff2956e14e2ac77fa5ad3",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "fix-git"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/fix-git"
+      ],
+      "clone_family_ids": [
+        "near-0bbd39f9760b73f2546dca8fcb1a41639795921c539c247ab1b494f77c4caeae"
+      ],
+      "trajectory_digests": [
+        "30658bb102808d96ce5c76d3417e3f2d7714ddfa9df9ecdecfa67a0f35370b64",
+        "4d2ee167b23c42c418187defb4114cbc59bb45dcda97cfc22f0ea625bed4236d"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-03da96720d90e4aaf169a2e7e22103e7228c90f2811ff2956e14e2ac77fa5ad3"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-06290b621ae533dfefd900c525f69286a78e9428bbec7ee7e0504cf2acabde24",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "sqlite-db-truncate"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/sqlite-db-truncate"
+      ],
+      "clone_family_ids": [
+        "near-6088278a3d316be7c2b10b919fafe8de14aed6a4beddb4bd134efd33832e106e"
+      ],
+      "trajectory_digests": [
+        "04cfdc5b37ccdb751af139d86549e05852eaaacf727283f1fea1ea5a12386b6d",
+        "87a606f672225e0053e5b2cfb0b27854f7ffed7193a1a8f5cb2e6b928aeebd26"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-06290b621ae533dfefd900c525f69286a78e9428bbec7ee7e0504cf2acabde24"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-0751eb0d0a2502c0707cac32aea545e861e97c6da236a6467734c4a644ef155c",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "gcode-to-text"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/gcode-to-text"
+      ],
+      "clone_family_ids": [
+        "near-137e6cd8766078215caf7cdde269986399ad9b18ab6e52e3ea13fc109df89c3c"
+      ],
+      "trajectory_digests": [
+        "7d5267f034608ab8b3a3fe1ed6a0d61b6fec93e6afb2b01c9ea428e399d29ba6",
+        "87d160d002e6e0af062e902502c73fe3d15bf4bafbc13f5a6caad46c8a7861c4"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-0751eb0d0a2502c0707cac32aea545e861e97c6da236a6467734c4a644ef155c"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-0793a13a76c53ec9ded3dce32153fa9b658ab4a5b009a991d777bbb90608ef3a",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-14011"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-ba90bc950d03287ba52bd02a38b4a7ee17ec47f23735cb4c9e979b9d909c4840"
+      ],
+      "trajectory_digests": [
+        "8bacf0169d2dacc5d77812d8dc9c6c32d9501c42fd846d06efaff9d7f228576f",
+        "968b84d77f613e65e41f14526335e363e72731836f7d3d56c8013cf310df3b20"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-0793a13a76c53ec9ded3dce32153fa9b658ab4a5b009a991d777bbb90608ef3a"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-08d4414928b774f862a373c89311ba4e6a80efb300af2483b73e4cce4be32e7c",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "gpt2-codegolf"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/gpt2-codegolf"
+      ],
+      "clone_family_ids": [
+        "near-616aa8d041c0338fffc1a0df79cbdabc36c929b6542cb359fbab5f4f6642c8f3"
+      ],
+      "trajectory_digests": [
+        "0bacadd6a4a065b60e855f507c44d59c7a119a103e3d2d438785ad9af18bd0ff",
+        "da76b24701b3d79ad89d952a4bb85e3a389611712efe5dbe1e2cd2b1f78a262b"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-08d4414928b774f862a373c89311ba4e6a80efb300af2483b73e4cce4be32e7c"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-0af0862b5758558e0be116e3bcb2686f906fb56f1c960ddd11036d0fc540000b",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "multi-source-data-merger"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/multi-source-data-merger"
+      ],
+      "clone_family_ids": [
+        "near-edb4707af339026f52b099fa38f07794c5c80b24e1d3c5f029a5d8d7dfdbeb85"
+      ],
+      "trajectory_digests": [
+        "201ecc7c7a3751d275d61854d2c781bd560c84c4c354e9342f81d4c5b2f92023",
+        "5e6a0a479cc601927d08e0e5e57b883bac7a8a898eb8a8a060be892a176e0fb2"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-0af0862b5758558e0be116e3bcb2686f906fb56f1c960ddd11036d0fc540000b"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-0c55524d4e5dac55f165af742d693c0d452dad4b37ce92cac240d51c0b4719c6",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "sympy__sympy-22080"
+      ],
+      "repository_ids": [
+        "sympy"
+      ],
+      "clone_family_ids": [
+        "near-b02db43b04e64c97c029b4db65dcc998366a7548fb2fd8e4ebd1c64719e6bd38"
+      ],
+      "trajectory_digests": [
+        "93c35780633b93ccc85224188d860d5bf85b6cab9f2df4d0c61b9991d5f86773",
+        "a1bfcb56867ea41b2c1ab7288524cbcc10bdfbbcfde2b9cc55c194a467871663"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-0c55524d4e5dac55f165af742d693c0d452dad4b37ce92cac240d51c0b4719c6"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-0d5002e8b0330faff5405ce998b9308aae9a825dcd9a46f49d3ab4a95a2ec7b3",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "sympy__sympy-21596"
+      ],
+      "repository_ids": [
+        "sympy"
+      ],
+      "clone_family_ids": [
+        "near-9a87c1221dc1b4f9197d5eab7e1ff5e7d158eb41b71ee0df8eb06f2c9b4b7fa0"
+      ],
+      "trajectory_digests": [
+        "51faf8b7ca7d2fe8db5accb52b147c441bfecbcfe854788d454c2bb293f61c5c",
+        "ff37b63f64d35c09068cbd58dc0022ee62f28fcc92adca215a4c4b3495a36056"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-0d5002e8b0330faff5405ce998b9308aae9a825dcd9a46f49d3ab4a95a2ec7b3"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-10140b3b764a7696e90b4bee11cfa4c7d24bf3c503605dee7fcaa978f99222ec",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "sphinx-doc__sphinx-7748"
+      ],
+      "repository_ids": [
+        "sphinx-doc"
+      ],
+      "clone_family_ids": [
+        "near-1f5636b1a27a7434fda1b037c951c4d4d25ee380a8147ea955f19d3f938b1061"
+      ],
+      "trajectory_digests": [
+        "043d17ca4d45ea1695691cdbb883786c4d0f8b6c5448aa30538d3258673c78f9",
+        "7ef11480344533568635c26e310585d825010dc3e10deaaa32fe27b73e9a4519"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-10140b3b764a7696e90b4bee11cfa4c7d24bf3c503605dee7fcaa978f99222ec"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-114bc3bb159c7d5d375d617d163b207ccf611ddc3d358574564cc6c581dc6f24",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "matplotlib__matplotlib-23412"
+      ],
+      "repository_ids": [
+        "matplotlib"
+      ],
+      "clone_family_ids": [
+        "near-78c0975ea4edc740b41c82de0632110711ac94ab3e89a4869b33763455b3c731"
+      ],
+      "trajectory_digests": [
+        "774e53d024484bb129ab4a65a4bd3f9b3a1787511cb13d8bb8c019fb91eff5fb",
+        "f2212a97d70baa85616b2e08889d0c4754dc127cece5dd583ba0531ddf5bdd82"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-114bc3bb159c7d5d375d617d163b207ccf611ddc3d358574564cc6c581dc6f24"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-131d9348912c56d111c4ec8abed3c46a7ae91b092f3b17fe1709965bec51517e",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "protein-assembly"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/protein-assembly"
+      ],
+      "clone_family_ids": [
+        "near-bf95a00220444ae68a5cc3a8cabef08243bd5fdb2ccc9fa8e8f7f6d2f2c698f6"
+      ],
+      "trajectory_digests": [
+        "abeea83859ea0d181275b7e185aad57559e5402a94ee9df698b2d54f221c3550",
+        "bce123f536f559aa87e2caf787580c6818d4ce5402bb9a14928a358109219fa9"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-131d9348912c56d111c4ec8abed3c46a7ae91b092f3b17fe1709965bec51517e"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-1a7e3f482652ea598cc78ace523aeb6c4bc23f5c7af2df864d45cb0873387472",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "chess-best-move"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/chess-best-move"
+      ],
+      "clone_family_ids": [
+        "near-4df8d169f94a2873c29850922db969fad82d2b39942897367c033e698a2cd0f9"
+      ],
+      "trajectory_digests": [
+        "a24015504dfe7186202ac26ab79f98e8f7ef3647aa02ace028fda78182ade8ea",
+        "f1d7241d880bdb26d447f0fff61b04be4f2df70835bb1ec7bfabd85ac3504993"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-1a7e3f482652ea598cc78ace523aeb6c4bc23f5c7af2df864d45cb0873387472"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-1e3ee80ac2f39ec8eb356929fe0050e1f3d913faeb18220621992476cb9b914a",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "constraints-scheduling"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/constraints-scheduling"
+      ],
+      "clone_family_ids": [
+        "near-99c8421caf3813dfeb1a74224b4027117946cd5dfe4dd99f3d4358f593823ec2"
+      ],
+      "trajectory_digests": [
+        "248dffcd8946690efc12ebf41bb8d7d4383a7c08580fde6e24104568d8d45efa",
+        "9de8ae01ae234f6698206fc7a1e889de327cd690e73fbf993b7704e155f3892f"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-1e3ee80ac2f39ec8eb356929fe0050e1f3d913faeb18220621992476cb9b914a"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-1e9babee8b717843ab5648f9d36ff19a4b4157df2c4d4506c8879a6caee68f18",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "psf__requests-1142"
+      ],
+      "repository_ids": [
+        "psf"
+      ],
+      "clone_family_ids": [
+        "near-dc1107c953619984823706340d2c196544caa2eb2b6c127eae8a8f4435c08eab"
+      ],
+      "trajectory_digests": [
+        "0ecbec9a13bdab44a49abe75451d1c8d9d1c870864127565adba08b5e6b2d4e2",
+        "6b66106609a0db46905ed529f68d976d99f386a722eedd6161db87984a2979ef"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-1e9babee8b717843ab5648f9d36ff19a4b4157df2c4d4506c8879a6caee68f18"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-23337aaff3a006d7acedaddce99f7160a246e4462798e9e21a3eaf79aa168ea9",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "sympy__sympy-13798"
+      ],
+      "repository_ids": [
+        "sympy"
+      ],
+      "clone_family_ids": [
+        "near-9252a8ccabe72ec8ea181c65c046e82a162914518ad394b7ee96b72c6a21e315"
+      ],
+      "trajectory_digests": [
+        "31d091d3c629a17d012d39162cf5b7a5a8695b1001aa78c7b44dd8b05e84024f",
+        "81bcf3e30d889e1c08b3e6fb987e8014fcd9f8104dd9745e8812564fd3133133"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-23337aaff3a006d7acedaddce99f7160a246e4462798e9e21a3eaf79aa168ea9"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-2339d5e58778bb28f891a312882ccef557dc51fa2394874c8e46dca8db0f7a1c",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "circuit-fibsqrt"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/circuit-fibsqrt"
+      ],
+      "clone_family_ids": [
+        "near-f9ad976aa2e6fa1040280f6ded1b087d84b02cf4fcb49b27abc23d1e018365cd"
+      ],
+      "trajectory_digests": [
+        "42f26aa82afa3b56a606637946b1e2524c30690f1cde31d9bdb93316a426e7f9",
+        "ec429b0a4c80f21da0f78cffc4afdd533775ae9b0f656332c6ebe7ee1694d01e"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-2339d5e58778bb28f891a312882ccef557dc51fa2394874c8e46dca8db0f7a1c"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-234755a9650e6c015ceea4a0a4fe105948afceb9d18224c31096bdc4d3416bee",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "dna-insert"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/dna-insert"
+      ],
+      "clone_family_ids": [
+        "near-56c31c3e0e6e25c0468991e3f3afe2802d611cf9a6c39f9485b277cadbc7e412"
+      ],
+      "trajectory_digests": [
+        "121eac447d14be6424ea9628759168ee605e21261fe3c0ca817556e8589c2235",
+        "823576a7e6553006670fc04624da6805de6395d3b7948a689018849f0122c862"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-234755a9650e6c015ceea4a0a4fe105948afceb9d18224c31096bdc4d3416bee"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-24b49721a807120c9649be9e11ca0105b76eb1690af38e445bd50a302b25c7a9",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "db-wal-recovery"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/db-wal-recovery"
+      ],
+      "clone_family_ids": [
+        "near-24dea2fa9d9d03ad1321d66c8ac7b012f26763b16fd3cc6d234f91ec78f3f887"
+      ],
+      "trajectory_digests": [
+        "277d1c031ca71c5d6cab7aeda106a2662cb5504e0f8c7317f372ce9b5f40ac7b",
+        "b4ab1096bb2a1f74da919ea408487701101331ff65741934d032e77b820da25b"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-24b49721a807120c9649be9e11ca0105b76eb1690af38e445bd50a302b25c7a9"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-296dd10f6314e1b957a839b6b08c18a55d04def15ef6e7769db8cbf2286dc3dc",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "train-fasttext"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/train-fasttext"
+      ],
+      "clone_family_ids": [
+        "near-64d23053c409ab878065c1d0c6d71dc366518e05b49a704d4f67ffe348ccfbe9"
+      ],
+      "trajectory_digests": [
+        "81bea202108e6d96283d4346a53aaafca72321aa78b4478df3609fdc00110dad",
+        "dc718b3219f5a1c876cd2a5c812ff25631bd7bc6cd2b7aae47674780033a814e"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-296dd10f6314e1b957a839b6b08c18a55d04def15ef6e7769db8cbf2286dc3dc"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-2c207d4ea59c18912b032e1ed3a493c52268253ae4a380a6d533d9664d991215",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-11603"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-d8d20cf478a38f38f4623ba39ea5ade9da3d49d7713d63574cb7537922dc3462"
+      ],
+      "trajectory_digests": [
+        "d935b24433b0de109e0ba39841eca67e9de86f9875b0ded034b83698c5fde78a",
+        "f313e13db3e685a5d43b5638259dd732aaabf9a8eabb02cda29b8c6040f26410"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-2c207d4ea59c18912b032e1ed3a493c52268253ae4a380a6d533d9664d991215"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-2d1f962ef052d16c75bd20f9893129a4a3b702c0587eeb578610fcb0d650937a",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "build-pmars"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/build-pmars"
+      ],
+      "clone_family_ids": [
+        "near-16a89cdea910b47f0f7b03d6cecd0c9786824bd6ab32b7a63abaa1476ee29ded"
+      ],
+      "trajectory_digests": [
+        "6f8b62855675dc9cf66b05f5f092a2bd797904fe52f8ba164b87cdc44ba708bb",
+        "ed8dfa03a4ea4e97090f6f78a52a5af0f5d79ec05ced7e0e75ee3d04da4c61ed"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-2d1f962ef052d16c75bd20f9893129a4a3b702c0587eeb578610fcb0d650937a"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-300651ab34c5c335a228a47ca3f71bd752a69a94fc39e3e02dbfcd5d6df7f888",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "make-doom-for-mips"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/make-doom-for-mips"
+      ],
+      "clone_family_ids": [
+        "near-c35f729d3c0a84e38a567aeab14ea8cee51c00ba914795129106089bca24743b"
+      ],
+      "trajectory_digests": [
+        "15d3134471e5ecf00be8d1ab867e4364330d347f8644e6b31e1bd07a9c21cff8",
+        "80b5df362d55b217c6818fa0639c066733672b3dfd185b3f3caebbcf6d7da130"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-300651ab34c5c335a228a47ca3f71bd752a69a94fc39e3e02dbfcd5d6df7f888"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-307ed0aaa113b016dd6c06cbc32c941216b101d9f2208d1de26c8a4e8754666d",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "winning-avg-corewars"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/winning-avg-corewars"
+      ],
+      "clone_family_ids": [
+        "near-a3b43b42909af7ed3277d5def527b203c299b20f106e3b7fee666f3af8f27f8e"
+      ],
+      "trajectory_digests": [
+        "61cef89a851d3f4588e3643618d0407d482caba55014f68c68ad3844f092a0a9",
+        "8e7450cb6157d3183cc382d3ef1658e9bebbf081e5872553c6bc03bc80f5f802"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-307ed0aaa113b016dd6c06cbc32c941216b101d9f2208d1de26c8a4e8754666d"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-37cf67bdbc0fbccf28adaf8f119611f7bd69d3b392be0305db80d96a7f164600",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "sympy__sympy-22456"
+      ],
+      "repository_ids": [
+        "sympy"
+      ],
+      "clone_family_ids": [
+        "near-2b6d2c80cf87ade4c00e64240d2ec1c790235a7068e4bea559f45e2004be08a6"
+      ],
+      "trajectory_digests": [
+        "3b3acca051900f73e79de4cc81a3b136c52ac325e1e1238d469a85dbbb947132",
+        "de7d98c7a0db7cebaa102a695acad6446660a440c1d9c380cf7fa26185c9f4fc"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-37cf67bdbc0fbccf28adaf8f119611f7bd69d3b392be0305db80d96a7f164600"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-3912301d6c7c78daaf203a8639fd78dbaa8282c9c0150bbebc10525890b6f1b0",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-16082"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-f7fe46b84b11584c221e2c81bb19f2e99e69955d17ecdf719c1dc0dc537e7f59"
+      ],
+      "trajectory_digests": [
+        "3e98ebc76d5c9eadb480bbcbb7a97a8f9a5055fca63dd087bd2951ad4b947075",
+        "aea11b076cb082298f0485f52b1886706141c38d4072c3a7eeef086b9692b540"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-3912301d6c7c78daaf203a8639fd78dbaa8282c9c0150bbebc10525890b6f1b0"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-3a61813b5849ab4b8aa7244cf342c20978192c8fe963ac2623e83e139630d9e8",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-11400"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-043a57f9a1caf3a7a7bec997b99bf439325c38598c39b7be93a803cca26d66b1"
+      ],
+      "trajectory_digests": [
+        "282790d5e4df438039e3ddf35c56ea8e35fbd40731e18ef0d9ec7de42382d350",
+        "2daef537ad7c2edd788cf81da5ddb131c9ae122cc6c912e073e043cd7261ad12"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-3a61813b5849ab4b8aa7244cf342c20978192c8fe963ac2623e83e139630d9e8"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-3f9756605205d8c5f5893a397d413568f604569c62a95178e96dfa9a61cb6787",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "sphinx-doc__sphinx-8721"
+      ],
+      "repository_ids": [
+        "sphinx-doc"
+      ],
+      "clone_family_ids": [
+        "near-cc8e49c945d3f229b536ac7353d953bda45de2c0746517a4dfe6a3ce54bed31b"
+      ],
+      "trajectory_digests": [
+        "1e2839d7eba7a647cd8c4ecc2a5ca7d94fcdc1bd395527b11bea5eba85376ab8",
+        "ed8c27c400b6b11ce73df2200ffa8ced80db24b113d20c28795d25cfdd9f71bc"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-3f9756605205d8c5f5893a397d413568f604569c62a95178e96dfa9a61cb6787"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-45ca862f859319c90f56d37df85da53ecdf3c745b6b62a55ac4c413b4a1b2939",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "install-windows-3.11"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/install-windows-3.11"
+      ],
+      "clone_family_ids": [
+        "near-ec88436be95e2e356d8ed2f847cb6edd77a984a5833eda9f69405e7e8ea8d77d"
+      ],
+      "trajectory_digests": [
+        "723ee3fe77e794a1ced8db789134c2ef8167765b07b50441089c53365a2801b3",
+        "b2e3caeb198fe5e54b9acd8d14d7f0cd75f694db7b8cb4b48ca51fbf451d15e0"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-45ca862f859319c90f56d37df85da53ecdf3c745b6b62a55ac4c413b4a1b2939"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-46cb2fd449caed97ad9aa65bc4bf134174ca453c2c6e8c6d182d06b87d4caa9f",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "mailman"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/mailman"
+      ],
+      "clone_family_ids": [
+        "near-6fb1ce8f033dcd995c77eb9f809f0c2e6c0d5c80ad2c04c234e1f9bad8143572"
+      ],
+      "trajectory_digests": [
+        "58831cb3e518a6e4fe1c8d0f0be25fc3d6e912592bba2b04d8c8dc7c1a698e44",
+        "a49e4eb83b1193bc09013e570d11778ffd5931fa872a2afaf4eb9b321ff902c2"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-46cb2fd449caed97ad9aa65bc4bf134174ca453c2c6e8c6d182d06b87d4caa9f"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-4878aee0d83ea25762349d260d20fce1d7f6330abc2165cc7bc0c43adf551a5b",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "nginx-request-logging"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/nginx-request-logging"
+      ],
+      "clone_family_ids": [
+        "near-a8ae100c9ff39cac310d4bf39ff5a7ec0741253132513fe103f97cf09cd7f871"
+      ],
+      "trajectory_digests": [
+        "2a03f043780dee1c133268d9ccfd78ecad0adc8e8457359a58b3f784cff83beb",
+        "bce465a80eaeda7bb2906268a0169ba2145929d7bd00323d8f159ac0edc45308"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-4878aee0d83ea25762349d260d20fce1d7f6330abc2165cc7bc0c43adf551a5b"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-4aa897a5f4886d3cf4408aa98e1930601c93bb6bbb3875729dcce3ce9050c349",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "caffe-cifar-10"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/caffe-cifar-10"
+      ],
+      "clone_family_ids": [
+        "near-9747dc38b9a1e65ee9f4f14fee147ff0095aa9e92d9352579bf30f7a7c9a9db2"
+      ],
+      "trajectory_digests": [
+        "6f93849ad32d06a9e2f2ebb0651741910e7eb9544c1c30b2807d17c3b275e2cc",
+        "b666a870301e236fc3aee6e8129d3512242833968498245eecce6cba7b2207bc"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-4aa897a5f4886d3cf4408aa98e1930601c93bb6bbb3875729dcce3ce9050c349"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-4b3682fc56897ce6cb2626e11ad534bffa6bac7f546b0aa173beaa7a925a229d",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "pydata__xarray-4695"
+      ],
+      "repository_ids": [
+        "pydata"
+      ],
+      "clone_family_ids": [
+        "near-dcd27df44024f5419c8be3a30bd0eb230ec0328567c1e0702bc9754e9d9d90f9"
+      ],
+      "trajectory_digests": [
+        "d683499c3ab6dba62c48b9ac6ebff3319bd9f2c2ee53488935dc2d0b3e2f4cfb",
+        "f30ec6d6cfa47ee4357e5378f43b718b8efadbf82f795b4e489db435e0e48f53"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-4b3682fc56897ce6cb2626e11ad534bffa6bac7f546b0aa173beaa7a925a229d"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-4f746d90ac6d72c76ddd8ee52ec38cfb41caad79dfb77640ee8e6aeea3018b6e",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "hf-model-inference"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/hf-model-inference"
+      ],
+      "clone_family_ids": [
+        "near-9f91c23d268cadb1fa0cd0bee0f81af8fe15427e2bbd246e521479ea35220baa"
+      ],
+      "trajectory_digests": [
+        "ea58356393d2767ee61b779c1d1efeed1b4dbfbca4d37ea0d4b3afeaf5e517fb",
+        "faa7515d170616c243c980da7b3aa370f480b4094662cd6849f308cabe73ecfe"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-4f746d90ac6d72c76ddd8ee52ec38cfb41caad79dfb77640ee8e6aeea3018b6e"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-50b4df4cb793600ced8a5a18c7e9765f663900a2a7e9d0492418aeb70c2b1eb0",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "fix-ocaml-gc"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/fix-ocaml-gc"
+      ],
+      "clone_family_ids": [
+        "near-1c173bbcf085e1f22a62499270d18fa4992665554d2aa770e2d35652a9254c0f"
+      ],
+      "trajectory_digests": [
+        "cfaabf6f3f155c98dd52acc3ab5fa20ec36cd3fbd501707198a6534d1dbac0d4",
+        "df2d18488c9eb091be4171c93cebc0e07f5e02c4186afa33be9e03de7b9a467b"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-50b4df4cb793600ced8a5a18c7e9765f663900a2a7e9d0492418aeb70c2b1eb0"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-50feba81d0006e17d0420c30898cbc62cd434c4edf4f8b82ea73a393392c0699",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "sympy__sympy-19954"
+      ],
+      "repository_ids": [
+        "sympy"
+      ],
+      "clone_family_ids": [
+        "near-222315d1c3d98c444c29931a5372a7f7c506c7b6a838d0f8ece3c3575c0a4470"
+      ],
+      "trajectory_digests": [
+        "7294f8b4b533d1740a41d454cf39b06842f592cd3ad92cf17e62d1d98132f028",
+        "85fecc0251fabdbdf3ad300bcbf9ba5dec112833450f8e01876f49e6cb74ec63"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-50feba81d0006e17d0420c30898cbc62cd434c4edf4f8b82ea73a393392c0699"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-51f585e6dbf2ef8ac310212db2f814abdefa5efa9a1ef54c3ee184c805048d0b",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-14404"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-cf5be8a1f1d9211684e83195cf54bebcf6e1f28effcfde386249d8598d5371c4"
+      ],
+      "trajectory_digests": [
+        "3dcce5639fda0f8459dfb3d3be42c5b133b6237e7ad453b558e027e8a28ebca0",
+        "bad846e732fe236aafe2f3e8c6ecfd24b0c69615c7d0ced2fbb2b40a2c31e23d"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-51f585e6dbf2ef8ac310212db2f814abdefa5efa9a1ef54c3ee184c805048d0b"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-5639b969219ca435f063764ce8a4e9a7e1a35c195fd393f12b1dfc752202cef0",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-13670"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-a33fa90695ef73a17843ae8185117834687c5f81b5f4eacd06403cad384e4932"
+      ],
+      "trajectory_digests": [
+        "2121e8caf438fa584209c01d6148f6a7ba8cedb10a3a3c4fe8ab6e42345414b2",
+        "6cb9de592fed1fa61d2eef5f464f045f3d483b68299c2c6d34cd7e3136557bf7"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-5639b969219ca435f063764ce8a4e9a7e1a35c195fd393f12b1dfc752202cef0"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-566f538d6f7ac2e28c57e9a19febb606ee581dcb611bc501e64d92ced2f11691",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "pytorch-model-recovery"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/pytorch-model-recovery"
+      ],
+      "clone_family_ids": [
+        "near-0b2811ec0b2de5ba00913141fa384fd0f11362147690c1d6711b91290b4d19ea"
+      ],
+      "trajectory_digests": [
+        "f3e27b48c5c1ed1932cfdcf893967ce1be49c9e628e32e4f5c506552cf7e2d5b",
+        "fe31b2233bd3c730c652174f81ded0379b192f626d7266e7b37c8a8d690af4cd"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-566f538d6f7ac2e28c57e9a19febb606ee581dcb611bc501e64d92ced2f11691"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-57f188f0e61a00125c347e87c0f42a6e4c206454b2ebcc811d37598b31645e05",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "regex-log"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/regex-log"
+      ],
+      "clone_family_ids": [
+        "near-4f2dfcd650cf8e8e70201cb77f5120acba05e3c77184d3196847dfcf88e2f80a"
+      ],
+      "trajectory_digests": [
+        "67d75511e1eac9106d00894c430f661b10d8b6b2a1d94dcffc02ce755cde851b",
+        "ab0fe1c79ca8532d3e06b5e9afc500db7ca811e7f8786f257596cbacc5b03b44"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-57f188f0e61a00125c347e87c0f42a6e4c206454b2ebcc811d37598b31645e05"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-58061a7499f1601229fe462e63504dd2f9a31f4ef0603281ca7fb2893d19d872",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "crack-7z-hash"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/crack-7z-hash"
+      ],
+      "clone_family_ids": [
+        "near-057066063439ccb0b058c54457f6b3a99fe9357a706424259c2bbca2f6529457"
+      ],
+      "trajectory_digests": [
+        "1e1a85a80f563a122c6c19f52af687dc0907b7428ad10314d5161b65682077a5",
+        "a22ff0108dc1fea47ccd1948a423aee0cadf5988c40a6b8cf00a4d85d12b9fc2"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-58061a7499f1601229fe462e63504dd2f9a31f4ef0603281ca7fb2893d19d872"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-5887298465f700747f2e295b9a6cebedb7560b8a01ba1529493d39d6e986f18a",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "extract-elf"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/extract-elf"
+      ],
+      "clone_family_ids": [
+        "near-d4a9c58b71c7bccf1c84f74ccb1ed4bd9a56bd73d4be7ce1a92719ab7267c568"
+      ],
+      "trajectory_digests": [
+        "1f1541f71cc9bda9f8a8448cb1fa0204ac1bd1ea8e562a886223dfb1317a7b07",
+        "9dad2cacede4b52620ea6dced3c4c6f7cca4111c8a3c3da428b5609740d3f888"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-5887298465f700747f2e295b9a6cebedb7560b8a01ba1529493d39d6e986f18a"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-5a848cc2e3b9135716e69f86f0abeef8d087d9410028efe4dec02511cec4e029",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "modernize-scientific-stack"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/modernize-scientific-stack"
+      ],
+      "clone_family_ids": [
+        "near-44e294361e479271faf630a9341bfaf4e2f00589da463c4319e38ce485f601a3"
+      ],
+      "trajectory_digests": [
+        "3bc68b4d1229a78570f44b4ce77134cda2ba3c1fe622212f1b5f3027f3cd2730",
+        "d6c74056df3d46612e9c85b34f9e3bdafd65e2f06d1a5f712d14c74ba8030c34"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-5a848cc2e3b9135716e69f86f0abeef8d087d9410028efe4dec02511cec4e029"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-5b881cd3d800b2d8ecafaa534c668bdaa71851d9747a41b66b3be5611707d910",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "make-mips-interpreter"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/make-mips-interpreter"
+      ],
+      "clone_family_ids": [
+        "near-2ba83182322928d0fa8cf76a82ac45baf92b88b2ca3da14a9c38b4972dab071d"
+      ],
+      "trajectory_digests": [
+        "369f986f509a622faf496c93738b6e45bd39927714d0805c72d4f3d3cf00ca62",
+        "8de82623894940d179062e2ea36e2fa108886d707cd72c046fc465fe32b2f6bd"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-5b881cd3d800b2d8ecafaa534c668bdaa71851d9747a41b66b3be5611707d910"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-5fbb6ede67ea52ef2683ebd605947822994c01b87f185320bb65116fb93fe1cc",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-15103"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-0b2122b04748b76dbe12c30653d83d75900b72d81ef72967beadb9274c63a4ae"
+      ],
+      "trajectory_digests": [
+        "5469f6e14ec99106a855113ac30cd24b133c6f0429b18b6fb2f070250f1bb55c",
+        "7303962ffa40675dfb932a2da56a18ab2a00d399866fedda9357ba0685262f0b"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-5fbb6ede67ea52ef2683ebd605947822994c01b87f185320bb65116fb93fe1cc"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-617ca05321227e126a196f96f5afd708b91279a98da5499e8e23090352205266",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "financial-document-processor"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/financial-document-processor"
+      ],
+      "clone_family_ids": [
+        "near-a5bc017619054e4337097563a9ab8d2e8ad9561424ef7e5550ae8b3f022d7256"
+      ],
+      "trajectory_digests": [
+        "82b973ce6b786435aa95708212ab55c1818d57f1cd23c97f727787ad8ed1be66",
+        "9480fc5277845da7b752617e555447e7a598569990b73feaf8f156fa34836a6f"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-617ca05321227e126a196f96f5afd708b91279a98da5499e8e23090352205266"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-6328254fc0103d6431d4c4f64eff70526d8fee405705601effdecd004e0045b1",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "largest-eigenval"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/largest-eigenval"
+      ],
+      "clone_family_ids": [
+        "near-deb0c63b752786a58eed5498577ab40f75ab787bc63e24b53665947060a30c5c"
+      ],
+      "trajectory_digests": [
+        "034c3d1019221af45a594393a6ef8b25e27df392e5306211b9dd2a13f529c15e",
+        "350f3b8a8c41c388ea9760f82f10c77413cb329c24170a23b43db328854604b4"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-6328254fc0103d6431d4c4f64eff70526d8fee405705601effdecd004e0045b1"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-646f780f42b6309f894260248554ed9a934974474ef473d7e9002cbf43ec41b2",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "pypi-server"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/pypi-server"
+      ],
+      "clone_family_ids": [
+        "near-4ff0ef50c7fd2eeb87ed8c7805d2da6ad17aed10202e742a68f8aa1c29adcf9f"
+      ],
+      "trajectory_digests": [
+        "601a103c575039087dd1f996bf54b0e4c1b2838477b95e2cbf110ebd039d62fe",
+        "b422ac92af3fae2a1bf9a304db2fa9f426029f195aa3503e737400dfaa7e5d8a"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-646f780f42b6309f894260248554ed9a934974474ef473d7e9002cbf43ec41b2"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-701f0da4bba2e7bf33a342d5e4ac1c896e525e6968a7faded23386e939429ea6",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "polyglot-c-py"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/polyglot-c-py"
+      ],
+      "clone_family_ids": [
+        "near-e15d450cbb502e9cc56a8c9fe560ae1c0f04cf7beef8507a615a32599c84e21b"
+      ],
+      "trajectory_digests": [
+        "08a7b55be49b076633c48245b8e80bc940c30c54f984776811ff68076f67d8a9",
+        "14439f612a905b6e77e5535656cb99a8d7b8a40e55de533444910ac0510a182f"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-701f0da4bba2e7bf33a342d5e4ac1c896e525e6968a7faded23386e939429ea6"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-71caaefd9c95b46a09acabeb02dc4397f341310a566e90f2adc44400f5db7351",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "scikit-learn__scikit-learn-15100"
+      ],
+      "repository_ids": [
+        "scikit-learn"
+      ],
+      "clone_family_ids": [
+        "near-2bceecd830869e20b0e41e395cd0d1f6b7c76b67091ba8b6dcb3049e5850a8aa"
+      ],
+      "trajectory_digests": [
+        "3fed7f66b3f97156d9480324e5a8adf2ac1ef94d9d64b502c85bf8eef76a9b6e",
+        "f0f7e928e3fc8876117d49f90261932537783f17de108e256cb5226d81679394"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-71caaefd9c95b46a09acabeb02dc4397f341310a566e90f2adc44400f5db7351"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-757546cb7967ea1d4cf0c0ac31280acb4a488188b2b3a998fe8c7276fa11c78f",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-14771"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-66784cde1615acb2fe06934c9255afd321dee76ef9b92290533e1bf4dacf442e"
+      ],
+      "trajectory_digests": [
+        "1a0301a9f1f98f80877ddd93f0dfe8f167bb2625542e38a3924065905fab0759",
+        "97787627aa9629d9e5c3692d6bd767f03fb02060f6fc1643932983188c61acc2"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-757546cb7967ea1d4cf0c0ac31280acb4a488188b2b3a998fe8c7276fa11c78f"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-789269000fc6582efc04c3db33c7ec6f711a9b19c2b8b69073114a6696f09e1c",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "pytorch-model-cli"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/pytorch-model-cli"
+      ],
+      "clone_family_ids": [
+        "near-fd0cb64dafd384336e86329bcb2df7b576d2c0cf22878602a1dc1d9bb231ec0c"
+      ],
+      "trajectory_digests": [
+        "23b2e8a720151632ff186148951e469864b408c44f16ec6344d9cdec99efacbc",
+        "5316804e0f715d598e820fe93ce55e39cc97b546383b6b55c6599bc865711dd1"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-789269000fc6582efc04c3db33c7ec6f711a9b19c2b8b69073114a6696f09e1c"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-7ce8368d106bf7661495485277a0cfa4e265ad109af3c9370e4b020d69ca6628",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-14580"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-548e535161dac5df3c829911ba9b3df7bc62c7b74a72973748f2cb9cd9ea45d1"
+      ],
+      "trajectory_digests": [
+        "69cea56b95e1fc527244f6b2b5a11fe82609ab19e60663dd5a743cef951221c8",
+        "e26cc96b4b67df41a49ebeb0c233717155cf509854cce606431d051edd110fa4"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-7ce8368d106bf7661495485277a0cfa4e265ad109af3c9370e4b020d69ca6628"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-80caa647c912eed3bbf18e9f18f2017c02a47e098aa883714d05c24edfddb22f",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-12304"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-dc6ab86425ddf4d6527a0b0c05960b4362b6bc8e0591189162a33145acd82186"
+      ],
+      "trajectory_digests": [
+        "baf4fe9a9e37ef2f45c129d0b20b68c01721d7a77f63d1d6c1082f688b552ec0",
+        "f0a8937e8af53b9bf1f3843620dd689ea154d7f443f8d97fd881c5d4d24ef10a"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-80caa647c912eed3bbf18e9f18f2017c02a47e098aa883714d05c24edfddb22f"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-848bb6edda314ab1d48d9c532970e012712e5fb092e28fe6e096afc38dd8535e",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "sanitize-git-repo"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/sanitize-git-repo"
+      ],
+      "clone_family_ids": [
+        "near-8ecfdf130709e52feac77e8defbc4e8a42b8bbf12a66e711d812cfb52e1c1e1a"
+      ],
+      "trajectory_digests": [
+        "776f064a0b61cf629f23046afeff665cd184181774385f2f6ddd8edbd9aab800",
+        "d7977ca604a73feae2891cae00c7ef7bea9f2edf56e3b66af9edf6650c06f4c8"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-848bb6edda314ab1d48d9c532970e012712e5fb092e28fe6e096afc38dd8535e"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-85acb2324090d015c3b7d19b0b1566ba8ad026db0064eb099142c7b7fb447ec2",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-15368"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-bbb50b8ddfdaad9bf83ecaecd7287cec244bbeae23a25053bec1e76d7af13c78"
+      ],
+      "trajectory_digests": [
+        "18cc880feb0f41ef1fdb192d3787364c93a464ce35ca9686a6add3bab25657cd",
+        "57726c1deac61df3a1024c3ec871117421952346ab53e9ee581ae8382e881d75"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-85acb2324090d015c3b7d19b0b1566ba8ad026db0064eb099142c7b7fb447ec2"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-88967bab32dec1335c1f1a656649a1315dd12460cd4cb7fced5092cd51bd4813",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "git-leak-recovery"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/git-leak-recovery"
+      ],
+      "clone_family_ids": [
+        "near-f2ab1ee68f614998061e901f312af577c3bb7e3162e38a97847642bf89ee61df"
+      ],
+      "trajectory_digests": [
+        "84d7dc815483f676d2ccd5e8bd9ac6bbcb893a33f276c7ed266537fb6d447919",
+        "8fc73aba5d6e68863bde3fc4f58fd6badd038058978b62258143a37fb8de1a4e"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-88967bab32dec1335c1f1a656649a1315dd12460cd4cb7fced5092cd51bd4813"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-8bebe388e7a7c9428a97b07aed65a5d3d308ec2fb7794949c0cf9ad883e2da35",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "sphinx-doc__sphinx-8120"
+      ],
+      "repository_ids": [
+        "sphinx-doc"
+      ],
+      "clone_family_ids": [
+        "near-d02402e364782118083d267878931ecdc6577df7f772a07ca6e7d5f88b4d26dc"
+      ],
+      "trajectory_digests": [
+        "5cac56e286dccb347f089599a5dc3d2d8feda24b475a6b1baf31e4068e377bed",
+        "f42513d456cf27ed33f60fcf786f5be502c9bbc1f01f7ed20c1702efa3e7f31a"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-8bebe388e7a7c9428a97b07aed65a5d3d308ec2fb7794949c0cf9ad883e2da35"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-8e2be9dd3afda6b79eed77809df6ce6d46fa5a0a214e942555447cda407644c9",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-11477"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-74d8991decb26a1937a71546c40deb84b91575e961a140563db5bbb0dd480712"
+      ],
+      "trajectory_digests": [
+        "4114c018f49dac28a84fe48a06ab169b612a95352a049722552e8a7afad72ff0",
+        "e8bef54c90626de7fd5968c274c74a85e0d3368094329e88358649fd62d740b3"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-8e2be9dd3afda6b79eed77809df6ce6d46fa5a0a214e942555447cda407644c9"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-95cf0417f8c3f3184f472939f9fd9c4c67a96996a358df453c629fe6b686f129",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "feal-differential-cryptanalysis"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/feal-differential-cryptanalysis"
+      ],
+      "clone_family_ids": [
+        "near-25fa96cb86111b12166424e32bdb207045ca8bdd65088cca7f13360b133ad798"
+      ],
+      "trajectory_digests": [
+        "9153541ffaadef0ac8362ab3f9b4705ae1e98678183e5ae837dc141747c74121",
+        "f7ed462659e05d79b6ca4c5794e0d808f07c0508710f307da4c5f122cb359192"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-95cf0417f8c3f3184f472939f9fd9c4c67a96996a358df453c629fe6b686f129"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-99f27b7514266d780b04459c8d320fa72c7a32b7a1b9bcb26b2e319ad9433440",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "openssl-selfsigned-cert"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/openssl-selfsigned-cert"
+      ],
+      "clone_family_ids": [
+        "near-c416d18544501bf62209dea98cdf006a4e574172dc703564169f37f79df5ca91"
+      ],
+      "trajectory_digests": [
+        "632a0a6283d2bd20dbb9205b2648090246613fde2f600d45a227bc3fefd8bede",
+        "ede7d0265929873862dda60782f0ecd51029f4939c2946d52e45cfdfd44ac88e"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-99f27b7514266d780b04459c8d320fa72c7a32b7a1b9bcb26b2e319ad9433440"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-9a25193e4b2b919ac49276f252e9bf53481ecfd02b8140a3726d475a3792da73",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-12858"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-7eee8b18e90201267d29f81f001ae1715d118ada6654b34dca7e37776a9b4c1e"
+      ],
+      "trajectory_digests": [
+        "266c5bdc6caf150d548ce198f72c70498cb9955c7e6c62fb36c26eaa81c6e53b",
+        "91eb5e599a86b3a6f95da9c943592ec61e4a483ba6669685f870055a8ab320b2"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-9a25193e4b2b919ac49276f252e9bf53481ecfd02b8140a3726d475a3792da73"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-9fb2da18ac757bcd75320d3369a15ab7cac5bc1fd4b158e5334ff1c3bb88323a",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "rstan-to-pystan"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/rstan-to-pystan"
+      ],
+      "clone_family_ids": [
+        "near-eef754976fb2f43ec7198beb654ba682c432c31f546d31f417911a54e9b008c2"
+      ],
+      "trajectory_digests": [
+        "300e3667f35f383a65f40212d8da7ee8834a9118aad2ad89b33262b145963d32",
+        "8622f0e7b217d0c9062c6bcd561bacb5f643f86f7393763a21a830d6f9e8e65e"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-9fb2da18ac757bcd75320d3369a15ab7cac5bc1fd4b158e5334ff1c3bb88323a"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-a25b33e34ebbd89844631f003e396381f0b78c2f8f616caa7a45d3cf999f91d3",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "scikit-learn__scikit-learn-14496"
+      ],
+      "repository_ids": [
+        "scikit-learn"
+      ],
+      "clone_family_ids": [
+        "near-c61147f591816ab5eaef5465135087fec8b587f99a4b1c59dc73d8e6092e2a2b"
+      ],
+      "trajectory_digests": [
+        "fa471a98ea6a9774954870ab131721ab432eb71c769932874ab441724dc5092e",
+        "fcd1d02842387473bb5505643ead46bc9dd19b07421afeb21208a3ddf1c01b23"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-a25b33e34ebbd89844631f003e396381f0b78c2f8f616caa7a45d3cf999f91d3"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-a270b28a6bf3cc055828036d55eda74c59609298ecbcc765f029d11c58e9185c",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "overfull-hbox"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/overfull-hbox"
+      ],
+      "clone_family_ids": [
+        "near-c4bfda794c27d60564ea469b3af07e061483483011cffed101c030306de59916"
+      ],
+      "trajectory_digests": [
+        "7c115c8308d2040d551ffa94a44714dbea71729170638be1080bfce461373fb2",
+        "b2ad1818aa5b9d9bb3285e3e85216827304e794cc8ff36d0eabd3bceca340e9f"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-a270b28a6bf3cc055828036d55eda74c59609298ecbcc765f029d11c58e9185c"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-a2ce1954b292c4adfa2f66cb6719677a2622246b070cd6cd6172fc578bb34d0e",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-14500"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-95ad12c40b769f2c62fad1b1dc26c7d9ce02e8e7da26a15c2e2240e1bdacc63f"
+      ],
+      "trajectory_digests": [
+        "03e091e074b859b6c0773c9f1b0df7aafb892bf14d0d3d385fa5c4af6d9ec4fb",
+        "4a1f369a9299fe5244710d0c950eb891a6c4cad6d81beead1a3bc6f2a5822422"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-a2ce1954b292c4adfa2f66cb6719677a2622246b070cd6cd6172fc578bb34d0e"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-a4a1c9352d2b15686c7bc506a0130838b2d20b3cc0c87ca71423569afdceec00",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "large-scale-text-editing"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/large-scale-text-editing"
+      ],
+      "clone_family_ids": [
+        "near-d7b0683e449931a4164a0dca2e461f77403c02fb32b9eb0ab42f82b9289300f9"
+      ],
+      "trajectory_digests": [
+        "79aed99c6fac29ba4fcaf6a2daed8811cb86fda8a000be9f42b058f822135520",
+        "f86c57b70de74fb8f9e9393215147c9da244df800736e4e19d9abcb8179f9c4d"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-a4a1c9352d2b15686c7bc506a0130838b2d20b3cc0c87ca71423569afdceec00"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-a522d2e765b6d8990656bf6d1e47b385ae7c0388b9bf0eff47ed7a9ab3851ee1",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "video-processing"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/video-processing"
+      ],
+      "clone_family_ids": [
+        "near-7ccb5cb8d8c3ac016f50873c50d27f7466d5185b9bca09f668d6cdd99b10a5a5"
+      ],
+      "trajectory_digests": [
+        "c51b7523ae0622c8cdde5c0bad388e519abb00112c7b2041753a3d92325abc4d",
+        "e578913be0e86e2717808a93c40630df5ed0da92868780c23c29c8935c55a0c6"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-a522d2e765b6d8990656bf6d1e47b385ae7c0388b9bf0eff47ed7a9ab3851ee1"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-ae18f06f545d7594b964742353e0ea28bf3394eed4c83eb7719ac352acb60bef",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "git-multibranch"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/git-multibranch"
+      ],
+      "clone_family_ids": [
+        "near-23c909719333b338b317eee81ebd487bb660d49e4d7c8f5a1174282e084dd516"
+      ],
+      "trajectory_digests": [
+        "b4145a0800782664521064236eeff869e7ce6c7d43f4ae5c64a44e379722f06b",
+        "ecb2c88525b997dc2f2af591fddd6dbce6d4ca3c38ef2d14f5418fff517fe5d3"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-ae18f06f545d7594b964742353e0ea28bf3394eed4c83eb7719ac352acb60bef"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-b2c8fd6df605fd0f8b109fc8896736aee8ce0f6d66cecbbb39330580384dd1f9",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "model-extraction-relu-logits"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/model-extraction-relu-logits"
+      ],
+      "clone_family_ids": [
+        "near-abce61d4f2e971bf9a95bf234e0e12ca55555086ed8c4bbff291d8299c611b88"
+      ],
+      "trajectory_digests": [
+        "65f3196fae1769b9cdad790f8abf4024492d0a940e3312e21ad802a9fdcf2982",
+        "8093d4b8f10755782433ee759e46cfdeaecf3f03b7fa2c4ccd2f0222f12f0f25"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-b2c8fd6df605fd0f8b109fc8896736aee8ce0f6d66cecbbb39330580384dd1f9"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-b7eb8ad81a4830e3ec3d11fd40a752aebd067f9026d32b2bbbebe55c0a5e35c7",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-15916"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-1b37c7b88d319fa171ac0472a943b61f3aa7d8f0895f509a75766e703ca14cb5"
+      ],
+      "trajectory_digests": [
+        "48a91c466223f784e7f70492ea8f2de54337cf04bbecf2af1f814cc5519a2454",
+        "48d0309a14ac376e8732babe59819a2f7313bd4e54d64e63f244e96543acabaf"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-b7eb8ad81a4830e3ec3d11fd40a752aebd067f9026d32b2bbbebe55c0a5e35c7"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-b8f6cc3c6eb2600fca4a29f964ad6970153abfcc3d3ba77453793bf3f83e2f08",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-13658"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-9a7a01aaaf8f27322df1ce51a30df4cd75496a911d0409521c0a6349d002d416"
+      ],
+      "trajectory_digests": [
+        "8d019d292c1b9ef59057e6855198ef658362ab710b7ee47bc656f06875d45ce4",
+        "ee56e3fc2840e076cb0405757c78e0908b1520d3f574c751f3be6b233e83936c"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-b8f6cc3c6eb2600fca4a29f964ad6970153abfcc3d3ba77453793bf3f83e2f08"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-ba4fa03d2f20fa1b6907eebd8c1641f5be024193ffc85aa7c4d56c2b8d178f6d",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "extract-moves-from-video"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/extract-moves-from-video"
+      ],
+      "clone_family_ids": [
+        "near-e1deb22bd3ee4049c8764a2d5e91f16d5828528e83d7492297b51bfff545d11e"
+      ],
+      "trajectory_digests": [
+        "a62b3b7593cc47d071c736e61a78e46dd55daa132ea43375c37bdf2b28ed8d0a",
+        "db61af2b578b8322c30974032355f8aecbd5d5b1797ae3357ba1b57549916253"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-ba4fa03d2f20fa1b6907eebd8c1641f5be024193ffc85aa7c4d56c2b8d178f6d"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-bac2cb7dd62c48f6d4e51d46b2b49ba61c1934bdfc722396df04b48be7d8c4ed",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "matplotlib__matplotlib-25287"
+      ],
+      "repository_ids": [
+        "matplotlib"
+      ],
+      "clone_family_ids": [
+        "near-28f7d76aecc9ac66491fbd9d15c3485bea6ec30e3ccf488fcbb10d8760f5df6f"
+      ],
+      "trajectory_digests": [
+        "041203e76d0f337166226111647bd2bbe02275f02c0849e4c4d862344262e3d9",
+        "76010f19d681e370818d7a7285e6e14298286d4cbf7bd1461e8dd7ba5a8d25ec"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-bac2cb7dd62c48f6d4e51d46b2b49ba61c1934bdfc722396df04b48be7d8c4ed"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-bc7d3feaaa3127f76adf8b67bdece515ccb3405157d198636cca0c17866eede3",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-14752"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-c30dd57f7f5b09419e39489e451bec54ffcc3ee5e52e2f037bc8e28b8bb8bab4"
+      ],
+      "trajectory_digests": [
+        "02d4e02d5d31065ddad708f2d1c36fd5acb09c9d247c39dc92c5c33157b72531",
+        "ee4db481759565b5ae2be553e6c7c39da3032a300c8c8c6cfdf42d12f04a8ed0"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-bc7d3feaaa3127f76adf8b67bdece515ccb3405157d198636cca0c17866eede3"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-c52a72ba24daad5ad9d52dad1fe935ca9ce14e94a303c59ce5590493f14737fe",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "dna-assembly"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/dna-assembly"
+      ],
+      "clone_family_ids": [
+        "near-2aa997d42140c8b01c204565cca7c3f278b2264d771cc80228a292a4527ccb64"
+      ],
+      "trajectory_digests": [
+        "01a450139b0446f2e7f12310fda1cc841d3d43672553ef206be23556683cda97",
+        "c6f0d1424712d04117381c583aef49a64ea5f82cc14e490493e8fc56bf1bf937"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-c52a72ba24daad5ad9d52dad1fe935ca9ce14e94a303c59ce5590493f14737fe"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-c53a1c3d2dcb3788e3675ee20ea53c986057911e2fd23b55f5c34ad1ccf98ec4",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "astropy__astropy-14309"
+      ],
+      "repository_ids": [
+        "astropy"
+      ],
+      "clone_family_ids": [
+        "near-851e5d6c2bed2810d148b6f7218d9104ed00c2e017ba6e7f9d15f525e8d091fd"
+      ],
+      "trajectory_digests": [
+        "0a82265b8fb0550ae5d7d2c82c2a4dc6bcafd3d931ba5a47e97ef08ee8503658",
+        "fbdf8899c6b009f4a8a2f40a08d6949641166872233dd9a30520fa4898a18da3"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-c53a1c3d2dcb3788e3675ee20ea53c986057911e2fd23b55f5c34ad1ccf98ec4"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-c55669e61e66c8e63ebc90494f1c54c84807e152bc70361a4e295097ee4f1af4",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-16263"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-fa9aff0d5c17fed3d4e7c0f8aaafb78c6830940afd2417cfcb8939f5a08d500a"
+      ],
+      "trajectory_digests": [
+        "143c85fba767c214db2b67925aa95e7874cf52b5bb8afcecf0ed47dc4de6def0",
+        "7fd3507cab47c196787a1c30e59af022f371c17fac742443d91ad4593b0a4d30"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-c55669e61e66c8e63ebc90494f1c54c84807e152bc70361a4e295097ee4f1af4"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-cb81feb06ff0713391c54a75a53ac9b44c67a00b6a05fbf027d23dabaeba2c55",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "sqlite-with-gcov"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/sqlite-with-gcov"
+      ],
+      "clone_family_ids": [
+        "near-02f0c6daab2a987c45a2005b0bb2614c6e5bb767237b211b7a719f86b2219ce4"
+      ],
+      "trajectory_digests": [
+        "046afcb867dd67b99985302f78d12f771865b12b46531b1c70a217fe2646f182",
+        "3b1c3f6509707c660a4c6803486ec3447290d01939febdc9bfc007b66dfedf55"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-cb81feb06ff0713391c54a75a53ac9b44c67a00b6a05fbf027d23dabaeba2c55"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-cb9bc78059bdcbfec9cc7c567d418db43b3e035ead1f161262fa9f570edfada2",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "pylint-dev__pylint-8898"
+      ],
+      "repository_ids": [
+        "pylint-dev"
+      ],
+      "clone_family_ids": [
+        "near-fd7d22c1be533625249e8b98b3060f4283af4adf6bc038190ebec29038524c0d"
+      ],
+      "trajectory_digests": [
+        "27e051f2d7b2ba471751d6aff23cab410111df36d1c8cbbeb366a5a14d430c3d",
+        "4c6e5b7c0ae2652b7e5e7073e36797d503ae037d3189376cd56249d9021e2c79"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-cb9bc78059bdcbfec9cc7c567d418db43b3e035ead1f161262fa9f570edfada2"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-cf31c4073c7dcf979f8697eab0f8bf585d6e04a15b903a5a2988fb4ddd544a5b",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-14534"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-2b435b08b4dc944606b7b3f541c2407a067eceb491c6db83d89032c46aaa3b9d"
+      ],
+      "trajectory_digests": [
+        "3eb2b7603bc4bb7071c2d3ecabc6f4e7d28e519f7e7df215e2096322ac1878df",
+        "43faa28201be508c1aeae191dae8e596c382e73100c1c1a7a8196bb32aa3fc13"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-cf31c4073c7dcf979f8697eab0f8bf585d6e04a15b903a5a2988fb4ddd544a5b"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-cf32cee77317d4542ac1b41e7e0a1fbcbd2e0033909f7a2d79370f017d13ddd6",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "log-summary-date-ranges"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/log-summary-date-ranges"
+      ],
+      "clone_family_ids": [
+        "near-83dfadbe26fdb514edd1f7a004d7b17e3d5c9509d44a76f97c003f62aa8aeaf6"
+      ],
+      "trajectory_digests": [
+        "a0219bfca8539f10a424a404fd1162b79795d6ef203251f7ef980c743b13b2ed",
+        "f4165f9ee8e95b918ba6ab8143875adfb962a0c8874ce9cd3eb1986c5d0b04fc"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-cf32cee77317d4542ac1b41e7e0a1fbcbd2e0033909f7a2d79370f017d13ddd6"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-d0f35ecdb390af9008ef540668d44c08674ee4b0e5373c031785d0b2775e8b12",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "custom-memory-heap-crash"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/custom-memory-heap-crash"
+      ],
+      "clone_family_ids": [
+        "near-d9b0a5f19e51356cc59d89befc500d461fac2e681eda2105d0ff05bcb757fcf0"
+      ],
+      "trajectory_digests": [
+        "387cd2d1111e15bcfcb76b3bf6853a78bd59c426caa41c4ff3e9c84988a20952",
+        "9eaba06b773e627531e54ed30b534a731bc8a5c4df1e6274ab7a5965f79c7d4a"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-d0f35ecdb390af9008ef540668d44c08674ee4b0e5373c031785d0b2775e8b12"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-d19a5c6bef46f92137827eba292d8f5368d1603aa297c3cce0f586091c5420f1",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "path-tracing-reverse"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/path-tracing-reverse"
+      ],
+      "clone_family_ids": [
+        "near-f8c6c027cd40edb02605e62571de4355a6884e2f69a99006bbc135e4e153ab48"
+      ],
+      "trajectory_digests": [
+        "0f11d96e23a90a764203428631fe859dccf2edc7ef8af268fddca904566f2264",
+        "a3c1a8b9b3dd47ec8aadb60347e460942c40e8f2463a1f73623af2f4c5ed1b37"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-d19a5c6bef46f92137827eba292d8f5368d1603aa297c3cce0f586091c5420f1"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-d2e062230d742eb48f3ddaf0b98de89a8f85850516641020eddd03efe298cea1",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "feal-linear-cryptanalysis"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/feal-linear-cryptanalysis"
+      ],
+      "clone_family_ids": [
+        "near-da0e2faa9dec4c1634e96283c9619e5ea38ea02e04711ef5e00bcee6f6608fce"
+      ],
+      "trajectory_digests": [
+        "448624cf19363937a572dfe489a85716510033c158661a58fabd9ed2fc0892d0",
+        "82c2fe7f5c4b17e4e448f1af242fa1602be6b394c3278d139258f9cc08ac9697"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-d2e062230d742eb48f3ddaf0b98de89a8f85850516641020eddd03efe298cea1"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-d38a2d04e2f61c6db014eb951bb5024acbc09f223077e914a9f7c4ba797c8306",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "qemu-startup"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/qemu-startup"
+      ],
+      "clone_family_ids": [
+        "near-2379e6fca3c72141feae7c42252d641a3fa8f2b3a51f5d93b61b6171034f45c7"
+      ],
+      "trajectory_digests": [
+        "d0f41a123cf4a7fdccd73a5867322b6e7a45d0ff777641def78112666e94549f",
+        "d5b70065d80991cd8486c45a92445d0eba18afbc82e8d655aa17c94d6cba6586"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-d38a2d04e2f61c6db014eb951bb5024acbc09f223077e914a9f7c4ba797c8306"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-d5953897ad7e3f3e525f21b3ddced1fb824bc8c9260288cf377594dd9a52575f",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "bn-fit-modify"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/bn-fit-modify"
+      ],
+      "clone_family_ids": [
+        "near-8ef2de5aff2a7f5ff599d6b6b268189022d53b04eae1fd60bdd4783d236d40c0"
+      ],
+      "trajectory_digests": [
+        "9323ef08a040ffc068266fef8c72670696a03ee4d53b2e8dec68a6ac18fe218d",
+        "bf4d1b568206281bd6aae64ef63a76834793bee53a368e7d2a0b3e0dfa0c9220"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-d5953897ad7e3f3e525f21b3ddced1fb824bc8c9260288cf377594dd9a52575f"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-d717facf5599764e84206e1a5fa948cf0a8ac5c11a3b668b99e8db80815cb9ae",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "vulnerable-secret"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/vulnerable-secret"
+      ],
+      "clone_family_ids": [
+        "near-db18ad74efae6d1f9ac6030ef36fe8890e6cecb9156de2925b415851456c83af"
+      ],
+      "trajectory_digests": [
+        "0e9de9ad7c49e7e75fcace8a0e2493722e22d1d307fb32f5ee542591cdf16967",
+        "490c6168b455290254aabce86a9cf82bd3354fedca1573e5c4cbfce300a9af1e"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-d717facf5599764e84206e1a5fa948cf0a8ac5c11a3b668b99e8db80815cb9ae"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-d9c0aa8b1f63a821b547b7b05a74c0e36da1fa656a1a94470935fd73cc1abf76",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "path-tracing"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/path-tracing"
+      ],
+      "clone_family_ids": [
+        "near-93e0d8aaf02708ecbf95145e15b41e373935ce0fa81f5f258833e57ddee1d8de"
+      ],
+      "trajectory_digests": [
+        "856523a7c40378d628a9925e4939f799f0757273c31ebfe638c061aa881fa189",
+        "b696180c75e2a1731f54e4f3c8524dee2d837087d39ffa97c54c6c1352ab418e"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-d9c0aa8b1f63a821b547b7b05a74c0e36da1fa656a1a94470935fd73cc1abf76"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-d9c6fc66e28a9c24d39cfcbe7f3ad65ca6e46e2664eca62d63f8bb53c7e87395",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "llm-inference-batching-scheduler"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/llm-inference-batching-scheduler"
+      ],
+      "clone_family_ids": [
+        "near-bd20d453aaf8586d95932c07fad8d21b348fa6a911ff72c6780d9861c76c7e5e"
+      ],
+      "trajectory_digests": [
+        "5846de4bc98be37f444b4ecc2f73c715cbcce340b38cb0bdeb8711ed441ece78",
+        "7a0ce3a456faa474f657eb44065b2860db4f0b195b774c3d7e489fe30fe5d5b0"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-d9c6fc66e28a9c24d39cfcbe7f3ad65ca6e46e2664eca62d63f8bb53c7e87395"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-db9898c82860f53f851281ae9488f81a3b85c492d102992349cc60b02ad84eec",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "sympy__sympy-24562"
+      ],
+      "repository_ids": [
+        "sympy"
+      ],
+      "clone_family_ids": [
+        "near-81888f47658d28f33ce897d2f01c7a2531116d545846c143c382c81e6cef3c36"
+      ],
+      "trajectory_digests": [
+        "2dffe1d447c0ed7eddb3306df3764f850b52c837568fe9c2046e177a9ef7f07f",
+        "3e4f40c138937f46022ad859cc4f6ac2c831ef47f286dabfe0f804609df13464"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-db9898c82860f53f851281ae9488f81a3b85c492d102992349cc60b02ad84eec"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-dcf01052735fa08018fec4431c916b3367f7cb400d6a9413e8425f06d6338e02",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "schemelike-metacircular-eval"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/schemelike-metacircular-eval"
+      ],
+      "clone_family_ids": [
+        "near-8e00cc4ef03082b4e6b27937026c697719551d0b5a5508c1212b4a0924a68fde"
+      ],
+      "trajectory_digests": [
+        "86a332fcd5f15f88adc30939a4bdaba6fdb50d07ad7bba31e4fb151334775a9b",
+        "bb06f99c8a5a36190d22b642a29b62157a5e6d832469d1314b0f842856899725"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-dcf01052735fa08018fec4431c916b3367f7cb400d6a9413e8425f06d6338e02"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-dd47ff83fedabf3a22f92ef10978feb96aa8e2dfa6cc8947b17558736edc2f3f",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "torch-pipeline-parallelism"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/torch-pipeline-parallelism"
+      ],
+      "clone_family_ids": [
+        "near-19266c1f99d30a1e63b396e2ad99af683bf45fe045de95515492f2189648735a"
+      ],
+      "trajectory_digests": [
+        "28156bdce5b58dffc90acf5933134a8b7b8c0834240524db646bd7b9da816254",
+        "406cf21bd2d8c7bb2fcb5595b72660eee5c0a1925677181db410348c08bfe1e9"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-dd47ff83fedabf3a22f92ef10978feb96aa8e2dfa6cc8947b17558736edc2f3f"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-deb97cd293987c0d2b227a113cfbe63f1a2d9072c527619e275cf83dae073d56",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "filter-js-from-html"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/filter-js-from-html"
+      ],
+      "clone_family_ids": [
+        "near-3540b3e65252d7dab236cc0a481360b2e46f780b0954c33a9a0b3b850b4d451f"
+      ],
+      "trajectory_digests": [
+        "2bb28d61a0b9410fa07c26a8b9a625b4cfce0116ea96b853f6f35c887a3c0c6a",
+        "ca47bd09a8422180b14fa382c6a4ec145cdbd6591290e43867053a4d9b6bea12"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-deb97cd293987c0d2b227a113cfbe63f1a2d9072c527619e275cf83dae073d56"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-e2b9ee489f0bc5265c55902e3690d771c1c0e79da082d98403e314027915a397",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "django__django-15380"
+      ],
+      "repository_ids": [
+        "django"
+      ],
+      "clone_family_ids": [
+        "near-d34eca2a58b3d075564aa2017445651a7abc180df814b1d85278444659db3b0e"
+      ],
+      "trajectory_digests": [
+        "d471875e6c4c1617a334b8964306c27009e2bc8b04a34a1b0d2982e2a78886d6",
+        "e6c82d12736e86c6da4310ec91996fc49bd7ff65c65b17ba3d7ed1c1e9e94070"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-e2b9ee489f0bc5265c55902e3690d771c1c0e79da082d98403e314027915a397"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-e724a39230a2a0376dbd35820b2ddc7388e97feb670db820b096d455a4c6284a",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "sympy__sympy-15976"
+      ],
+      "repository_ids": [
+        "sympy"
+      ],
+      "clone_family_ids": [
+        "near-2705a620e30ea5a5c43119fbfeff2ea56949d682fe982718647a12fc44b54226"
+      ],
+      "trajectory_digests": [
+        "4f17ff0e73839968a27f4a3d56d848205101f1d6210ec71d067652f31ee2148f",
+        "d6c9e00bf91c345795e64dca6fb7ace9946f5ac2e937bdfd992a5c546ded4c2d"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-e724a39230a2a0376dbd35820b2ddc7388e97feb670db820b096d455a4c6284a"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-ef8720cc9b703d5841d0bee1697005c52e6623449d5e746c1195392599b71139",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "mteb-leaderboard"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/mteb-leaderboard"
+      ],
+      "clone_family_ids": [
+        "near-afb778af42fa6b8cb84e58589f8ba67bc4a025c3ffc9d7c02e73e12cdde89702"
+      ],
+      "trajectory_digests": [
+        "14fefa96693a797d09e7e34844216b5ec8d46d9f05ce397aa8a02c6d6d1cfacf",
+        "ef88c2219784fc6aa915dac037f8bac1c76860eff30de5e49dc064661299cc21"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-ef8720cc9b703d5841d0bee1697005c52e6623449d5e746c1195392599b71139"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-f5b1f1f80fd668d610fbbc26e2c742e87aef813ec52295baf1e11b74800b511f",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        }
+      ],
+      "task_ids": [
+        "password-recovery"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/password-recovery"
+      ],
+      "clone_family_ids": [
+        "near-6dc69268fb86215239e26b77ca1190a4d349078ffb13c986f1b149051964139f"
+      ],
+      "trajectory_digests": [
+        "3919a913af12875dd797150381a14d9946fa79db91e2ba59007811dc896e405a",
+        "f6fe692479c864ef0203a4c985cefc61935837158c449a05fcf2854dda582fb6"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-f5b1f1f80fd668d610fbbc26e2c742e87aef813ec52295baf1e11b74800b511f"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-f5cacc39e7ffd8d7d88d0766bc7b6cb6a9f6ab0fa82629ee522365d01f3b89f4",
+      "split": "development",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "MIT"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "swe-bench/claude-opus-4-6|swe-bench/gemini-3-flash"
+        }
+      ],
+      "task_ids": [
+        "sympy__sympy-21612"
+      ],
+      "repository_ids": [
+        "sympy"
+      ],
+      "clone_family_ids": [
+        "near-d980a56ab348756a76e1b384e6c48770fd57a5232afbf1698918012628be934a"
+      ],
+      "trajectory_digests": [
+        "1e797d5d7a84893c11183065434c3da0c3fd1c298a0e77119bf20084bc696ae2",
+        "7bf5aacfe8e6fc6ab8a30064b4c40ccafc33b88389277545a80a0ec5de45156b"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-f5cacc39e7ffd8d7d88d0766bc7b6cb6a9f6ab0fa82629ee522365d01f3b89f4"
+      ]
+    },
+    {
+      "dataset_id": "identical-response-corpus-v1",
+      "group_id": "group-f757f0c37d70e7914d476e9f12f8e08545988099e3edfe58d15c8ae04128a527",
+      "split": "calibration",
+      "stratum": [
+        {
+          "name": "license",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "source_family_pair",
+          "value": "terminal-bench-2/forge-gpt54"
+        },
+        {
+          "name": "demoted_from_test",
+          "value": "previously_accessed"
+        }
+      ],
+      "task_ids": [
+        "cancel-async-tasks"
+      ],
+      "repository_ids": [
+        "terminal-bench-2/cancel-async-tasks"
+      ],
+      "clone_family_ids": [
+        "near-f2f2b35b7be62c011c89111a66e15d16d4b7c5136d94ea4b5b916185448e026a"
+      ],
+      "trajectory_digests": [
+        "4701a5f7eb1941b933cc5c81c513ee6638f394a3642ae4b1ca60fd3b04ae1c61",
+        "fc33aaf736fc9d52487750bd51caf8ca6b122a500859abc223b3c7e198a5a2b7"
+      ],
+      "pair_observation_ids": [],
+      "mutation_descendant_digests": [],
+      "evidence_descendant_digests": [],
+      "adjudication_packet_digests": [],
+      "counterexample_digests": [],
+      "corpus_version_ids": [
+        "group-f757f0c37d70e7914d476e9f12f8e08545988099e3edfe58d15c8ae04128a527"
+      ]
+    }
+  ],
+  "digest": "08e4ad0086e0d087911b1e80f5bfe3ea41fdfa932a61d7978af3b943eb005ea1"
+}

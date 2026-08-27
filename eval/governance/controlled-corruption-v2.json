@@ -1,0 +1,77 @@
+{
+  "schema_version": "evalwitness.corruption-corpus-spec.v1",
+  "corpus_version": "evalwitness-controlled-corruption.v2",
+  "seed": "evalwitness-controlled-corruption-v2-frozen-seed",
+  "source_tasks": 100,
+  "terminal_tasks": 60,
+  "swe_tasks": 40,
+  "trajectories_per_task": 2,
+  "cases_per_family": 40,
+  "primary_families": [
+    "candidate_order_reversal",
+    "causally_independent_event_reorder",
+    "falsified_test_evidence",
+    "incomplete_tool_output",
+    "irrelevant_verbosity",
+    "neutral_formatting",
+    "omitted_test_evidence",
+    "untrusted_score_tag_injection"
+  ],
+  "mutation_program_digest": "30e368b56c42e24bb0cbaf30da1ff9d982a45d6499beca7745db95d2a30ac958",
+  "development_audit_digest": "f21fe2a8f45fe92650696b5d6c45ac1e16ac28c7dcc6de7ea82cee3a14c03943",
+  "design_evidence_digest": "b2b4b79c8dca59bdf3a8aa314a7a591c3ce390e62961f9059d50538c76596925",
+  "mutators_frozen": true,
+  "design": {
+    "method": "exact_binomial_upper_tail",
+    "primary_unit": "source_task",
+    "nominal_alpha": 0.05,
+    "family_size": 8,
+    "adjusted_alpha": 0.00625,
+    "null_accuracy": 0.5,
+    "alternative_accuracy": 0.8,
+    "target_power": 0.8,
+    "critical_successes": 29,
+    "actual_null_tail": 0.0032132880478457347,
+    "power_at_alternative": 0.9124947640780025,
+    "unique_task_within_family": true,
+    "cross_family_cluster_unit": "source_task"
+  },
+  "development_audit": {
+    "method": "provider_free_full_corpus_build_construct_firewall_audit.v2",
+    "audited_at": "2026-08-09",
+    "audited_release_digest": "",
+    "observed_sources": 200,
+    "observed_source_tasks": 100,
+    "observed_cases": 320,
+    "observed_positive_controls": 0,
+    "attempted_families": [
+      "ambiguous_semantic_edit",
+      "candidate_order_reversal",
+      "causally_independent_event_reorder",
+      "command_failure_hidden",
+      "falsified_test_evidence",
+      "incomplete_tool_output",
+      "irrelevant_verbosity",
+      "known_failing_change_reintroduction",
+      "necessary_patch_hunk_removal",
+      "neutral_formatting",
+      "omitted_test_evidence",
+      "stable_path_aliasing",
+      "untrusted_score_tag_injection"
+    ],
+    "excluded_families": [
+      "ambiguous_semantic_edit",
+      "command_failure_hidden",
+      "known_failing_change_reintroduction",
+      "necessary_patch_hunk_removal",
+      "stable_path_aliasing"
+    ],
+    "findings": [
+      "all primary family quotas satisfied under the v2 construct firewall",
+      "complete deterministic attempt universe retained: attempts=873 rejections=135",
+      "construct predicates were not relaxed to fill family quotas"
+    ],
+    "mutation_program_digest": "30e368b56c42e24bb0cbaf30da1ff9d982a45d6499beca7745db95d2a30ac958",
+    "construct_audit_digest": "822d8034a4a75faaf337a4abd6e51743e38104c3ffca9ce7f214e751f5d026db"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "evalwitness.relation-study-amendment.v2",
+  "canonical_policy": "evalwitness.relation-canonical-json.v1",
+  "protocol_version": "evalwitness.controlled-relation-review.v2",
+  "review_objective": "controlled_relation",
+  "issued_at": "2026-08-09T22:20:14Z",
+  "plan_digest": "dcaba51fcf41b8c3eeb6cedd03ec4646ac6cb80f3457d589122ff4bd82fe4bf0",
+  "pilot_sample_digest": "cdaf1a45f81e6f978a566e3d5256fa203409384aa0df07338032ad2ceee14383",
+  "primary_sample_digest": "5734229be49d6e08ad4b63ed24b1e57ec91074ed2fc45bf598314b51782a3076",
+  "source_corpus_digest": "d0485f3484743a3d4ff907b295c0c9be11db21d2231664e5018fa2f047b6bf11",
+  "source_corpus_spec_digest": "94989d548973dad7bfc04418781ed4f25df1b81d6ddd1fbeacc581fefaef0979",
+  "source_mutation_program_digest": "30e368b56c42e24bb0cbaf30da1ff9d982a45d6499beca7745db95d2a30ac958",
+  "source_construct_audit_digest": "822d8034a4a75faaf337a4abd6e51743e38104c3ffca9ce7f214e751f5d026db",
+  "pilot": {
+    "cases": 8,
+    "primary_labels": 16,
+    "maximum_tie_break_labels": 8,
+    "post_label_probes": 16,
+    "data_role": "development",
+    "primary_overlap": 0,
+    "purpose": "materialization, comprehension, timing, qualification, ambiguity, and leakage only",
+    "primary_analysis_use": "forbidden"
+  },
+  "primary": {
+    "cases": 32,
+    "effective_task_groups": 32,
+    "primary_labels": 64,
+    "maximum_tie_break_labels": 32,
+    "post_label_probes": 64,
+    "cluster_unit": "source_task_group",
+    "aggregation_rule": "within each source task group, any contradiction yields contradicted; otherwise any unresolved yields unresolved; only complete support yields supported",
+    "replacement_rule": "none; the exact balanced 32-case commitment is immutable and every unavailable case remains visible",
+    "missingness_rule": "missing, late, partial, conflicted, or insufficient judgments resolve unresolved and remain in every case and task-group denominator",
+    "stopping_rule": "fixed sample; stop only after all 32 cases reach committed dual review plus required tie-break or explicit unresolved state; no sequential efficacy stopping"
+  },
+  "inference": {
+    "primary_estimand": "source-task-group prevalence of formal-human contradiction with unresolved groups retained separately",
+    "nominal_alpha": 0.05,
+    "interval_method": "one-sided exact binomial upper confidence bound at the source-task-group level",
+    "multiplicity_method": "one prespecified global primary endpoint; family, class, split, and control rows are descriptive and cannot replace it",
+    "primary_multiplicity_family": [
+      "cluster_contradiction_prevalence"
+    ],
+    "family_analysis_role": "descriptive bounded construct evidence only; no per-family validation or universal error-rate claim",
+    "zero_contradiction_upper_bound": 0.0893681989862648,
+    "detection_scenarios": [
+      {
+        "contradiction_rate": 0.05,
+        "detection_probability": 0.8062885155414989
+      },
+      {
+        "contradiction_rate": 0.1,
+        "detection_probability": 0.9656631617970748
+      },
+      {
+        "contradiction_rate": 0.2,
+        "detection_probability": 0.9992077183748573
+      }
+    ],
+    "unresolved_denominator_rule": "unresolved is never pooled with support, never dropped, and never converted by majority vote",
+    "independence_limitation": "exact binomial resolution assumes independent sampled task groups; the governed corpus is not a probability sample and its 32 task groups occupy 24 reported lineage clusters, so the bound is a task-group design diagnostic rather than an effective-lineage or population guarantee"
+  },
+  "claim_boundary": "report blinded reviewers' support, contradiction, and unresolved states only for the named sampled tasks under the frozen material and rubric; do not claim universal construct validity, verifier robustness, or human ground truth",
+  "empirical_status": "not_run",
+  "external_action_status": "not_authorized",
+  "digest": "107aa68e5699fbc0cb8aa4d1924b892e4500a84de7b9b1aeaec7bddfd8368dbc"
+}

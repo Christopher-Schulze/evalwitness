@@ -1,0 +1,49 @@
+{
+  "version": "evalwitness.verification-lineage-corpus-feasibility.v1",
+  "decision_id": "task_069-corpus-feasibility-v1",
+  "plan_digest": "5f56a357721a4ec2b650660a4efb7b4d9b67d342ada388a5d28f6e607fd9189c",
+  "parser_lock_digest": "b3d5a1cfde6881bca5ff4fcb38adecd3b83a03fb9f0763cf4e97649cfced9631",
+  "source_readiness_digest": "f19faeafad0083cb21ef9504b9650889354e2538f0084744e48bbe5cadad5480",
+  "holdout_readiness_digest": "8eb9bd64c07a059c2bc7a1f2a65fb92d6b5dc7a298cdc1a0ba1b2b5f83702891",
+  "decision": "not_feasible_current_generation",
+  "acquisition_performed": false,
+  "threshold_weakened": false,
+  "post_outcome_replacement": false,
+  "threshold": {
+    "required_calibration_task_groups": 20,
+    "required_locked_test_task_groups": 20,
+    "required_eligible_task_groups": 40,
+    "admitted_calibration_task_groups": 0,
+    "admitted_locked_test_task_groups": 0,
+    "admitted_eligible_task_groups": 0,
+    "eligible_task_group_shortfall": 40,
+    "passed": false
+  },
+  "reasons": [
+    "holdouts_not_validly_runnable",
+    "no_admitted_calibration_sources",
+    "no_admitted_locked_test_sources",
+    "no_empirical_task_group_denominator"
+  ],
+  "protocol_v2_requirements": [
+    "acquire_and_admit_at_least_20_calibration_and_20_locked_test_task_groups",
+    "freeze_syntax_family_candidate_universe_before_any_family_outcome",
+    "isolate_selected_format_from_parser_and_mapping_development",
+    "preserve_task_lineage_near_duplicate_and_source_session_role_firewalls"
+  ],
+  "claim_boundary": {
+    "evidence_role": "adapter_development",
+    "empirical_audit_run": false,
+    "future_impossibility": false,
+    "provider_calls": 0,
+    "agent_launches": 0,
+    "supported_claim": "the current sealed TASK-069 generation cannot satisfy its unchanged 20-calibration plus 20-locked-test threshold",
+    "unsupported_claims": [
+      "future corpus impossibility",
+      "population prevalence",
+      "provider quality",
+      "transfer performance"
+    ]
+  },
+  "digest": "0d6d2b72f866bd55f1199de49c5b2bddecea779fbfafa4220802001d0342dd14"
+}

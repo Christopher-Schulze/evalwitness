@@ -1,0 +1,24 @@
+{
+  "schema_version": "evalwitness.profile.v1",
+  "identity": "reference",
+  "protocol_version": "evalwitness.protocol.v1",
+  "route_scope": "r1",
+  "time_window": "",
+  "domains": null,
+  "data_roles": null,
+  "evidence_levels": null,
+  "capsule_parents": null,
+  "dimensions": [
+    {
+      "id": "a",
+      "status": "measured",
+      "metric": "m",
+      "scope": "s",
+      "evidence_level": "E1",
+      "capsule_expression": "c",
+      "denominator": 1,
+      "sample_unit": "task"
+    }
+  ],
+  "digest": "3c101922c4026c6100b351050adb411de6363280059ad20e8796ee4b83713c05"
+}
